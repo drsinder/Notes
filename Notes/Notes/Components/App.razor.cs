@@ -11,9 +11,5 @@ namespace Notes.Components
 
         private IComponentRenderMode? PageRenderMode =>
             HttpContext.AcceptsInteractiveRouting() ? InteractiveWebAssembly : null;
-
-
-
-
     }
 }
