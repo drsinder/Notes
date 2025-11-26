@@ -1,0 +1,204 @@
+﻿@using Notes.Protos
+@*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2022, Dale Sinder
+    **
+    **  Name: NotePanel.razor
+    **
+    **  Description:
+    **      Displays a note - may be used recursively
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*@
+
+@using Notes.Client.Menus
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Inputs
+@inject CookieStateAgent myState
+
+@implements IAsyncDisposable
+
+<div>
+    @if (model is null)
+    {
+        <p class="center"><em>Loading...</em></p>
+    }
+    else if (!model.Access.ReadAccess)
+    {
+        <p class="center"><em>Permission denied...</em></p>
+    }
+    else
+    {
+        @if (!IsMini)
+        {
+            if (ShowChild && model.Header.RefId != 0)
+            {
+                if (IsRootNote)
+                {
+                    <h4>References</h4>
+                }
+                <NotePanel NoteId="@model.Header.RefId" ShowChild="true" IsRootNote="false" AltStyle="true"></NotePanel>
+            }
+
+            if (ShowVers)
+            {
+                <Versions FileId="@model.Header.NoteFileId" NoteOrdinal="@model.Header.NoteOrdinal" ResponseOrdinal="@model.Header.ResponseOrdinal" ArcId="@model.Header.ArchiveId"></Versions>
+            }
+
+            if (IsRootNote && @model != null)
+            {
+                <div>
+                    <NoteMenu @ref="@MyMenu" Model="@model" MyNoteIndex="@MyNoteIndex"></NoteMenu>
+                </div>
+            }
+        }
+        <div class="note-display">
+            <div class="@HeaderStyle">
+                @if (model is not null && !model.Header.IsDeleted)   
+                {
+                    <p>
+                        <span class="keep-right">Note: @model.Header.NoteOrdinal @respX&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </p>
+
+                    <h4>
+                        Subject: @model.Header.NoteSubject <br />
+                        Author: @model.Header.AuthorName &nbsp;&nbsp;&nbsp;On:
+                        @(Globals.LocalTimeBlazor(model.Header.LastEdited.ToDateTime()).ToLongDateString()) At:
+                        @Globals.LocalTimeBlazor(model.Header.LastEdited.ToDateTime()).ToShortTimeString() @*@Model.tZone.Abbreviation*@
+                        @if (!string.IsNullOrEmpty(model.Header.DirectorMessage))
+                        {
+                            <br />
+
+                            <span>Director Message: @model.Header.DirectorMessage</span>
+                        }
+                        @if (model.Tags.List != null && model.Tags.List.Count > 0)
+                        {
+                            string tl = "Tags: ";
+                            foreach (GTags tag in model.Tags.List)
+                                tl += tag.Tag + " ";
+                            <br />
+
+                            <span>@tl</span>
+                        }
+                    </h4>
+                }
+                else
+                {
+                    <span>Note has been deleted!</span>
+                }
+            </div>
+            <div>
+                <div class="@BodyStyle">
+                    @if (model is not null && !model.Header.IsDeleted)
+                    {
+                        @((MarkupString)model.Content.NoteBody)
+                    }
+                </div>
+                @if (!IsMini)
+                {
+                    @if (ShowButtons && !ShowChild)
+                    {
+                        <SfButton @onclick="OnDone" class="donebutton">Done</SfButton>
+                        <SfButton @onclick="OnPrint" class="printbutton">Print</SfButton>
+
+                        @if (model is not null && model.Header.ResponseOrdinal == 0)
+                        {
+                            <SfButton @onclick="OnPrintString" class="printbutton">Print String</SfButton>
+                        }
+
+                    }
+                }
+            </div>
+        </div>
+
+        @if (IsRootNote && @model != null && !model.Header.IsDeleted)
+        {
+            <span><strong>Show versions </strong></span><SfSwitch @bind-Checked="ShowVers" TChecked="bool"></SfSwitch>
+        }
+
+        @if (!IsMini)
+        {
+            if (ResetShown)
+            {
+                GetData().GetAwaiter();
+                ResetShown = false;
+                StateHasChanged();
+            }
+            @if (IsRootNote && model is not null &&  model.Header.RefId != 0 && !model.Header.IsDeleted)
+            {
+                <span><strong>Show References</strong></span><SfSwitch @bind-Checked="ShowChild" TChecked="bool"></SfSwitch>
+            }
+
+            @if (!RespShown && model is not null &&  model.Header.ResponseOrdinal == 0 && model.Header.ResponseCount > 0 && !AltStyle && !model.Header.IsDeleted)
+            {
+                <span><strong>Show Responses</strong></span><SfSwitch @bind-Checked="RespShown" ValueChange="ShowRespChange" TChecked="bool"></SfSwitch>
+            }
+            else if (RespShown)
+            {
+                <span><strong>Show Responses</strong></span><SfSwitch @bind-Checked="RespShown" ValueChange="ShowRespChange" TChecked="bool"></SfSwitch>
+                <span><strong>Flip Order</strong></span><SfSwitch @bind-Checked="RespFlipped" ValueChange="FlipRespChange" TChecked="bool"></SfSwitch>
+                if (respHeaders != null)
+                {
+                    bool alt = true;
+                    foreach (GNoteHeader rh in respHeaders)
+                    {
+                        <NotePanel NoteId="@rh.Id" IsRootNote="false" ShowButtons="true" MyNoteIndex="@MyNoteIndex" AltStyle="@alt"></NotePanel>
+                    }
+                }
+            }
+
+            @if (IsRootNote)
+            {
+                <div class="arrow2">
+                    <div>
+                        @{model = model is not null ? model : new();}
+                    Navigate: <strong>@model.Header.NoteOrdinal@respY</strong>
+                    <SfTextBox @ref="@sfTextBox" ShowClearButton="true" Placeholder="b#.r# | (+/-)b# | (+/-).r#"
+                       @bind-Value="@NavString" Input="@NavInputHandler" @onkeyup="@KeyUpHandler"></SfTextBox>
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>
+
+<style>
+    .donebutton {
+        color: white;
+        background-color: darkcyan;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 6px;
+    }
+
+        .donebutton:hover {
+            color: white;
+            background-color: blue;
+        }
+
+    .printbutton {
+        color: white;
+        background-color: green;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 6px;
+    }
+
+        .printbutton:hover {
+            color: white;
+            background-color: darkgreen;
+        }
+</style>
+

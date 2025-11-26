@@ -1,0 +1,267 @@
+﻿@page "/Account/Login"
+
+@using System.ComponentModel.DataAnnotations
+@using Grpc.Core
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.IdentityModel.Tokens
+@using Notes.Data
+@using System.Security.Claims
+@using System.IdentityModel.Tokens.Jwt
+@using Notes.Protos
+@using Notes.Client.Shared
+@using System.Text.Json
+@using System.Text
+@using Notes.Entities
+
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject ILogger<Login> Logger
+@inject NavigationManager NavigationManager
+@inject IdentityRedirectManager RedirectManager
+
+<PageTitle>Log in</PageTitle>
+
+<h1>Log in</h1>
+<div class="row">
+    <div class="col-lg-6">
+        <section>
+            <StatusMessage Message="@errorMessage" />
+            <EditForm EditContext="editContext" method="post" OnSubmit="LoginUser" FormName="login">
+                <DataAnnotationsValidator />
+                <h2>Use a local account to log in.</h2>
+                <hr />
+                <ValidationSummary class="text-danger" role="alert" />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.Email" id="Input.Email" class="form-control" autocomplete="username webauthn" aria-required="true" placeholder="name@example.com" />
+                    <label for="Input.Email" class="form-label">Email</label>
+                    <ValidationMessage For="() => Input.Email" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.Password" id="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <label for="Input.Password" class="form-label">Password</label>
+                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+                </div>
+                <div class="checkbox mb-3">
+                    <label class="form-label">
+                        <InputCheckbox @bind-Value="Input.RememberMe" class="darker-border-checkbox form-check-input" />
+                        Remember me
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <hr />
+                <div class="d-flex flex-column">
+                    <span class="text-secondary mx-auto mt-2">OR</span>
+                    <PasskeySubmit Operation="PasskeyOperation.Request" Name="Input.Passkey" EmailName="Input.Email" class="btn btn-link mx-auto">Log in with a passkey</PasskeySubmit>
+                </div>
+                <hr />
+                <div>
+                    <p>
+                        <a href="Account/ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>
+            </EditForm>
+        </section>
+    </div>
+    <div class="col-lg-4 col-lg-offset-2">
+        <section>
+            <h3>Use another service to log in.</h3>
+            <hr />
+            <ExternalLoginPicker />
+        </section>
+    </div>
+</div>
+
+@code {
+    private string? errorMessage;
+    private EditContext editContext = default!;
+
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = default!;
+
+    [SupplyParameterFromQuery]
+    private string? ReturnUrl { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Input ??= new();
+
+        editContext = new EditContext(Input);
+
+        if (HttpMethods.IsGet(HttpContext.Request.Method))
+        {
+            // Clear the existing external cookie to ensure a clean login process
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+        }
+    }
+
+    public async Task LoginUser()
+    {
+        if (!string.IsNullOrEmpty(Input.Passkey?.Error))
+        {
+            errorMessage = $"Error: {Input.Passkey.Error}";
+            return;
+        }
+
+        SignInResult result;
+        if (!string.IsNullOrEmpty(Input.Passkey?.CredentialJson))
+        {
+            // When performing passkey sign-in, don't perform form validation.
+            result = await SignInManager.PasskeySignInAsync(Input.Passkey.CredentialJson);
+        }
+        else
+        {
+            // If doing a password sign-in, validate the form.
+            if (!editContext.Validate())
+            {
+                return;
+            }
+
+            // This doesn't count login failures towards account lockout
+            // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+            result = await SignInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+        }
+
+        if (result.Succeeded)
+        {
+            await SetCookieAsync();
+            Logger.LogInformation("User logged in.");
+            RedirectManager.RedirectTo(ReturnUrl);
+        }
+        else if (result.RequiresTwoFactor)
+        {
+            RedirectManager.RedirectTo(
+                "Account/LoginWith2fa",
+                new() { ["returnUrl"] = ReturnUrl, ["rememberMe"] = Input.RememberMe });
+        }
+        else if (result.IsLockedOut)
+        {
+            Logger.LogWarning("User account locked out.");
+            RedirectManager.RedirectTo("Account/Lockout");
+        }
+        else
+        {
+            errorMessage = "Error: Invalid login attempt.";
+        }
+    }
+
+    private async Task SetCookieAsync()
+    {
+        ApplicationUser? user = await UserManager.FindByEmailAsync(Input.Email);
+        if (user is null)
+        {
+            return;
+        }
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.UserName ?? ""),
+            new Claim(ClaimTypes.Email, user.Email ?? "")
+        };
+        //var claimsIdentity = new ClaimsIdentity(claims, "Login");
+
+        if (user.DisplayName is null)
+            user.DisplayName = String.Empty;
+
+        // form login response with JWT
+#pragma warning disable CS8604 // Possible null reference argument.
+        List<Claim> authClaims = new()
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                    new Claim(JwtRegisteredClaimNames.Email, user.Email)
+                };
+#pragma warning restore CS8604 // Possible null reference argument.
+        IList<string>? userRoles = await UserManager.GetRolesAsync(user);
+
+        List<string> roles = new();
+        foreach (string? userRole in userRoles)
+        {
+            authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+            roles.Add(userRole);
+        }
+
+        int ExpHours = 24 * 30; // token expiration in hours
+
+        JwtSecurityToken? token = GetToken(authClaims, ExpHours);
+        JwtSecurityTokenHandler handler = new();
+        string stoken = handler.WriteToken(token);
+        UserInfo userInfo = new()
+        {
+            Displayname = user.DisplayName,
+            Email = user.Email,
+            Subject = user.Id,
+            IsAdmin = roles.Contains((UserRoles.Admin)),
+            IsUser = roles.Contains((UserRoles.User))
+        };
+
+        LoginReply ret = new() { Status = StatusCodes.Status200OK, Message = "Login successful.", Info = userInfo, Jwt = stoken, Hours = ExpHours };
+        string? enc = Globals.CookieName + "=" + Globals.Base64Encode(JsonSerializer.Serialize(ret));
+
+        /*
+        HttpContext.Response.Headers.Remove("Set-Cookie");
+
+        DateTime dt = DateTime.UtcNow.AddHours(ExpHours);
+        string exp = dt.ToString("r");
+        string suffix = $"; expires={exp}; path=/; secure; samesite=lax";
+        Metadata md = new()
+                {
+                    { "Set-Cookie", enc + suffix }
+                };
+        await context.WriteResponseHeadersAsync(md);
+        */
+        HttpContext.Response.Cookies.Append(Globals.CookieName, Globals.Base64Encode(JsonSerializer.Serialize(ret)), new CookieOptions
+        {
+            Expires = DateTimeOffset.UtcNow.AddHours(ExpHours),
+            Path = "/",
+            Secure = false,
+            SameSite = SameSiteMode.Lax,
+            HttpOnly = false
+        });
+    }
+
+    /// <summary>
+    /// Gets the JWT token.
+    /// </summary>
+    /// <param name="authClaims">The authentication claims.</param>
+    /// <param name="hours">The hours.</param>
+    /// <returns>JwtSecurityToken.</returns>
+    private static JwtSecurityToken GetToken(List<Claim> authClaims, int hours)
+    {
+        SymmetricSecurityKey? authSigningKey = new(Encoding.UTF8.GetBytes(Globals.SecretKey));
+        JwtSecurityToken? token = new(
+            issuer: Globals.ValidIssuerURL,
+            audience: Globals.ValidAudienceURL,
+            expires: DateTime.Now.AddHours(hours),
+            claims: authClaims,
+            signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+            );
+        return token;
+    }
+    private sealed class InputModel
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = "";
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = "";
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+
+        public PasskeyInputModel? Passkey { get; set; }
+    }
+}

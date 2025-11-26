@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Notes-b5e55d77-25bc-485d-bf37-e72191dd3b34</UserSecretsId>
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Notes.ServiceDefaults\Notes.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Notes.Client\Notes.Client.csproj" />
+    <PackageReference Include="Blazored.Modal" Version="7.3.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.33.1" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.71.0" />
+    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.71.0" />
+    <PackageReference Include="Hangfire" Version="1.8.22" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0" />
+    <PackageReference Include="SendGrid" Version="9.29.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Import\" />
+  </ItemGroup>
+
+</Project>

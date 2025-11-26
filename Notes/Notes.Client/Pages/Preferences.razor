@@ -1,0 +1,69 @@
+﻿@*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2022, Dale Sinder
+    **
+    **  Name: Preferences.razor
+    **
+    **  Description:
+    **      Set user preferences
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*@
+
+@page "/preferences"
+
+@using Notes.Client.Shared
+@using System.Text
+@using Notes.Protos
+@using Syncfusion.Blazor.Buttons
+@inject NotesServer.NotesServerClient Client
+@inject NavigationManager Navigation
+@inject CookieStateAgent myState
+
+@if (string.IsNullOrEmpty(currentText))
+{
+    <p class="center"><em>Loading...</em></p>
+}
+else
+{
+
+            <div>
+                <h2>Preferences</h2>
+                <br />
+                <p>Default Page Size for Pageable Lists:</p>
+                <select class="form-control short-input" @bind="@pageSize">
+                    @foreach (LocalModel2 item in MySizes)
+                    {
+                        <option value="@item.Psize">@item.Name</option>
+                    }
+                </select>
+                <br />
+                <SfSwitch @bind-Checked="@UserData.Pref7"></SfSwitch> Show Content on index by default when expanded
+                <br />
+                <SfSwitch @bind-Checked="@UserData.Pref5"></SfSwitch> Show Response Content on index by default when expanded
+                <br />
+                <SfSwitch @bind-Checked="@UserData.Pref3"></SfSwitch> Show Responses by default
+                <br />
+                <SfSwitch @bind-Checked="@UserData.Pref4"></SfSwitch> Flip Response order by default
+                <br />
+                <button type="button" @onclick="OnSubmit" class="btn btn-info btn-sm">Submit</button>&nbsp;&nbsp;
+                <button type="button" @onclick="Cancel" class="btn btn-info btn-sm">Close</button>
+
+            </div>
+}
+
+
+
+

@@ -1,0 +1,24 @@
+﻿@page "/"
+
+@using System.Timers
+
+@inject NavigationManager NavigationManager
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        // Give the app a moment to finish loading (CookieStateAgent)
+
+        Timer timer = new Timer(100);
+        timer.Elapsed += async (sender, e) => await Go();
+        timer.AutoReset = false;
+        timer.Start();
+    }
+
+    private async Task Go()
+    {
+        NavigationManager.NavigateTo("home");
+    }
+
+}

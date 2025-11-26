@@ -1,0 +1,8 @@
+﻿@using Notes.Client.Shared
+@using Syncfusion.Blazor.Buttons
+
+@inject HttpClient Http
+@inject CookieStateAgent myState
+
+<SfCheckBox @bind-Checked="@Model.isChecked" Disabled="!Model.canEdit" @onclick="OnClick"></SfCheckBox>
+

@@ -1,0 +1,72 @@
+﻿@*--------------------------------------------------------------------------
+    **
+    ** Copyright © 2022, Dale Sinder
+    **
+    ** Name: Responses.razor
+    **
+    ** Description:
+    **      Displays response headers (and content) inside the NoteIndex
+    **
+    ** This program is free software: you can redistribute it and/or modify
+    ** it under the terms of the GNU General Public License version 3 as
+    ** published by the Free Software Foundation.   
+    **
+    ** This program is distributed in the hope that it will be useful,
+    ** but WITHOUT ANY WARRANTY; without even the implied warranty of
+    ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+    ** GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*@
+
+@using Notes.Protos
+@using Syncfusion.Blazor.Grids
+
+@if (Headers == null)
+{
+    <p class="center"><em>Loading...</em></p>
+}
+else
+{
+    @if (Headers.Count > 0)
+    {
+        <SfGrid @ref="@sfGrid2" DataSource="Headers" AllowPaging="false" AllowSelection="true" EnableHover="true" AllowSorting="true" >
+ @*           <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.FilterBar" ShowFilterBarStatus="true">
+                <GridFilterColumns>
+                    <GridFilterColumn Field="IsDeleted" MatchCase=true Operator="Operator.Equal" Predicate="and" Value="@false"></GridFilterColumn>
+                    <GridFilterColumn Field = "Version" MatchCase =true Operator = "Operator.Equal" Predicate = "and" Value = "0" ></GridFilterColumn>
+                </GridFilterColumns>
+            </GridFilterSettings>*@
+            <GridEvents DataBound="DataBoundHandler" RowSelected="DisplayIt" TValue="GNoteHeader"></GridEvents>
+            <GridTemplates>
+                <DetailTemplate>
+                    @if (ShowContentR)
+                    {
+                        var current2 = (context as GNoteHeader);
+                        current2 = current2 is not null ? current2 : new();
+                        <NotePanel NoteId="@current2.Id" ShowChild="false" IsRootNote="false" IsMini="true"></NotePanel>
+                    }
+                </DetailTemplate>
+            </GridTemplates>
+            <GridColumns>
+                <GridColumn Field=@nameof(GNoteHeader.ResponseOrdinal) HeaderText="Resp. #" TextAlign="TextAlign.Left" Width="25" IsPrimaryKey="true"></GridColumn>
+                <GridColumn Field=@nameof(GNoteHeader.NoteSubject) HeaderText="Subject" TextAlign="TextAlign.Left" Width="150"></GridColumn>
+                <GridColumn Field=@nameof(GNoteHeader.AuthorName) HeaderText="Writer" TextAlign="TextAlign.Left" Width="80"></GridColumn>
+                <GridColumn Field=@nameof(GNoteHeader.CreateDate) HeaderText="Date/Time" TextAlign="TextAlign.Left" Width="60">
+                    <Template Context="inner">
+                @{
+                            var itemx = (inner as GNoteHeader);
+                            itemx = itemx is not null ? itemx : new();
+                    <span>@Globals.LocalTimeBlazor(itemx.CreateDate.ToDateTime())</span>
+                        }
+                    </Template>
+                </GridColumn>
+@*                <GridColumn Field=@nameof(GNoteHeader.IsDeleted) HeaderText="Del" TextAlign="TextAlign.Left" Width="0" Type="ColumnType.Boolean"></GridColumn>
+                <GridColumn Field=@nameof(GNoteHeader.Version) HeaderText="Version" TextAlign="TextAlign.Left" Width="0"></GridColumn>
+*@            </GridColumns>
+        </SfGrid>
+    }
+}

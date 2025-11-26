@@ -1,0 +1,14 @@
+﻿@using System.Timers
+
+<span>
+    @if (Interval < 2000)
+    {
+        @mytime
+    }
+    else
+    {
+       @mytime.ToShortDateString() <span>&nbsp;</span> @mytime.ToShortTimeString(); 
+    }
+</span>
+
+

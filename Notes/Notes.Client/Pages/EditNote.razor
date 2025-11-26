@@ -1,0 +1,16 @@
+﻿@page "/editnote/{NoteId:long}"
+
+@using Notes.Client.Panels
+
+@inject CookieStateAgent myState
+
+@if (go)
+{
+    <NoteEditor Model="@Model" ></NoteEditor>
+}
+else
+{
+    <div>Loading...</div>
+}
+
+

@@ -1,0 +1,17 @@
+﻿@using Notes.Protos
+@using Syncfusion.Blazor.SplitButtons
+@inject NotesServer.NotesServerClient Client
+
+@if (CurrentTracker != null)
+{
+    <SfSplitButton Content="Move">
+        <SplitButtonEvents ItemSelected="ItemSelected">
+        </SplitButtonEvents>
+        <DropDownMenuItems>
+            <DropDownMenuItem Text="Up" ></DropDownMenuItem>
+            <DropDownMenuItem Text="Down" ></DropDownMenuItem>
+            <DropDownMenuItem Text="Top" ></DropDownMenuItem>
+            <DropDownMenuItem Text="Bottom" ></DropDownMenuItem>
+        </DropDownMenuItems>
+    </SfSplitButton>
+}

@@ -1,0 +1,17 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.Threading.Tasks
+@using Notes.Client.Shared
+@using System.IO
+@using System.Text
+
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject NotesServer.NotesServerClient Client
+@inject CookieStateAgent myState
+
+<div class="dialogs modal-body">
+    <p>@message  Please Wait...</p>
+</div>
+
+

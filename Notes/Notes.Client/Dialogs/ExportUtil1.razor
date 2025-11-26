@@ -1,0 +1,12 @@
+﻿@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject NotesServer.NotesServerClient Client
+@inject CookieStateAgent myState
+
+<div class="dialogs modal-body">
+    <p>@message  Please Wait...</p>
+    <button type="button" @onclick="Cancel" class="btn btn-info btn-sm">Close</button>
+</div>
+
+
+

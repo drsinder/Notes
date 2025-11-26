@@ -1,0 +1,54 @@
+﻿@*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2022, Dale Sinder
+    **
+    **  Name: EditNoteFile.razor
+    **
+    **  Description:
+    **      Note File Edit Dialog
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*@
+
+@using System.ComponentModel.DataAnnotations
+@using Blazored.Modal.Services
+@using Google.Protobuf.WellKnownTypes
+
+@inject Notes.Client.Shared.CookieStateAgent myState
+@inject IModalService Modal
+@inject NotesServer.NotesServerClient Client
+
+@if (dummyFile == null)
+{
+    <p class="center"><em>Loading...</em></p>
+}
+else
+{
+    <div class="dialogs">
+        <h3>Edit Note File:</h3>
+
+        <EditForm id="createform" Model="@dummyFile" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <strong>Enter a NoteFile Name:</strong>
+            <InputText id="name" @bind-Value="dummyFile.NoteFileName" class="form-control short-input keep-center" />
+            <strong>Enter a NoteFile Title:</strong>
+            <InputText id="title" @bind-Value="dummyFile.NoteFileTitle" class="form-control short-input keep-center" />
+            <button type="submit">Submit</button> <button type="button" @onclick="Cancel">Cancel</button>
+        </EditForm>
+    </div>
+
+}
+

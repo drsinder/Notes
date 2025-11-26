@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="Notes.AppHost/Notes.AppHost.csproj" />
+  <Project Path="Notes.ServiceDefaults/Notes.ServiceDefaults.csproj" />
+  <Project Path="Notes/Notes.Client/Notes.Client.csproj" />
+  <Project Path="Notes/Notes/Notes.csproj" />
+</Solution>

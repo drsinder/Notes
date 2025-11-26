@@ -1,0 +1,17 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using Blazored.Modal.Services
+
+@inject IModalService Modal
+@inject NotesServer.NotesServerClient Client
+@inject Notes.Client.Shared.CookieStateAgent myState
+
+<div class="dialogs">
+    <h3>Delete Note File Id: @FileId</h3>
+    <h4>@FileName</h4>
+    <h4>@FileTitle</h4>
+    <EditForm id="createform" Model="@dummyFile" OnValidSubmit="HandleValidSubmit">
+        <button type="submit">Confirm</button> <button type="button" @onclick="Cancel">Cancel</button>
+    </EditForm>
+</div>
+
+
