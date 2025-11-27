@@ -120,7 +120,7 @@ namespace Notes.Client.Dialogs
                 GEmail stuff = new()
                 {
                     Address = model.Email,
-                    Subject = "Notes 2022 - " + model.NoteFile.NoteFileTitle,
+                    Subject = "Notes 2026 - " + model.NoteFile.NoteFileTitle,
                     Body = email
                 };
 
@@ -352,7 +352,7 @@ namespace Notes.Client.Dialogs
                 sb.Append("<h2>");
 
             // File Header
-            sb.Append("2022 NoteFile " + nf.NoteFileName + " - " + nf.NoteFileTitle);
+            sb.Append("2026 NoteFile " + nf.NoteFileName + " - " + nf.NoteFileTitle);
             sb.Append(" - Created " + DateTime.Now.ToUniversalTime().ToLongDateString() + " " + DateTime.Now.ToUniversalTime().ToShortTimeString());
             if (isHtml)
             {

@@ -90,7 +90,9 @@ namespace Notes.Manager
 
                     if (counter == 0)   // first line of input file
                     {
-                        if (line.StartsWith("2021 NoteFile ") || line.StartsWith("2022 NoteFile "))  // By this we know it came from Notes Web edition
+                        if (line.StartsWith("2021 NoteFile ") 
+                            || line.StartsWith("2022 NoteFile ")
+                            || line.StartsWith("2026 NoteFile "))  // By this we know it came from Notes Web edition
                         {
                             filetype = 1;   // Notes 3.1
                             await file.ReadLineAsync();
