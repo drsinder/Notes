@@ -110,8 +110,8 @@ namespace Notes.Client.Pages
 
 
 
-       // protected override async Task OnParametersSetAsync()
-       protected override async Task OnAfterRenderAsync(bool firstRender)
+        protected override async Task OnParametersSetAsync()
+       //protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             bool needStateChange = false;
             if (serverTime is null)
@@ -167,8 +167,8 @@ namespace Notes.Client.Pages
                 }
 
             }
-            if (firstRender || needStateChange)
-                StateHasChanged();
+         //   if (firstRender || needStateChange)
+          //      StateHasChanged();
         }
 
         /// <summary>
