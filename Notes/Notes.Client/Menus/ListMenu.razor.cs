@@ -178,8 +178,10 @@ namespace Notes.Client.Menus
                     break;
 
                 case "AccessControls":
-                    var parameters = new ModalParameters();
-                    parameters.Add("fileId", Model.NoteFile.Id);
+                    ModalParameters parameters = new()
+                    {
+                        { "fileId", Model.NoteFile.Id }
+                    };
                     Modal.Show<AccessList>("", parameters);
                     break;
 
@@ -233,8 +235,10 @@ namespace Notes.Client.Menus
         /// </summary>
         private async Task SetSearch()
         {
-            var parameters = new ModalParameters();
-            parameters.Add("searchtype", "File");
+            ModalParameters parameters = new ModalParameters
+            {
+                { "searchtype", "File" }
+            };
 
             var formModal = Modal.Show<SearchDlg>();
             var result = await formModal.Result;
@@ -353,8 +357,10 @@ namespace Notes.Client.Menus
             string stuff = sb.ToString();           // turn accumulated output into a string
             sb = null;
             json = null;
-            var parameters = new ModalParameters();
-            parameters.Add("PrintStuff", stuff);    // pass string to print dialog
+            ModalParameters parameters = new()
+            {
+                { "PrintStuff", stuff }    // pass string to print dialog
+            };
             Modal.Show<PrintDlg>("", parameters);   // invoke print dialog with our output
 
         }
@@ -368,8 +374,6 @@ namespace Notes.Client.Menus
         /// <param name="emailaddr">Where to mail it</param>
         private void DoExport(bool isHtml, bool isCollapsible, bool isEmail = false, string emailaddr = "")
         {
-            var parameters = new ModalParameters();
-
             ExportViewModel vm = new()
             {
                 ArchiveNumber = Model.ArcId,
@@ -383,8 +387,11 @@ namespace Notes.Client.Menus
             };
             currNote = 1;
 
-            parameters.Add("Model", vm);
-            parameters.Add("FileName", Model.NoteFile.NoteFileName + (isHtml ? ".html" : ".txt"));
+            ModalParameters parameters = new()
+            {
+                { "Model", vm },
+                { "FileName", Model.NoteFile.NoteFileName + (isHtml ? ".html" : ".txt") }
+            };
 
             Modal.Show<ExportUtil1>("", parameters);
 
@@ -404,8 +411,6 @@ namespace Notes.Client.Menus
         /// <param name="ext">if set to <c>true</c> [ext].</param>
         private void DoJson(bool ext = false)
         {
-            var parameters = new ModalParameters();
-            
             ExportViewModel vm = new()
             {
                 ArchiveNumber = Model.ArcId,
@@ -414,7 +419,10 @@ namespace Notes.Client.Menus
                 isCollapsible = ext
             };
 
-            parameters.Add("model", vm);
+            ModalParameters parameters = new()
+            {
+                { "model", vm }
+            };
 
             Modal.Show<ExportJson>("", parameters);
           
@@ -427,7 +435,7 @@ namespace Notes.Client.Menus
         {
             
             string emailaddr;
-            var parameters = new ModalParameters();
+            ModalParameters parameters = new ();
             var formModal = Modal.Show<Email>("", parameters);
             var result = await formModal.Result;
             if (result.Cancelled)
