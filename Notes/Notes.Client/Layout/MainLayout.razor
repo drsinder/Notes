@@ -14,10 +14,18 @@
                 <Notes.Client.Menus.MainMenu/>
             }
         </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+        @if (Navigation.Uri.EndsWith("/home"))
+        {
+            <article class="content px-4 index-background-class">
+                @Body
+            </article>
+        }
+        else
+        {
+            <article class="content px-4">
+                @Body
+            </article>
+        }
     </main>
 </div>
 

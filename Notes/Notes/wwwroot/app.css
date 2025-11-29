@@ -109,6 +109,27 @@ button {
         color: black;
     }
 
+#index-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -100;
+}
+
+    #index-bg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        min-width: 50%;
+        min-height: 50%;
+    }
+
+
 .index-background-class {
     background-image: url("https://www.drsinder.com/NotesStuff/Notes2022/Images/index-bgnd.jpg");
     min-height: 100%;

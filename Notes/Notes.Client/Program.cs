@@ -27,9 +27,10 @@ builder.Services.AddSyncfusionBlazor();   // options => { options.IgnoreScriptIs
 
 
 // Add my gRPC service so it can be injected.
+
 builder.Services.AddSingleton(services =>
 {
-    Globals.AppVirtDir = ""; // preset for localhost
+    //Globals.AppVirtDir = ""; // preset for localhost
     string baseUri = services.GetRequiredService<NavigationManager>().BaseUri;
     string[] parts = baseUri.Split('/');
     if (!baseUri.Contains("localhost")) // not localhost - assume it is in a virtual directory ONLY ONE LEVEL DOWN from root of site
@@ -46,7 +47,14 @@ builder.Services.AddSingleton(services =>
     return Client;
 });
 
-
+/*
+builder.Services.AddGrpcClient<NotesServer.NotesServerClient>(options =>
+    {
+        options.Address = new Uri("https://localhost:7093");
+    })
+    .ConfigurePrimaryHttpMessageHandler(
+        () => new GrpcWebHandler(new HttpClientHandler()));
+*/
 
 await builder.Build().RunAsync();
 

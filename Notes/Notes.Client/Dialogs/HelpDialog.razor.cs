@@ -26,11 +26,7 @@ namespace Notes.Client.Dialogs
         /// Get some simple stuff from server
         /// </summary>
         /// <returns>A Task representing the asynchronous operation.</returns>
-        protected override async Task OnInitializedAsync()
-        {
-            text = (await Client.GetTextFileAsync(new AString()
-            { Val = "helpdialog.html" })).Val;
-        }
+       
 
         /// <summary>
         /// Cancels this instance.
