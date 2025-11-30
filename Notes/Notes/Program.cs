@@ -140,7 +140,7 @@ Globals.HangfireAddress = "/hangfire";
 
 app.UseHangfireDashboard(Globals.HangfireAddress, new DashboardOptions
 {
-    Authorization = new[] { new MyAuthorizationFilter() }
+    Authorization = [new MyAuthorizationFilter()]
 });
 
 app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });

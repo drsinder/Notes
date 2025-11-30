@@ -24,33 +24,33 @@ namespace Notes.Client.Pages
         /// Gets or sets the item.
         /// </summary>
         /// <value>The item.</value>
-        private GNotefile item { get; set; }
+        private GNotefile? item { get; set; }
 
 
         /// <summary>
         /// Gets or sets the file list.
         /// </summary>
         /// <value>The file list.</value>
-        private List<GNotefile> fileList { get; set; }
+        private List<GNotefile>? fileList { get; set; }
 
         /// <summary>
         /// List of files ordered by title
         /// </summary>
         /// <value>The name list.</value>
-        private GNotefileList nameList { get; set; }
+        private GNotefileList? nameList { get; set; }
 
         /// <summary>
         /// Important file list
         /// </summary>
         /// <value>The impfile list.</value>
-        private GNotefileList impfileList { get; set; }
+        private GNotefileList? impfileList { get; set; }
 
         /// <summary>
         /// History file list
         /// </summary>
         /// <value>The histfile list.</value>
-        private GNotefileList histfileList { get; set; }
-        private System.Timers.Timer timer2 { get; set; }
+        private GNotefileList? histfileList { get; set; }
+        private System.Timers.Timer? timer2 { get; set; }
 
         /// <summary>
         /// The ticks
@@ -65,9 +65,9 @@ namespace Notes.Client.Pages
         protected void TimerTick2(Object source, ElapsedEventArgs e)
         {
             if (++ticks == 10)
-                timer2.Interval = 5000;
+                timer2?.Interval = 5000;
             else if (++ticks == 60)
-                timer2.Interval = 15000;
+                timer2?.Interval = 15000;
 
             //Globals.LoginDisplay?.Reload();
             //Globals.NavMenu?.Reload().GetAwaiter();
@@ -113,9 +113,9 @@ namespace Notes.Client.Pages
         protected override async Task OnParametersSetAsync()
        //protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            bool needStateChange = false;
-            if (serverTime is null)
-                needStateChange = true;
+//            bool needStateChange = false;
+//            if (serverTime is null)
+//                needStateChange = true;
 
             fileList = new List<GNotefile>();
             nameList = new GNotefileList();
@@ -181,7 +181,7 @@ namespace Notes.Client.Pages
 
             try
             {
-                for (int i = 0; i < fileList.Count; i++)
+                for (int i = 0; i < fileList?.Count; i++)
                 {
                     item = fileList[i];
                     if (value == item.NoteFileName)

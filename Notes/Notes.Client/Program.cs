@@ -58,33 +58,33 @@ builder.Services.AddGrpcClient<NotesServer.NotesServerClient>(options =>
 
 await builder.Build().RunAsync();
 
-/// <summary>
-/// A delegating handler that adds a subdirectory to the URI of gRPC requests.
-/// </summary>
-public class SubdirectoryHandler : DelegatingHandler
+namespace Notes.Client
 {
-    private readonly string _subdirectory;
-
-    public SubdirectoryHandler(HttpMessageHandler innerHandler, string subdirectory)
-        : base(innerHandler)
+    /// <summary>
+    /// A delegating handler that adds a subdirectory to the URI of gRPC requests.
+    /// </summary>
+    public class SubdirectoryHandler : DelegatingHandler
     {
-        _subdirectory = subdirectory;
+        private readonly string _subdirectory;
+
+        public SubdirectoryHandler(HttpMessageHandler innerHandler, string subdirectory)
+            : base(innerHandler)
+        {
+            _subdirectory = subdirectory;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            Uri? old = request.RequestUri ?? throw new InvalidOperationException("RequestUri cannot be null.");
+            string url = $"{old.Scheme}://{old.Host}:{old.Port}";
+            url += $"{_subdirectory}{old.AbsolutePath}";
+            request.RequestUri = new Uri(url, UriKind.Absolute);
+
+            Console.WriteLine(request.RequestUri);
+
+            var response = base.SendAsync(request, cancellationToken);
+
+            return response;
+        }
     }
-
-    
-    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
-    {
-        Uri? old = request.RequestUri;
-
-        string? url = $"{old.Scheme}://{old.Host}:{old.Port}";
-        url += $"{_subdirectory}{request.RequestUri.AbsolutePath}";
-        request.RequestUri = new Uri(url, UriKind.Absolute);
-
-        Console.WriteLine(request.RequestUri);
-
-        var response = base.SendAsync(request, cancellationToken);
-
-        return response;
-    }
-    
 }

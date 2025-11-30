@@ -62,10 +62,10 @@ namespace Notes.Manager
             int numberArchives = noteFile.NumberArchives;
             long counter = 0;
             bool isResp = false;
-            char[] spaceTrim = new char[] { ' ' };
-            char[] slash = new char[] { '/' };
-            char[] colon = new char[] { ':' };
-            char[] dash = new char[] { '-' };
+            char[] spaceTrim = [' '];
+            char[] slash = ['/'];
+            char[] colon = [':'];
+            char[] dash = ['-'];
 
             string platoBaseYear = "";
 
@@ -121,8 +121,6 @@ namespace Notes.Manager
 
                     if (filetype == 0)  // Process for NovaNET output
                     {
-
-#pragma warning disable CS8604 // Possible null reference argument.
                         line = await CheckFf(line, file);
                         if (line.Length > 52)  // Possible Note Header
                         {
@@ -666,7 +664,6 @@ namespace Notes.Manager
         }
     }
 
-#pragma warning restore CS8604 // Possible null reference argument.
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 

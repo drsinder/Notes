@@ -144,9 +144,11 @@ namespace Notes.Services
                 RolesList = new CheckedUserList()
             };
             string Id = request.Subject;
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             ApplicationUser user = await _userManager.FindByIdAsync(Id);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
-            model.UserData = user.GetGAppUser();
+            model.UserData = user?.GetGAppUser();
 
             var allRoles = _roleManager.Roles.ToList();
 
@@ -182,7 +184,9 @@ namespace Notes.Services
         [Authorize(Roles = "Admin")]
         public override async Task<NoRequest> UpdateUserRoles(EditUserViewModel model, ServerCallContext context)
         {
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             ApplicationUser user = await _userManager.FindByIdAsync(model.UserData.Id);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             var myRoles = await _userManager.GetRolesAsync(user);
             foreach (CheckedUser item in model.RolesList.List)
             {
@@ -213,7 +217,7 @@ namespace Notes.Services
         {
             var user = context.GetHttpContext().User;
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
-            ApplicationUser appUser = await _userManager.FindByIdAsync(user.FindFirst(ClaimTypes.NameIdentifier).Value);
+            ApplicationUser? appUser = await _userManager.FindByIdAsync(user.FindFirst(ClaimTypes.NameIdentifier).Value);
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
             return appUser;
         }
@@ -716,7 +720,7 @@ namespace Notes.Services
             if (appUser.Id != request.Id)   // can onlt update self
                 return request;
 
-            ApplicationUser appUserBase = await _userManager.FindByIdAsync(request.Id);
+            ApplicationUser? appUserBase = await _userManager.FindByIdAsync(request.Id);
             ApplicationUser merged = ApplicationUser.MergeApplicationUser(request, appUserBase);
 
             await _userManager.UpdateAsync(merged);

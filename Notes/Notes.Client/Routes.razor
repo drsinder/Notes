@@ -1,6 +1,9 @@
 ﻿@using Blazored.Modal
 @using Blazored.Modal.Services
-<Blazored.Modal.CascadingBlazoredModal HideCloseButton="true" DisableBackgroundCancel="true" HideHeader="true" Class="blazored-custom-modal">
+<Blazored.Modal.CascadingBlazoredModal HideCloseButton="true"
+                                       DisableBackgroundCancel="true"
+                                       HideHeader="true"
+                                       Class="blazored-custom-modal">
     <Router AppAssembly="typeof(Program).Assembly" NotFoundPage="typeof(Pages.NotFound)">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">

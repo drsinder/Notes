@@ -433,9 +433,8 @@ namespace Notes.Client.Menus
         /// </summary>
         private async Task DoEmail()
         {
-            
-            string emailaddr;
-            ModalParameters parameters = new ();
+            string? emailaddr;
+            ModalParameters parameters = [];
             var formModal = Modal.Show<Email>("", parameters);
             var result = await formModal.Result;
             if (result.Cancelled)
@@ -448,16 +447,18 @@ namespace Notes.Client.Menus
            
         }
 
-        ///// <summary>
-        ///// Shows the message.
-        ///// </summary>
-        ///// <param name="message">The message.</param>
-        //private void ShowMessage(string message)
-        //{
-        //    var parameters = new ModalParameters();
-        //    parameters.Add("MessageInput", message);
-        //    Modal.Show<MessageBox>("", parameters);
-        //}
+        /// <summary>
+        /// Shows the message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        private void ShowMessage(string message)
+        {
+            ModalParameters parameters = new ModalParameters
+            {
+                { "MessageInput", message }
+            };
+            Modal.Show<MessageBox>("", parameters);
+        }
 
     }
 }
