@@ -42,6 +42,15 @@ namespace Notes.Manager
         //    return await Import(_db, file, myNotesFile);
         //}
 
+        private enum FileType
+        {
+            NovaNET,
+            Notes31,
+            PlatoIV
+        }
+
+        private FileType filetype;
+
         /// <summary>
         /// Import the file stream from a server file or from a file uploaded from client
         /// </summary>
@@ -76,7 +85,7 @@ namespace Notes.Manager
             NoteHeader makeHeader = null;
             int basenotes = 0;
 
-            int filetype = 0;  // 0= NovaNET | 1 = Notes 3.1 | 2 = plato iv group notes -- we can process three formats
+            filetype = FileType.NovaNET;  // 0= NovaNET | 1 = Notes 3.1 | 2 = plato iv group notes -- we can process three formats
 
             // Read the file and process it line by line.
             // we first determine the file type
@@ -94,13 +103,13 @@ namespace Notes.Manager
                             || line.StartsWith("2022 NoteFile ")
                             || line.StartsWith("2026 NoteFile "))  // By this we know it came from Notes Web edition
                         {
-                            filetype = 1;   // Notes 3.1
+                            filetype = FileType.Notes31;   // Notes 3.1
                             await file.ReadLineAsync();
                             line = await file.ReadLineAsync();
                         }
                         else if (line.StartsWith("+++ plato iv group notes +++"))
                         {
-                            filetype = 2;   // plato iv group notes
+                            filetype = FileType.PlatoIV;   // plato iv group notes
                             await file.ReadLineAsync();
                             await file.ReadLineAsync();
                             await file.ReadLineAsync();
@@ -119,7 +128,7 @@ namespace Notes.Manager
                         }   // else we assume it's novanet format = 0
                     }
 
-                    if (filetype == 0)  // Process for NovaNET output
+                    if (filetype == FileType.NovaNET)  // Process for NovaNET output
                     {
                         line = await CheckFf(line, file);
                         if (line.Length > 52)  // Possible Note Header
@@ -250,7 +259,7 @@ namespace Notes.Manager
                         counter++;
                     }  // end NovaNET
 
-                    else if (filetype == 1)  // Process from Notes 3.1 export as text - NOT TESTED IN A LONG TIME!!!
+                    else if (filetype == FileType.Notes31)  // Process from Notes 3.1 export as text - NOT TESTED IN A LONG TIME!!!
                     {
                         if (line.StartsWith("Note: "))  // possible note header
                         {
@@ -359,7 +368,7 @@ namespace Notes.Manager
                         counter++;
                     }  // end Notes 3.1
 
-                    else if (filetype == 2)  // PLATO iv group notes
+                    else if (filetype == FileType.PlatoIV)  // PLATO iv group notes
                     {
 
                         int xflag = 0;
@@ -487,7 +496,7 @@ namespace Notes.Manager
 
                 // Cleanup after all lines in input file processed - YUCK!!
 
-                if (filetype == 0)  // NovaNET
+                if (filetype == FileType.NovaNET)  // NovaNET
                 {
                     if (newContent is not null)  // have a note to write
                     {
@@ -518,7 +527,7 @@ namespace Notes.Manager
                         }
                     }
                 }
-                else if (filetype == 1)  // Notes 3.1
+                else if (filetype == FileType.Notes31)  // Notes 3.1
                 {
                     if (newContent is not null)  // have a note to write
                     {
@@ -550,7 +559,7 @@ namespace Notes.Manager
                         }
                     }
                 }
-                else if (filetype == 2)  // PLATO
+                else if (filetype == FileType.PlatoIV)  // PLATO iv
                 {
                     if (newContent is not null)  // have a note to write
                     {
