@@ -1,9 +1,9 @@
 using Blazored.Modal;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using Newtonsoft.Json;
 using Notes.Protos;
 using System.Text;
+using Google.Protobuf;
 
 namespace Notes.Client.Dialogs
 {
@@ -52,7 +52,9 @@ namespace Notes.Client.Dialogs
             wrapper.NoteFile = await Client.GetNoteFileAsync(new NoteFileRequest() { NoteFileId = model.NoteFileId }, myState.AuthHeader);
             wrapper.NoteHeaders = await Client.GetNoteHeadersAsync(model, myState.AuthHeader);
 
-            stringContent = new StringContent(JsonConvert.SerializeObject(wrapper, Newtonsoft.Json.Formatting.Indented), Encoding.UTF8, "application/json");
+            // Use protobuf JsonFormatter for correct protobuf serialization
+            var json = JsonFormatter.Default.Format(wrapper);
+            stringContent = new StringContent(json, Encoding.UTF8, "application/json");
 
             Stream ms0 = await stringContent.ReadAsStreamAsync();
             MemoryStream ms = new MemoryStream();

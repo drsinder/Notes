@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Notes.Protos;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json;
+using Google.Protobuf;
 
 namespace Notes.Client.Dialogs
 {
@@ -84,7 +82,10 @@ namespace Notes.Client.Dialogs
 
             JsonExport stuff;
             stuff = await Client.GetExportJsonAsync(new ExportRequest() { FileId = nfid, ArcId = 0, NestResponses = true }, myState.AuthHeader);
-            stringContent = new StringContent(JsonConvert.SerializeObject(stuff, Newtonsoft.Json.Formatting.Indented), Encoding.UTF8, "application/json");
+
+            // Use protobuf JsonFormatter for correct protobuf serialization
+            var json = JsonFormatter.Default.Format(stuff);
+            stringContent = new StringContent(json, Encoding.UTF8, "application/json");
 
             Stream ms0 = await stringContent.ReadAsStreamAsync();
             MemoryStream ms = new MemoryStream();
