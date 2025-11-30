@@ -1,4 +1,5 @@
 ﻿@page "/home"
+
 @using System.Timers
 @using Grpc.Net.Client
 @using Microsoft.AspNetCore.Authorization
@@ -7,7 +8,6 @@
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.DropDowns
 
-@inject NotesServer.NotesServerClient NotesClient
 @inject CookieStateAgent myState
 @inject NavigationManager Navigation
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage

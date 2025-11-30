@@ -40,7 +40,6 @@ builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
            .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
 }));
 
-
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents()
@@ -133,6 +132,41 @@ Globals.SendGridName = builder.Configuration["SendGridName"];
 Globals.ImportRoot = builder.Configuration["ImportRoot"];
 Globals.CookieName = builder.Configuration["CookieName"];
 Globals.ImportMailInterval = int.Parse(builder.Configuration["ImportMailInterval"]);
+Globals.AppUrl = (builder.Configuration["AppUrl"]);
+
+
+// Add my gRPC service so it can be injected.
+
+builder.Services.AddSingleton(services =>
+{
+    string AppVirtDir = ""; // preset for localhost / Development
+    string baseUri = Globals.AppUrl;  //services.GetRequiredService<NavigationManager>().BaseUri;
+    string[] parts = baseUri.Split('/');
+    if (!baseUri.Contains("localhost")) // not localhost - assume it is in a virtual directory ONLY ONE LEVEL DOWN from root of site
+    {
+        AppVirtDir = "/" + parts[^2];
+    }
+
+    SubdirectoryHandler handler = new SubdirectoryHandler(new HttpClientHandler(), AppVirtDir);
+
+    var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, handler))
+    {
+        BaseAddress = new Uri(baseUri)
+    };
+
+    var channel = GrpcChannel.ForAddress(httpClient.BaseAddress, 
+        new GrpcChannelOptions { 
+            HttpClient = httpClient, 
+            MaxReceiveMessageSize = 50 * 1024 * 1024,
+            MaxSendMessageSize = 50 * 1024 * 1024
+        });
+
+    NotesServer.NotesServerClient Client = new(channel);
+    return Client;
+});
+
+
+
 
 var app = builder.Build();
 
@@ -143,7 +177,7 @@ app.UseHangfireDashboard(Globals.HangfireAddress, new DashboardOptions
     Authorization = [new MyAuthorizationFilter()]
 });
 
-app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+app.UseGrpcWeb(options: new GrpcWebOptions { DefaultEnabled = true });
 app.UseCors();
 
 

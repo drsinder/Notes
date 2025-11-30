@@ -30,18 +30,27 @@ builder.Services.AddSyncfusionBlazor();   // options => { options.IgnoreScriptIs
 
 builder.Services.AddSingleton(services =>
 {
-    //Globals.AppVirtDir = ""; // preset for localhost
+    string AppVirtDir = ""; // preset for localhost / Development
     string baseUri = services.GetRequiredService<NavigationManager>().BaseUri;
     string[] parts = baseUri.Split('/');
     if (!baseUri.Contains("localhost")) // not localhost - assume it is in a virtual directory ONLY ONE LEVEL DOWN from root of site
     {
-        Globals.AppVirtDir = "/" + parts[^2];
+        AppVirtDir = "/" + parts[^2];
     }
 
-    SubdirectoryHandler? handler = new(new HttpClientHandler(), Globals.AppVirtDir);
-    GrpcChannel? channel = GrpcChannel.ForAddress(baseUri,
-        new GrpcChannelOptions
-        { HttpHandler = new GrpcWebHandler(handler), MaxReceiveMessageSize = 50 * 1024 * 1024 });   // up to 50MB
+    SubdirectoryHandler handler = new SubdirectoryHandler(new HttpClientHandler(), AppVirtDir);
+
+    var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, handler))
+    {
+        BaseAddress = new Uri(baseUri)
+    };
+
+    var channel = GrpcChannel.ForAddress(httpClient.BaseAddress, 
+        new GrpcChannelOptions { 
+            HttpClient = httpClient, 
+            MaxReceiveMessageSize = 50 * 1024 * 1024,
+            MaxSendMessageSize = 50 * 1024 * 1024
+        });
 
     NotesServer.NotesServerClient Client = new(channel);
     return Client;

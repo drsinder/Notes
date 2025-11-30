@@ -1,5 +1,9 @@
-﻿using Notes.Client.Layout;
+﻿using Grpc.Net.Client;
+using Grpc.Net.Client.Web;
+using Microsoft.AspNetCore.Components;
+using Notes.Client.Layout;
 using Notes.Client.Menus;
+using Notes.Protos;
 using System.Text;
 
 namespace Notes.Client
@@ -128,12 +132,36 @@ namespace Notes.Client
 
         public static string CookieName { get; set; } = "notesfoodie2026";
 
+        public static string AppUrl { get; set; } = "https://localhost:7093";
+
         public static string ValidIssuerURL { get; set; } = "https://localhost:7093";
         public static string ValidAudienceURL { get; set; } = "https://localhost:7093";
 
         public static string SecretKey { get; set; } = "%TrwmbxYunsJWT8972jbgsfdh02h4gHTwwmkOOmNVDRNBSTmmdshgsynsnb%$$@2mNggsshh&";
 
         public static MainMenu? NavMenu = null;
+
+        public static NotesServer.NotesServerClient? NotesClient { get; set; }
+
+        public static NotesServer.NotesServerClient GetNotesClient(NavigationManager serviceprov)
+        {
+            string AppVirtDir = ""; // preset for localhost
+            string baseUri = serviceprov.BaseUri;
+            string[] parts = baseUri.Split('/');
+            if (!baseUri.Contains("localhost")) // not localhost - assume it is in a virtual directory ONLY ONE LEVEL DOWN from root of site
+                AppVirtDir = "/" + parts[^2];
+
+
+            return new NotesServer.NotesServerClient(
+                GrpcChannel.ForAddress(baseUri,
+                new GrpcChannelOptions
+                {
+                    HttpHandler = new GrpcWebHandler(new SubdirectoryHandler(new HttpClientHandler(), AppVirtDir)),
+                    MaxReceiveMessageSize = 50 * 1024 * 1024,
+                    MaxSendMessageSize = 50 * 1024 * 1024
+                })
+                );
+        }
 
     }
 }

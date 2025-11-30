@@ -126,9 +126,9 @@ namespace Notes.Client.Pages
         /// <summary>
         /// Initializes a new instance of the <see cref="NoteIndex"/> class.
         /// </summary>
-        public NoteIndex()
-        {
-        }
+       // public NoteIndex()
+       // {
+       // }
 
         //protected override void OnParametersSet()
         //{

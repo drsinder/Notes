@@ -1,3 +1,4 @@
+using Grpc.Net.Client;
 using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 using Syncfusion.Blazor.DropDowns;
@@ -7,7 +8,11 @@ namespace Notes.Client.Pages
 {
     public partial class HomeIndex
     {
+//        [Inject]
+//        GrpcChannel Channel { get; set; }
 
+        [Inject] 
+        NotesServer.NotesServerClient NotesClient { get; set; } = null!;
 
         protected ServerTime? serverTime { get; set; }
 
@@ -121,6 +126,8 @@ namespace Notes.Client.Pages
             nameList = new GNotefileList();
             histfileList = new GNotefileList();
             impfileList = new GNotefileList();
+
+         //   NotesClient = Globals.GetNotesClient(Navigation);
 
             serverTime = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
 
