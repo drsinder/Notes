@@ -166,7 +166,7 @@ namespace Notes.Client.Pages
 
                     // handle special important and history files
                     string fname = work.NoteFileName;
-                    if (fname == "Opbnotes" || fname == "Gnotes")
+                    if (fname == "Opbnotes" || fname == "Gnotes" || fname.StartsWith("sysnotes"))
                         histfileList.List.Add(work);
 
                     if (fname == "announce" || fname == "pbnotes" || fname == "noteshelp")
