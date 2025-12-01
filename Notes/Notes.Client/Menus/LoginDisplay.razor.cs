@@ -44,7 +44,7 @@ namespace Notes.Client.Menus
         /// </summary>
         private void GotoHome()
         {
-            Navigation.NavigateTo("home", false);
+            Navigation.NavigateTo("", false);
         }
 
         /// <summary>
