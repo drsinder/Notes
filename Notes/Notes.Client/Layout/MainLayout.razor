@@ -9,12 +9,12 @@
     
     <main>
         <div class="top-row px-4 auth">
-            @if (!Navigation.Uri.EndsWith("/") && menuVisible)
+            @if (menuVisible)
             { 
                 <Notes.Client.Menus.MainMenu/>
             }
         </div>
-        @if (!Navigation.Uri.EndsWith("/home"))
+        @if (!Navigation.Uri.EndsWith("/"))
         {
             <article class="content px-4">
                 @Body

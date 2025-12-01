@@ -188,9 +188,9 @@ namespace Notes.Client.Menus
                         Navigation.NavigateTo("preferences");
                         break;
 
-                    //case "Hangfire":
-                    //    Navigation.NavigateTo(Globals.EditUserVModel.HangfireLoc, true);
-                    //    break;
+                    case "Hangfire":
+                        Navigation.NavigateTo("hangfire", true);
+                        break;
 
                     case "Roles":
                         Navigation.NavigateTo("admin/editroles");
@@ -276,9 +276,9 @@ namespace Notes.Client.Menus
                 item.Items = new List<MenuItem>
             {
                 new () { Id = "NoteFiles", Text = "NoteFiles" },
-                new () { Id = "Roles", Text = "Roles" }
+                new () { Id = "Roles", Text = "Roles" },
                 //new () { Id = "Linked", Text = "Linked" }
-                //new () { Id = "Hangfire", Text = "Hangfire" }
+                new () { Id = "Hangfire", Text = "Hangfire" }
             };
 
                 menuItemsTop.Add(item);
