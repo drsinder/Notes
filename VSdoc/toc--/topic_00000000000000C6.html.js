@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['304',"Notes.Client.Menus Namespace","topic_00000000000000BC.html"],['305',"ListMenu Class","topic_00000000000000BD.html"],['306',"ListMenu Constructor","topic_00000000000000C6.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['304',"Notes.Client.Menus Namespace","topic_00000000000000BC.html"],['305',"ListMenu Class","topic_00000000000000BD.html"],['306',"ListMenu Constructor","topic_00000000000000C6.html"]];

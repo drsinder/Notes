@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['87',"Notes.Client.Dialogs Namespace","topic_000000000000001C.html"],['286',"UserEdit Class","topic_00000000000000B0.html"],['287',"UserEdit Constructor","topic_00000000000000B4.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['87',"Notes.Client.Dialogs Namespace","topic_000000000000001C.html"],['286',"UserEdit Class","topic_00000000000000B0.html"],['287',"UserEdit Constructor","topic_00000000000000B4.html"]];

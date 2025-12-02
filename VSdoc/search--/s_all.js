@@ -1335,4 +1335,4 @@ _s['1333']=["topic_0000000000000314_methods--.html","MyAuthorizationFilter Metho
 _s['1334']=["topic_0000000000000314_props--.html","MyAuthorizationFilter Properties",""];
 _s['1335']=["topic_0000000000000314_vars--.html","MyAuthorizationFilter Fields",""];
 _s['1336']=["topic_0000000000000315.html","MyAuthorizationFilter.Authorize Method",""];
-_s['1337']=["topic_0000000000000316.html","SOLUTION-WIDE PROPERTIES Reference ",""];
+_s['1337']=["topic_0000000000000316.html","Notes Reference ","Notes"];

@@ -7,7 +7,7 @@ namespace Notes.Entities
     /// <summary>
     /// This class defines a table in the database.
     /// Each NoteContent object is associated with one NoteHeader
-    /// It contains the "Body" of the note.
+    /// It contains the "Body" text of the note.
     /// </summary>
     [DataContract]
     public class NoteContent

@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['54',"Notes.Client.Comp Namespace","topic_0000000000000006.html"],['55',"Clock Class","topic_0000000000000007.html"],['58',"Methods","topic_0000000000000007_methods--.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['54',"Notes.Client.Comp Namespace","topic_0000000000000006.html"],['55',"Clock Class","topic_0000000000000007.html"],['58',"Methods","topic_0000000000000007_methods--.html"]];

@@ -5,8 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Notes.Entities
 {
     /// <summary>
-    /// Class Mark.
+    /// Represents a mark associated with a user and a specific note within an notefile.
     /// </summary>
+    /// <remarks>The Mark class is typically used to identify notes or responses
+    /// within note files, supporting features such as Output.  
+    /// Each Mark instance is uniquely identified by a combination of user, note file, archive, and ordinal values. This
+    /// class is commonly used in scenarios where user interactions with notes need to be recorded or
+    /// Output.</remarks>
     public class Mark
     {
         /// <summary>

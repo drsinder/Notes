@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['570',"Notes.Client.Shared Namespace","topic_0000000000000191.html"],['571',"CookieStateAgent Class","topic_0000000000000192.html"],['572',"Properties","topic_0000000000000192_props--.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['570',"Notes.Client.Shared Namespace","topic_0000000000000191.html"],['571',"CookieStateAgent Class","topic_0000000000000192.html"],['572',"Properties","topic_0000000000000192_props--.html"]];
