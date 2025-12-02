@@ -635,11 +635,15 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Updates the access item.
+        /// Updates the access permissions for a note file if the current user has edit access.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteAccess.</returns>
+        /// <remarks>This method requires the caller to be authorized. The update is performed only if the
+        /// current user has edit access to the specified note file. No changes are made if edit access is not
+        /// granted.</remarks>
+        /// <param name="request">The access item containing the updated permissions and identifiers for the note file.</param>
+        /// <param name="context">The server call context that provides information about the current gRPC request and user.</param>
+        /// <returns>The updated access item reflecting the requested changes. If the user does not have edit access, the item is
+        /// returned unchanged.</returns>
         [Authorize]
         public override async Task<GNoteAccess> UpdateAccessItem(GNoteAccess request, ServerCallContext context)
         {
@@ -656,11 +660,13 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Deletes the access item.
+        /// Deletes the specified access item for a note if the current user has edit permissions.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>The access item is only deleted if the current user has edit access to the note. If
+        /// the user does not have sufficient permissions, no changes are made.</remarks>
+        /// <param name="request">The access item to delete, containing information about the note and associated access rights.</param>
+        /// <param name="context">The server call context that provides information about the current request and user.</param>
+        /// <returns>A NoRequest object indicating that the operation has completed.</returns>
         [Authorize]
         public override async Task<NoRequest> DeleteAccessItem(GNoteAccess request, ServerCallContext context)
         {
@@ -677,11 +683,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Adds an access item.
+        /// Adds a new access item for a note if the current user has edit permissions.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteAccess.</returns>
+        /// <remarks>This method requires the caller to have edit access to the specified note. If edit
+        /// access is not granted, no changes are made to the database and the request is returned unchanged.</remarks>
+        /// <param name="request">The access item to add, containing note and archive identifiers and access details.</param>
+        /// <param name="context">The server call context that provides information about the current request and user.</param>
+        /// <returns>The access item that was requested to be added. If the user does not have edit access, the item is not
+        /// added.</returns>
         [Authorize]
         public override async Task<GNoteAccess> AddAccessItem(GNoteAccess request, ServerCallContext context)
         {
@@ -697,11 +706,13 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the user data.
+        /// Retrieves user data for the authenticated user associated with the current server call context.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GAppUser.</returns>
+        /// <remarks>This method requires the caller to be authenticated. If the caller is not
+        /// authenticated, an authorization error will be returned.</remarks>
+        /// <param name="request">A request object containing no parameters. This value is ignored.</param>
+        /// <param name="context">The context for the current server call, providing access to user identity and request metadata.</param>
+        /// <returns>A <see cref="GAppUser"/> instance containing information about the authenticated user.</returns>
         [Authorize]
         public override async Task<GAppUser> GetUserData(NoRequest request, ServerCallContext context)
         {
@@ -710,11 +721,16 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Updates the user data.
+        /// Updates the user data for the authenticated user based on the provided information.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GAppUser.</returns>
+        /// <remarks>This method only allows users to update their own data. Attempts to update data for
+        /// other users will be ignored. The operation requires authentication and is subject to authorization
+        /// policies.</remarks>
+        /// <param name="request">An object containing the updated user data. Only fields corresponding to the authenticated user will be
+        /// applied.</param>
+        /// <param name="context">The server call context that provides information about the current request and authenticated user.</param>
+        /// <returns>A <see cref="GAppUser"/> object containing the user data after the update operation. If the request does not
+        /// pertain to the authenticated user, returns the original request object without changes.</returns>
         [Authorize]
         public override async Task<GAppUser> UpdateUserData(GAppUser request, ServerCallContext context)
         {
@@ -732,11 +748,15 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the versions.
+        /// Retrieves a list of all available versions of a note that match the specified criteria.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteHeaderList.</returns>
+        /// <remarks>The caller must have read access to the specified note file and archive to receive
+        /// results. Only note versions with a non-zero version number are included in the response.</remarks>
+        /// <param name="request">The request containing the identifiers and ordinals used to filter note versions. Must specify valid values
+        /// for FileId, ArcId, NoteOrdinal, and ResponseOrdinal.</param>
+        /// <param name="context">The server call context for the current gRPC request. Used to identify the authenticated user.</param>
+        /// <returns>A GNoteHeaderList containing the headers of all note versions that match the request parameters. Returns an
+        /// empty list if the user does not have read access or if no matching versions are found.</returns>
         [Authorize]
         public override async Task<GNoteHeaderList> GetVersions(GetVersionsRequest request, ServerCallContext context)
         {
@@ -756,11 +776,15 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the sequencer list.
+        /// Retrieves a list of sequencers owned by the current user for which read access is granted.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GSequencerList.</returns>
+        /// <remarks>Only sequencers for which the user currently has read access are included in the
+        /// returned list. Sequencers are ordered by their ordinal value.</remarks>
+        /// <param name="request">A request object containing no parameters. This value is ignored.</param>
+        /// <param name="context">The server call context that provides information about the current RPC call, including user authentication
+        /// details.</param>
+        /// <returns>A <see cref="GSequencerList"/> containing sequencers owned by the user and accessible for reading. The list
+        /// will be empty if no accessible sequencers are found.</returns>
         [Authorize]
         public override async Task<GSequencerList> GetSequencer(NoRequest request, ServerCallContext context)
         {
@@ -784,11 +808,16 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Creates the sequencer item.
+        /// Creates a new sequencer entry for the authenticated user using the specified check model.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>This method requires the caller to be authenticated. The new sequencer entry is
+        /// created with an incremented ordinal value and is marked as active. The entry is associated with the note
+        /// file specified in <paramref name="request"/> and the current user.</remarks>
+        /// <param name="request">The check model containing information used to initialize the sequencer entry. The <see
+        /// cref="SCheckModel.FileId"/> property must specify the note file to associate with the sequencer.</param>
+        /// <param name="context">The server call context that provides information about the current gRPC call, including authentication
+        /// details.</param>
+        /// <returns>A <see cref="NoRequest"/> instance indicating that the operation completed successfully.</returns>
         [Authorize]
         public override async Task<NoRequest> CreateSequencer(SCheckModel request, ServerCallContext context)
         {
@@ -823,11 +852,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Deletes the sequencer item.
+        /// Deletes the sequencer associated with the specified note file for the current user.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>This method requires the caller to be authorized. If the sequencer does not exist for
+        /// the given note file and user, no changes are made.</remarks>
+        /// <param name="request">The model containing the identifier of the note file whose sequencer is to be deleted.</param>
+        /// <param name="context">The server call context for the current request, used to identify the authenticated user.</param>
+        /// <returns>A <see cref="NoRequest"/> instance indicating the completion of the operation. If no sequencer is found for
+        /// the specified note file and user, the operation completes without error.</returns>
         [Authorize]
         public override async Task<NoRequest> DeleteSequencer(SCheckModel request, ServerCallContext context)
         {
@@ -846,11 +878,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Updates the sequencer item ordinal.
+        /// Updates the ordinal and last modification time of a sequencer for the specified user and note file.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>Requires authorization. The sequencer is identified by the combination of user ID and
+        /// note file ID provided in the request. If no matching sequencer is found, an exception will be
+        /// thrown.</remarks>
+        /// <param name="request">The sequencer update request containing the user ID, note file ID, new ordinal, and last modification time.</param>
+        /// <param name="context">The server call context for the current gRPC request.</param>
+        /// <returns>A <see cref="NoRequest"/> instance indicating that the update operation has completed.</returns>
         [Authorize]
         public override async Task<NoRequest> UpdateSequencerOrdinal(GSequencer request, ServerCallContext context)
         {
@@ -866,11 +901,16 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Updates the sequencer item.
+        /// Updates the sequencer state for the specified user and note file, setting its active status and relevant
+        /// timestamps.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>If the sequencer is activated, its start time is set to the current UTC time. If
+        /// deactivated, the last time is updated to match the previous start time. This method requires authorization
+        /// and persists changes to the database.</remarks>
+        /// <param name="request">The sequencer update request containing the user ID, note file ID, and the desired active status.</param>
+        /// <param name="context">The server call context for the current gRPC request.</param>
+        /// <returns>A NoRequest instance indicating that the operation completed successfully and no additional data is
+        /// returned.</returns>
         [Authorize]
         public override async Task<NoRequest> UpdateSequencer(GSequencer request, ServerCallContext context)
         {
@@ -893,11 +933,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the note file.
+        /// Retrieves the note file specified by the request if the current user has appropriate access permissions.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNotefile.</returns>
+        /// <remarks>Access is determined based on the user's permissions for the specified note file. The
+        /// returned object will be empty if the user does not have read, write, edit, or respond access.</remarks>
+        /// <param name="request">The request containing the identifier of the note file to retrieve.</param>
+        /// <param name="context">The server call context for the current gRPC request, used to identify and authorize the user.</param>
+        /// <returns>A <see cref="GNotefile"/> representing the requested note file if access is granted; otherwise, an empty
+        /// <see cref="GNotefile"/>.</returns>
         [Authorize]
         public override async Task<GNotefile> GetNoteFile(NoteFileRequest request, ServerCallContext context)
         {
@@ -914,11 +957,16 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Creates the new note.
+        /// Creates a new note or response in the system using the provided text and subject information.
         /// </summary>
-        /// <param name="TextViewModel">The TVM.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteHeader.</returns>
+        /// <remarks>The caller must have write or respond access to the specified note file and be
+        /// assigned the 'User' role. If these conditions are not met, the method returns an empty note header. This
+        /// method is protected by authorization and should be called by authenticated users only.</remarks>
+        /// <param name="tvm">The text view model containing the note content, subject, and related metadata. Must not have a null value
+        /// for MyNote or MySubject.</param>
+        /// <param name="context">The server call context associated with the current request, used to identify and authorize the user.</param>
+        /// <returns>A GNoteHeader representing the newly created note or response. Returns an empty GNoteHeader if the user is
+        /// not authorized or required information is missing.</returns>
         [Authorize]
         public override async Task<GNoteHeader> CreateNewNote(TextViewModel tvm, ServerCallContext context)
         {
@@ -975,11 +1023,15 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Updates the note.
+        /// Updates an existing note with new content and subject information if the caller is authorized to edit the
+        /// note.
         /// </summary>
-        /// <param name="tvm">The TVM.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteHeader.</returns>
+        /// <remarks>Only the note's author or users with the 'Admin' role are permitted to update a note.
+        /// If the caller lacks permission or required fields are null, the method returns an empty result.</remarks>
+        /// <param name="tvm">A model containing the updated note content, subject, and related metadata to apply to the note.</param>
+        /// <param name="context">The server call context that provides information about the current gRPC request and caller identity.</param>
+        /// <returns>A GNoteHeader representing the updated note if the operation succeeds; otherwise, an empty GNoteHeader if
+        /// the caller is not authorized or required data is missing.</returns>
         [Authorize]
         public override async Task<GNoteHeader> UpdateNote(TextViewModel tvm, ServerCallContext context)
         {
@@ -1018,11 +1070,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the header for note identifier.
+        /// Retrieves the header information for the specified note identifier, subject to access permissions.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>GNoteHeader.</returns>
+        /// <remarks>If the caller is not an administrator and lacks read access to the note, the method returns an empty
+        /// header object. Administrators can retrieve headers for any note regardless of access restrictions.</remarks>
+        /// <param name="request">An object containing the unique identifier of the note for which the header is requested.</param>
+        /// <param name="context">The server call context associated with the current request, providing user and request metadata.</param>
+        /// <returns>A <see cref="GNoteHeader"/> representing the header of the requested note. If the caller does not have read access,
+        /// an empty <see cref="GNoteHeader"/> is returned.</returns>
         [Authorize]
         public override async Task<GNoteHeader> GetHeaderForNoteId(NoteId request, ServerCallContext context)
         {
@@ -1191,11 +1246,14 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Does the forward of note(s) to an email address.
+        /// Sends a note email to the current user if they have read access to the specified file and archive.
         /// </summary>
-        /// <param name="fv">The fv.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>If the user does not have read access to the specified file and archive, no email is
+        /// sent and a default response is returned. This method requires the caller to be authorized.</remarks>
+        /// <param name="fv">The view model containing information about the note, including file and archive identifiers, note content,
+        /// and subject.</param>
+        /// <param name="context">The server call context that provides information about the current gRPC request and user.</param>
+        /// <returns>A <see cref="NoRequest"/> instance indicating the completion of the operation.</returns>
         [Authorize]
         public override async Task<NoRequest> DoForward(ForwardViewModel fv, ServerCallContext context)
         {
@@ -1222,11 +1280,18 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Copies note(s) from one file to another
+        /// Copies a note or an entire note thread to a specified target file for the current user, preserving content
+        /// and associated tags.
         /// </summary>
-        /// <param name="Model">The model.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>The method requires the caller to have read access to the source note and write
+        /// access to the target file. If copying the entire note thread, all responses associated with the note are
+        /// also copied. The copied note will be attributed to the current user. This operation is performed
+        /// asynchronously.</remarks>
+        /// <param name="Model">The model containing information about the note to copy, the target file ID, and whether to copy the entire
+        /// note thread. Must not be null.</param>
+        /// <param name="context">The server call context for the current request, used to identify and authorize the user.</param>
+        /// <returns>A <see cref="NoRequest"/> object indicating the completion of the copy operation. Returns an empty response
+        /// if the user does not have read access to the source note or write access to the target file.</returns>
         [Authorize]
         public override async Task<NoRequest> CopyNote(CopyModel Model, ServerCallContext context)
         {
@@ -1349,11 +1414,15 @@ namespace Notes.Services
 
         // Utility method - makes a viewable header for the copied note
         /// <summary>
-        /// Makes the header.
+        /// Generates an HTML header string for a copied note, including the note file name, subject, author, and
+        /// creation date.
         /// </summary>
-        /// <param name="header">The header.</param>
-        /// <param name="noteFile">The note file.</param>
-        /// <returns>System.String.</returns>
+        /// <remarks>The returned string includes the note file name, subject, author, and creation date,
+        /// separated by hyphens and wrapped in a <div> element with the class 'copiednote'. The method does not perform
+        /// HTML encoding; ensure that input values are safe for HTML output if used in untrusted contexts.</remarks>
+        /// <param name="header">The header information for the note, including subject, author, and creation date. Cannot be null.</param>
+        /// <param name="noteFile">The note file containing the note's file name. Cannot be null.</param>
+        /// <returns>A formatted HTML string representing the note header, suitable for display in a web view.</returns>
         private static string MakeHeader(NoteHeader header, NoteFile noteFile)
         {
             StringBuilder sb = new();
@@ -1371,11 +1440,13 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Deletes the note.
+        /// Deletes the specified note if the current user has delete permissions.
         /// </summary>
-        /// <param name="request">The request.</param>
-        /// <param name="context">The context.</param>
-        /// <returns>NoRequest.</returns>
+        /// <remarks>If the user does not have permission to delete the note, the operation completes
+        /// without deleting the note and without throwing an exception.</remarks>
+        /// <param name="request">An object containing the identifier of the note to delete.</param>
+        /// <param name="context">The server call context for the current request, providing user and request metadata.</param>
+        /// <returns>A <see cref="NoRequest"/> object indicating the completion of the delete operation.</returns>
         [Authorize]
         public override async Task<NoRequest> DeleteNote(NoteId request, ServerCallContext context)
         {
