@@ -1,0 +1,1 @@
+search_result['1064']=["topic_0000000000000279.html","NoteHeader.LinkGuid Property","Gets or sets the link unique identifier."];

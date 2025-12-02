@@ -1,0 +1,1 @@
+search_result['908']=["topic_000000000000020B.html","ApplicationUser.GetGAppUser Method","Gets the g application user.\r\nConversions between Db Entity space and gRPC space."];

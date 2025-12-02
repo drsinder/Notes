@@ -1,0 +1,1 @@
+search_result['1061']=["topic_0000000000000276.html","NoteHeader.ResponseCount Property","Gets or sets the response count.\r\nMeaningful only if ResponseOrdinal = 0"];

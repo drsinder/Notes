@@ -1,0 +1,1 @@
+search_result['679']=["topic_000000000000017A.html","NotePanel Constructor","Initialize defaults for a \"root\" note - not showing children"];

@@ -1,0 +1,1 @@
+search_result['869']=["topic_00000000000001E9.html","NotesDbContext.Sequencer Property","Gets or sets the sequencer."];

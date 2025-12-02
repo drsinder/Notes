@@ -1,0 +1,1 @@
+search_result['1172']=["topic_00000000000002C6.html","AccessManager.GetAccess Method","All access checks call this."];

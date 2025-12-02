@@ -1,0 +1,1 @@
+c['726']=[['727',"GetGNoteAccess Method","topic_0000000000000255.html",0],['728',"GetGNoteAccessList Method","topic_0000000000000257.html",0],['729',"GetNoteAccess Method","topic_0000000000000254.html",0],['730',"GetNoteAccesses Method","topic_0000000000000256.html",0]];

@@ -1,0 +1,1 @@
+search_result['1076']=["topic_0000000000000285.html","NoteHeader.GetNoteHeaders Method","Gets the note headers."];

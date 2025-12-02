@@ -1,0 +1,1 @@
+search_result['18']=["topic_0000000000000008.html","Clock.Interval Property","Gets or sets the interval."];

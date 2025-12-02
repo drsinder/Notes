@@ -1,0 +1,1 @@
+search_result['1203']=["topic_00000000000002DA.html","NoteDataManager.GetBaseNoteHeader (NotesDbContext, Int32, Int32, Int32) Method","Get the BaseNoteHeader for a Note"];

@@ -1,0 +1,1 @@
+search_result['1277']=["topic_00000000000002FA.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];

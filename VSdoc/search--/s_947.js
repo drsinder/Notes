@@ -1,0 +1,1 @@
+search_result['947']=["topic_0000000000000223.html","LinkedFile.GetGLinkedFile Method","Gets the g linked file."];

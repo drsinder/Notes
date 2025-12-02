@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['911',"Notes.Services Namespace","topic_00000000000002DC.html"],['915',"EmailSender Class","topic_00000000000002DD.html"],['916',"EmailSender Constructor","topic_00000000000002DE_overloads--.html"],['917',"EmailSender() Constructor","topic_00000000000002DF.html"]];

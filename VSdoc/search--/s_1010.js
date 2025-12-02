@@ -1,0 +1,1 @@
+search_result['1010']=["topic_0000000000000252.html","NoteAccess.ViewAccess Property","Gets or sets a value indicating whether [view access]."];

@@ -1,0 +1,1 @@
+search_result['518']=["topic_0000000000000109.html","NewNote.BaseNoteHeaderId Property","Gets or sets the base note header identifier."];

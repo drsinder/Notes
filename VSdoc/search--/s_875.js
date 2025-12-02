@@ -1,0 +1,1 @@
+search_result['875']=["topic_00000000000001EF.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];

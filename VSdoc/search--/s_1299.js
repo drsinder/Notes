@@ -1,0 +1,1 @@
+search_result['1299']=["topic_0000000000000305.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];

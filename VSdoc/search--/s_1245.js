@@ -1,0 +1,1 @@
+search_result['1245']=["topic_00000000000002EA.html","NotesService.GetUserList Method","Retrieves a list of all application users accessible to administrators."];

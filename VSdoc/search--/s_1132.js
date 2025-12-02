@@ -1,0 +1,1 @@
+search_result['1132']=["topic_00000000000002B0.html","Subscription Class","This class defines a table in the database.\r\nUsed to associate a user and a file for the purpose of\r\nforwarding an email when new notes are written."];

@@ -1,0 +1,1 @@
+search_result['608']=["topic_000000000000014B.html","LocalModel2(String, String) Constructor","Initializes a new instance of the LocalModel2 class."];

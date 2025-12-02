@@ -1,0 +1,1 @@
+search_result['981']=["topic_000000000000023F.html","LinkQueue.GetGSequencerList Method","Gets the g sequencer list."];

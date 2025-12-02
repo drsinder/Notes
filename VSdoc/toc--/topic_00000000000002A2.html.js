@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['620',"Notes.Entities Namespace","topic_00000000000001F1.html"],['810',"Sequencer Class","topic_000000000000029A.html"],['818',"Methods","topic_000000000000029A_methods--.html"],['819',"GetGSequencer Method","topic_00000000000002A2.html"]];

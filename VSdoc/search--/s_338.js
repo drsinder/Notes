@@ -1,0 +1,1 @@
+search_result['338']=["topic_00000000000000A9.html","SearchDlg.searchtype Property","Gets or sets the searchtype."];

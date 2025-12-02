@@ -1,0 +1,1 @@
+search_result['709']=["topic_000000000000018C.html","Versions.ResponseOrdinal Property","Gets or sets the response ordinal."];

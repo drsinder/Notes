@@ -1,0 +1,1 @@
+c['513']=[['514',"NotePanel Constructor","topic_000000000000017A.html",0],['515',"Properties","topic_0000000000000161_props--.html",1],['540',"Methods","topic_0000000000000161_methods--.html",1]];

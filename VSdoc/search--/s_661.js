@@ -1,0 +1,1 @@
+search_result['661']=["topic_0000000000000168.html","NotePanel.IsMini Property","Should certain functions be suppressed at head and tail of panel"];

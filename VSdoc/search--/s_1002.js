@@ -1,0 +1,1 @@
+search_result['1002']=["topic_000000000000024A.html","NoteAccess.UserID Property","Gets or sets the user identifier."];

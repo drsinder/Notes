@@ -1,0 +1,1 @@
+search_result['1305']=["topic_0000000000000308.html","NotesService.GetExport2 Method","Gets the export info for phase 2. (note content)"];

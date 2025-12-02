@@ -1,0 +1,1 @@
+search_result['642']=["topic_000000000000015B.html","NoteEditor Constructor","Initializes a new instance of the NoteEditor class."];

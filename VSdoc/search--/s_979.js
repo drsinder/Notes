@@ -1,0 +1,1 @@
+search_result['979']=["topic_000000000000023D.html","LinkQueue.GetGLinkQueue Method","Gets the g link queue."];

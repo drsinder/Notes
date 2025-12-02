@@ -1,0 +1,1 @@
+search_result['1216']=["topic_00000000000002DF_overloads--.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];

@@ -1,0 +1,1 @@
+search_result['669']=["topic_0000000000000170.html","NotePanel.ResetShown Property","Gets or sets a value indicating whether [reset shown]."];

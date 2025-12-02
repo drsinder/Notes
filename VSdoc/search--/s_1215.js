@@ -1,0 +1,1 @@
+search_result['1215']=["topic_00000000000002DF.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];

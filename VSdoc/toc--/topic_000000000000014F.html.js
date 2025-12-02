@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_0000000000000316.html"],['359',"Notes.Client.Pages Namespace","topic_00000000000000F6.html"],['463',"ShowNote Class","topic_000000000000014E.html"],['465',"Properties","topic_000000000000014E_props--.html"],['467',"NoteId Property","topic_000000000000014F.html"]];

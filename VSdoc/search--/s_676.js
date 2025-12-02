@@ -1,0 +1,1 @@
+search_result['676']=["topic_0000000000000177.html","NotePanel.NavString Property","Accumulator for the typin nav box"];

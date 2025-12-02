@@ -1,0 +1,1 @@
+search_result['124']=["topic_0000000000000047.html","CodeFormat.EditObj Property","Gets or sets the edit object."];

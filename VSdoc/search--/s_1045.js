@@ -1,0 +1,1 @@
+search_result['1045']=["topic_000000000000026B.html","NoteHeader Class","This class defines a table in the database.\r\nNoteHeader objects are the high level descriptors for a note.\r\nThey contain all the information about a note EXCEPT the\r\nbody, which is contained in relate..."];

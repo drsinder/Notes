@@ -1,0 +1,1 @@
+search_result['1288']=["topic_00000000000002FF_overloads--.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];

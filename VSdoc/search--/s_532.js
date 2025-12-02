@@ -1,0 +1,1 @@
+search_result['532']=["topic_0000000000000111.html","NoteIndex.CurrentNoteId Property","Non zero when viewing a note"];

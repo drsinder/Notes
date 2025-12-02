@@ -1,0 +1,1 @@
+search_result['1300']=["topic_0000000000000305_overloads--.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];

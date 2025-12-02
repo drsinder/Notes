@@ -1,0 +1,1 @@
+search_result['1091']=["topic_0000000000000296.html","Search.BaseOrdinal Property","Gets or sets the base ordinal."];

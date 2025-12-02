@@ -1,0 +1,1 @@
+search_result['960']=["topic_000000000000022B.html","LinkLog.GetLinkLog Method","Gets the link log."];

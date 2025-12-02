@@ -1,0 +1,1 @@
+search_result['1094']=["topic_0000000000000299.html","Search.Clone Method","Clones the specified s."];

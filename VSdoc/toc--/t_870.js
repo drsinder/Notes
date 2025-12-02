@@ -1,0 +1,1 @@
+c['870']=[['871',"GetBaseNoteHeader(NotesDbContext, int, int, int) Method","topic_00000000000002DA.html",0],['872',"GetBaseNoteHeader(NotesDbContext, long) Method","topic_00000000000002D9.html",0]];

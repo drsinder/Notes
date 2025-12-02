@@ -1,0 +1,1 @@
+c['735']=[['736',"CloneForLink Method","topic_000000000000025B.html",0],['737',"GetGNoteContent Method","topic_000000000000025D.html",0],['738',"GetGNoteContentList Method","topic_000000000000025F.html",0],['739',"GetNoteContent Method","topic_000000000000025C.html",0],['740',"GetNoteContents Method","topic_000000000000025E.html",0]];

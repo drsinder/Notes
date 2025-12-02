@@ -1,0 +1,1 @@
+search_result['1174']=["topic_00000000000002C8.html","AccessManager.GetAccessListForFile Method","Gets the access list for file."];

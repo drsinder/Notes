@@ -1,0 +1,1 @@
+search_result['755']=["topic_00000000000001A9.html","Globals.SendGridName Property","Gets or sets the name of the send grid."];

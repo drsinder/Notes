@@ -1,0 +1,1 @@
+search_result['1207']=["topic_00000000000002DD.html","EmailSender Class","Class EmailSender.\r\nImplements the IEmailSender"];

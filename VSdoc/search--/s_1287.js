@@ -1,0 +1,1 @@
+search_result['1287']=["topic_00000000000002FF.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];
