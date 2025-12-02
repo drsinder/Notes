@@ -1479,11 +1479,12 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Gets the current homepage message if any
+        /// Retrieves the current home page message to be displayed to users.
         /// </summary>
-        /// <param name="request">The request received from the client.</param>
-        /// <param name="context">The context of the server-side call handler being invoked.</param>
-        /// <returns>The response to send back to the client (wrapped by a task).</returns>
+        /// <param name="request">A request object containing no parameters. This value is ignored.</param>
+        /// <param name="context">The context for the server-side call, providing information about the RPC environment.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains an <see cref="AString"/> with
+        /// the home page message text. If no message is available, the value will be empty.</returns>
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public override async Task<AString> GetHomePageMessage(NoRequest request, ServerCallContext context)
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
@@ -1506,13 +1507,20 @@ namespace Notes.Services
         }
 
         /// <summary>
-        /// Get a list of notes w or wo content and tags as specified by the request.
-        /// Returns the same stuff as a JsonExport but without the Notefile and Access token.
-        /// Also permits filtering to a limted degree.
+        /// Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in
+        /// the request.
         /// </summary>
-        /// <param name="request">The request received from the client.</param>
-        /// <param name="context">The context of the server-side call handler being invoked.</param>
-        /// <returns>The response to send back to the client (wrapped by a task).</returns>
+        /// <remarks>The returned list may include base notes, responses, or both, depending on the values
+        /// specified in the request. If the ContentAndTags option is set, each note header will include its associated
+        /// content and tags. If the NestResponses option is set, responses will be nested under their corresponding
+        /// base notes. The method requires the caller to have read access to the specified note file and
+        /// archive.</remarks>
+        /// <param name="request">An object containing the criteria for selecting note headers, including note file ID, archive ID, note
+        /// ordinal, response ordinal, and additional options such as whether to include content, tags, or nested
+        /// responses. Cannot be null.</param>
+        /// <param name="context">The context for the server call, providing user and request metadata. Cannot be null.</param>
+        /// <returns>A list of note headers matching the specified criteria. If the user does not have read access, the list will
+        /// be empty.</returns>
         [Authorize]
         public override async Task<GNoteHeaderList> GetNoteHeaders(NoteHeadersRequest request, ServerCallContext context)
         {
@@ -1604,6 +1612,17 @@ namespace Notes.Services
             return returnval;
         }
 
+        /// <summary>
+        /// Retrieves the number of notes in the specified note file and archive that are not deleted and are not
+        /// responses.
+        /// </summary>
+        /// <remarks>Only notes that are not deleted, are not responses, and are in the initial version
+        /// are included in the count. The caller must have read access to the specified note file and archive;
+        /// otherwise, the result will indicate a count of zero.</remarks>
+        /// <param name="request">The request containing the identifiers of the note file and archive for which to count notes.</param>
+        /// <param name="context">The context for the server call, which provides user and request information.</param>
+        /// <returns>A <see cref="NoteCount"/> object containing the count of notes matching the specified criteria. If the user
+        /// does not have read access, the count will be zero.</returns>
         [Authorize]
         public override async Task<NoteCount> GetNoteCount(NoteFileRequest request, ServerCallContext context)
         {
@@ -1621,6 +1640,18 @@ namespace Notes.Services
             return returnval;
         }
 
+        /// <summary>
+        /// Searches note content for matches to the specified search criteria and returns the results.
+        /// </summary>
+        /// <remarks>The search can be performed with case sensitivity and/or whole word matching,
+        /// depending on the values specified in the request. Only notes that are not deleted and have a version of 0
+        /// are included in the search results.</remarks>
+        /// <param name="request">The search parameters, including the search text, case sensitivity, whole word matching, and identifiers for
+        /// the note file and archive. Cannot be null.</param>
+        /// <param name="context">The server call context for the current gRPC request. Provides information about the call and its
+        /// environment.</param>
+        /// <returns>A SearchResult containing a list of note headers that match the search criteria. Returns an empty result if
+        /// no matches are found or if the search text is null or empty.</returns>
         [Authorize]
         public override async Task<SearchResult> ContentSearch(ContentSearchRequest request, ServerCallContext context)
         {
