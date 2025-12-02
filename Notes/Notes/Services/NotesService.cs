@@ -1636,25 +1636,100 @@ namespace Notes.Services
         [Authorize]
         public override async Task<SearchResult> ContentSearch(ContentSearchRequest request, ServerCallContext context)
         {
-            //ApplicationUser appUser = await GetAppUser(context);
+            if (request.SearchText is null || request.SearchText.Trim() == string.Empty)
+                return new SearchResult();
 
-            List<NoteHeader> stuff = 
-                await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId 
-                && p.ArchiveId == request.ArcId 
-                && !p.IsDeleted
-                && p.Version == 0)
-                .Include(s => s.NoteContent)
-                .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
-                && s.Id == s.NoteContent.NoteHeaderId
-                ).ToListAsync();
+            if (request.CaseSensitive)
+            {
+                if (request.WholeWords)
+                {
+                    request.SearchText = " " + request.SearchText.Trim() + " ";
+                    List<NoteHeader> stuff =
+                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
+                        && p.ArchiveId == request.ArcId
+                        && !p.IsDeleted
+                        && p.Version == 0)
+                        .Include(s => s.NoteContent)
+                        .Where(s => s.NoteContent.NoteBody.Contains(request.SearchText)
+                        && s.Id == s.NoteContent.NoteHeaderId
+                        ).ToListAsync();
 
-            SearchResult result = new();
+                    SearchResult result = new();
 
-            foreach (NoteHeader stuffItem in stuff) {
-                result.List.Add(stuffItem.GetGNoteHeader());
+                    foreach (NoteHeader stuffItem in stuff)
+                    {
+                        result.List.Add(stuffItem.GetGNoteHeader());
+                    }
+
+                    return result;
+                }
+                else
+                {
+                    // case sensitive search
+                    List<NoteHeader> stuff =
+                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
+                        && p.ArchiveId == request.ArcId
+                        && !p.IsDeleted
+                        && p.Version == 0)
+                        .Include(s => s.NoteContent)
+                        .Where(s => s.NoteContent.NoteBody.Contains(request.SearchText)
+                        && s.Id == s.NoteContent.NoteHeaderId
+                        ).ToListAsync();
+                    SearchResult result = new();
+                    foreach (NoteHeader stuffItem in stuff)
+                    {
+                        result.List.Add(stuffItem.GetGNoteHeader());
+                    }
+                    return result;
+                }
             }
+            else
+            {
+                if (request.WholeWords)
+                {
+                    request.SearchText = " " + request.SearchText.Trim() + " ";
+                    List<NoteHeader> stuff =
+                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
+                        && p.ArchiveId == request.ArcId
+                        && !p.IsDeleted
+                        && p.Version == 0)
+                        .Include(s => s.NoteContent)
+                        .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
+                        && s.Id == s.NoteContent.NoteHeaderId
+                        ).ToListAsync();
 
-            return result;
+                    SearchResult result = new();
+
+                    foreach (NoteHeader stuffItem in stuff)
+                    {
+                        result.List.Add(stuffItem.GetGNoteHeader());
+                    }
+
+                    return result;
+                }
+                else
+                {
+
+                    List<NoteHeader> stuff =
+                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
+                        && p.ArchiveId == request.ArcId
+                        && !p.IsDeleted
+                        && p.Version == 0)
+                        .Include(s => s.NoteContent)
+                        .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
+                        && s.Id == s.NoteContent.NoteHeaderId
+                        ).ToListAsync();
+
+                    SearchResult result = new();
+
+                    foreach (NoteHeader stuffItem in stuff)
+                    {
+                        result.List.Add(stuffItem.GetGNoteHeader());
+                    }
+
+                    return result;
+                }
+            }
         }
     }
 }

@@ -45,6 +45,10 @@ namespace Notes.Client.Dialogs
         private DateTime theTime { get; set; }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
+        private bool casesensitive { get; set; } = false;
+
+        private bool wholeword { get; set; } = false;
+
         /// <summary>
         /// Method invoked when the component has received parameters from its parent in
         /// the render tree, and the incoming values have been assigned to properties.
@@ -64,7 +68,10 @@ namespace Notes.Client.Dialogs
             {
                 case 1: target.Option = Client.Pages.NoteIndex.SearchOption.Author; break;
                 case 2: target.Option = Client.Pages.NoteIndex.SearchOption.Title; break;
-                case 3: target.Option = Client.Pages.NoteIndex.SearchOption.Content; break;
+                case 3: target.Option = Client.Pages.NoteIndex.SearchOption.Content; 
+                    target.CaseSensitive = casesensitive;
+                    target.WholeWords = wholeword;
+                    break;
                 case 4: target.Option = Client.Pages.NoteIndex.SearchOption.DirMess; break;
                 case 5: target.Option = Client.Pages.NoteIndex.SearchOption.Tag; break;
                 case 6: target.Option = Client.Pages.NoteIndex.SearchOption.TimeIsBefore; break;

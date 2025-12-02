@@ -24,6 +24,15 @@
             if (option == 5) txt = "Tag";
             <h5>@txt</h5>
             <input id="searchtext" type="text" @bind="@text" />
+            if (option == 3)
+            {    <div>
+                    <input id="casesensitive" type="checkbox" @bind="@casesensitive" />
+                    <label for="casesensitive">Case Sensitive</label>
+                    <input id="wholeword" type="checkbox" @bind="@wholeword" />
+                    <label for="wholeword">Whole Word</label>
+                </div>
+            }  
+
         }
             @if (option > 5)
             {

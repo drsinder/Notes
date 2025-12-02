@@ -447,6 +447,15 @@ namespace Notes.Client.Pages
             [Column(Order = 4)]
             [DataMember(Order = 9)]
             public long NoteID { get; set; }
+
+         
+            [Column(Order = 10)]
+            [DataMember(Order = 10)]
+            public bool CaseSensitive { get; set; } = false;
+
+            [Column(Order = 11)]
+            [DataMember(Order = 11)]
+            public bool WholeWords { get; set; } = false;
         }
 
         /// <summary>
@@ -459,7 +468,7 @@ namespace Notes.Client.Pages
             //StateHasChanged();
 
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
-            target.Text = target.Text.ToLower();
+      //      target.Text = target.Text.ToLower();
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             switch (target.Option)
@@ -601,15 +610,15 @@ namespace Notes.Client.Pages
             var modal = Modal.Show<MessageBox>("", parameters);
 
             results = new List<GNoteHeader>();
-            List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
+       //     List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
 
             ContentSearchRequest csr = new ContentSearchRequest()
             {
-                NoteFileId = this.NotesfileId,
+                NoteFileId = NotesfileId,
                 SearchText = target.Text,
-                ArcId = Model.ArcId,
-                CaseSensitive = false,
-                WholeWords = false
+                ArcId = 0,
+                CaseSensitive = target.CaseSensitive,
+                WholeWords = target.WholeWords
             };
 
             // Get list of note headers that match from server

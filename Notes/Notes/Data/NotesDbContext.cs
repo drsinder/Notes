@@ -156,6 +156,11 @@ public class NotesDbContext(DbContextOptions<NotesDbContext> options) : Identity
             .HasForeignKey<SQLFileContent>(b => b.SQLFileId);
 
 
+        builder.Entity<NoteContent>()
+            .Property(p => p.NoteBody)
+            .UseCollation("SQL_Latin1_General_CP1_CS_AS"); // Case Sensitive collation for NoteBody for case sensitive searches
+
+
         //builder.Entity<IdentityRole>().HasData(
         //    new IdentityRole { Name = "User", NormalizedName = "USER", Id = "7550e722-3cc2-4731-b4fc-e9ba0e6d20f3" },
         //    new IdentityRole { Name = "Admin", NormalizedName = "ADMIN", Id = "c0fd3f06-97b7-4c72-afa6-96e250749dc7" },
