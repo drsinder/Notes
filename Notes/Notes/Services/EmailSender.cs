@@ -24,11 +24,13 @@ namespace Notes.Services
         {
             Options = optionsAccessor.Value;
         }
-    
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailSender"/> class.
         /// </summary>
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public EmailSender()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         {
         }
 
@@ -60,7 +62,7 @@ namespace Notes.Services
             {
                 string[] who = email.Split(';');
 
-                List<EmailAddress> addresses = new List<EmailAddress>();
+                List<EmailAddress> addresses = [];
                 foreach (string a in who)
                 {
                     addresses.Add(new EmailAddress(a.Trim()));
@@ -98,6 +100,8 @@ namespace Notes.Services
         /// Gets or sets the send grid key.
         /// </summary>
         /// <value>The send grid key.</value>
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public string SendGridKey { get; set; }
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     }
 }

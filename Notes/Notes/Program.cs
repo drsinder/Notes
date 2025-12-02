@@ -140,14 +140,16 @@ Globals.AppUrl = (builder.Configuration["AppUrl"]);
 builder.Services.AddSingleton(services =>
 {
     string AppVirtDir = ""; // preset for localhost / Development
-    string baseUri = Globals.AppUrl;  //services.GetRequiredService<NavigationManager>().BaseUri;
+    string? baseUri = Globals.AppUrl;  //services.GetRequiredService<NavigationManager>().BaseUri;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
     string[] parts = baseUri.Split('/');
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
     if (!baseUri.Contains("localhost")) // not localhost - assume it is in a virtual directory ONLY ONE LEVEL DOWN from root of site
     {
         AppVirtDir = "/" + parts[^2];
     }
 
-    SubdirectoryHandler handler = new SubdirectoryHandler(new HttpClientHandler(), AppVirtDir);
+    SubdirectoryHandler handler = new(new HttpClientHandler(), AppVirtDir);
 
     var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, handler))
     {
@@ -165,16 +167,13 @@ builder.Services.AddSingleton(services =>
     return Client;
 });
 
-
-
-
 var app = builder.Build();
 
 Globals.HangfireAddress = "/hangfire";
 
 app.UseHangfireDashboard(Globals.HangfireAddress, new DashboardOptions
 {
-    Authorization = [new MyAuthorizationFilter()]
+    Authorization = [new Notes.MyAuthorizationFilter()]
 });
 
 app.UseGrpcWeb(options: new GrpcWebOptions { DefaultEnabled = true });
@@ -216,12 +215,15 @@ app.MapAdditionalIdentityEndpoints();
 app.Run();
 
 
-
-public class MyAuthorizationFilter : IDashboardAuthorizationFilter
+namespace Notes
 {
-    //[Authorize(Roles = "Admin")]
-    public bool Authorize(DashboardContext context)
+
+    public class MyAuthorizationFilter : IDashboardAuthorizationFilter
     {
-        return true;
+        //[Authorize(Roles = "Admin")]
+        public bool Authorize(DashboardContext context)
+        {
+            return true;
+        }
     }
 }
