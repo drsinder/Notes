@@ -1,11 +1,12 @@
 using Grpc.Core;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Notes.Protos;
 using System.Text.Json;
 
 namespace Notes.Client.Shared
 {
-    public partial class CookieStateAgent
+    public partial class CookieStateAgent : ComponentBase
     {
         /// <summary>
         /// Dealing with login related info

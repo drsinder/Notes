@@ -20,7 +20,7 @@ namespace Notes.Client.Pages
         /// For dialogs
         /// </summary>
         /// <value>The modal.</value>
-        [CascadingParameter] public IModalService Modal { get; set; }
+        [CascadingParameter] public required IModalService Modal { get; set; }
 
         /// <summary>
         /// The NoteFileId we are using
