@@ -603,23 +603,40 @@ namespace Notes.Client.Pages
             results = new List<GNoteHeader>();
             List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
 
-            foreach (GNoteHeader nh in lookin)
+            ContentSearchRequest csr = new ContentSearchRequest()
             {
-                //DisplayModel dm = await DAL.GetNoteContent(Http, nh.Id);
+                NoteFileId = this.NotesfileId,
+                SearchText = target.Text,
+                ArcId = Model.ArcId,
+                CaseSensitive = false,
+                WholeWords = false
+            };
 
-                DisplayModel dm = await Client.GetNoteContentAsync(new DisplayModelRequest() { NoteId = nh.Id }, myState.AuthHeader);
+            // Get list of note headers that match from server
 
-                GNoteContent nc = dm.Content;
+            SearchResult matches = await Client.ContentSearchAsync(csr, myState.AuthHeader);
+            /*
+                        foreach (GNoteHeader nh in lookin)
+                        {
+                            DisplayModel dm = await Client.GetNoteContentAsync(new DisplayModelRequest() { NoteId = nh.Id }, myState.AuthHeader);
 
-                bool isMatch = false;
-                switch (target.Option)
-                {
-                    case SearchOption.Content:
-                        isMatch = nc.NoteBody.ToLower().Contains(target.Text);
-                        break;
-                }
-                if (isMatch)
-                    results.Add(nh);
+                            GNoteContent nc = dm.Content;
+
+                            bool isMatch = false;
+                            switch (target.Option)
+                            {
+                                case SearchOption.Content:
+                                    isMatch = nc.NoteBody.ToLower().Contains(target.Text);
+                                    break;
+                            }
+                            if (isMatch)
+                                results.Add(nh);
+                        }
+            */
+
+            foreach (GNoteHeader nh in matches.List)
+            {
+                results.Add(nh);
             }
 
             modal.Close();

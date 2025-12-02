@@ -70,6 +70,8 @@ service NotesServer {
 	rpc NoOp(NoRequest) returns (NoRequest);
 
 	rpc GetServerTime(NoRequest) returns (ServerTime);				// gets server time
+
+	rpc ContentSearch(ContentSearchRequest) returns (SearchResult);	// search for text in note contents
 }
 
 // used generically -  used when no data needed for request or response
@@ -525,4 +527,16 @@ message NoteHeadersRequest {
 
 message NoteCount {
 	int32 Count = 1;
+}
+
+message ContentSearchRequest {
+	string searchText = 1;
+	int32 noteFileId = 2;
+	int32 arcId = 3;
+	bool wholeWords = 4;
+	bool caseSensitive = 5;
+}
+
+message SearchResult {
+	repeated GNoteHeader list = 1;
 }

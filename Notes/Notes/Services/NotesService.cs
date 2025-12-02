@@ -136,7 +136,7 @@ namespace Notes.Services
         /// cancellation and authentication details.</param>
         /// <returns>An EditUserViewModel containing the user's data and a list of all available roles, each indicating whether
         /// the user is a member of that role.</returns>
-       [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public override async Task<EditUserViewModel> GetUserRoles(AppUserRequest request, ServerCallContext context)
         {
             EditUserViewModel model = new()
@@ -315,7 +315,7 @@ namespace Notes.Services
         {
             HomePageModel homepageModel = new();
 
-            logger.LogInformation("Received GetBaseHomePageModelAsync request" );
+            logger.LogInformation("Received GetBaseHomePageModelAsync request");
 
             NoteFile? hpmf = _db.NoteFile.Where(p => p.NoteFileName == "homepagemessages").FirstOrDefault();
             if (hpmf is not null)
@@ -1459,13 +1459,13 @@ namespace Notes.Services
             {
                 Val = string.Empty
             };
-/*
-            if (request.Val == "syncfusionkey.rsghjjsrsrj43632353")
-            {
-                stuff.Val = _configuration["SyncfusionKey"];
-                return stuff;
-            }
-*/
+            /*
+                        if (request.Val == "syncfusionkey.rsghjjsrsrj43632353")
+                        {
+                            stuff.Val = _configuration["SyncfusionKey"];
+                            return stuff;
+                        }
+            */
             string myFileInput = Globals.ImportRoot + "Text\\" + request.Val;
             // Get the input file
             StreamReader file;
@@ -1633,5 +1633,28 @@ namespace Notes.Services
             return returnval;
         }
 
+        [Authorize]
+        public override async Task<SearchResult> ContentSearch(ContentSearchRequest request, ServerCallContext context)
+        {
+            //ApplicationUser appUser = await GetAppUser(context);
+
+            List<NoteHeader> stuff = 
+                await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId 
+                && p.ArchiveId == request.ArcId 
+                && !p.IsDeleted
+                && p.Version == 0)
+                .Include(s => s.NoteContent)
+                .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText)
+                && s.Id == s.NoteContent.NoteHeaderId
+                ).ToListAsync();
+
+            SearchResult result = new();
+
+            foreach (NoteHeader stuffItem in stuff) {
+                result.List.Add(stuffItem.GetGNoteHeader());
+            }
+
+            return result;
+        }
     }
 }
