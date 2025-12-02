@@ -596,6 +596,10 @@ namespace Notes.Client.Pages
         /// <param name="target">The target.</param>
         protected async Task SearchContents(Search target)
         {
+            var parameters = new ModalParameters();
+            parameters.Add("MessageInput", "Searching.  Please wait...");
+            var modal = Modal.Show<MessageBox>("", parameters);
+
             results = new List<GNoteHeader>();
             List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
 
@@ -617,6 +621,8 @@ namespace Notes.Client.Pages
                 if (isMatch)
                     results.Add(nh);
             }
+
+            modal.Close();
 
             if (results.Count == 0)
             {
