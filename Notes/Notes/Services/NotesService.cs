@@ -1644,7 +1644,7 @@ namespace Notes.Services
                 && !p.IsDeleted
                 && p.Version == 0)
                 .Include(s => s.NoteContent)
-                .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText)
+                .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
                 && s.Id == s.NoteContent.NoteHeaderId
                 ).ToListAsync();
 
