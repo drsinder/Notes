@@ -1,1 +1,1 @@
-search_result['1075']=["topic_0000000000000284.html","NoteHeader.GetGNoteHeader Method","Gets the g note header."];
+search_result['1075']=["topic_0000000000000282.html","NoteHeader.CloneForLinkR Method","Clones for link r."];

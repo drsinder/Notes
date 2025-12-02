@@ -1,1 +1,1 @@
-search_result['678']=["topic_0000000000000179.html","NotePanel.respY Property","Gets or sets the resp y."];
+search_result['678']=["topic_0000000000000177.html","NotePanel.NavString Property","Accumulator for the typin nav box"];

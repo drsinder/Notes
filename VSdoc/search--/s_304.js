@@ -1,1 +1,1 @@
-search_result['304']=["topic_000000000000009C.html","MessageBox Class","Class MessageBox.\r\nImplements the ComponentBase"];
+search_result['304']=["topic_000000000000009B.html","HelpDialog2.OnInitializedAsync Method","Get some simple stuff from server"];

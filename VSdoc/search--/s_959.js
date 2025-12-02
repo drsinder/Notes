@@ -1,1 +1,1 @@
-search_result['959']=["topic_000000000000022A.html","LinkLog.Event Property","Gets or sets the event."];
+search_result['959']=["topic_0000000000000228.html","LinkLog.EventType Property","Gets or sets the type of the event."];

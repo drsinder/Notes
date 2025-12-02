@@ -1,1 +1,1 @@
-search_result['88']=["topic_0000000000000033_attached_props--.html","AccessList Attached Properties",""];
+search_result['88']=["topic_0000000000000032.html","AccessItem.canEdit Property","Can current user change it?"];

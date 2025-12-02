@@ -1,1 +1,1 @@
-search_result['625']=["topic_0000000000000153_events--.html","Tracker Events",""];
+search_result['625']=["topic_0000000000000153.html","Tracker Class","Class Tracker.\r\nImplements the ComponentBase"];

@@ -1,1 +1,1 @@
-search_result['198']=["topic_000000000000006B_overloads--.html","EditNoteFile.OnInitialized Method","Method invoked when the component is ready to start, having received its\r\ninitial parameters from its parent in the render tree."];
+search_result['198']=["topic_000000000000006A.html","EditNoteFile.Owner Property","Gets or sets the owner."];

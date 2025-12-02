@@ -1,1 +1,1 @@
-search_result['1060']=["topic_0000000000000275.html","NoteHeader.CreateDate Property","Gets or sets the create date."];
+search_result['1060']=["topic_0000000000000273.html","NoteHeader.LastEdited Property","Gets or sets the last edited.\r\nWhen the note was created or last edited"];

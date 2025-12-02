@@ -1,1 +1,1 @@
-search_result['578']=["topic_0000000000000140.html","NoteIndex.SearchContents Method","Searches the contents."];
+search_result['578']=["topic_000000000000013E.html","NoteIndex.SearchTags Method","Searches the tags."];

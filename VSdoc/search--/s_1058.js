@@ -1,1 +1,1 @@
-search_result['1058']=["topic_0000000000000273.html","NoteHeader.LastEdited Property","Gets or sets the last edited.\r\nWhen the note was created or last edited"];
+search_result['1058']=["topic_0000000000000271.html","NoteHeader.ResponseOrdinal Property","Gets or sets the response ordinal.\r\nThe ordinal of the response where 0 is a Base Note"];

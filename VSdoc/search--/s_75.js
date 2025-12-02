@@ -1,1 +1,1 @@
-search_result['75']=["topic_0000000000000025.html","AccessDeleteButton.Delete Method","Deletes this instance."];
+search_result['75']=["topic_0000000000000023.html","AccessDeleteButton.OnClick Property","Gets or sets the on click."];

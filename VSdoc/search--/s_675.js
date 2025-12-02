@@ -1,1 +1,1 @@
-search_result['675']=["topic_0000000000000176.html","NotePanel.MyMenu Property","Reference to our menu so we can talk to it"];
+search_result['675']=["topic_0000000000000174.html","NotePanel.IsSeq Property","Are we sequencing?"];

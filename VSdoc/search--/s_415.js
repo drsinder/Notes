@@ -1,1 +1,1 @@
-search_result['415']=["topic_00000000000000D0_events--.html","MainMenu Events",""];
+search_result['415']=["topic_00000000000000D0.html","MainMenu Class",""];

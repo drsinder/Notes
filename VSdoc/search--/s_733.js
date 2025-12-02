@@ -1,1 +1,1 @@
-search_result['733']=["topic_000000000000019D.html","CookieStateAgent.UserInfo Property","Get the decoded user info"];
+search_result['733']=["topic_000000000000019B.html","CookieStateAgent.IsUser Property","Is user in User role"];

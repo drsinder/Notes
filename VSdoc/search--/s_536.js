@@ -1,1 +1,1 @@
-search_result['536']=["topic_0000000000000115.html","NoteIndex.sfTextBox Property","Our direct navigation typin box"];
+search_result['536']=["topic_0000000000000113.html","NoteIndex.MyNotePanel Property",""];

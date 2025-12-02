@@ -1,1 +1,1 @@
-search_result['1009']=["topic_0000000000000251.html","NoteAccess.DeleteEdit Property","Gets or sets a value indicating whether [delete edit]."];
+search_result['1009']=["topic_000000000000024F.html","NoteAccess.Write Property","Gets or sets a value indicating whether this NoteAccess is write."];

@@ -1,1 +1,1 @@
-search_result['861']=["topic_00000000000001E1.html","NotesDbContext.NoteAccess Property","Gets or sets the note access."];
+search_result['861']=["topic_00000000000001DF_vars--.html","NotesDbContext Fields",""];

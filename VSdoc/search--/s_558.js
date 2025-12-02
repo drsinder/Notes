@@ -1,1 +1,1 @@
-search_result['558']=["topic_0000000000000131.html","Search Class","Class Search."];
+search_result['558']=["topic_0000000000000128.html","NoteIndex.GetNoteHeaderId Method","Get note header Id given note ordinal and response ordinal"];

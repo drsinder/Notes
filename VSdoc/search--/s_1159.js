@@ -1,1 +1,1 @@
-search_result['1159']=["topic_00000000000002BE.html","Tags.CloneForLink Method","Clones for link."];
+search_result['1159']=["topic_00000000000002BD.html","Tags.StringToList (String, Int64, Int32, Int32) Method","Strings to list."];

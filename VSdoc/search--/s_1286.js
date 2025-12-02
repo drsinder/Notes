@@ -1,1 +1,1 @@
-search_result['1286']=["topic_00000000000002FE_overloads--.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];
+search_result['1286']=["topic_00000000000002FD_overloads--.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];

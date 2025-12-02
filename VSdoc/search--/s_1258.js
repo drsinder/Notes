@@ -1,1 +1,1 @@
-search_result['1258']=["topic_00000000000002F0_overloads--.html","NotesService.UpdateNoteFile Method","Updates an existing note file with new name and title information."];
+search_result['1258']=["topic_00000000000002EF_overloads--.html","NotesService.GetAdminPageModel Method","Retrieves the administrative home page model, including user and note access data, for authorized admin\r\nusers."];

@@ -1,1 +1,1 @@
-search_result['734']=["topic_000000000000019E.html","UserRoles Class","Class UserRoles."];
+search_result['734']=["topic_000000000000019C.html","CookieStateAgent.AuthHeader Property","Get a Metadata/header for authetication to server in gRPC calls"];

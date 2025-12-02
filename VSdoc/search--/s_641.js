@@ -1,1 +1,1 @@
-search_result['641']=["topic_000000000000015A.html","NoteEditor.PreparedCode Property","Holding place to prepared code to be inserted"];
+search_result['641']=["topic_0000000000000158.html","NoteEditor.Modal Property","For dialogs"];

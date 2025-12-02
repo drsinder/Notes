@@ -1,1 +1,1 @@
-search_result['905']=["topic_0000000000000208.html","ApplicationUser.MyGuid Property","Gets or sets my unique identifier."];
+search_result['905']=["topic_0000000000000206.html","ApplicationUser.Pref8 Property","Gets or sets a value indicating whether this ApplicationUser is pref8."];

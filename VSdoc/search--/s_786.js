@@ -1,1 +1,1 @@
-search_result['786']=["topic_00000000000001C2_overloads--.html","SubdirectoryHandler.SendAsync Method","Sends an HTTP request to the inner handler to send to the server as an asynchronous operation."];
+search_result['786']=["topic_00000000000001C1.html","SubdirectoryHandler Constructor",""];

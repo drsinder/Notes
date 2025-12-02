@@ -1,1 +1,1 @@
-search_result['24']=["topic_000000000000000B_events--.html","FileButton Events",""];
+search_result['24']=["topic_000000000000000B.html","FileButton Class","Class FileButton.\r\nImplements the ComponentBase"];

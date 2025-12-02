@@ -1,1 +1,1 @@
-search_result['757']=["topic_00000000000001AB.html","Globals.HangfireAddress Property",""];
+search_result['757']=["topic_00000000000001A9.html","Globals.SendGridName Property","Gets or sets the name of the send grid."];

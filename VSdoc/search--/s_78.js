@@ -1,1 +1,1 @@
-search_result['78']=["topic_000000000000002E_attached_props--.html","AccessItem Attached Properties",""];
+search_result['78']=["topic_0000000000000026.html","AccessX Enumeration","Enum AccessX"];

@@ -1,1 +1,1 @@
-search_result['1059']=["topic_0000000000000274.html","NoteHeader.ThreadLastEdited Property","Gets or sets the thread last edited.\r\nWhen the thread was last edited"];
+search_result['1059']=["topic_0000000000000272.html","NoteHeader.NoteSubject Property","Gets or sets the note subject.\r\nSubject/Title of a note"];

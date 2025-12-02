@@ -1,1 +1,1 @@
-search_result['555']=["topic_0000000000000127.html","NoteIndex.GetModel Method","Get the Index model - used by the NotePanel"];
+search_result['555']=["topic_0000000000000125.html","NoteIndex.GetPreviousNote Method","Get the previous note"];

@@ -1,1 +1,1 @@
-search_result['301']=["topic_000000000000009A_vars--.html","HelpDialog2 Fields",""];
+search_result['301']=["topic_000000000000009A_methods--.html","HelpDialog2 Methods",""];

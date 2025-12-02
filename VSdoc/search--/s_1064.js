@@ -1,1 +1,1 @@
-search_result['1064']=["topic_0000000000000279.html","NoteHeader.LinkGuid Property","Gets or sets the link unique identifier."];
+search_result['1064']=["topic_0000000000000277.html","NoteHeader.AuthorID Property","Gets or sets the author identifier."];

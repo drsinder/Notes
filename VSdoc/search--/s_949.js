@@ -1,1 +1,1 @@
-search_result['949']=["topic_0000000000000225.html","LinkedFile.GetGLinkedFileList Method","Gets the g linked file list."];
+search_result['949']=["topic_0000000000000223.html","LinkedFile.GetGLinkedFile Method","Gets the g linked file."];

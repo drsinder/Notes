@@ -1,1 +1,1 @@
-search_result['993']=["topic_0000000000000246.html","Mark.NoteHeaderId Property","Gets or sets the note header identifier."];
+search_result['993']=["topic_0000000000000244.html","Mark.MarkOrdinal Property","Gets or sets the mark ordinal."];

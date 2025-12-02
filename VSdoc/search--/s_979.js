@@ -1,1 +1,1 @@
-search_result['979']=["topic_000000000000023D.html","LinkQueue.GetGLinkQueue Method","Gets the g link queue."];
+search_result['979']=["topic_000000000000023B.html","LinkQueue.Secret Property","Gets or sets the secret."];

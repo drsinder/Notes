@@ -1,1 +1,1 @@
-search_result['521']=["topic_000000000000010C.html","NewNote Constructor","Initializes a new instance of the NewNote class."];
+search_result['521']=["topic_000000000000010A.html","NewNote.RefId Property","Gets or sets the reference identifier."];

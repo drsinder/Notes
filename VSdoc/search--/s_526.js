@@ -1,1 +1,1 @@
-search_result['526']=["topic_000000000000010E_events--.html","NoteIndex Events",""];
+search_result['526']=["topic_000000000000010E.html","NoteIndex Class",""];

@@ -1,1 +1,1 @@
-search_result['644']=["topic_000000000000015C_overloads--.html","NoteEditor.OnParametersSetAsync Method","Get a NoteFile Object for the file we are using"];
+search_result['644']=["topic_000000000000015B.html","NoteEditor Constructor","Initializes a new instance of the NoteEditor class."];

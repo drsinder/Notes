@@ -1,1 +1,1 @@
-search_result['433']=["topic_00000000000000DB_events--.html","NoteMenu Events",""];
+search_result['433']=["topic_00000000000000DB.html","NoteMenu Class",""];

@@ -1,1 +1,1 @@
-search_result['819']=["topic_00000000000001D2_events--.html","Notesdata Events",""];
+search_result['819']=["topic_00000000000001D2.html","Notesdata Class","A base class inherited by each EF Core migration."];

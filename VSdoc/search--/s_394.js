@@ -1,1 +1,1 @@
-search_result['394']=["topic_00000000000000C5.html","ListMenu.currNote Property","Ordinal of the current note"];
+search_result['394']=["topic_00000000000000C3.html","ListMenu.IsPrinting Property","Are we printing?"];

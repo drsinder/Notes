@@ -1,1 +1,1 @@
-search_result['1138']=["topic_00000000000002B1.html","Subscription.Id Property","Gets or sets the identifier."];
+search_result['1138']=["topic_00000000000002B0_props--.html","Subscription Properties",""];

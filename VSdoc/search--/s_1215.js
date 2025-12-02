@@ -1,1 +1,1 @@
-search_result['1215']=["topic_00000000000002DF.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];
+search_result['1215']=["topic_00000000000002DE.html","EmailSender(IOptions\u0026lt;AuthMessageSenderOptions\u0026gt;) Constructor","Initializes a new instance of the EmailSender class."];

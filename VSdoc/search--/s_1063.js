@@ -1,1 +1,1 @@
-search_result['1063']=["topic_0000000000000278.html","NoteHeader.AuthorName Property","Gets or sets the name of the author."];
+search_result['1063']=["topic_0000000000000276.html","NoteHeader.ResponseCount Property","Gets or sets the response count.\r\nMeaningful only if ResponseOrdinal = 0"];

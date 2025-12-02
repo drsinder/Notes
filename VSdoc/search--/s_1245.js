@@ -1,1 +1,1 @@
-search_result['1245']=["topic_00000000000002EA.html","NotesService.GetUserList Method","Retrieves a list of all application users accessible to administrators."];
+search_result['1245']=["topic_00000000000002E9.html","NotesService.GetAccess Method","Retrieves the access permissions for a specified note file based on the current user\u0027s context."];

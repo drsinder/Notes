@@ -1,1 +1,1 @@
-search_result['76']=["topic_0000000000000026.html","AccessX Enumeration","Enum AccessX"];
+search_result['76']=["topic_0000000000000024.html","AccessDeleteButton Constructor","Initializes a new instance of the AccessDeleteButton class."];

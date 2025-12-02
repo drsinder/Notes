@@ -1,1 +1,1 @@
-search_result['754']=["topic_00000000000001A8.html","Globals.SendGridEmail Property","Gets or sets the send grid email."];
+search_result['754']=["topic_00000000000001A6.html","Globals.TimeZoneDefaultID Property","Gets or sets the time zone default identifier."];

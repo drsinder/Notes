@@ -1,1 +1,1 @@
-search_result['406']=["topic_00000000000000CB_vars--.html","LoginDisplay Fields",""];
+search_result['406']=["topic_00000000000000CB_methods--.html","LoginDisplay Methods",""];

@@ -1,1 +1,1 @@
-search_result['700']=["topic_0000000000000188.html","Responses.DisplayIt Method","GO show the note"];
+search_result['700']=["topic_0000000000000186.html","Responses Constructor","Initializes a new instance of the Responses class."];

@@ -1,1 +1,1 @@
-search_result['21']=["topic_000000000000000A.html","Clock.TimerTick2 Method","Timers the tick2."];
+search_result['21']=["topic_0000000000000009.html","Clock.OnAfterRender Method","Method invoked after each time the component has been rendered."];

@@ -1,1 +1,1 @@
-search_result['594']=["topic_0000000000000147_events--.html","Preferences Events",""];
+search_result['594']=["topic_0000000000000147.html","Preferences Class","Class Preferences.\r\nImplements the ComponentBase"];

@@ -1,1 +1,1 @@
-search_result['1263']=["topic_00000000000002F3.html","NotesService.GetNoteFileIndexData Method","Retrieves index data for a note file, including access information, note headers, linked files, tags, and\r\nuser details, based on the specified request and the current user\u0027s permissions."];
+search_result['1263']=["topic_00000000000002F2.html","NotesService.Import Method","Imports data from the specified payload into the system using the provided import request.\r\nThe payload is a notefile."];

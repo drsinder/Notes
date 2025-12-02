@@ -1,1 +1,1 @@
-search_result['696']=["topic_0000000000000184.html","Responses.ExpandAllR Property","Expand all rows"];
+search_result['696']=["topic_0000000000000182.html","Responses.Headers Property","List of response headers"];

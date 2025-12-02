@@ -1,1 +1,1 @@
-search_result['371']=["topic_00000000000000B8.html","Notes.Client.Layout Namespace",""];
+search_result['371']=["topic_00000000000000B6_vars--.html","YesNo Fields",""];

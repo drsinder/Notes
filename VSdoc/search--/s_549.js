@@ -1,1 +1,1 @@
-search_result['549']=["topic_0000000000000121.html","NoteIndex.Listing Method","Goto the listing mode from note display mode"];
+search_result['549']=["topic_000000000000011F.html","NoteIndex.DisplayIt Method","Note selected for display"];

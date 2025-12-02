@@ -1,1 +1,1 @@
-search_result['1123']=["topic_00000000000002AC.html","SQLFileContent Class","This class defines a table in the database.\r\nNot currently in use."];
+search_result['1123']=["topic_00000000000002AA.html","SQLFile.Content Property","Gets or sets the content."];

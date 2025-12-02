@@ -1,1 +1,1 @@
-search_result['439']=["topic_00000000000000DE.html","NoteMenu.MyNoteIndex Property","Reference to our caller/container so we can call back into it."];
+search_result['439']=["topic_00000000000000DC.html","NoteMenu.Modal Property","For dialogs"];

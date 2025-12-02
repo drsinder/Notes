@@ -1,1 +1,1 @@
-search_result['727']=["topic_0000000000000197.html","CookieStateAgent.LoginReply Property","Gets or sets the login reply.  Setting also notifies subsrcibers"];
+search_result['727']=["topic_0000000000000195.html","CookieStateAgent.ReadCookie Method","Read a cookie"];

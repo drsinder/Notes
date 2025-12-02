@@ -1,1 +1,1 @@
-search_result['1096']=["topic_000000000000029A_attached_props--.html","Sequencer Attached Properties",""];
+search_result['1096']=["topic_0000000000000299.html","Search.Clone Method","Clones the specified s."];

@@ -1,1 +1,1 @@
-search_result['33']=["topic_000000000000000F_events--.html","SCheckBox Events",""];
+search_result['33']=["topic_000000000000000F.html","SCheckBox Class","Class SCheckBox.\r\nImplements the ComponentBase"];

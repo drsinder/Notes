@@ -1,1 +1,1 @@
-search_result['129']=["topic_000000000000004C.html","CFormat Class","Class CFormat."];
+search_result['129']=["topic_000000000000004A.html","CodeFormat.IsEditing Property","Gets or sets a value indicating whether this instance is editing."];

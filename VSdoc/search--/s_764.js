@@ -1,1 +1,1 @@
-search_result['764']=["topic_00000000000001B2.html","Globals.UTimeBlazor Method","us the time blazor."];
+search_result['764']=["topic_00000000000001B0.html","Globals.Base64Encode Method","Base64s the encode."];

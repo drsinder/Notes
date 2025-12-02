@@ -1,1 +1,1 @@
-search_result['947']=["topic_0000000000000223.html","LinkedFile.GetGLinkedFile Method","Gets the g linked file."];
+search_result['947']=["topic_0000000000000221.html","LinkedFile.Secret Property","Gets or sets the secret."];

@@ -1,1 +1,1 @@
-search_result['1303']=["topic_0000000000000307.html","NotesService.SendEmailAuth Method","Send email authenticated."];
+search_result['1303']=["topic_0000000000000306.html","NotesService.GetAbout Method","Gets the about."];

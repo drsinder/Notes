@@ -1,1 +1,1 @@
-search_result['424']=["topic_00000000000000D5_overloads--.html","MainMenu.OnAfterRender Method","Update the clock once per second"];
+search_result['424']=["topic_00000000000000D4.html","MainMenu Constructor","Initializes a new instance of the NavMenu class."];

@@ -1,1 +1,1 @@
-search_result['662']=["topic_0000000000000169.html","NotePanel.Vers Property","Are we showing history versions"];
+search_result['662']=["topic_0000000000000167.html","NotePanel.AltStyle Property","Is this panel to be shown in the alternate style?"];

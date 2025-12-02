@@ -1,1 +1,1 @@
-search_result['647']=["topic_000000000000015F.html","NoteEditor.InsertCode2 Method","Insert the previously prepared code."];
+search_result['647']=["topic_000000000000015D.html","NoteEditor.HandleValidSubmit Method","User has asked to store the note"];

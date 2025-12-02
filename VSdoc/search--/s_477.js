@@ -1,1 +1,1 @@
-search_result['477']=["topic_00000000000000F7.html","About Class",""];
+search_result['477']=["topic_00000000000000F5.html","UserList.EditLink Method","Edits the link."];

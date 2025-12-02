@@ -1,1 +1,1 @@
-search_result['284']=["topic_0000000000000097_attached_props--.html","Forward Attached Properties",""];
+search_result['284']=["topic_0000000000000096.html","Mark.ResponseOrdinal Property","Gets or sets the response ordinal."];

@@ -1,1 +1,1 @@
-search_result['209']=["topic_000000000000006F_events--.html","Email Events",""];
+search_result['209']=["topic_000000000000006F.html","Email Class","Class Email.\r\nImplements the ComponentBase"];

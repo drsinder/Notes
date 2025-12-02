@@ -1,1 +1,1 @@
-search_result['767']=["topic_00000000000001B5.html","Globals.LoginDisplay Property",""];
+search_result['767']=["topic_00000000000001B3.html","Globals.LocalTimeBlazor Method","GMT to Local."];

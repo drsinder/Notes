@@ -1,1 +1,1 @@
-search_result['285']=["topic_0000000000000097_events--.html","Forward Events",""];
+search_result['285']=["topic_0000000000000097.html","Forward Class","Class Forward.\r\nImplements the ComponentBase"];

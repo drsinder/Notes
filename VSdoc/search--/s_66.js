@@ -1,1 +1,1 @@
-search_result['66']=["topic_0000000000000021.html","AccessDeleteButton Class",""];
+search_result['66']=["topic_000000000000001F.html","AccessCheckBox Constructor","Initializes a new instance of the AccessCheckBox class."];

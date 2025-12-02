@@ -1,1 +1,1 @@
-search_result['1323']=["topic_0000000000000311.html","NotesService.GetNoteCount Method","Retrieves the number of notes in the specified note file and archive that are not deleted and are not\r\nresponses."];
+search_result['1323']=["topic_0000000000000310.html","NotesService.GetNoteHeaders Method","Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in\r\nthe request."];

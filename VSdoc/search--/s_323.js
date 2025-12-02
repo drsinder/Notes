@@ -1,1 +1,1 @@
-search_result['323']=["topic_00000000000000A4_attached_props--.html","PrintDlg Attached Properties",""];
+search_result['323']=["topic_00000000000000A3.html","NoteFileDetails.Owner Property","Gets or sets the owner."];

@@ -1,1 +1,1 @@
-search_result['562']=["topic_0000000000000131_props--.html","Search Properties",""];
+search_result['562']=["topic_0000000000000131_events--.html","Search Events",""];

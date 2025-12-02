@@ -1,1 +1,1 @@
-search_result['950']=["topic_0000000000000226.html","LinkLog Class","This class defines a table in the database.\r\nLog of link activity."];
+search_result['950']=["topic_0000000000000224.html","LinkedFile.GetSequencerList Method","Gets the sequencer list."];

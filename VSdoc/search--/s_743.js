@@ -1,1 +1,1 @@
-search_result['743']=["topic_00000000000001A2.html","Globals Class","Class Globals."];
+search_result['743']=["topic_00000000000001A0.html","User Field","The user role name"];

@@ -1,1 +1,1 @@
-search_result['1288']=["topic_00000000000002FF_overloads--.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];
+search_result['1288']=["topic_00000000000002FE_overloads--.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];

@@ -1,1 +1,1 @@
-search_result['1144']=["topic_00000000000002B5_events--.html","Tags Events",""];
+search_result['1144']=["topic_00000000000002B5.html","Tags Class","This class defines a table in the database.\r\nZero or more of these objects may be associated with each note.\r\nDefines a simple tag or set of tags for a note."];

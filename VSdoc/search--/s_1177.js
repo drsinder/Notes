@@ -1,1 +1,1 @@
-search_result['1177']=["topic_00000000000002CA_attached_props--.html","Importer Attached Properties",""];
+search_result['1177']=["topic_00000000000002C9.html","AccessManager.TestLinkAccess Method","Tests the link access."];

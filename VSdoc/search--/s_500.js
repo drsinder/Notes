@@ -1,1 +1,1 @@
-search_result['500']=["topic_0000000000000100_events--.html","HomeIndex Events",""];
+search_result['500']=["topic_0000000000000100.html","HomeIndex Class",""];

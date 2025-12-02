@@ -1,1 +1,1 @@
-search_result['1278']=["topic_00000000000002FA_overloads--.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];
+search_result['1278']=["topic_00000000000002F9_overloads--.html","NotesService.AddAccessItem Method","Adds a new access item for a note if the current user has edit permissions."];

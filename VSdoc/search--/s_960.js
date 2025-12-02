@@ -1,1 +1,1 @@
-search_result['960']=["topic_000000000000022B.html","LinkLog.GetLinkLog Method","Gets the link log."];
+search_result['960']=["topic_0000000000000229.html","LinkLog.EventTime Property","Gets or sets the event time."];

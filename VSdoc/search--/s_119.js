@@ -1,1 +1,1 @@
-search_result['119']=["topic_0000000000000045_events--.html","CodeFormat Events",""];
+search_result['119']=["topic_0000000000000045.html","CodeFormat Class","Prepare a block of code for insertion"];

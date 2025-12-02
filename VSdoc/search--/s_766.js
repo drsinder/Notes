@@ -1,1 +1,1 @@
-search_result['766']=["topic_00000000000001B4.html","Globals.MainMenu Property",""];
+search_result['766']=["topic_00000000000001B2.html","Globals.UTimeBlazor Method","us the time blazor."];

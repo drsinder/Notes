@@ -1,1 +1,1 @@
-search_result['360']=["topic_00000000000000B3.html","UserEdit.Model Property","Gets or sets the model."];
+search_result['360']=["topic_00000000000000B1.html","UserEdit.ModalInstance Property","Gets or sets the modal instance."];

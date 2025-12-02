@@ -1,1 +1,1 @@
-search_result['103']=["topic_000000000000003B_events--.html","AddAccessDlg Events",""];
+search_result['103']=["topic_000000000000003B.html","AddAccessDlg Class","Add a user to the access list"];

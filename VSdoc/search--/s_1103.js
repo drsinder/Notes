@@ -1,1 +1,1 @@
-search_result['1103']=["topic_000000000000029D.html","Sequencer.Ordinal Property","Gets or sets the ordinal."];
+search_result['1103']=["topic_000000000000029B.html","Sequencer.UserId Property","Gets or sets the user identifier.\r\nID of the user who owns the item"];

@@ -1,1 +1,1 @@
-search_result['534']=["topic_0000000000000113.html","NoteIndex.MyNotePanel Property",""];
+search_result['534']=["topic_0000000000000111.html","NoteIndex.CurrentNoteId Property","Non zero when viewing a note"];

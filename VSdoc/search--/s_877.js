@@ -1,1 +1,1 @@
-search_result['877']=["topic_00000000000001F1.html","Notes.Entities Namespace",""];
+search_result['877']=["topic_00000000000001EF.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];

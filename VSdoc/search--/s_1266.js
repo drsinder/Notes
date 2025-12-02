@@ -1,1 +1,1 @@
-search_result['1266']=["topic_00000000000002F4_overloads--.html","NotesService.GetNoteContent Method","Retrieves the content and metadata of a note specified by the request, including header, body, tags, file\r\ninformation, and access permissions."];
+search_result['1266']=["topic_00000000000002F3_overloads--.html","NotesService.GetNoteFileIndexData Method","Retrieves index data for a note file, including access information, note headers, linked files, tags, and\r\nuser details, based on the specified request and the current user\u0027s permissions."];

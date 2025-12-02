@@ -1,1 +1,1 @@
-search_result['1065']=["topic_000000000000027A.html","NoteHeader.RefId Property","Gets or sets the reference identifier."];
+search_result['1065']=["topic_0000000000000278.html","NoteHeader.AuthorName Property","Gets or sets the name of the author."];

@@ -1,1 +1,1 @@
-search_result['870']=["topic_00000000000001EA.html","NotesDbContext.Subscription Property","Gets or sets the subscription."];
+search_result['870']=["topic_00000000000001E8.html","NotesDbContext.Search Property","Gets or sets the search."];

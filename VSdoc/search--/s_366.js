@@ -1,1 +1,1 @@
-search_result['366']=["topic_00000000000000B6_events--.html","YesNo Events",""];
+search_result['366']=["topic_00000000000000B6.html","YesNo Class","Class YesNo.\r\nImplements the ComponentBase"];

@@ -1,1 +1,1 @@
-search_result['142']=["topic_0000000000000051_events--.html","Copy Events",""];
+search_result['142']=["topic_0000000000000051.html","Copy Class","Class Copy.\r\nImplements the ComponentBase"];

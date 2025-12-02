@@ -1,1 +1,1 @@
-search_result['1272']=["topic_00000000000002F7_overloads--.html","NotesService.UpdateAccessItem Method","Updates the access permissions for a note file if the current user has edit access."];
+search_result['1272']=["topic_00000000000002F6_overloads--.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];

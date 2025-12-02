@@ -1,1 +1,1 @@
-search_result['1061']=["topic_0000000000000276.html","NoteHeader.ResponseCount Property","Gets or sets the response count.\r\nMeaningful only if ResponseOrdinal = 0"];
+search_result['1061']=["topic_0000000000000274.html","NoteHeader.ThreadLastEdited Property","Gets or sets the thread last edited.\r\nWhen the thread was last edited"];

@@ -1,1 +1,1 @@
-search_result['1092']=["topic_0000000000000297.html","Search.ResponseOrdinal Property","Gets or sets the response ordinal."];
+search_result['1092']=["topic_0000000000000295.html","Search.ArchiveId Property","Gets or sets the archive identifier."];

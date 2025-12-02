@@ -1,1 +1,1 @@
-search_result['1302']=["topic_0000000000000306_overloads--.html","NotesService.GetAbout Method","Gets the about."];
+search_result['1302']=["topic_0000000000000305_overloads--.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];

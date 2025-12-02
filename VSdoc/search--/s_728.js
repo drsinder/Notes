@@ -1,1 +1,1 @@
-search_result['728']=["topic_0000000000000198.html","OnChange Event","Occurs when Login state changes."];
+search_result['728']=["topic_0000000000000196.html","CookieStateAgent.WriteCookie Method","Write a Cookie"];

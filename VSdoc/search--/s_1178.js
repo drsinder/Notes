@@ -1,1 +1,1 @@
-search_result['1178']=["topic_00000000000002CA_events--.html","Importer Events",""];
+search_result['1178']=["topic_00000000000002CA.html","Importer Class","Does the import of a text file from an old plato/novanet system notefile\r\nThere be messy stuff in here!!!"];

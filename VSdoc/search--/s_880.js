@@ -1,1 +1,1 @@
-search_result['880']=["topic_00000000000001F2_events--.html","ApplicationUser Events",""];
+search_result['880']=["topic_00000000000001F2.html","ApplicationUser Class","Extentions to the base IdentityUser\r\nContains fields mirrored locally in UserData\r\nThese fields are accessed and edited there and then written back\r\nenmass.  By contrast the predefined field not seen ..."];

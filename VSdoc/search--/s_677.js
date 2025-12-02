@@ -1,1 +1,1 @@
-search_result['677']=["topic_0000000000000178.html","NotePanel.respX Property","Gets or sets the resp x."];
+search_result['677']=["topic_0000000000000176.html","NotePanel.MyMenu Property","Reference to our menu so we can talk to it"];

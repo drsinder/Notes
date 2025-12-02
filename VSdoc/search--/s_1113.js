@@ -1,1 +1,1 @@
-search_result['1113']=["topic_00000000000002A5_events--.html","SQLFile Events",""];
+search_result['1113']=["topic_00000000000002A5.html","SQLFile Class","This class defines a table in the database.\r\nNot currently in use."];

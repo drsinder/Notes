@@ -1,1 +1,1 @@
-search_result['975']=["topic_0000000000000239.html","LinkQueue.BaseUri Property","Gets or sets the base URI."];
+search_result['975']=["topic_0000000000000237.html","LinkQueue.LinkGuid Property","Gets or sets the link unique identifier."];

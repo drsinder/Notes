@@ -1,1 +1,1 @@
-search_result['1318']=["topic_000000000000030E_overloads--.html","NotesService.GetTextFile Method","Gets text from server for display in client.\r\nfiles: about.html | help.html | helpdialog.html | helpdialog2.html | license.html"];
+search_result['1318']=["topic_000000000000030D_overloads--.html","NotesService.GetExportJson Method","Gets the export json.  Well it\u0027s called json here because it was intended to be used to export a\r\nfile as json.  But the fact is this is a good way to grab every thing the file contains\r\nrelevant to t..."];

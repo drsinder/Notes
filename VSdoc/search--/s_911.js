@@ -1,1 +1,1 @@
-search_result['911']=["topic_000000000000020E.html","Audit Class","This class defines a table in the database.\r\nNot currently in use."];
+search_result['911']=["topic_000000000000020C.html","ApplicationUser.GetApplicationUsers Method","Gets the application users.\r\nConversions between Db Entity space and gRPC space."];

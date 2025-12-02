@@ -1,1 +1,1 @@
-search_result['495']=["topic_00000000000000FE.html","EditNote Constructor","Initializes a new instance of the EditNote class."];
+search_result['495']=["topic_00000000000000FC.html","EditNote.stuff Property","A note display model"];

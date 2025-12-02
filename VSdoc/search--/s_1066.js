@@ -1,1 +1,1 @@
-search_result['1066']=["topic_000000000000027B.html","NoteHeader.IsDeleted Property","Gets or sets a value indicating whether this instance is deleted."];
+search_result['1066']=["topic_0000000000000279.html","NoteHeader.LinkGuid Property","Gets or sets the link unique identifier."];

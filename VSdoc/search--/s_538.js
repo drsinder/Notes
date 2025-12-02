@@ -1,1 +1,1 @@
-search_result['538']=["topic_0000000000000117.html","NoteIndex.PageSettings Property","Filter setting for the grid"];
+search_result['538']=["topic_0000000000000115.html","NoteIndex.sfTextBox Property","Our direct navigation typin box"];

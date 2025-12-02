@@ -1,1 +1,1 @@
-search_result['425']=["topic_00000000000000D6.html","MainMenu.TimerTick2 Method","Invoked once per second"];
+search_result['425']=["topic_00000000000000D5.html","MainMenu.OnAfterRender Method","Update the clock once per second"];

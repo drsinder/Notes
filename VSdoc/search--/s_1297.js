@@ -1,1 +1,1 @@
-search_result['1297']=["topic_0000000000000304.html","NotesService.UpdateNote Method","Updates an existing note with new content and subject information if the caller is authorized to edit the\r\nnote."];
+search_result['1297']=["topic_0000000000000303.html","NotesService.CreateNewNote Method","Creates a new note or response in the system using the provided text and subject information."];

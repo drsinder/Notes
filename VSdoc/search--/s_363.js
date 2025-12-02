@@ -1,1 +1,1 @@
-search_result['363']=["topic_00000000000000B5_overloads--.html","UserEdit.OnParametersSetAsync Method","On parameters set as an asynchronous operation."];
+search_result['363']=["topic_00000000000000B4.html","UserEdit Constructor","Initializes a new instance of the UserEdit class."];

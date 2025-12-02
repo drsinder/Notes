@@ -1,1 +1,1 @@
-search_result['1121']=["topic_00000000000002AA.html","SQLFile.Content Property","Gets or sets the content."];
+search_result['1121']=["topic_00000000000002A8.html","SQLFile.ContentType Property","Gets or sets the type of the content."];

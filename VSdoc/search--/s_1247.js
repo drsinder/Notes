@@ -1,1 +1,1 @@
-search_result['1247']=["topic_00000000000002EB.html","NotesService.GetUserRoles Method","Retrieves the roles assigned to a specified user and returns a view model containing user information and\r\nrole membership status."];
+search_result['1247']=["topic_00000000000002EA.html","NotesService.GetUserList Method","Retrieves a list of all application users accessible to administrators."];

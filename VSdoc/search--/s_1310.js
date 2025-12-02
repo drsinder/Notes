@@ -1,1 +1,1 @@
-search_result['1310']=["topic_000000000000030A_overloads--.html","NotesService.GetNoteFilesOrderedByName Method","Gets the note files ordered by name."];
+search_result['1310']=["topic_0000000000000309_overloads--.html","NotesService.DoForward Method","Sends a note email to the current user if they have read access to the specified file and archive."];

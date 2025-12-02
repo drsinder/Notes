@@ -1,1 +1,1 @@
-search_result['1292']=["topic_0000000000000301_overloads--.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];
+search_result['1292']=["topic_0000000000000300_overloads--.html","NotesService.UpdateSequencerOrdinal Method","Updates the ordinal and last modification time of a sequencer for the specified user and note file."];

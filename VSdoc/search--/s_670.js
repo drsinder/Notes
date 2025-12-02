@@ -1,1 +1,1 @@
-search_result['670']=["topic_0000000000000171.html","NotePanel.RespFlipped Property","Is the order of responses flipped?"];
+search_result['670']=["topic_000000000000016F.html","NotePanel.ShowResp Property","Public value of RespShown"];

@@ -1,1 +1,1 @@
-search_result['894']=["topic_00000000000001FD.html","ApplicationUser.Ipref9 Property","Gets or sets the ipref9.\r\nbits extend bool properties"];
+search_result['894']=["topic_00000000000001FB.html","ApplicationUser.Ipref7 Property","Gets or sets the ipref7."];

@@ -1,1 +1,1 @@
-search_result['1262']=["topic_00000000000002F2_overloads--.html","NotesService.Import Method","Imports data from the specified payload into the system using the provided import request.\r\nThe payload is a notefile."];
+search_result['1262']=["topic_00000000000002F1_overloads--.html","NotesService.DeleteNoteFile Method","Deletes the specified note file and all associated data from the database."];

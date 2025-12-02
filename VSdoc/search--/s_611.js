@@ -1,1 +1,1 @@
-search_result['611']=["topic_000000000000014D.html","LocalModel2.Name Property","Gets or sets the name."];
+search_result['611']=["topic_000000000000014B_overloads--.html","LocalModel2 Constructor","Initializes a new instance of the LocalModel2 class."];

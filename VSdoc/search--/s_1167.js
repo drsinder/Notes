@@ -1,1 +1,1 @@
-search_result['1167']=["topic_00000000000002C4_events--.html","AccessManager Events",""];
+search_result['1167']=["topic_00000000000002C4.html","AccessManager Class","Class AccessManager."];

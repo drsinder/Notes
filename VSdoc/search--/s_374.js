@@ -1,1 +1,1 @@
-search_result['374']=["topic_00000000000000B9_events--.html","MainLayout Events",""];
+search_result['374']=["topic_00000000000000B9.html","MainLayout Class",""];

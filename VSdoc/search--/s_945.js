@@ -1,1 +1,1 @@
-search_result['945']=["topic_0000000000000221.html","LinkedFile.Secret Property","Gets or sets the secret."];
+search_result['945']=["topic_000000000000021F.html","LinkedFile.AcceptFrom Property","Gets or sets a value indicating whether [accept from]."];

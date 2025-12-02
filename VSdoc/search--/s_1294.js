@@ -1,1 +1,1 @@
-search_result['1294']=["topic_0000000000000302_overloads--.html","NotesService.GetNoteFile Method","Retrieves the note file specified by the request if the current user has appropriate access permissions."];
+search_result['1294']=["topic_0000000000000301_overloads--.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];

@@ -1,1 +1,1 @@
-search_result['1243']=["topic_00000000000002E9.html","NotesService.GetAccess Method","Retrieves the access permissions for a specified note file based on the current user\u0027s context."];
+search_result['1243']=["topic_00000000000002E8.html","NotesService.NoOp Method","Handles a no-operation request and returns a default response."];

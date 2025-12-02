@@ -1,1 +1,1 @@
-search_result['1283']=["topic_00000000000002FD.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];
+search_result['1283']=["topic_00000000000002FC.html","NotesService.GetVersions Method","Retrieves a list of all available versions of a note that match the specified criteria."];

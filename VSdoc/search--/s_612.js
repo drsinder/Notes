@@ -1,1 +1,1 @@
-search_result['612']=["topic_000000000000014E.html","ShowNote Class","Class ShowNote.\r\nImplements the ComponentBase"];
+search_result['612']=["topic_000000000000014C.html","LocalModel2.Psize Property","Gets or sets the psize."];

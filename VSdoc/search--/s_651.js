@@ -1,1 +1,1 @@
-search_result['651']=["topic_0000000000000161_events--.html","NotePanel Events",""];
+search_result['651']=["topic_0000000000000161.html","NotePanel Class",""];

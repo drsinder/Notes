@@ -1,1 +1,1 @@
-search_result['807']=["topic_00000000000001CE_events--.html","CreateIdentitySchema Events",""];
+search_result['807']=["topic_00000000000001CE.html","CreateIdentitySchema Class","A base class inherited by each EF Core migration."];

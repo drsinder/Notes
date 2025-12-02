@@ -1,1 +1,1 @@
-search_result['718']=["topic_0000000000000192_events--.html","CookieStateAgent Events",""];
+search_result['718']=["topic_0000000000000192.html","CookieStateAgent Class",""];

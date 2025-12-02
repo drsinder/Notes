@@ -1,1 +1,1 @@
-search_result['1221']=["topic_00000000000002E2_events--.html","AuthMessageSenderOptions Events",""];
+search_result['1221']=["topic_00000000000002E2.html","AuthMessageSenderOptions Class","Class AuthMessageSenderOptions."];

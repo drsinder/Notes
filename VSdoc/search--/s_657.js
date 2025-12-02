@@ -1,1 +1,1 @@
-search_result['657']=["topic_0000000000000164.html","NotePanel.ShowChild Property","Whether or not child windows should be shown.  These might include\r\nResponses, versions, references."];
+search_result['657']=["topic_0000000000000162.html","NotePanel.Modal Property","For Dialogs"];

@@ -1,1 +1,1 @@
-search_result['604']=["topic_0000000000000149_props--.html","LocalModel2 Properties",""];
+search_result['604']=["topic_0000000000000149_events--.html","LocalModel2 Events",""];

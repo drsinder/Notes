@@ -1,1 +1,1 @@
-search_result['610']=["topic_000000000000014C.html","LocalModel2.Psize Property","Gets or sets the psize."];
+search_result['610']=["topic_000000000000014B.html","LocalModel2(String, String) Constructor","Initializes a new instance of the LocalModel2 class."];

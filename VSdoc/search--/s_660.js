@@ -1,1 +1,1 @@
-search_result['660']=["topic_0000000000000167.html","NotePanel.AltStyle Property","Is this panel to be shown in the alternate style?"];
+search_result['660']=["topic_0000000000000165.html","NotePanel.IsRootNote Property","Is this at the \"root\" of something"];

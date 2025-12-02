@@ -1,1 +1,1 @@
-search_result['620']=["topic_0000000000000151.html","ShowNote Constructor","Initializes a new instance of the ShowNote class."];
+search_result['620']=["topic_000000000000014F.html","ShowNote.NoteId Property","Gets or sets the note identifier."];

@@ -1,1 +1,1 @@
-search_result['1205']=["topic_00000000000002DB.html","NoteDataManager.GetBaseNoteHeaderById Method","Gets a base note header given its headerid"];
+search_result['1205']=["topic_00000000000002DA.html","NoteDataManager.GetBaseNoteHeader (NotesDbContext, Int32, Int32, Int32) Method","Get the BaseNoteHeader for a Note"];

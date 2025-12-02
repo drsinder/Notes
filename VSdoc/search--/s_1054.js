@@ -1,1 +1,1 @@
-search_result['1054']=["topic_000000000000026F.html","NoteHeader.BaseNoteId Property","Gets or sets the base note identifier."];
+search_result['1054']=["topic_000000000000026D.html","NoteHeader.NoteFileId Property","Gets or sets the note file identifier.\r\nThe fileid the note belongs to"];

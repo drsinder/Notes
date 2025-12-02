@@ -1,1 +1,1 @@
-search_result['976']=["topic_000000000000023A.html","LinkQueue.Enqueued Property","Gets or sets a value indicating whether this LinkQueue is enqueued."];
+search_result['976']=["topic_0000000000000238.html","LinkQueue.Activity Property","Gets or sets the activity."];

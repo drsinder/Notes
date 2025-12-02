@@ -1,1 +1,1 @@
-search_result['1195']=["topic_00000000000002D3.html","NoteDataManager.DeleteNote Method","Delete a Note"];
+search_result['1195']=["topic_00000000000002D1.html","NoteDataManager.CreateNote Method","Create a new note"];

@@ -1,1 +1,1 @@
-search_result['1051']=["topic_000000000000026C.html","NoteHeader.Id Property","Gets or sets the identifier.\r\nUniquely identifies the note"];
+search_result['1051']=["topic_000000000000026B_props--.html","NoteHeader Properties",""];

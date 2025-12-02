@@ -1,1 +1,1 @@
-search_result['1081']=["topic_000000000000028F_events--.html","Search Events",""];
+search_result['1081']=["topic_000000000000028F.html","Search Class","Model for searching a notefile"];

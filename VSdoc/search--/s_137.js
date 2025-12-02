@@ -1,1 +1,1 @@
-search_result['137']=["topic_000000000000004F.html","CFormats Field","The c formats"];
+search_result['137']=["topic_000000000000004D.html","CFormat.Name Property","Gets or sets the name."];

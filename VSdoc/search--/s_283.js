@@ -1,1 +1,1 @@
-search_result['283']=["topic_0000000000000097.html","Forward Class","Class Forward.\r\nImplements the ComponentBase"];
+search_result['283']=["topic_0000000000000095.html","Mark.NoteHeaderId Property","Gets or sets the note header identifier."];

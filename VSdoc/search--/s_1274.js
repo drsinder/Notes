@@ -1,1 +1,1 @@
-search_result['1274']=["topic_00000000000002F8_overloads--.html","NotesService.DeleteAccessItem Method","Deletes the specified access item for a note if the current user has edit permissions."];
+search_result['1274']=["topic_00000000000002F7_overloads--.html","NotesService.UpdateAccessItem Method","Updates the access permissions for a note file if the current user has edit access."];

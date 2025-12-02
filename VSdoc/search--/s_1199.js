@@ -1,1 +1,1 @@
-search_result['1199']=["topic_00000000000002D7.html","NoteDataManager.GetFileById Method","Get notefile entity from its Id"];
+search_result['1199']=["topic_00000000000002D5.html","NoteDataManager.GetFileByName Method","Copy user prefs from ApplicationUser to UserData entity"];

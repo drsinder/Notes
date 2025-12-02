@@ -1,1 +1,1 @@
-search_result['125']=["topic_0000000000000048.html","CodeFormat.TextObj Property","Gets or sets the text object."];
+search_result['125']=["topic_0000000000000046.html","CodeFormat.stuff Property","Gets or sets the stuff."];

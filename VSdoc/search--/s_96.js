@@ -1,1 +1,1 @@
-search_result['96']=["topic_0000000000000037.html","AccessList Constructor","Initializes a new instance of the AccessList class."];
+search_result['96']=["topic_0000000000000035.html","AccessList.ModalInstance Property","Gets or sets the modal instance."];

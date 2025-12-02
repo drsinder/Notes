@@ -1,1 +1,1 @@
-search_result['907']=["topic_000000000000020A.html","ApplicationUser.MergeApplicationUser Method","Merges the application user."];
+search_result['907']=["topic_0000000000000208.html","ApplicationUser.MyGuid Property","Gets or sets my unique identifier."];

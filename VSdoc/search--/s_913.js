@@ -1,1 +1,1 @@
-search_result['913']=["topic_000000000000020E_events--.html","Audit Events",""];
+search_result['913']=["topic_000000000000020E.html","Audit Class","This class defines a table in the database.\r\nNot currently in use."];

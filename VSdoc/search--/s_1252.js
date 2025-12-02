@@ -1,1 +1,1 @@
-search_result['1252']=["topic_00000000000002ED_overloads--.html","NotesService.CreateNoteFile Method","Creates a new note file using the specified request data and returns the created note file."];
+search_result['1252']=["topic_00000000000002EC_overloads--.html","NotesService.UpdateUserRoles Method","Updates the roles assigned to a user based on the specified role selections."];

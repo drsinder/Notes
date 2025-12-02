@@ -1,1 +1,1 @@
-search_result['487']=["topic_00000000000000F9_events--.html","EditNote Events",""];
+search_result['487']=["topic_00000000000000F9.html","EditNote Class","Setup for calling note editor panel to edit an existing note"];

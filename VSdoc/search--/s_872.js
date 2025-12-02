@@ -1,1 +1,1 @@
-search_result['872']=["topic_00000000000001EC.html","NotesDbContext.SQLFileContent Property","Gets or sets the content of the SQL file."];
+search_result['872']=["topic_00000000000001EA.html","NotesDbContext.Subscription Property","Gets or sets the subscription."];

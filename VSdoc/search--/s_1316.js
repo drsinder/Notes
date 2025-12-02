@@ -1,1 +1,1 @@
-search_result['1316']=["topic_000000000000030D_overloads--.html","NotesService.GetExportJson Method","Gets the export json.  Well it\u0027s called json here because it was intended to be used to export a\r\nfile as json.  But the fact is this is a good way to grab every thing the file contains\r\nrelevant to t..."];
+search_result['1316']=["topic_000000000000030C_overloads--.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];

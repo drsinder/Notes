@@ -1,1 +1,1 @@
-search_result['761']=["topic_00000000000001AF.html","Globals.ImportMailInterval Property",""];
+search_result['761']=["topic_00000000000001AD.html","Globals.PrimeAdminEmail Property",""];

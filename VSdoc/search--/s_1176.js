@@ -1,1 +1,1 @@
-search_result['1176']=["topic_00000000000002CA.html","Importer Class","Does the import of a text file from an old plato/novanet system notefile\r\nThere be messy stuff in here!!!"];
+search_result['1176']=["topic_00000000000002C8.html","AccessManager.GetAccessListForFile Method","Gets the access list for file."];

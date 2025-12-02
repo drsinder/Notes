@@ -1,1 +1,1 @@
-search_result['711']=["topic_000000000000018E.html","Versions.Headers Property","Gets or sets the headers."];
+search_result['711']=["topic_000000000000018C.html","Versions.ResponseOrdinal Property","Gets or sets the response ordinal."];

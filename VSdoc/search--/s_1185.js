@@ -1,1 +1,1 @@
-search_result['1185']=["topic_00000000000002CE.html","Importer.Output Method","Outputs the specified message."];
+search_result['1185']=["topic_00000000000002CC.html","Importer.CheckFf Method","Process NovaNET formfeed - we need to eat some lines"];

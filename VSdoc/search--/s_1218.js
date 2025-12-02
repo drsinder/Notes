@@ -1,1 +1,1 @@
-search_result['1218']=["topic_00000000000002E1.html","EmailSender.SendEmailAsync Method","Send email as an asynchronous operation."];
+search_result['1218']=["topic_00000000000002DF_overloads--.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];

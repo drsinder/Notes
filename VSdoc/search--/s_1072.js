@@ -1,1 +1,1 @@
-search_result['1072']=["topic_0000000000000281.html","NoteHeader.CloneForLink Method","Clones for link."];
+search_result['1072']=["topic_000000000000027F.html","NoteHeader.Tags Property","Gets or sets the tags."];

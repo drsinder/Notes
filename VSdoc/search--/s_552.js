@@ -1,1 +1,1 @@
-search_result['552']=["topic_0000000000000124.html","NoteIndex.GetPreviousBaseNote Method","Get the previous base note"];
+search_result['552']=["topic_0000000000000122.html","NoteIndex.GetNextBaseNote Method","Get the next base note header given the current one"];

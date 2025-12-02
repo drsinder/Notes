@@ -1,1 +1,1 @@
-search_result['878']=["topic_00000000000001F2.html","ApplicationUser Class","Extentions to the base IdentityUser\r\nContains fields mirrored locally in UserData\r\nThese fields are accessed and edited there and then written back\r\nenmass.  By contrast the predefined field not seen ..."];
+search_result['878']=["topic_00000000000001F0.html","NotesDbContext.OnModelCreating Method","Called when [model creating]."];

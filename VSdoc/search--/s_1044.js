@@ -1,1 +1,1 @@
-search_result['1044']=["topic_000000000000026A.html","NoteFile.GetGNotefileList Method","Gets the g notefile list.  Conversions between Db Entity space and gRPC space."];
+search_result['1044']=["topic_0000000000000268.html","NoteFile.GetGNotefile Method","Gets the g notefile.\r\nConversions between Db Entity space and gRPC space."];

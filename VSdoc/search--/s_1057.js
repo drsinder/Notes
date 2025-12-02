@@ -1,1 +1,1 @@
-search_result['1057']=["topic_0000000000000272.html","NoteHeader.NoteSubject Property","Gets or sets the note subject.\r\nSubject/Title of a note"];
+search_result['1057']=["topic_0000000000000270.html","NoteHeader.NoteOrdinal Property","Gets or sets the note ordinal.\r\nthe ordinal on a Base note and all its responses"];

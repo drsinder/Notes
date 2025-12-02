@@ -1,1 +1,1 @@
-search_result['770']=["topic_00000000000001B8.html","Globals.CookieName Property",""];
+search_result['770']=["topic_00000000000001B6.html","Globals.GotoNote Property",""];

@@ -1,1 +1,1 @@
-search_result['1046']=["topic_000000000000026B_attached_props--.html","NoteHeader Attached Properties",""];
+search_result['1046']=["topic_000000000000026A.html","NoteFile.GetGNotefileList Method","Gets the g notefile list.  Conversions between Db Entity space and gRPC space."];

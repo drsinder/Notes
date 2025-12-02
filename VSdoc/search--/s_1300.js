@@ -1,1 +1,1 @@
-search_result['1300']=["topic_0000000000000305_overloads--.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];
+search_result['1300']=["topic_0000000000000304_overloads--.html","NotesService.UpdateNote Method","Updates an existing note with new content and subject information if the caller is authorized to edit the\r\nnote."];

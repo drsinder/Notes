@@ -1,1 +1,1 @@
-search_result['332']=["topic_00000000000000A8.html","SearchDlg Class","Class SearchDlg.\r\nImplements the ComponentBase"];
+search_result['332']=["topic_00000000000000A6_overloads--.html","PrintDlg.OnAfterRender Method","Method invoked after each time the component has been rendered."];

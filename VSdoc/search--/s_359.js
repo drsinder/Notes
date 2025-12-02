@@ -1,1 +1,1 @@
-search_result['359']=["topic_00000000000000B2.html","UserEdit.UserId Property","Gets or sets the user identifier."];
+search_result['359']=["topic_00000000000000B0_vars--.html","UserEdit Fields",""];

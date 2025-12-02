@@ -1,1 +1,1 @@
-search_result['1325']=["topic_0000000000000312.html","NotesService.ContentSearch Method","Searches note content for matches to the specified search criteria and returns the results."];
+search_result['1325']=["topic_0000000000000311.html","NotesService.GetNoteCount Method","Retrieves the number of notes in the specified note file and archive that are not deleted and are not\r\nresponses."];

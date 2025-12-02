@@ -1,1 +1,1 @@
-search_result['1173']=["topic_00000000000002C7.html","AccessManager.GetOneAccess Method","Get Users Specific Access Entry"];
+search_result['1173']=["topic_00000000000002C5.html","AccessManager.CreateBaseEntries Method","Create standard starting entires for a access controls for a new file.\r\n\"Other\" -- no access\r\ncreating user (Admin) -- Full Access"];

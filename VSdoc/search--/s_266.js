@@ -1,1 +1,1 @@
-search_result['266']=["topic_000000000000008B.html","ExportViewModel.NoteOrdinal Property","NoteOrdinal to export - 0 for all notes"];
+search_result['266']=["topic_0000000000000089.html","ExportViewModel.isCollapsible Property","Collapsible or \"flat\""];

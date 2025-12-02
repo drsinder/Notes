@@ -1,1 +1,1 @@
-search_result['298']=["topic_000000000000009A_events--.html","HelpDialog2 Events",""];
+search_result['298']=["topic_000000000000009A.html","HelpDialog2 Class","Class HelpDialog2.\r\nImplements the ComponentBase"];

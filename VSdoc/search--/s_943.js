@@ -1,1 +1,1 @@
-search_result['943']=["topic_000000000000021F.html","LinkedFile.AcceptFrom Property","Gets or sets a value indicating whether [accept from]."];
+search_result['943']=["topic_000000000000021D.html","LinkedFile.RemoteFileName Property","Gets or sets the name of the remote file."];

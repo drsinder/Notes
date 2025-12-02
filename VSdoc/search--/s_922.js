@@ -1,1 +1,1 @@
-search_result['922']=["topic_0000000000000214.html","Audit.Event Property","Gets or sets the event."];
+search_result['922']=["topic_0000000000000212.html","Audit.UserID Property","Gets or sets the user identifier."];

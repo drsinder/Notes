@@ -1,1 +1,1 @@
-search_result['331']=["topic_00000000000000A7.html","PrintDlg.TimerTick2 Method","Timers the tick2."];
+search_result['331']=["topic_00000000000000A6.html","PrintDlg.OnAfterRender Method","Method invoked after each time the component has been rendered."];

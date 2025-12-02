@@ -1,1 +1,1 @@
-search_result['684']=["topic_000000000000017E.html","NotePanel.NextSearch Method","GET next matching item from search"];
+search_result['684']=["topic_000000000000017C.html","NotePanel.GetData Method","Get data for note"];

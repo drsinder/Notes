@@ -1,1 +1,1 @@
-search_result['862']=["topic_00000000000001E2.html","NotesDbContext.NoteHeader Property","Gets or sets the note header."];
+search_result['862']=["topic_00000000000001E0.html","NotesDbContext.NoteFile Property","Gets or sets the note file."];

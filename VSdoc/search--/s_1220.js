@@ -1,1 +1,1 @@
-search_result['1220']=["topic_00000000000002E2_attached_props--.html","AuthMessageSenderOptions Attached Properties",""];
+search_result['1220']=["topic_00000000000002E1.html","EmailSender.SendEmailAsync Method","Send email as an asynchronous operation."];

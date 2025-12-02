@@ -1,1 +1,1 @@
-search_result['64']=["topic_000000000000001F.html","AccessCheckBox Constructor","Initializes a new instance of the AccessCheckBox class."];
+search_result['64']=["topic_000000000000001D_vars--.html","AccessCheckBox Fields",""];

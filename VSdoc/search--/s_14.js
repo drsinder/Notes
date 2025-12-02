@@ -1,1 +1,1 @@
-search_result['14']=["topic_0000000000000007_events--.html","Clock Events",""];
+search_result['14']=["topic_0000000000000007.html","Clock Class","Class Clock.\r\nImplements the ComponentBase"];

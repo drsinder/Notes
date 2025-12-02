@@ -1,1 +1,1 @@
-search_result['372']=["topic_00000000000000B9.html","MainLayout Class",""];
+search_result['372']=["topic_00000000000000B7.html","YesNo.MessageInput Property","Gets or sets the message input."];

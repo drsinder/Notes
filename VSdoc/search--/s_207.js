@@ -1,1 +1,1 @@
-search_result['207']=["topic_000000000000006F.html","Email Class","Class Email.\r\nImplements the ComponentBase"];
+search_result['207']=["topic_000000000000006D.html","CreateFileModel.NoteFileName Property","Gets or sets the name of the note file."];

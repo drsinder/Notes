@@ -1,1 +1,1 @@
-search_result['606']=["topic_000000000000014A.html","LocalModel2(String) Constructor","Initializes a new instance of the LocalModel2 class."];
+search_result['606']=["topic_0000000000000149_props--.html","LocalModel2 Properties",""];

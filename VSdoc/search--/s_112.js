@@ -1,1 +1,1 @@
-search_result['112']=["topic_0000000000000041.html","AddAccessDlg.ArcString Property","Gets or sets the arc string."];
+search_result['112']=["topic_000000000000003F.html","AddAccessDlg.selectedUserId Property","Gets or sets the selected user identifier."];

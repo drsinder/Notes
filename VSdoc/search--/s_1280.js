@@ -1,1 +1,1 @@
-search_result['1280']=["topic_00000000000002FB_overloads--.html","NotesService.UpdateUserData Method","Updates the user data for the authenticated user based on the provided information."];
+search_result['1280']=["topic_00000000000002FA_overloads--.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];

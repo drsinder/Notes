@@ -1,1 +1,1 @@
-search_result['1165']=["topic_00000000000002C4.html","AccessManager Class","Class AccessManager."];
+search_result['1165']=["topic_00000000000002C2.html","Tags.GetGTagsList Method","Gets the g tags list."];

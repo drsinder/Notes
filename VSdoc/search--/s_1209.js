@@ -1,1 +1,1 @@
-search_result['1209']=["topic_00000000000002DD_events--.html","EmailSender Events",""];
+search_result['1209']=["topic_00000000000002DD.html","EmailSender Class","Class EmailSender.\r\nImplements the IEmailSender"];

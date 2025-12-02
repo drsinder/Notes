@@ -1,1 +1,1 @@
-search_result['955']=["topic_0000000000000226_vars--.html","LinkLog Fields",""];
+search_result['955']=["topic_0000000000000226_methods--.html","LinkLog Methods",""];

@@ -1,1 +1,1 @@
-search_result['1285']=["topic_00000000000002FE.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];
+search_result['1285']=["topic_00000000000002FD.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];

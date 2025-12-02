@@ -1,1 +1,1 @@
-search_result['732']=["topic_000000000000019C.html","CookieStateAgent.AuthHeader Property","Get a Metadata/header for authetication to server in gRPC calls"];
+search_result['732']=["topic_000000000000019A.html","CookieStateAgent.IsAdmin Property","Is user in Admin role"];

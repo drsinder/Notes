@@ -1,1 +1,1 @@
-search_result['337']=["topic_00000000000000A8_vars--.html","SearchDlg Fields",""];
+search_result['337']=["topic_00000000000000A8_methods--.html","SearchDlg Methods",""];

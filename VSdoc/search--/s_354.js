@@ -1,1 +1,1 @@
-search_result['354']=["topic_00000000000000B0_events--.html","UserEdit Events",""];
+search_result['354']=["topic_00000000000000B0.html","UserEdit Class","Class UserEdit.\r\nImplements the ComponentBase"];

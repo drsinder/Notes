@@ -1,1 +1,1 @@
-search_result['1319']=["topic_000000000000030F.html","NotesService.GetHomePageMessage Method","Retrieves the current home page message to be displayed to users."];
+search_result['1319']=["topic_000000000000030E.html","NotesService.GetTextFile Method","Gets text from server for display in client.\r\nfiles: about.html | help.html | helpdialog.html | helpdialog2.html | license.html"];

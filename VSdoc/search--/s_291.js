@@ -1,1 +1,1 @@
-search_result['291']=["topic_0000000000000099_attached_props--.html","HelpDialog Attached Properties",""];
+search_result['291']=["topic_0000000000000098.html","Forward.ForwardView Property","Gets or sets the forward view."];

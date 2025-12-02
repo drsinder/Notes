@@ -1,1 +1,1 @@
-search_result['1175']=["topic_00000000000002C9.html","AccessManager.TestLinkAccess Method","Tests the link access."];
+search_result['1175']=["topic_00000000000002C7.html","AccessManager.GetOneAccess Method","Get Users Specific Access Entry"];

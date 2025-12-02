@@ -1,1 +1,1 @@
-search_result['981']=["topic_000000000000023F.html","LinkQueue.GetGSequencerList Method","Gets the g sequencer list."];
+search_result['981']=["topic_000000000000023D.html","LinkQueue.GetGLinkQueue Method","Gets the g link queue."];

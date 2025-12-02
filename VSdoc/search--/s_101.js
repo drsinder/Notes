@@ -1,1 +1,1 @@
-search_result['101']=["topic_000000000000003B.html","AddAccessDlg Class","Add a user to the access list"];
+search_result['101']=["topic_0000000000000039.html","AccessList.CreateNew Method","Add a new token for another user"];

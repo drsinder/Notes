@@ -1,1 +1,1 @@
-search_result['994']=["topic_0000000000000247.html","Mark.ResponseOrdinal Property","Gets or sets the response ordinal."];
+search_result['994']=["topic_0000000000000245.html","Mark.NoteOrdinal Property","Gets or sets the note ordinal."];

@@ -1,1 +1,1 @@
-search_result['334']=["topic_00000000000000A8_events--.html","SearchDlg Events",""];
+search_result['334']=["topic_00000000000000A8.html","SearchDlg Class","Class SearchDlg.\r\nImplements the ComponentBase"];

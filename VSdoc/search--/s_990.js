@@ -1,1 +1,1 @@
-search_result['990']=["topic_0000000000000243.html","Mark.ArchiveId Property","Gets or sets the archive identifier."];
+search_result['990']=["topic_0000000000000241.html","Mark.UserId Property","Gets or sets the user identifier."];

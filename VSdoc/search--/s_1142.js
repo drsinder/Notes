@@ -1,1 +1,1 @@
-search_result['1142']=["topic_00000000000002B5.html","Tags Class","This class defines a table in the database.\r\nZero or more of these objects may be associated with each note.\r\nDefines a simple tag or set of tags for a note."];
+search_result['1142']=["topic_00000000000002B3.html","Subscription.SubscriberId Property","Gets or sets the subscriber identifier."];

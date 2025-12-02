@@ -1,1 +1,1 @@
-search_result['1313']=["topic_000000000000030C.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];
+search_result['1313']=["topic_000000000000030B.html","NotesService.CopyNote Method","Copies a note or an entire note thread to a specified target file for the current user, preserving content\r\nand associated tags."];

@@ -1,1 +1,1 @@
-search_result['1022']=["topic_0000000000000259.html","NoteContent.NoteHeaderId Property","Gets or sets the note header identifier."];
+search_result['1022']=["topic_0000000000000258_props--.html","NoteContent Properties",""];

@@ -1,1 +1,1 @@
-search_result['522']=["topic_000000000000010D.html","NewNote.OnParametersSet Method","Just fill in a few fields and we are ready..."];
+search_result['522']=["topic_000000000000010B.html","NewNote.Model Property","Gets or sets the model."];

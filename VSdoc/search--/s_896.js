@@ -1,1 +1,1 @@
-search_result['896']=["topic_00000000000001FF.html","ApplicationUser.Pref1 Property","Gets or sets a value indicating whether this ApplicationUser is pref1."];
+search_result['896']=["topic_00000000000001FD.html","ApplicationUser.Ipref9 Property","Gets or sets the ipref9.\r\nbits extend bool properties"];

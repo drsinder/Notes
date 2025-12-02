@@ -1,1 +1,1 @@
-search_result['243']=["topic_000000000000007E_events--.html","ExportUtil1 Events",""];
+search_result['243']=["topic_000000000000007E.html","ExportUtil1 Class","Class ExportUtil1.\r\nImplements the ComponentBase\r\nImplements the IAsyncDisposable"];

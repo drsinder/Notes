@@ -1,1 +1,1 @@
-search_result['551']=["topic_0000000000000123.html","NoteIndex.GetNextNote Method","Get the nest note given the current one"];
+search_result['551']=["topic_0000000000000121.html","NoteIndex.Listing Method","Goto the listing mode from note display mode"];

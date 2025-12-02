@@ -1,1 +1,1 @@
-search_result['730']=["topic_000000000000019A.html","CookieStateAgent.IsAdmin Property","Is user in Admin role"];
+search_result['730']=["topic_0000000000000198.html","OnChange Event","Occurs when Login state changes."];

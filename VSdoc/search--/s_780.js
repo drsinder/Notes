@@ -1,1 +1,1 @@
-search_result['780']=["topic_00000000000001C0_events--.html","SubdirectoryHandler Events",""];
+search_result['780']=["topic_00000000000001C0.html","SubdirectoryHandler Class","A delegating handler that adds a subdirectory to the URI of gRPC requests."];

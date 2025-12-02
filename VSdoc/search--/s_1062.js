@@ -1,1 +1,1 @@
-search_result['1062']=["topic_0000000000000277.html","NoteHeader.AuthorID Property","Gets or sets the author identifier."];
+search_result['1062']=["topic_0000000000000275.html","NoteHeader.CreateDate Property","Gets or sets the create date."];

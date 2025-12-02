@@ -1,1 +1,1 @@
-search_result['1094']=["topic_0000000000000299.html","Search.Clone Method","Clones the specified s."];
+search_result['1094']=["topic_0000000000000297.html","Search.ResponseOrdinal Property","Gets or sets the response ordinal."];

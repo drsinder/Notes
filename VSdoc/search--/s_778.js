@@ -1,1 +1,1 @@
-search_result['778']=["topic_00000000000001C0.html","SubdirectoryHandler Class","A delegating handler that adds a subdirectory to the URI of gRPC requests."];
+search_result['778']=["topic_00000000000001BE.html","Globals.NotesClient Property",""];

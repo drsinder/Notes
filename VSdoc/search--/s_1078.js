@@ -1,1 +1,1 @@
-search_result['1078']=["topic_0000000000000287.html","SearchOption Enumeration","Enum SearchOption"];
+search_result['1078']=["topic_0000000000000285.html","NoteHeader.GetNoteHeaders Method","Gets the note headers."];

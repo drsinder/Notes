@@ -1,1 +1,1 @@
-search_result['745']=["topic_00000000000001A2_events--.html","Globals Events",""];
+search_result['745']=["topic_00000000000001A2.html","Globals Class","Class Globals."];

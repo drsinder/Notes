@@ -1,1 +1,1 @@
-search_result['642']=["topic_000000000000015B.html","NoteEditor Constructor","Initializes a new instance of the NoteEditor class."];
+search_result['642']=["topic_0000000000000159.html","NoteEditor.Model Property","The data model used"];

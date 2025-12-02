@@ -1,1 +1,1 @@
-search_result['760']=["topic_00000000000001AE.html","Globals.PrimeAdminName Property",""];
+search_result['760']=["topic_00000000000001AC.html","Globals.AppVirtDir Property",""];

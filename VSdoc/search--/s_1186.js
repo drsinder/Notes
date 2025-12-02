@@ -1,1 +1,1 @@
-search_result['1186']=["topic_00000000000002CF.html","NoteDataManager Class","Class NoteDataManager."];
+search_result['1186']=["topic_00000000000002CD.html","Importer.GetBaseNoteHeader Method","Get the BaseNoteHeader for a NoteContent"];

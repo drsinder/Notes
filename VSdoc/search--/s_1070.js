@@ -1,1 +1,1 @@
-search_result['1070']=["topic_000000000000027F.html","NoteHeader.Tags Property","Gets or sets the tags."];
+search_result['1070']=["topic_000000000000027D.html","NoteHeader.DirectorMessage Property","Gets or sets the director message."];

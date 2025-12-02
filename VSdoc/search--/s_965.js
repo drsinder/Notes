@@ -1,1 +1,1 @@
-search_result['965']=["topic_0000000000000234.html","LinkQueue Class","This class defines a table in the database.\r\nUsed to que up items to be linked to remote system."];
+search_result['965']=["topic_000000000000022E.html","LinkLog.GetGSequencerList Method","Gets the g sequencer list."];

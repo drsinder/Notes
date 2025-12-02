@@ -1,1 +1,1 @@
-search_result['370']=["topic_00000000000000B7.html","YesNo.MessageInput Property","Gets or sets the message input."];
+search_result['370']=["topic_00000000000000B6_props--.html","YesNo Properties",""];

@@ -1,1 +1,1 @@
-search_result['265']=["topic_000000000000008A.html","ExportViewModel.isDirectOutput Property","Direct output or destination collected via a dailog?"];
+search_result['265']=["topic_0000000000000088.html","ExportViewModel.isHtml Property","Is it to be in html format?"];

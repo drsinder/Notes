@@ -1,1 +1,1 @@
-search_result['451']=["topic_00000000000000E7_events--.html","NotesFilesAdmin Events",""];
+search_result['451']=["topic_00000000000000E7.html","NotesFilesAdmin Class",""];

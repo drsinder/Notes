@@ -1,1 +1,1 @@
-search_result['1093']=["topic_0000000000000298.html","Search.NoteID Property","Gets or sets the note identifier."];
+search_result['1093']=["topic_0000000000000296.html","Search.BaseOrdinal Property","Gets or sets the base ordinal."];

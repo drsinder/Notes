@@ -1,1 +1,1 @@
-search_result['1207']=["topic_00000000000002DD.html","EmailSender Class","Class EmailSender.\r\nImplements the IEmailSender"];
+search_result['1207']=["topic_00000000000002DB.html","NoteDataManager.GetBaseNoteHeaderById Method","Gets a base note header given its headerid"];

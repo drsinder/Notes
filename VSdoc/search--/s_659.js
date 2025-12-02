@@ -1,1 +1,1 @@
-search_result['659']=["topic_0000000000000166.html","NotePanel.ShowButtons Property","Should optional buttons be shown"];
+search_result['659']=["topic_0000000000000164.html","NotePanel.ShowChild Property","Whether or not child windows should be shown.  These might include\r\nResponses, versions, references."];

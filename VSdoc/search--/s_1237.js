@@ -1,1 +1,1 @@
-search_result['1237']=["topic_00000000000002E6_props--.html","NotesService Properties",""];
+search_result['1237']=["topic_00000000000002E6_events--.html","NotesService Events",""];

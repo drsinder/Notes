@@ -1,1 +1,1 @@
-search_result['554']=["topic_0000000000000126.html","NoteIndex.GetResponseHeaders Method","Get just the response headers for the given noteid"];
+search_result['554']=["topic_0000000000000124.html","NoteIndex.GetPreviousBaseNote Method","Get the previous base note"];

@@ -1,1 +1,1 @@
-search_result['391']=["topic_00000000000000C2.html","ListMenu.myGauge Property","Gets or sets my gauge."];
+search_result['391']=["topic_00000000000000C0.html","ListMenu.Caller Property","reference to the caller/container"];

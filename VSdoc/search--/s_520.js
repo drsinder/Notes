@@ -1,1 +1,1 @@
-search_result['520']=["topic_000000000000010B.html","NewNote.Model Property","Gets or sets the model."];
+search_result['520']=["topic_0000000000000109.html","NewNote.BaseNoteHeaderId Property","Gets or sets the base note header identifier."];

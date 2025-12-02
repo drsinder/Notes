@@ -1,1 +1,1 @@
-search_result['963']=["topic_000000000000022E.html","LinkLog.GetGSequencerList Method","Gets the g sequencer list."];
+search_result['963']=["topic_000000000000022C.html","LinkLog.GetGLinkLog Method","Gets the g link log."];

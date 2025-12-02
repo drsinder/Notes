@@ -1,1 +1,1 @@
-search_result['1242']=["topic_00000000000002E8_overloads--.html","NotesService.NoOp Method","Handles a no-operation request and returns a default response."];
+search_result['1242']=["topic_00000000000002E7_overloads--.html","NotesService.GetServerTime Method","Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset."];

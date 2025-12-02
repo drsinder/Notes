@@ -1,1 +1,1 @@
-search_result['703']=["topic_0000000000000189_events--.html","Versions Events",""];
+search_result['703']=["topic_0000000000000189.html","Versions Class","Displays versions for edited notes"];

@@ -1,1 +1,1 @@
-search_result['215']=["topic_0000000000000072.html","ExportJson Class","Class ExportJson.\r\nImplements the ComponentBase\r\nImplements the IAsyncDisposable"];
+search_result['215']=["topic_0000000000000070.html","Email.ModalInstance Property","Gets or sets the modal instance."];

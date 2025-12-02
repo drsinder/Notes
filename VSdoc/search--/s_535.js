@@ -1,1 +1,1 @@
-search_result['535']=["topic_0000000000000114.html","NoteIndex.NavString Property","Accumulator for the navigation string"];
+search_result['535']=["topic_0000000000000112.html","NoteIndex.MyMenu Property","Reference to the menu so we can talk to it."];

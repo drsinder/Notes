@@ -1,1 +1,1 @@
-search_result['131']=["topic_000000000000004C_events--.html","CFormat Events",""];
+search_result['131']=["topic_000000000000004C.html","CFormat Class","Class CFormat."];

@@ -1,1 +1,1 @@
-search_result['113']=["topic_0000000000000042.html","AddAccessDlg Constructor","Initializes a new instance of the AddAccessDlg class."];
+search_result['113']=["topic_0000000000000040.html","AddAccessDlg.delay Property","Gets or sets the delay."];

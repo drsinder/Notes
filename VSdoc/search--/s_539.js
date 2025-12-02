@@ -1,1 +1,1 @@
-search_result['539']=["topic_0000000000000118.html","NoteIndex.PageSize Property","Grid page size"];
+search_result['539']=["topic_0000000000000116.html","NoteIndex.sfGrid1 Property","Our index grid"];

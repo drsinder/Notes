@@ -1,1 +1,1 @@
-search_result['925']=["topic_0000000000000215_events--.html","HomePageMessage Events",""];
+search_result['925']=["topic_0000000000000215.html","HomePageMessage Class","Obsolete"];

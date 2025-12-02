@@ -1,1 +1,1 @@
-search_result['393']=["topic_00000000000000C4.html","ListMenu.baseNotes Property","Text value for slider while doing background processing"];
+search_result['393']=["topic_00000000000000C2.html","ListMenu.myGauge Property","Gets or sets my gauge."];
