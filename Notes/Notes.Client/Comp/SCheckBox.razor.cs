@@ -41,10 +41,14 @@ using Notes.Client.Pages;
 namespace Notes.Client.Comp
 {
     /// <summary>
-    /// Class SCheckBox.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a checkbox component that tracks its checked state and file association, and interacts with a tracker
+    /// and model for sequencer operations.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>SCheckBox is designed for use in UI scenarios where a checkbox needs to be bound to a model
+    /// and perform create or delete operations based on its checked state. The component updates its model and
+    /// communicates with external services when the checked state changes. It is intended to be used within a Blazor or
+    /// similar component framework, where parameters are supplied by the parent and actions are triggered by user
+    /// interaction.</remarks>
     public partial class SCheckBox
     {
         /// <summary>
@@ -52,7 +56,7 @@ namespace Notes.Client.Comp
         /// </summary>
         /// <value>The tracker.</value>
         [Parameter]
-        public Tracker Tracker { get; set; }
+        public required Tracker Tracker { get; set; }
 
         /// <summary>
         /// Gets or sets the file identifier.
@@ -86,8 +90,12 @@ namespace Notes.Client.Comp
         }
 
         /// <summary>
-        /// Called when [click].
+        /// Toggles the checked state and asynchronously creates or deletes the sequencer item based on the new state.
         /// </summary>
+        /// <remarks>If the checked state becomes enabled, a new sequencer item is created; otherwise, the
+        /// existing item is deleted. After the operation, the tracker is shuffled to reflect the updated
+        /// state.</remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
         public async Task OnClick()
         {
             isChecked = !isChecked;

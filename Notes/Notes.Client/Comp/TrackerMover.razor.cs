@@ -20,8 +20,13 @@ using Syncfusion.Blazor.SplitButtons;
 namespace Notes.Client.Comp
 {
     /// <summary>
-    /// Moves traker items (Sequencer items) up or down...
+    /// Represents a component that manages the movement and ordering of tracker items within a collection.
     /// </summary>
+    /// <remarks>TrackerMover provides functionality to reorder tracker items, such as moving them up, down,
+    /// to the top, or to the bottom of the list. It maintains references to the current tracker, its container, and
+    /// neighboring items to facilitate these operations. This class is typically used in UI scenarios where users can
+    /// interactively change the order of items. The component relies on its parameters being set by the parent and
+    /// updates the underlying data source when items are moved.</remarks>
     public partial class TrackerMover
     {
         /// <summary>

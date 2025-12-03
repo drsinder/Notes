@@ -37,41 +37,40 @@ using System.Timers;
 namespace Notes.Client.Comp
 {
     /// <summary>
-    /// Class Clock.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a component that displays and updates the current time at a specified interval.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>Use the <see cref="Interval"/> property to configure how frequently the time is updated. The
+    /// component initializes its timer and starts updating the displayed time after the first render. This class is
+    /// intended for use in Blazor applications where periodic UI updates are required.</remarks>
     public partial class Clock
     {
         /// <summary>
-        /// Gets or sets the interval.
+        /// Gets or sets the interval, in milliseconds, between consecutive operations.
         /// </summary>
-        /// <value>The interval.</value>
+        /// <remarks>The interval determines how frequently the associated action is performed. Setting a
+        /// lower value increases the operation rate, which may impact performance depending on the workload.</remarks>
         [Parameter]
         public int Interval { get; set; } = 1000;
 #pragma warning disable IDE1006 // Naming Styles
         /// <summary>
-        /// Gets or sets the timer2.
+        /// Gets or sets the timer used for scheduled operations.
         /// </summary>
-        /// <value>The timer2.</value>
         private System.Timers.Timer timer2 { get; set; }
 
         /// <summary>
-        /// Gets or sets the mytime.
+        /// Gets or sets the date and time value associated with this instance.
         /// </summary>
-        /// <value>The mytime.</value>
         private DateTime mytime { get; set; } = DateTime.Now;
 #pragma warning restore IDE1006 // Naming Styles
 
         /// <summary>
-        /// Method invoked after each time the component has been rendered.
+        /// Handles post-render logic for the component, initializing resources when rendering for the first time.
         /// </summary>
-        /// <param name="firstRender">Set to <c>true</c> if this is the first time <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)" /> has been invoked
-        /// on this component instance; otherwise <c>false</c>.</param>
-        /// <remarks>The <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)" /> and <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRenderAsync(System.Boolean)" /> lifecycle methods
-        /// are useful for performing interop, or interacting with values received from <c>@ref</c>.
-        /// Use the <paramref name="firstRender" /> parameter to ensure that initialization work is only performed
-        /// once.</remarks>
+        /// <remarks>Override this method to perform actions that should occur after the component has
+        /// rendered. Initialization code should be placed within the <paramref name="firstRender"/> check to ensure it
+        /// runs only once.</remarks>
+        /// <param name="firstRender">Indicates whether this is the first time the component has been rendered. If <see langword="true"/>,
+        /// initialization logic is performed.</param>
         protected override void OnAfterRender(bool firstRender)
         {
             if (firstRender)
@@ -86,10 +85,13 @@ namespace Notes.Client.Comp
         }
 
         /// <summary>
-        /// Timers the tick2.
+        /// Handles the timer's elapsed event by updating the current time and triggering a UI refresh.
         /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="e">The <see cref="ElapsedEventArgs"/> instance containing the event data.</param>
+        /// <remarks>This method is intended to be used as an event handler for timer events. It updates
+        /// the time and refreshes the component's state to reflect the change.</remarks>
+        /// <param name="source">The source of the timer event, typically the timer object that raised the event.</param>
+        /// <param name="e">An <see cref="System.Timers.ElapsedEventArgs"/> instance containing the event data for the elapsed timer
+        /// event.</param>
         protected void TimerTick2(Object source, ElapsedEventArgs e)
         {
             mytime = DateTime.Now;

@@ -12,6 +12,17 @@ using System.Text;
 
 namespace Notes.Client.Panels
 {
+    /// <summary>
+    /// Represents a panel for displaying and interacting with notes, including support for responses, navigation, and
+    /// various display modes within a note management application.
+    /// </summary>
+    /// <remarks>The NotePanel component provides functionality for viewing note content, managing responses,
+    /// navigating between notes, and handling user interactions such as printing and editing. It supports multiple
+    /// display styles, history/version tracking, and integration with services such as modal dialogs, navigation,
+    /// JavaScript interop, and session storage. The panel can operate in different modes, such as root note view, mini
+    /// view, and alternate styling, and exposes parameters to control its behavior and appearance. NotePanel is
+    /// designed for use within Blazor applications and relies on dependency injection for service access.
+    /// It can invoke itself recursivly</remarks>
     public partial class NotePanel
     {
         /// <summary>
@@ -21,9 +32,8 @@ namespace Notes.Client.Panels
         [CascadingParameter] public IModalService Modal { get; set; }
 
         /// <summary>
-        /// Our current NoteId
+        /// Gets or sets the unique identifier for the note we are displaying.
         /// </summary>
-        /// <value>The note identifier.</value>
         [Parameter] public long NoteId { get; set; }
 
         /// <summary>
@@ -66,7 +76,6 @@ namespace Notes.Client.Panels
         /// <summary>
         /// Who is my container
         /// </summary>
-        /// <value>The index of my note.</value>
         [Parameter] public NoteIndex MyNoteIndex { get; set; }
 
         /// <summary>
@@ -131,9 +140,8 @@ namespace Notes.Client.Panels
         protected bool IsSeq { get; set; }
 
         /// <summary>
-        /// Data Model for Note display
+        /// Gets or sets the display model associated with the current instance.
         /// </summary>
-        /// <value>The model.</value>
         protected DisplayModel model { get; set; }
 
         /// <summary>
@@ -423,7 +431,7 @@ namespace Notes.Client.Panels
 
         /// <summary>
         /// collect input and clear EatEnter
-        /// </summary>
+        /// </summary> 
         /// <param name="args">The <see cref="InputEventArgs" /> instance containing the event data.</param>
         private async void NavInputHandler(InputEventArgs args)
         {

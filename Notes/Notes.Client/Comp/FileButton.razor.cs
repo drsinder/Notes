@@ -18,10 +18,11 @@ using Notes.Protos;
 namespace Notes.Client.Comp
 {
     /// <summary>
-    /// Class FileButton.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a UI component that displays a button for navigating to a specific note file.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>Use this component to provide users with a button that, when clicked, navigates to the
+    /// index page of the associated note file. The navigation behavior depends on the configured <see
+    /// cref="NavigationManager"/> and the <see cref="GNotefile"/> instance provided.</remarks>
     public partial class FileButton
     {
         /// <summary>
@@ -43,8 +44,11 @@ namespace Notes.Client.Comp
         }
 
         /// <summary>
-        /// Called when [click].
+        /// Navigates to the note index page for the current note file.
         /// </summary>
+        /// <remarks>This method constructs a navigation URL using the identifier of the current note file
+        /// and initiates navigation to that page. The navigation occurs immediately when the method is
+        /// called.</remarks>
         protected void OnClick()
         {
             Navigation.NavigateTo("noteindex/" + NoteFile.Id);
