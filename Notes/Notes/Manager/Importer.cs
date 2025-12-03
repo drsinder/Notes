@@ -42,6 +42,11 @@ namespace Notes.Manager
         //    return await Import(_db, file, myNotesFile);
         //}
 
+        /// <summary>
+        /// Specifies the supported file formats for import operations.
+        /// </summary>
+        /// <remarks>Use this enumeration to indicate the format of a file when performing import or
+        /// conversion tasks. The available values correspond to distinct file types recognized by the system.</remarks>
         private enum FileType
         {
             NovaNET,
@@ -49,6 +54,9 @@ namespace Notes.Manager
             PlatoIV
         }
 
+        /// <summary>
+        /// File type being processed
+        /// </summary>
         private FileType filetype;
 
         /// <summary>

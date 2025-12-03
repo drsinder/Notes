@@ -82,8 +82,7 @@ namespace Notes.Manager
                 .Where(p => p.UserID == userId && p.NoteFileId == fileId && p.ArchiveId == arcId).FirstOrDefaultAsync();
 
             // If specific user not in list use "Other"
-            if (na == null)
-                na = await db.NoteAccess
+            na ??= await db.NoteAccess
                     .Where(p => p.UserID == Globals.AccessOtherId && p.NoteFileId == fileId && p.ArchiveId == arcId).FirstOrDefaultAsync();
 
             return na is null ? new() : na;
