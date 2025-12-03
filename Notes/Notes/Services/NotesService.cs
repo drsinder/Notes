@@ -1000,7 +1000,7 @@ namespace Notes.Services
                 ResponseCount = 0
             };
 
-            NoteHeader created;
+            NoteHeader created; 
 
             if (tvm.BaseNoteHeaderID == 0)  // a base note
             {

@@ -8,11 +8,10 @@ namespace Notes.Client.Pages
 {
     public partial class HomeIndex
     {
-//        [Inject]
-//        GrpcChannel Channel { get; set; }
-
         [Inject] 
         NotesServer.NotesServerClient NotesClient { get; set; } = null!;
+
+        [Parameter] public int EnterNotesfileId { get; set; } = 0;
 
         protected ServerTime? serverTime { get; set; }
 
@@ -20,10 +19,9 @@ namespace Notes.Client.Pages
 
         protected HomePageModel? hpModel { get; set; }
 
-        /// <summary>
-        /// The dummy file
-        /// </summary>
         private GNotefile dummyFile = new GNotefile { Id = 0, NoteFileName = " ", NoteFileTitle = " " };
+
+        private GNotefile GoToFile = new GNotefile { Id = 0, NoteFileName = " ", NoteFileTitle = " " };
 
         /// <summary>
         /// Gets or sets the item.
@@ -55,7 +53,7 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <value>The histfile list.</value>
         private GNotefileList? histfileList { get; set; }
-        private System.Timers.Timer? timer2 { get; set; }
+     //   private System.Timers.Timer? timer2 { get; set; }
 
         /// <summary>
         /// The ticks
@@ -67,18 +65,16 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="e">The <see cref="ElapsedEventArgs"/> instance containing the event data.</param>
-        protected void TimerTick2(Object source, ElapsedEventArgs e)
+    /*    protected void TimerTick2(Object source, ElapsedEventArgs e)
         {
-            if (++ticks == 10)
-                timer2?.Interval = 5000;
-            else if (++ticks == 60)
-                timer2?.Interval = 15000;
-
-            //Globals.LoginDisplay?.Reload();
-            //Globals.NavMenu?.Reload().GetAwaiter();
-//            StateHasChanged();
+            timer2.Stop();
+            if (EnterNotesfileId != 0)
+            {
+                Navigation.NavigateTo("noteindex/" + EnterNotesfileId, true); // goto the file
+                EnterNotesfileId = 0;
+            }
         }
-
+     */
 
         /// <summary>
         /// Method invoked after each time the component has been rendered.
@@ -89,20 +85,20 @@ namespace Notes.Client.Pages
         /// are useful for performing interop, or interacting with values received from <c>@ref</c>.
         /// Use the <paramref name="firstRender" /> parameter to ensure that initialization work is only performed
         /// once.</remarks>
-//        protected override void OnAfterRender(bool firstRender)
-//        {
-//            if (false && firstRender)
-//            {
-//                timer2 = new System.Timers.Timer(1000);
+        
+    /*    protected override void OnAfterRender(bool firstRender)
+        {
+            if (false && timer2 is null)
+            {
+                timer2 = new System.Timers.Timer(2000);
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-                // timer2.Elapsed += TimerTick2;
+                timer2.Elapsed += TimerTick2;
 #pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-//                timer2.Enabled = true;
-
-  //              myState.OnChange += OnParametersSet; // get notified of login status changes
-  //         }
-  //      }
-
+                timer2.Enabled = true;
+                timer2.Start();
+            }
+        }
+    */
         /// <summary>
         /// Method invoked when the component has received parameters from its parent in
         /// the render tree, and the incoming values have been assigned to properties.
@@ -164,6 +160,9 @@ namespace Notes.Client.Pages
                 {
                     GNotefile work = new GNotefile { Id = fileList1.List[i].Id, NoteFileName = fileList1.List[i].NoteFileName, NoteFileTitle = fileList1.List[i].NoteFileTitle };
 
+                    if (EnterNotesfileId == work.Id)
+                        GoToFile = work;
+
                     // handle special important and history files
                     string fname = work.NoteFileName;
                     if (fname == "Opbnotes" || fname == "Gnotes" || fname.StartsWith("sysnotes") || fname == "Cannounce")
@@ -174,8 +173,7 @@ namespace Notes.Client.Pages
                 }
 
             }
-         //   if (firstRender || needStateChange)
-          //      StateHasChanged();
+
         }
 
         /// <summary>

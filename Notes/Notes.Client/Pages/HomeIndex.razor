@@ -1,4 +1,5 @@
 ﻿@page "/"
+@page "/{EnterNotesfileId:int}"
 
 @using System.Timers
 @using Grpc.Net.Client
@@ -35,7 +36,10 @@
     {
         <p class="center"><em>Loading...</em></p>
     }
-
+    else if (GoToFile.Id != 0)
+    {
+        <p class="center"><b>Click to goto: </b><FileButton NoteFile="@GoToFile"></FileButton></p>
+    }
 
         else if (hpModel != null)
         {
@@ -109,7 +113,6 @@
                 </div>
             </div>
 
-@*           <SfButton OnClick="StartSeq" >Recent</SfButton>*@
     } 
 
 
