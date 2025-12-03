@@ -31,6 +31,8 @@ namespace Notes.Client.Comp
         /// <value>The note file.</value>
         [Parameter] public GNotefile NoteFile { get; set; }
 
+        [Parameter] public bool Triggered { get; set; } = false;
+
         /// <summary>
         /// Gets or sets the navigation.
         /// </summary>
@@ -52,6 +54,14 @@ namespace Notes.Client.Comp
         protected void OnClick()
         {
             Navigation.NavigateTo("noteindex/" + NoteFile.Id);
+        }
+
+        protected override void OnParametersSet()
+        {
+            if (Triggered)
+            {
+                OnClick();
+            }
         }
 
     }

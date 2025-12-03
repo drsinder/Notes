@@ -8,19 +8,44 @@ namespace Notes.Client.Pages
 {
     public partial class HomeIndex
     {
+        /// <summary>
+        /// Gets or sets the gRPC client used to communicate with the Notes server.
+        /// </summary>
         [Inject] 
         NotesServer.NotesServerClient NotesClient { get; set; } = null!;
 
+        /// <summary>
+        /// Gets or sets the identifier of the notes file to be entered.
+        /// </summary>
         [Parameter] public int EnterNotesfileId { get; set; } = 0;
 
+        /// <summary>
+        /// Gets or sets the current server time information, if available.
+        /// </summary>
         protected ServerTime? serverTime { get; set; }
 
+        /// <summary>
+        /// Gets or sets the data model for the home page.
+        /// </summary>
         protected HomePageModel? hpData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the model representing the data and state of the home page.
+        /// </summary>
         protected HomePageModel? hpModel { get; set; }
 
+        /// <summary>
+        /// Represents a placeholder instance of a <see cref="GNotefile"/> used for default or dummy operations within
+        /// the containing class.
+        /// </summary>
+        /// <remarks>This field is initialized with default values and may be used to avoid null
+        /// references or to represent an uninitialized state. It is not intended for use as a valid note file in
+        /// application logic.</remarks>
         private GNotefile dummyFile = new GNotefile { Id = 0, NoteFileName = " ", NoteFileTitle = " " };
 
+        /// <summary>
+        /// Represents the target note file used for navigation operations.
+        /// </summary>
         private GNotefile GoToFile = new GNotefile { Id = 0, NoteFileName = " ", NoteFileTitle = " " };
 
         /// <summary>
@@ -53,77 +78,24 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <value>The histfile list.</value>
         private GNotefileList? histfileList { get; set; }
-     //   private System.Timers.Timer? timer2 { get; set; }
 
         /// <summary>
-        /// The ticks
+        /// Asynchronously updates the component's state when its parameters are set. This method initializes file
+        /// lists, retrieves the current server time, and resets session storage values based on the user's
+        /// authentication status.
         /// </summary>
-        private int ticks = 0;
-
-        /// <summary>
-        /// Timers the tick2.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="e">The <see cref="ElapsedEventArgs"/> instance containing the event data.</param>
-    /*    protected void TimerTick2(Object source, ElapsedEventArgs e)
-        {
-            timer2.Stop();
-            if (EnterNotesfileId != 0)
-            {
-                Navigation.NavigateTo("noteindex/" + EnterNotesfileId, true); // goto the file
-                EnterNotesfileId = 0;
-            }
-        }
-     */
-
-        /// <summary>
-        /// Method invoked after each time the component has been rendered.
-        /// </summary>
-        /// <param name="firstRender">Set to <c>true</c> if this is the first time <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)" /> has been invoked
-        /// on this component instance; otherwise <c>false</c>.</param>
-        /// <remarks>The <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)" /> and <see cref="M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRenderAsync(System.Boolean)" /> lifecycle methods
-        /// are useful for performing interop, or interacting with values received from <c>@ref</c>.
-        /// Use the <paramref name="firstRender" /> parameter to ensure that initialization work is only performed
-        /// once.</remarks>
-        
-    /*    protected override void OnAfterRender(bool firstRender)
-        {
-            if (false && timer2 is null)
-            {
-                timer2 = new System.Timers.Timer(2000);
-#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-                timer2.Elapsed += TimerTick2;
-#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-                timer2.Enabled = true;
-                timer2.Start();
-            }
-        }
-    */
-        /// <summary>
-        /// Method invoked when the component has received parameters from its parent in
-        /// the render tree, and the incoming values have been assigned to properties.
-        /// </summary>
-  //      protected override void OnParametersSet()
-  //      {
-  //          OnParametersSetAsync().GetAwaiter();    // notified of login status change
-  //          StateHasChanged();
-  //       }
-
-
-
+        /// <remarks>This method is called by the Blazor framework after component parameters have been
+        /// assigned. It performs state initialization and session storage updates, ensuring that the component reflects
+        /// the latest parameter and authentication information. If the user is authenticated, additional data is loaded
+        /// and session storage is reset to default values.</remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
         protected override async Task OnParametersSetAsync()
-       //protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-//            bool needStateChange = false;
-//            if (serverTime is null)
-//                needStateChange = true;
 
             fileList = new List<GNotefile>();
             nameList = new GNotefileList();
             histfileList = new GNotefileList();
             impfileList = new GNotefileList();
-
-         //   NotesClient = Globals.GetNotesClient(Navigation);
 
             serverTime = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
 
@@ -171,9 +143,7 @@ namespace Notes.Client.Pages
                     if (fname == "announce" || fname == "pbnotes" || fname == "noteshelp")
                         impfileList.List.Add(work);
                 }
-
             }
-
         }
 
         /// <summary>
