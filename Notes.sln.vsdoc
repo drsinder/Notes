@@ -9,7 +9,7 @@
 <filters />]]></add>
       <add key="VBdocman_customVar1"><![CDATA[]]></add>
       <add key="VBdocman_comInterface"><![CDATA[-1]]></add>
-      <add key="VBdocman_outputPath"><![CDATA[$(ProjectDir)VSdoc]]></add>
+      <add key="VBdocman_outputPath"><![CDATA[X:\Notes2026Help]]></add>
       <add key="VBdocman_useConditionalCompilation"><![CDATA[0]]></add>
       <add key="VBdocman_customVar2"><![CDATA[]]></add>
       <add key="VBdocman_SupportedXamarinIos"><![CDATA[]]></add>
@@ -29,7 +29,7 @@
       <add key="VBdocman_comObject"><![CDATA[-1]]></add>
       <add key="VBdocman_comDelegate"><![CDATA[-1]]></add>
       <add key="VBdocman_supportedXnaFramework"><![CDATA[]]></add>
-      <add key="VBdocman_emptyOutputFolder"><![CDATA[0]]></add>
+      <add key="VBdocman_emptyOutputFolder"><![CDATA[-1]]></add>
       <add key="VBdocman_rootNamespaceCommentStyle"><![CDATA[2]]></add>
       <add key="VBdocman_comEnumeration"><![CDATA[-1]]></add>
       <add key="VBdocman_comMethod"><![CDATA[-1]]></add>

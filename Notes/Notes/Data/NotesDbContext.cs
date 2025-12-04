@@ -3,7 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using Notes.Entities;
 
 namespace Notes.Data;
-
+/// <summary>
+/// Represents the Entity Framework Core database context for the notes application, providing access to note-related
+/// entities and ASP.NET Core Identity features.
+/// </summary>
+/// <remarks>This context integrates with ASP.NET Core Identity by inheriting from
+/// IdentityDbContext<ApplicationUser>, enabling user authentication and authorization features alongside application
+/// data. Use this context to query and save instances of note files, note content, tags, audits, and related entities.
+/// The context should be registered with the dependency injection container and disposed of appropriately.</remarks>
+/// <param name="options">The options to be used by the DbContext. Typically includes configuration such as the database provider and
+/// connection string. Cannot be null.</param>
 public class NotesDbContext(DbContextOptions<NotesDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
     /// <summary>
