@@ -19,6 +19,10 @@ namespace Notes.Client.Pages
         /// </summary>
         [Parameter] public int EnterNotesfileId { get; set; } = 0;
 
+
+        [Parameter] public string EnterNotesfileName { get; set; } = "";
+
+
         /// <summary>
         /// Gets or sets the current server time information, if available.
         /// </summary>
@@ -130,9 +134,13 @@ namespace Notes.Client.Pages
 
                 for (int i = 0; i < fileList1.List.Count; i++)
                 {
-                    GNotefile work = new GNotefile { Id = fileList1.List[i].Id, NoteFileName = fileList1.List[i].NoteFileName, NoteFileTitle = fileList1.List[i].NoteFileTitle };
+                    GNotefile work = new GNotefile 
+                        { Id = fileList1.List[i].Id, NoteFileName = fileList1.List[i].NoteFileName, 
+                        NoteFileTitle = fileList1.List[i].NoteFileTitle };
 
                     if (EnterNotesfileId == work.Id)
+                        GoToFile = work;
+                    else if (EnterNotesfileName == work.NoteFileName)
                         GoToFile = work;
 
                     // handle special important and history files
