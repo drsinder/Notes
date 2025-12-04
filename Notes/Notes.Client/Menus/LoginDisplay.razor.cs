@@ -56,6 +56,10 @@ namespace Notes.Client.Menus
             Globals.LoginDisplay = this;
         }
 
+        /// <summary>
+        /// Delays the rendering of the component to allow other components to load first.
+        /// </summary>
+        /// <param name="firstRender"></param>
         protected override void OnAfterRender(bool firstRender)
         {
             if (firstRender)
@@ -73,9 +77,9 @@ namespace Notes.Client.Menus
         protected void TimerTick2(object source, ElapsedEventArgs e)
         { 
             Reload();
+            timer2.Enabled = false;
+            timer2.Stop();
         }
-
-
 
         /// <summary>
         /// Reloads this instance.

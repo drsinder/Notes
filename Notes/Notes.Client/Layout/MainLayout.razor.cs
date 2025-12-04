@@ -12,10 +12,8 @@ namespace Notes.Client.Layout
         {
             if (timer2 is null)
             {
-                timer2 = new System.Timers.Timer(120);
-#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+                timer2 = new System.Timers.Timer(120); // wait a bit before showing the menu
                 timer2.Elapsed += TimerTick2;
-#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
                 timer2.Enabled = true;
 
             }

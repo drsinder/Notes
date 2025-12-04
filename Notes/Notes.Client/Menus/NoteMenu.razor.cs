@@ -10,6 +10,15 @@ using System.Timers;
 
 namespace Notes.Client.Menus
 {
+    /// <summary>
+    /// Represents the menu component for note-related actions, providing user interface options for navigating,
+    /// editing, exporting, and managing notes within the application.
+    /// </summary>
+    /// <remarks>The NoteMenu component dynamically constructs its menu items based on the user's access
+    /// rights and the current note context. It supports actions such as listing notes, navigating between notes,
+    /// creating responses, editing, deleting, exporting, and forwarding notes. The component integrates with modal
+    /// dialogs for user confirmations and additional actions. It is typically used within a container that provides the
+    /// necessary model and navigation context.</remarks>
     public partial class NoteMenu
     {
         /// <summary>

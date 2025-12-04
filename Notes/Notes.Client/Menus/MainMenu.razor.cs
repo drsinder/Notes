@@ -7,6 +7,14 @@ using System.Timers;
 
 namespace Notes.Client.Menus
 {
+    /// <summary>
+    /// Represents the main navigation menu component for the application, providing menu structure, navigation, and
+    /// user-specific menu item visibility.
+    /// </summary>
+    /// <remarks>The MainMenu component manages the display and behavior of the application's top-level menu,
+    /// including dynamic updates based on user authentication and role. It integrates with navigation, session storage,
+    /// and modal services to provide a responsive and personalized menu experience. This component is typically used as
+    /// a shared navigation element across pages.</remarks>
     public partial class MainMenu
     {
         /// <summary>
