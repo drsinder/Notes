@@ -52,9 +52,13 @@
 <h2 class="center">Welcome to Notes @myState?.UserInfo?.Displayname</h2>
 <div>
     <h5 class="center">
-        <Clock Interval="1000"></Clock>  @* update the clock every second *@
+        <Clock Interval="1000"/>  @* update the clock every second *@
     </h5>
-    @if (!myState.IsAuthenticated)
+    @if (!initDone)
+    {
+        <p class="center"><strong>Gathering Notes...</strong></p>
+    }
+    else if (!myState.IsAuthenticated)
     {
         <p class="center"><strong>You are not logged in.  Please log in.  Register first if you need to.</strong></p>
     }

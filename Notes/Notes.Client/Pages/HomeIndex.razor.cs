@@ -108,6 +108,19 @@ namespace Notes.Client.Pages
         /// <value>The histfile list.</value>
         private GNotefileList? histfileList { get; set; }
 
+        private bool initDone { get; set; } = false;
+
+        /// <summary>
+        /// Invoked after the component has rendered. Allows performing post-render logic, such as initialization, based
+        /// on whether this is the first render.
+        /// </summary>
+        /// <param name="firstRender">Indicates whether this is the first time the component has rendered. <see langword="true"/> if this is the
+        /// initial render; otherwise, <see langword="false"/>.</param>
+        protected override void OnAfterRender(bool firstRender)
+        {
+            initDone = true;
+        }
+
         /// <summary>
         /// Asynchronously updates the component's state when its parameters are set. This method initializes file
         /// lists, retrieves the current server time, and resets session storage values based on the user's
@@ -128,6 +141,8 @@ namespace Notes.Client.Pages
 
             // If this is not done things don't progress - that's OK - but why is a mystery!
             _ = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
+
+            //initDone = true;
 
             if (myState.IsAuthenticated)
             {
