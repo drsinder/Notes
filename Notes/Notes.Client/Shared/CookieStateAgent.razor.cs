@@ -6,6 +6,14 @@ using System.Text.Json;
 
 namespace Notes.Client.Shared
 {
+    /// <summary>
+    /// Provides state management and authentication logic for user login using cookies in a Blazor component. Enables
+    /// reading, writing, and tracking login information, authentication status, and user roles.
+    /// </summary>
+    /// <remarks>CookieStateAgent interacts with browser cookies via JavaScript interop to persist and
+    /// retrieve login information. It exposes properties to determine authentication and user roles, and provides an
+    /// event to notify subscribers when the login state changes. This class is intended for use within Blazor
+    /// applications that require client-side authentication state tracking.</remarks>
     public partial class CookieStateAgent : ComponentBase
     {
         /// <summary>
@@ -58,25 +66,6 @@ namespace Notes.Client.Shared
             }
 
         }
-        /*
-        public async Task InitializeAsync()
-        {
-            {
-                if (module is null)
-                    module = await JS.InvokeAsync<IJSObjectReference>("import", "./cookies.js");
-                if (!IsAuthenticated)
-                {
-                    try
-                    {
-                        await GetLoginReplyAsync();
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-            }
-        }
-        */
 
         /// <summary>
         /// Try to get login cookie
