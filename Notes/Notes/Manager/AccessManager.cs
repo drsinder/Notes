@@ -1,4 +1,23 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
+using Microsoft.EntityFrameworkCore;
 using Notes.Client;
 using Notes.Data;
 using Notes.Entities;
@@ -6,8 +25,13 @@ using Notes.Entities;
 namespace Notes.Manager
 {
     /// <summary>
-    /// Class AccessManager.
+    /// Provides static methods for managing and querying access control entries for note files, including creation of
+    /// base access entries, retrieval of user-specific access, and validation of link-based access.
     /// </summary>
+    /// <remarks>The AccessManager class is intended to centralize access control logic for note files within
+    /// the application. All methods are static and thread-safe, as they operate on provided database contexts. This
+    /// class should be used to create, retrieve, and verify access permissions for users and linked files. It is not
+    /// intended to be instantiated.</remarks>
     public static class AccessManager
     {
         /// <summary>

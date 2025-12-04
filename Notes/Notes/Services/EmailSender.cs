@@ -1,4 +1,25 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: EmailSender.cs
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
 using Notes.Client;
@@ -8,10 +29,12 @@ using SendGrid.Helpers.Mail;
 namespace Notes.Services
 {
     /// <summary>
-    /// Class EmailSender.
-    /// Implements the <see cref="IEmailSender" />
+    /// Provides functionality to send email messages asynchronously using configured options.
     /// </summary>
-    /// <seealso cref="IEmailSender" />
+    /// <remarks>This class implements the <see cref="IEmailSender"/> interface and is typically used to send
+    /// emails in applications that require notification or communication features. The email sending behavior is
+    /// configured via <see cref="AuthMessageSenderOptions"/>, which may be set through dependency injection or secret
+    /// management. Instances of <see cref="EmailSender"/> are thread-safe for concurrent use.</remarks>
     public class EmailSender : IEmailSender
     {
         //public StreamWriter StreamWriter { get; private set; }
@@ -87,8 +110,6 @@ namespace Notes.Services
 
             await client.SendEmailAsync(msg);
         }
-
-
     }
 
     /// <summary>

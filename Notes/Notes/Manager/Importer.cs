@@ -1,4 +1,23 @@
-﻿using Notes.Client;
+﻿/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
+using Notes.Client;
 using Notes.Data;
 using Notes.Entities;
 using System.Text;
@@ -7,9 +26,13 @@ using System.Text.RegularExpressions;
 namespace Notes.Manager
 {
     /// <summary>
-    /// Does the import of a text file from an old plato/novanet system notefile
-    /// There be messy stuff in here!!!
+    /// Provides functionality to import note files from various supported formats into the database. Handles parsing,
+    /// conversion, and storage of notes and their associated metadata during the import process.
     /// </summary>
+    /// <remarks>The Importer class supports multiple file formats, including NovaNET, Notes 3.1, and PLATO IV
+    /// group notes. Use this class to automate the migration or integration of legacy note data into the current
+    /// system. Import operations may require access to a valid NotesDbContext and appropriate file streams. This class
+    /// is not thread-safe; create a separate instance for each concurrent import operation.</remarks>
     public partial class Importer
     {
         /// <summary>
@@ -88,7 +111,6 @@ namespace Notes.Manager
 
             StringBuilder sb = new();
             long baseNoteHeaderId = 0;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             NoteContent newContent = null;
             NoteHeader makeHeader = null;
             int basenotes = 0;
@@ -129,7 +151,6 @@ namespace Notes.Manager
                             await file.ReadLineAsync();
                             line = await file.ReadLineAsync();
 
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                             string[] splits = platoLine5.Split(spaceTrim);
                             platoBaseYear = splits[^1];
 
@@ -546,7 +567,6 @@ namespace Notes.Manager
                         if (!isResp) // base note
                         {
                             //basenotes++;
-                            // ReSharper disable once RedundantAssignment
 #pragma warning disable IDE0059 // Unnecessary assignment of a value
                             newHeader = await NoteDataManager.CreateNote(_db, makeHeader, newContent.NoteBody, string.Empty, makeHeader.DirectorMessage, false, false);
 #pragma warning restore IDE0059 // Unnecessary assignment of a value
@@ -578,7 +598,6 @@ namespace Notes.Manager
                         if (!isResp) // base note
                         {
                             //basenotes++;
-                            // ReSharper disable once RedundantAssignment
 #pragma warning disable IDE0059 // Unnecessary assignment of a value
                             newHeader = await NoteDataManager.CreateNote(_db, makeHeader, newContent.NoteBody, string.Empty, makeHeader.DirectorMessage, false, false);
 #pragma warning restore IDE0059 // Unnecessary assignment of a value
@@ -680,8 +699,4 @@ namespace Notes.Manager
         {
         }
     }
-
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-
 }

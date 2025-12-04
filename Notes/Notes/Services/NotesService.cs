@@ -1,4 +1,25 @@
-﻿using Grpc.Core;
+﻿/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: NotesService.cs
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
+using Grpc.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -15,9 +36,26 @@ using System.Runtime;
 using System.Security.Claims;
 using System.Text;
 
-
 namespace Notes.Services
 {
+    /// <summary>
+    /// Provides gRPC service methods for managing notes, note files, user access, and related operations in the
+    /// application. Supports authentication, authorization, and administrative features for note collaboration and user
+    /// management.
+    /// </summary>
+    /// <remarks>This service implements the core server-side logic for the application's note management
+    /// system, exposing endpoints for note creation, editing, access control, user administration, and related
+    /// features. Most methods require the caller to be authenticated, and some are restricted to users with
+    /// administrative privileges. The service integrates with ASP.NET Core Identity for user and role management, and
+    /// uses dependency injection for configuration, logging, and email services. Thread safety and authorization are
+    /// enforced according to .NET and gRPC best practices.</remarks>
+    /// <param name="logger">The logger instance used to record diagnostic and operational information for the NotesService.</param>
+    /// <param name="_db">The database context for accessing and manipulating note, user, and related data entities.</param>
+    /// <param name="_configuration">The application configuration provider used to access settings such as JWT secrets and administrative contact
+    /// information.</param>
+    /// <param name="_roleManager">The role manager used to query and manage user roles within the application.</param>
+    /// <param name="_emailSender">The email sender service used to send notification and system emails to users.</param>
+    /// <param name="_userManager">The user manager responsible for user identity operations, including user lookup and role assignment.</param>
     public class NotesService(ILogger<NotesService> logger,
         NotesDbContext _db,
         IConfiguration _configuration,

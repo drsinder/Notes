@@ -23,7 +23,7 @@
       <add key="VBdocman_comVariable"><![CDATA[-1]]></add>
       <add key="VBdocman_comProtected"><![CDATA[-1]]></add>
       <add key="VBdocman_supportedNetFrameworkClientProfile"><![CDATA[]]></add>
-      <add key="VBdocman_comPrivate"><![CDATA[0]]></add>
+      <add key="VBdocman_comPrivate"><![CDATA[-1]]></add>
       <add key="VBdocman_comWriteDescription"><![CDATA[0]]></add>
       <add key="VBdocman_comProtectedFriend"><![CDATA[-1]]></add>
       <add key="VBdocman_comObject"><![CDATA[-1]]></add>
@@ -46,7 +46,7 @@
       <add key="VBdocman_SupportedNetCore"><![CDATA[10.0]]></add>
       <add key="VBdocman_customVar3"><![CDATA[]]></add>
       <add key="VBdocman_unbreakSourceLines"><![CDATA[0]]></add>
-      <add key="VBdocman_supportedNetFramework"><![CDATA[]]></add>
+      <add key="VBdocman_supportedNetFramework"><![CDATA[10.0]]></add>
       <add key="VBdocman_SelectedProperties"><![CDATA[
 <ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <string>showFormsSeparate</string>
@@ -62,6 +62,7 @@
   <string>customTopics</string>
   <string>ListNamespacesWithShortNames</string>
   <string>emptyOutputFolder</string>
+  <string>SupportedNetCore</string>
 </ArrayOfString>]]></add>
       <add key="VBdocman_pageFooterText"><![CDATA[Generated with <see href="https://www.helixoft.com/vsdocman/overview.html">VSdocman</see>]]></add>
       <add key="VBdocman_comConstant"><![CDATA[-1]]></add>
@@ -75,8 +76,8 @@
       <add key="VBdocman_insertSourceGlobal"><![CDATA[0]]></add>
       <add key="VBdocman_SupportedNetStandard"><![CDATA[]]></add>
       <add key="VBdocman_SupportedXamarinMac"><![CDATA[]]></add>
-      <add key="VBdocman_comFriend"><![CDATA[0]]></add>
-      <add key="VBdocman_templatePath"><![CDATA[html_msdn2019.vbdt]]></add>
+      <add key="VBdocman_comFriend"><![CDATA[-1]]></add>
+      <add key="VBdocman_templatePath"><![CDATA[html_2025.vbdt]]></add>
       <add key="VBdocman_comDeclare"><![CDATA[-1]]></add>
       <add key="VBdocman_conditionalConstants"><![CDATA[]]></add>
       <add key="VBdocman_SupportedXamarinAndroid"><![CDATA[]]></add>

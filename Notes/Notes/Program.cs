@@ -1,3 +1,22 @@
+/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
 using Blazored.Modal;
 using Blazored.SessionStorage;
 using Grpc.Net.Client;
@@ -24,6 +43,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
+/// Configure gRPC options for message size limits
 builder.Services.AddGrpc()
     .AddServiceOptions<NotesService>(options =>
     {
@@ -32,6 +52,7 @@ builder.Services.AddGrpc()
                                                        //        options.Interceptors.Add<AuthInterceptor>();
     });
 
+// Configure CORS to allow gRPC-Web calls from any origin
 builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder =>
 {
     builder.AllowAnyOrigin()
@@ -50,7 +71,7 @@ builder.Services.AddScoped<IdentityRedirectManager>();
 
 builder.Services.AddBlazoredModal();
 builder.Services.AddBlazoredSessionStorage();
-builder.Services.AddScoped<CookieStateAgent>();  // for login state mgt = "myState" injection in _imports.razor
+builder.Services.AddScoped<CookieStateAgent>();  // for login state mgt
 
 builder.Services.AddAuthentication(options =>
     {
@@ -74,6 +95,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
+// Configure Entity Framework and Identity
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<NotesDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -134,9 +156,7 @@ Globals.CookieName = builder.Configuration["CookieName"];
 Globals.ImportMailInterval = int.Parse(builder.Configuration["ImportMailInterval"]);
 Globals.AppUrl = (builder.Configuration["AppUrl"]);
 
-
-// Add my gRPC service so it can be injected.
-
+// Configure gRPC client with GrpcWebHandler and SubdirectoryHandler for virtual directory support
 builder.Services.AddSingleton(services =>
 {
     string AppVirtDir = ""; // preset for localhost / Development

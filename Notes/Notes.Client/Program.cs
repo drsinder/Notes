@@ -1,3 +1,22 @@
+/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
 using Blazored.Modal;
 using Blazored.SessionStorage;
 using Grpc.Net.Client;
@@ -18,7 +37,7 @@ builder.Services.AddAuthenticationStateDeserialization();
 
 builder.Services.AddBlazoredModal();
 builder.Services.AddBlazoredSessionStorage();
-builder.Services.AddScoped<CookieStateAgent>();  // for login state mgt = "myState" injection in _imports.razor
+builder.Services.AddScoped<CookieStateAgent>();  // for login state mgt
 
 SyncfusionLicenseProvider
     .RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF5cXGRCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWH5fcnVcRWReWEN0WEpWYEg=");
@@ -26,8 +45,7 @@ SyncfusionLicenseProvider
 builder.Services.AddSyncfusionBlazor();   // options => { options.IgnoreScriptIsolation = true; });
 
 
-// Add my gRPC service so it can be injected.
-
+// Configure gRPC client with subdirectory handling for virtual directory deployment
 builder.Services.AddSingleton(services =>
 {
     string AppVirtDir = ""; // preset for localhost / Development
@@ -55,15 +73,6 @@ builder.Services.AddSingleton(services =>
     NotesServer.NotesServerClient Client = new(channel);
     return Client;
 });
-
-/*
-builder.Services.AddGrpcClient<NotesServer.NotesServerClient>(options =>
-    {
-        options.Address = new Uri("https://localhost:7093");
-    })
-    .ConfigurePrimaryHttpMessageHandler(
-        () => new GrpcWebHandler(new HttpClientHandler()));
-*/
 
 await builder.Build().RunAsync();
 

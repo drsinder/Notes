@@ -1,4 +1,25 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: LocalService.cs
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
+using Microsoft.EntityFrameworkCore;
 using Notes.Protos;
 using Notes.Data;
 using Notes.Entities;
@@ -8,8 +29,12 @@ using System.Text;
 namespace Notes.Services
 {
     /// <summary>
-    /// Class LocalService.
+    /// Provides functionality to generate formatted note content for email forwarding within the Notes 2026 system.
     /// </summary>
+    /// <remarks>This static class contains methods for creating email-ready representations of notes,
+    /// including metadata such as author, subject, and file information. The generated content is intended for use in
+    /// email bodies and includes relevant details to facilitate sharing and review. All members are thread-safe due to
+    /// the static nature of the class.</remarks>
     public static class LocalService
     {
         /// <summary>
