@@ -1,11 +1,41 @@
-using Grpc.Net.Client;
+/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: HomeIndex.razor
+    **
+    **  Description: Displays the main index 
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
 using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 using Syncfusion.Blazor.DropDowns;
-using System.Timers;
 
 namespace Notes.Client.Pages
 {
+    /// <summary>
+    /// Represents the main component for the home page, providing data models, file lists, and navigation logic for
+    /// interacting with note files and server information.
+    /// </summary>
+    /// <remarks>This class manages the initialization and state of the home page, including communication
+    /// with the Notes server via gRPC, handling user authentication, and updating session storage. It provides
+    /// mechanisms for navigating to specific note files, retrieving server time, and organizing files into important,
+    /// history, and ordered lists. The component is designed to work within a Blazor application and relies on
+    /// dependency injection and parameter binding for its operation.</remarks>
     public partial class HomeIndex
     {
         /// <summary>
@@ -13,11 +43,6 @@ namespace Notes.Client.Pages
         /// </summary>
         [Inject] 
         NotesServer.NotesServerClient NotesClient { get; set; } = null!;
-
-        /// <summary>
-        /// Gets or sets the identifier of the notes file to be entered.
-        /// </summary>
-        [Parameter] public int EnterNotesfileId { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets the file name to be used when directly entering file.
@@ -28,11 +53,6 @@ namespace Notes.Client.Pages
         /// Gets or sets the ordinal position used to determine note file entry behavior.
         /// </summary>
         [Parameter] public long Ordinal { get; set; } = 0;
-
-        /// <summary>
-        /// Gets or sets the current server time information, if available.
-        /// </summary>
-        protected ServerTime? serverTime { get; set; }
 
         /// <summary>
         /// Gets or sets the data model for the home page.
@@ -63,7 +83,6 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <value>The item.</value>
         private GNotefile? item { get; set; }
-
 
         /// <summary>
         /// Gets or sets the file list.
@@ -107,7 +126,8 @@ namespace Notes.Client.Pages
             histfileList = new GNotefileList();
             impfileList = new GNotefileList();
 
-            serverTime = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
+            // If this is not done things don't progress - that's OK - but why is a mystery!
+            _ = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
 
             if (myState.IsAuthenticated)
             {
@@ -128,6 +148,7 @@ namespace Notes.Client.Pages
                 await sessionStorage.RemoveItemAsync("SearchIndex");
                 await sessionStorage.RemoveItemAsync("SearchList");
 
+                // Get home page model
                 hpData = hpModel = await NotesClient.GetHomePageModelAsync(new NoRequest(), myState.AuthHeader);
 
                 GNotefileList fileList1 = hpModel.NoteFiles;
@@ -144,9 +165,7 @@ namespace Notes.Client.Pages
                         { Id = fileList1.List[i].Id, NoteFileName = fileList1.List[i].NoteFileName, 
                         NoteFileTitle = fileList1.List[i].NoteFileTitle };
 
-                    if (EnterNotesfileId == work.Id)
-                        GoToFile = work;
-                    else if (EnterNotesfileName == work.NoteFileName)
+                    if (EnterNotesfileName == work.NoteFileName)    // direct goto specified file
                         GoToFile = work;
 
                     // handle special important and history files
@@ -184,7 +203,7 @@ namespace Notes.Client.Pages
         }
 
         /// <summary>
-        /// Values the change handler.
+        /// Values change handler for dropdown
         /// </summary>
         /// <param name="args">The arguments.</param>
         private void ValueChangeHandler(ChangeEventArgs<int, GNotefile> args)
@@ -192,6 +211,5 @@ namespace Notes.Client.Pages
             Navigation.NavigateTo("noteindex/" + args.Value); // goto the file
 
         }
-
     }
 }

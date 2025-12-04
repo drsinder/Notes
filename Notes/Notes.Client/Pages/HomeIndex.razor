@@ -1,7 +1,33 @@
-﻿@page "/"
-@page "/enter/{EnterNotesfileId:int}"
+﻿@*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: HomeIndex.razor
+    **
+    **  Description: Displays the main index 
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*@
+    
+        @* show the main index *@
+@page "/"
+        @* Goto a notes file index *@
 @page "/enter/{EnterNotesfileName}"
-@page "/enter/{EnterNotesfileName}/{Ordinal:long}"
+        @* Goto a note in a notes file *@
+@page "/enter/{EnterNotesfileName}/{Ordinal:long}"      
+                                @*   @page "/enter/{EnterNotesfileId:int}"  *@
 
 @using System.Timers
 @using Grpc.Net.Client
@@ -15,108 +41,110 @@
 @inject NavigationManager Navigation
 @inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
+@* grab the users ID cookie *@
 @if (!(myState.IsAuthenticated))
 {
     <CookieStateAgent @ref="myState" />
 }
+
 <PageTitle>Notes Index</PageTitle>
 
 <h2 class="center">Welcome to Notes @myState?.UserInfo?.Displayname</h2>
 <div>
     <h5 class="center">
-        <Clock Interval="1000"></Clock>
+        <Clock Interval="1000"></Clock>  @* update the clock every second *@
     </h5>
     @if (!myState.IsAuthenticated)
     {
         <p class="center"><strong>You are not logged in.  Please log in.  Register first if you need to.</strong></p>
     }
+    @* show any home page message *@
     @if (hpData != null && !string.IsNullOrEmpty(hpData.Message))
     {
         <div>@((MarkupString)@hpData.Message)</div>
     }
+    @* brief wait while we get data from server *@
     @if (myState.IsAuthenticated && hpData == null)
     {
         <p class="center"><em>Loading...</em></p>
     }
+    @* if we have a goto file, show it *@
     else if (GoToFile.Id != 0)
     {
-        <p class="center"><b>Click to goto: </b><FileButton Triggered="true" Ordinal="@Ordinal" NoteFile="@GoToFile"></FileButton></p>
+        <p class="center"><b>Click to goto: </b><FileButton Triggered="true" NoteFile="@GoToFile" Ordinal="@Ordinal"></FileButton></p>
     }
+    @* finally...  show the index *@
+    else if (hpModel != null)
+    {
+         <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 roundedindex keep-center">
+                <EditForm Model="@dummyFile">
+                    <ChildContent Context="Typer">
+                        <p class="center">
+                            <label>
+                                <strong>Enter a NoteFile Name and press Enter:</strong>
+                                <InputText class="form-control short-input"
+                                           ValueChanged="@( (string val) => TextHasChanged(val) )"
+                                           Value="@dummyFile.NoteFileName"
+                                           ValueExpression="@( () => dummyFile.NoteFileName )" />
+                            </label>
+                        </p>
+                        <p class="center">
+                            Or select a file<br />
+                            <div class="btn btn-file form-control short-input">
+                            <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a File" DataSource="@fileList" >
+                                <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
+                                <DropDownListFieldSettings Value="Id" Text="NoteFileName"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            </div>
+                        </p>
 
-        else if (hpModel != null)
-        {
-             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 roundedindex keep-center">
-                    <EditForm Model="@dummyFile">
-                        <ChildContent Context="Typer">
-                            <p class="center">
-                                <label>
-                                    <strong>Enter a NoteFile Name and press Enter:</strong>
-                                    <InputText class="form-control short-input"
-                                               ValueChanged="@( (string val) => TextHasChanged(val) )"
-                                               Value="@dummyFile.NoteFileName"
-                                               ValueExpression="@( () => dummyFile.NoteFileName )" />
-                                </label>
-                            </p>
-                            <p class="center">
-                                Or select a file<br />
-                                <div class="btn btn-file form-control short-input">
-                                <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a File" DataSource="@fileList" >
-                                    <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
-                                    <DropDownListFieldSettings Value="Id" Text="NoteFileName"></DropDownListFieldSettings>
-                                </SfDropDownList>
-                                </div>
-                            </p>
-
-                            <p class="center">
-                                Or select a title<br />
-                                <div class="btn btn-title form-control short-input">
-                                <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a Title" DataSource="@nameList.List" >
-                                    <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
-                                    <DropDownListFieldSettings Value="Id" Text="NoteFileTitle"></DropDownListFieldSettings>
-                                </SfDropDownList> 
-                                </div>
-                            </p>
-                        </ChildContent>
-                    </EditForm>
-                    <p class="center">
-                        <a href="notesfiles"><strong>List of all NotesFiles</strong></a>
-                    </p>
-                </div>
+                        <p class="center">
+                            Or select a title<br />
+                            <div class="btn btn-title form-control short-input">
+                            <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a Title" DataSource="@nameList.List" >
+                                <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
+                                <DropDownListFieldSettings Value="Id" Text="NoteFileTitle"></DropDownListFieldSettings>
+                            </SfDropDownList> 
+                            </div>
+                        </p>
+                    </ChildContent>
+                </EditForm>
+                <p class="center">
+                    <a href="notesfiles"><strong>List of all NotesFiles</strong></a>
+                </p>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-4">
-                    <h4>Important Files</h4>
-                    <ul>
-                        @for (int i = 0; i < impfileList.List.Count; i++)
-                        {
-                             item = impfileList.List[i];
-                            <li> 
-                               <FileButton NoteFile="@item"></FileButton>
-                            </li>
-                        }
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>History Files</h4>
-                    <ul>
-                        @for (int i = 0; i < histfileList.List.Count; i++)
-                        {
-                             item = histfileList.List[i];
-                            <li>
-                               <FileButton NoteFile="@item"></FileButton>
-                            </li>
-                        }
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col-md-2">
             </div>
+            <div class="col-md-4">
+                <h4>Important Files</h4>
+                <ul>
+                    @for (int i = 0; i < impfileList.List.Count; i++)
+                    {
+                         item = impfileList.List[i];
+                        <li> 
+                           <FileButton NoteFile="@item"></FileButton>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>History Files</h4>
+                <ul>
+                    @for (int i = 0; i < histfileList.List.Count; i++)
+                    {
+                         item = histfileList.List[i];
+                        <li>
+                           <FileButton NoteFile="@item"></FileButton>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
 
     } 
-
-
 </div>
-
