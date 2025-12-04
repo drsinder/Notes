@@ -46,7 +46,7 @@
       <add key="VBdocman_SupportedNetCore"><![CDATA[10.0]]></add>
       <add key="VBdocman_customVar3"><![CDATA[]]></add>
       <add key="VBdocman_unbreakSourceLines"><![CDATA[0]]></add>
-      <add key="VBdocman_supportedNetFramework"><![CDATA[10.0]]></add>
+      <add key="VBdocman_supportedNetFramework"><![CDATA[]]></add>
       <add key="VBdocman_SelectedProperties"><![CDATA[
 <ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <string>showFormsSeparate</string>
@@ -63,6 +63,26 @@
   <string>ListNamespacesWithShortNames</string>
   <string>emptyOutputFolder</string>
   <string>SupportedNetCore</string>
+  <string>comPublic</string>
+  <string>comPrivate</string>
+  <string>comFriend</string>
+  <string>comProtected</string>
+  <string>comProtectedFriend</string>
+  <string>comPrivateProtected</string>
+  <string>comConstant</string>
+  <string>comEvent</string>
+  <string>comMethod</string>
+  <string>comStdModule</string>
+  <string>comObject</string>
+  <string>comForm</string>
+  <string>comProperty</string>
+  <string>comVariable</string>
+  <string>comEnumeration</string>
+  <string>comStructure</string>
+  <string>comDelegate</string>
+  <string>comInterface</string>
+  <string>comEventDecl</string>
+  <string>comDeclare</string>
 </ArrayOfString>]]></add>
       <add key="VBdocman_pageFooterText"><![CDATA[Generated with <see href="https://www.helixoft.com/vsdocman/overview.html">VSdocman</see>]]></add>
       <add key="VBdocman_comConstant"><![CDATA[-1]]></add>
