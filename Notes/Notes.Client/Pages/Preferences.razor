@@ -1,6 +1,6 @@
 ﻿@*--------------------------------------------------------------------------
     **
-    **  Copyright © 2022, Dale Sinder
+    **  Copyright © 2026, Dale Sinder
     **
     **  Name: Preferences.razor
     **
@@ -38,30 +38,28 @@
 }
 else
 {
-
-            <div>
-                <h2>Preferences</h2>
-                <br />
-                <p>Default Page Size for Pageable Lists:</p>
-                <select class="form-control short-input" @bind="@pageSize">
-                    @foreach (LocalModel2 item in MySizes)
-                    {
-                        <option value="@item.Psize">@item.Name</option>
-                    }
-                </select>
-                <br />
-                <SfSwitch @bind-Checked="@UserData.Pref7"></SfSwitch> Show Content on index by default when expanded
-                <br />
-                <SfSwitch @bind-Checked="@UserData.Pref5"></SfSwitch> Show Response Content on index by default when expanded
-                <br />
-                <SfSwitch @bind-Checked="@UserData.Pref3"></SfSwitch> Show Responses by default
-                <br />
-                <SfSwitch @bind-Checked="@UserData.Pref4"></SfSwitch> Flip Response order by default
-                <br />
-                <button type="button" @onclick="OnSubmit" class="btn btn-info btn-sm">Submit</button>&nbsp;&nbsp;
-                <button type="button" @onclick="Cancel" class="btn btn-info btn-sm">Close</button>
-
-            </div>
+    <div>
+        <h2>Preferences</h2>
+        <br />
+        <p>Default Page Size for Pageable Lists:</p>
+        <select class="form-control short-input" @bind="@pageSize">
+            @foreach (LocalModel2 item in MySizes)
+            {
+                <option value="@item.Psize">@item.Name</option>
+            }
+        </select>
+        <br />
+        <SfSwitch @bind-Checked="@UserData.Pref7"></SfSwitch> Show Content on index by default when expanded
+        <br />
+        <SfSwitch @bind-Checked="@UserData.Pref5"></SfSwitch> Show Response Content on index by default when expanded
+        <br />
+        <SfSwitch @bind-Checked="@UserData.Pref3"></SfSwitch> Show Responses by default
+        <br />
+        <SfSwitch @bind-Checked="@UserData.Pref4"></SfSwitch> Flip Response order by default
+        <br />
+        <button type="button" @onclick="OnSubmit" class="btn btn-info btn-sm">Submit</button>&nbsp;&nbsp;
+        <button type="button" @onclick="Cancel" class="btn btn-info btn-sm">Close</button>
+    </div>
 }
 
 

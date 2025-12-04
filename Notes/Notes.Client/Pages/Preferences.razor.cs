@@ -1,12 +1,38 @@
+/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: Preferences.razor
+    **
+    **  Description:
+    **      Set user preferences
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
 using Notes.Protos;
 
 namespace Notes.Client.Pages
 {
     /// <summary>
-    /// Class Preferences.
-    /// Implements the <see cref="Microsoft.AspNetCore.Components.ComponentBase" />
+    /// Represents a container for managing user preferences and related data within the application.
     /// </summary>
-    /// <seealso cref="Microsoft.AspNetCore.Components.ComponentBase" />
+    /// <remarks>The Preferences class encapsulates user-specific settings, such as page size and available
+    /// size options, and provides methods for initializing, updating, and canceling preference changes. It is typically
+    /// used to persist and retrieve user customization data, ensuring a personalized experience across
+    /// sessions.</remarks>
     public partial class Preferences
     {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -43,7 +69,7 @@ namespace Notes.Client.Pages
         {
             UserData = await Client.GetUserDataAsync(new NoRequest(), myState.AuthHeader);
             pageSize = UserData.Ipref2.ToString();
-            MySizes = new List<LocalModel2> { new LocalModel2("0", "All"), new LocalModel2("5"), new LocalModel2("10"), new LocalModel2("12"), new LocalModel2("20") };
+            MySizes = new List<LocalModel2> { new("0", "All"), new("5"), new("10"), new("12"), new("20") };
             currentText = " ";
         }
 

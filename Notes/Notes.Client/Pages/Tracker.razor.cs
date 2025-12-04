@@ -1,19 +1,6 @@
-// ***********************************************************************
-// Assembly         : Notes2022.Client
-// Author           : Dale Sinder
-// Created          : 04-29-2022
-//
-// Last Modified By : Dale Sinder
-// Last Modified On : 05-08-2022
-// ***********************************************************************
-// <copyright file="Tracker.razor.cs" company="Notes2022.Client">
-//     Copyright (c) 2022 Dale Sinder. All rights reserved.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
 /*--------------------------------------------------------------------------
     **
-    ** Copyright © 2022, Dale Sinder
+    ** Copyright © 2026, Dale Sinder
     **
     ** Name: Tracker.razor.cs
     **
@@ -38,15 +25,17 @@
 
 
 using Notes.Protos;
-using Notes.Client.Shared;
 
 namespace Notes.Client.Pages
 {
     /// <summary>
-    /// Class Tracker.
-    /// Implements the <see cref="Microsoft.AspNetCore.Components.ComponentBase" />
+    /// Represents a component that manages and organizes collections of note files and sequencers, providing
+    /// functionality to retrieve, order, and shuffle these items asynchronously.
     /// </summary>
-    /// <seealso cref="Microsoft.AspNetCore.Components.ComponentBase" />
+    /// <remarks>The Tracker class is designed to interact with external services to fetch and update lists of
+    /// note files and sequencers. It provides asynchronous operations to initialize and reorder its internal
+    /// collections based on external data. This class is intended to be used as part of a larger application where
+    /// dynamic organization and display of note files and sequencers are required.</remarks>
     public partial class Tracker
     {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -99,9 +88,7 @@ namespace Notes.Client.Pages
                 trackers = trackers.OrderBy(p => p.Ordinal).ToList();
                 foreach (var tracker in trackers)
                 {
-#pragma warning disable CS8604 // Possible null reference argument.
                     files.Add(stuff.Find(p => p.Id == tracker.NoteFileId));
-#pragma warning restore CS8604 // Possible null reference argument.
                 }
             }
             foreach (var s in stuff)

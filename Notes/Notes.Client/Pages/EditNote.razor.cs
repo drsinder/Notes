@@ -36,6 +36,7 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <value>The client.</value>
         [Inject] NotesServer.NotesServerClient Client { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EditNote"/> class.
         /// </summary>
@@ -45,9 +46,12 @@ namespace Notes.Client.Pages
 
         // get all the data
         /// <summary>
-        /// On parameters set as an asynchronous operation.
+        /// Asynchronously updates the component's state when its parameters are set.
         /// </summary>
-        /// <returns>A Task representing the asynchronous operation.</returns>
+        /// <remarks>This method is called by the Blazor framework when component parameters have been
+        /// assigned. Override this method to perform additional initialization or data loading based on the new
+        /// parameters. The method should not be called directly.</remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
         protected override async Task OnParametersSetAsync()
         {
             stuff = await Client.GetNoteContentAsync(new DisplayModelRequest() { NoteId = NoteId, Vers = 0 }, myState.AuthHeader);
@@ -69,5 +73,4 @@ namespace Notes.Client.Pages
             go = true;
         }
     }
-
 }
