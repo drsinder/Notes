@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
+    <File Path="LICENSE.txt" />
+    <File Path="README.md" />
     <File Path="secretsTemplate.txt" />
   </Folder>
   <Project Path="Notes.AppHost/Notes.AppHost.csproj" />
