@@ -1,41 +1,12 @@
+
 // ***********************************************************************
-// Assembly         : Notes2022.Client
-// Author           : Dale Sinder
-// Created          : 05-08-2022
-//
-// Last Modified By : Dale Sinder
-// Last Modified On : 05-09-2022
-// ***********************************************************************
-// <copyright file="SCheckBox.razor.cs" company="Notes2022.Client">
-//     Copyright (c) 2022 Dale Sinder. All rights reserved.
+// <copyright file="SCheckBox.razor.cs" company="Notes.Client">
+//     Copyright (c) 2026 Dale Sinder. All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using System.Net.Http;
-using System.Net.Http.Json;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.Components.Routing;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Components.Web.Virtualization;
-using Microsoft.AspNetCore.Components.WebAssembly.Http;
-using Microsoft.JSInterop;
-using Notes.Client;
-using Notes.Client.Shared;
 using Notes.Protos;
-using Syncfusion.Blazor;
-using Syncfusion.Blazor.Navigations;
-using Syncfusion.Blazor.Buttons;
-using Syncfusion.Blazor.Grids;
-using Syncfusion.Blazor.LinearGauge;
-using Syncfusion.Blazor.Inputs;
-using Syncfusion.Blazor.SplitButtons;
-using Syncfusion.Blazor.Calendars;
-using System.Text;
 using Notes.Client.Pages;
 
 namespace Notes.Client.Comp

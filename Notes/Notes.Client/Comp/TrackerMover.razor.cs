@@ -1,13 +1,6 @@
 // ***********************************************************************
-// Assembly         : Notes2022.Client
-// Author           : Dale Sinder
-// Created          : 04-29-2022
-//
-// Last Modified By : Dale Sinder
-// Last Modified On : 05-08-2022
-// ***********************************************************************
-// <copyright file="TrackerMover.razor.cs" company="Notes2022.Client">
-//     Copyright (c) 2022 Dale Sinder. All rights reserved.
+// <copyright file="TrackerMover.razor.cs" company="Notes.Client">
+//     Copyright (c) 2026 Dale Sinder. All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************

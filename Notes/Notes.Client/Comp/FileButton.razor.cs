@@ -1,28 +1,23 @@
-﻿// ***********************************************************************
-// Assembly         : Notes2022.Client
-// Author           : Dale Sinder
-// Created          : 05-06-2022
-//
-// Last Modified By : Dale Sinder
-// Last Modified On : 05-06-2022
+﻿
 // ***********************************************************************
-// <copyright file="FileButton.razor.cs" company="Notes2022.Client">
-//     Copyright (c) 2022 Dale Sinder. All rights reserved.
+// <copyright file="FileButton.razor.cs" company="Notes.Client">
+//     Copyright (c) 2026 Dale Sinder. All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
 using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 
-
 namespace Notes.Client.Comp
 {
     /// <summary>
-    /// Represents a UI component that displays a button for navigating to a specific note file.
+    /// Represents a button component that navigates to a note index page based on the specified note file and ordinal
+    /// value.
     /// </summary>
-    /// <remarks>Use this component to provide users with a button that, when clicked, navigates to the
-    /// index page of the associated note file. The navigation behavior depends on the configured <see
-    /// cref="NavigationManager"/> and the <see cref="GNotefile"/> instance provided.</remarks>
+    /// <remarks>Use this component to provide navigation functionality to a note index page within a Blazor
+    /// application. The navigation target is determined by the associated note file and, optionally, an ordinal value.
+    /// The component can be triggered programmatically by setting the Triggered property to <see
+    /// langword="true"/>.</remarks>
     public partial class FileButton
     {
         /// <summary>
