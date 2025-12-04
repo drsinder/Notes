@@ -1,5 +1,6 @@
 using Grpc.Core;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using Notes.Protos;
 using System.Text.Json;
@@ -24,6 +25,10 @@ namespace Notes.Client.Shared
         /// The module for calling javascript
         /// </summary>
         private IJSObjectReference? module; // for calling javascript
+
+        [CascadingParameter]
+        private Task<AuthenticationState>? authenticationStateTask { get; set; }
+
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources asynchronously.
@@ -194,7 +199,8 @@ namespace Notes.Client.Shared
         {
             get
             {
-                return (LoginReply is not null) && LoginReply.Status == 200;
+                return authenticationStateTask?.GetAwaiter().GetResult().User.Identity?.IsAuthenticated == true &&
+                    (LoginReply is not null) && LoginReply.Status == 200;
             }
         }
 
