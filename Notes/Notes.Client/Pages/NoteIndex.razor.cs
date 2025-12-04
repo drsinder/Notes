@@ -1,3 +1,27 @@
+/*--------------------------------------------------------------------------
+    **
+    **  Copyright © 2026, Dale Sinder
+    **
+    **  Name: NoteIndex.razor
+    **
+    **  Description: Displays the main file index grid
+    **     Base notes and expands to show responses
+    **
+    **  This program is free software: you can redistribute it and/or modify
+    **  it under the terms of the GNU General Public License version 3 as
+    **  published by the Free Software Foundation.
+    **
+    **  This program is distributed in the hope that it will be useful,
+    **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    **  GNU General Public License version 3 for more details.
+    **
+    **  You should have received a copy of the GNU General Public License
+    **  version 3 along with this program in file "license-gpl-3.0.txt".
+    **  If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
+    **
+    **--------------------------------------------------------------------------*/
+
 using Blazored.Modal;
 using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
@@ -45,33 +69,33 @@ namespace Notes.Client.Pages
         /// Reference to the menu so we can talk to it.
         /// </summary>
         /// <value>My menu.</value>
-        protected ListMenu MyMenu { get; set; }
+        protected ListMenu? MyMenu { get; set; }
 
-        public NotePanel MyNotePanel { get; set; }
+        public NotePanel? MyNotePanel { get; set; }
 
         /// <summary>
         /// Accumulator for the navigation string
         /// </summary>
         /// <value>The nav string.</value>
-        public string NavString { get; set; }
+        public string? NavString { get; set; }
 
         /// <summary>
         /// Our direct navigation typin box
         /// </summary>
         /// <value>The sf text box.</value>
-        protected SfTextBox sfTextBox { get; set; }
+        protected SfTextBox? sfTextBox { get; set; }
 
         /// <summary>
         /// Our index grid
         /// </summary>
         /// <value>The sf grid1.</value>
-        public SfGrid<GNoteHeader> sfGrid1 { get; set; }
+        public SfGrid<GNoteHeader>? sfGrid1 { get; set; }
 
         /// <summary>
         /// Filter setting for the grid
         /// </summary>
         /// <value>The page settings.</value>
-        protected GridPageSettings PageSettings { get; set; }
+        protected GridPageSettings? PageSettings { get; set; }
 
         /// <summary>
         /// Grid page size
@@ -113,7 +137,7 @@ namespace Notes.Client.Pages
         /// Model for the index data
         /// </summary>
         /// <value>The model.</value>
-        public NoteDisplayIndexModel Model { get; set; }
+        public NoteDisplayIndexModel? Model { get; set; }
 
         /// <summary>
         /// Gets or sets the client.
@@ -186,7 +210,7 @@ namespace Notes.Client.Pages
                     CurrentNoteId = Globals.GotoNote;
                     Globals.GotoNote = 0;
                 }
-
+                // If note ordinal passed in, get corresponding note id
                 if (NoteOrdinal > 0)
                 {
                     GNoteHeader? val = Model.AllNotes.List.Where(
@@ -194,7 +218,7 @@ namespace Notes.Client.Pages
                         .FirstOrDefault();
                     NoteOrdinal = 0;
                     if (val is not null)
-                        CurrentNoteId = val.Id;
+                        CurrentNoteId = val.Id; // set to view this note
                 }
             }
             catch (Exception ex)
@@ -256,7 +280,7 @@ namespace Notes.Client.Pages
         }
 
         /// <summary>
-        /// Get the nest note given the current one
+        /// Get the next note given the current one
         /// </summary>
         /// <param name="oh">The oh.</param>
         /// <returns>System.Int64.</returns>
@@ -615,7 +639,6 @@ namespace Notes.Client.Pages
             var modal = Modal.Show<MessageBox>("", parameters);
 
             results = new List<GNoteHeader>();
-       //     List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
 
             ContentSearchRequest csr = new ContentSearchRequest()
             {
@@ -629,24 +652,6 @@ namespace Notes.Client.Pages
             // Get list of note headers that match from server
 
             SearchResult matches = await Client.ContentSearchAsync(csr, myState.AuthHeader);
-            /*
-                        foreach (GNoteHeader nh in lookin)
-                        {
-                            DisplayModel dm = await Client.GetNoteContentAsync(new DisplayModelRequest() { NoteId = nh.Id }, myState.AuthHeader);
-
-                            GNoteContent nc = dm.Content;
-
-                            bool isMatch = false;
-                            switch (target.Option)
-                            {
-                                case SearchOption.Content:
-                                    isMatch = nc.NoteBody.ToLower().Contains(target.Text);
-                                    break;
-                            }
-                            if (isMatch)
-                                results.Add(nh);
-                        }
-            */
 
             foreach (GNoteHeader nh in matches.List)
             {
