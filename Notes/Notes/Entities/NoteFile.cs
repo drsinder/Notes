@@ -92,6 +92,12 @@ namespace Notes.Entities
         [DataMember(Order = 6)]
         public DateTime LastEdited { get; set; }
 
+        [Required]
+        [Display(Name = "Inhibit Versions")]
+        [DataMember(Order = 7)]
+        public bool InhibitVersions { get; set; }
+
+
         //
         // Conversions between Db Entity space and gRPC space.
 
@@ -110,6 +116,7 @@ namespace Notes.Entities
             noteFile.NoteFileName = other.NoteFileName;
             noteFile.NoteFileTitle = other.NoteFileTitle;
             noteFile.LastEdited = other.LastEdited.ToDateTime();
+            noteFile.InhibitVersions = other.InhibitVersions;
             return noteFile;
         }
 
@@ -127,6 +134,7 @@ namespace Notes.Entities
             notefile.NoteFileName = NoteFileName;
             notefile.NoteFileTitle = NoteFileTitle;
             notefile.LastEdited = Timestamp.FromDateTime(Globals.UTimeBlazor(LastEdited).ToUniversalTime());
+            notefile.InhibitVersions = InhibitVersions;
             return notefile;
         }
 
