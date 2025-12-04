@@ -19,16 +19,6 @@ namespace Notes.Client.Dialogs
         BlazoredModalInstance ModalInstance { get; set; }
 
         /// <summary>
-        /// The text
-        /// </summary>
-        private string text = string.Empty;
-        /// <summary>
-        /// Get some simple stuff from server
-        /// </summary>
-        /// <returns>A Task representing the asynchronous operation.</returns>
-       
-
-        /// <summary>
         /// Cancels this instance.
         /// </summary>
         private void Cancel()

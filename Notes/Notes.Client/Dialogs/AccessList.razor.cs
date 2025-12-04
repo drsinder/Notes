@@ -26,7 +26,6 @@ namespace Notes.Client.Dialogs
         /// File Id we are working on
         /// </summary>
         /// <value>The file identifier.</value>
-#pragma warning disable IDE1006 // Naming Styles
         [Parameter] public int fileId { get; set; }
 
         /// <summary>
@@ -73,8 +72,6 @@ namespace Notes.Client.Dialogs
         /// </summary>
         /// <value>The session storage.</value>
         [Inject] Blazored.SessionStorage.ISessionStorageService sessionStorage { get; set; }
-
-#pragma warning restore IDE1006 // Naming Styles
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccessList"/> class.

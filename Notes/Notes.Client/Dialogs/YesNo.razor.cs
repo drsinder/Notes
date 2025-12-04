@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Components;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class YesNo.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a modal dialog component that displays a yes/no confirmation message.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>Use this component to prompt users for confirmation before proceeding with an action. The
+    /// dialog displays a custom message and provides options to confirm or cancel. Integrates with Blazored Modal for
+    /// modal management.</remarks>
     public partial class YesNo
     {
         /// <summary>

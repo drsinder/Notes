@@ -6,6 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents a Blazor component for editing the details of a note file, including its name, title, owner, and
+    /// archive information.
+    /// </summary>
+    /// <remarks>This component is typically used within a modal dialog to allow users to update note file
+    /// metadata. It receives file details as parameters and provides functionality to submit changes or cancel the edit
+    /// operation. The component interacts with a backend service to persist updates and uses BlazoredModal for modal
+    /// management.</remarks>
     public partial class EditNoteFile
     {
         /// <summary>

@@ -7,12 +7,14 @@ using System.Text;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class ExportUtil1.
-    /// Implements the <see cref="ComponentBase" />
-    /// Implements the <see cref="System.IAsyncDisposable" />
+    /// Provides utility methods and component logic for exporting note files and related data, supporting both direct
+    /// file downloads and email-based exports within a Blazor application.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
-    /// <seealso cref="System.IAsyncDisposable" />
+    /// <remarks>This partial class is designed to be used as a Blazor component for exporting notes, handling
+    /// export formatting, file saving, and email sending. It integrates with JavaScript interop for file operations and
+    /// leverages Blazored Modal for user interaction. The class manages export state and lifecycle events, and
+    /// interacts with various models and services to perform export tasks. Thread safety is not guaranteed; instances
+    /// are intended for use within the Blazor component lifecycle.</remarks>
     public partial class ExportUtil1
     {
         /// <summary>

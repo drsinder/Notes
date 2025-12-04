@@ -8,12 +8,14 @@ using Google.Protobuf;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class ExportJson.
-    /// Implements the <see cref="ComponentBase" />
-    /// Implements the <see cref="System.IAsyncDisposable" />
+    /// Represents a Blazor component that exports note data as a JSON file and provides functionality to save the
+    /// exported file using JavaScript interop.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
-    /// <seealso cref="System.IAsyncDisposable" />
+    /// <remarks>This component interacts with Blazored Modal for dialog management and uses JavaScript
+    /// interop to facilitate file downloads in the browser. It relies on an injected model containing note and mark
+    /// data to generate the export. The component implements asynchronous lifecycle methods and supports asynchronous
+    /// disposal of resources. Usage typically involves presenting the export dialog, which will generate and prompt the
+    /// user to download a JSON file representing the note data.</remarks>
     public partial class ExportJson
     {
         /// <summary>

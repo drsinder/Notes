@@ -3,6 +3,12 @@ using Notes.Protos;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents a button component that allows deletion of note access within the application.   
+    /// </summary>
+    /// <remarks>This component is typically used in user interfaces where access permissions to notes can be
+    /// managed. It interacts with the notes server to perform deletion operations and notifies consumers via the
+    /// OnClick callback when a delete action occurs.</remarks>
     public partial class AccessDeleteButton
     {
         /// <summary>

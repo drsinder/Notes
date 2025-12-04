@@ -6,10 +6,14 @@ using static Notes.Client.Pages.NoteIndex;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class SearchDlg.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a modal dialog component used for configuring and initiating a search operation within the
+    /// application.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>This component is typically displayed as a modal dialog and allows users to specify search
+    /// criteria such as type, text, and options. It interacts with the parent context via BlazoredModal to return the
+    /// configured search parameters or to cancel the operation. The dialog supports various search options, including
+    /// author, title, content, tags, and time-based filters. Usage of this component requires integration with
+    /// BlazoredModal and appropriate parameter binding from the parent component.</remarks>
     public partial class SearchDlg
     {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.

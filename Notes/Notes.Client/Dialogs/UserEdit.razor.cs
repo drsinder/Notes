@@ -5,10 +5,11 @@ using Notes.Protos;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class UserEdit.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a Blazor component for editing a user's roles and details within a modal dialog.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>This component is typically used within a modal context to display and update user
+    /// information. It interacts with a backend service to retrieve and update user roles. The component requires a
+    /// valid user identifier and a modal instance to function correctly.</remarks>
     public partial class UserEdit
     {
         /// <summary>

@@ -6,6 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents a Blazor component for deleting a note file, providing functionality to confirm or cancel the
+    /// deletion within a modal dialog.
+    /// </summary>
+    /// <remarks>This component is typically used within a modal dialog to prompt users for confirmation
+    /// before deleting a note file. It interacts with the modal infrastructure and requires parameters specifying the
+    /// file to be deleted. The component handles user actions to either submit the deletion request or cancel the
+    /// operation.</remarks>
     public partial class DeleteNoteFile
     {
         /// <summary>

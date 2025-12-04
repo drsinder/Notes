@@ -4,6 +4,13 @@ using Microsoft.AspNetCore.Components;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents the details of a note file, including its identifier, name, title, owner, and related metadata for
+    /// use within a Blazor modal component.
+    /// </summary>
+    /// <remarks>This class is typically used as a parameter model for displaying or editing note file
+    /// information in a modal dialog. It provides properties for binding file-specific data and supports integration
+    /// with Blazored Modal for modal operations.</remarks>
     public partial class NoteFileDetails
     {
         /// <summary>

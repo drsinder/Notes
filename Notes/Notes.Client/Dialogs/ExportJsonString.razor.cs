@@ -7,6 +7,13 @@ using Google.Protobuf;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Provides functionality to export note header data as a JSON file within a Blazor modal dialog component.
+    /// </summary>
+    /// <remarks>This component integrates with Blazored Modal and JavaScript interop to enable exporting note
+    /// data to a downloadable JSON file. It supports asynchronous lifecycle methods for initialization and resource
+    /// management. The export process serializes note data using protobuf JSON formatting to ensure compatibility with
+    /// the expected data structure.</remarks>
     public partial class ExportJsonString
     {
         /// <summary>

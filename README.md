@@ -31,7 +31,7 @@ The author of Notes managed and contributed to the Notes 2 rewrite on NovaNET.
 A prior effort, 3.0, was written using Microsoft ASP.NET MVC 5. 
 Version 2017 was derived from 3.0 but uses a new foundation, ASP.NET CORE 3, which permits greater flexibility. 
 This version is built on dotNET Core 6. Notes also adds the ability to archive notes files (forums).  
-Notes 2022 also goes beyond the capabilities of NovaNET notes to utilize the scrolling browser environment to advantage. 
+Notes also goes beyond the capabilities of NovaNET notes to utilize the scrolling browser environment to advantage. 
 For example, responses to notes have references related to what the author of the response was viewing when they made the response.  
 These references can be displayed while viewing a note (response) and when composing a new response.
 This version of Notes uses gRPC for client/server communications.
@@ -75,7 +75,7 @@ Example you will need to fill in the values for your case:
   
   "SendGridEmail": "youremail@wherever.com",
   
-  "SendGridName": "Your Name on behalf of Notes 2022",
+  "SendGridName": "Your Name on behalf of Notes",
 
   "SyncfusionKey": "xxx"
 
@@ -97,5 +97,5 @@ Write some notes!
 
 ### Solution organization
 The Solution has 2 projects
-- Notes2022.Client : All of the client side function resides here as components and @page s..
-- Notes2022        : Direct access to Db and provides data and operations to Client through the gRPC.
+- Notes.Client : All of the client side function resides here as components and @page s..
+- Notes        : Direct access to Db and provides data and operations to Client through the gRPC.

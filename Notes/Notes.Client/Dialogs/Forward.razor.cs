@@ -5,10 +5,13 @@ using Notes.Protos;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class Forward.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a component that manages forwarding operations, including displaying the forward view and handling
+    /// user actions to forward content.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>This class is typically used within a Blazor modal dialog to facilitate forwarding
+    /// functionality. It interacts with a modal instance and a forward view model to process user input and perform the
+    /// forward operation. The class is designed to be used as part of a UI workflow where users can review and submit
+    /// forwarding details.</remarks>
     public partial class Forward
     {
         /// <summary>

@@ -4,6 +4,12 @@ using Notes.Protos;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents a component that handles uploading a note file and its associated data within a modal dialog.
+    /// </summary>
+    /// <remarks>This component is typically used in conjunction with Blazored Modal to facilitate file
+    /// uploads and import operations. It manages the upload process and interacts with the modal instance to provide
+    /// user feedback or cancel the dialog upon completion.</remarks>
     public partial class Upload4
     {
         /// <summary>

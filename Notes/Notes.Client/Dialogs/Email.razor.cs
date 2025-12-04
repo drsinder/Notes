@@ -5,10 +5,12 @@ using Microsoft.AspNetCore.Components;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class Email.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents an email input component that interacts with a modal dialog.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>This class is typically used within a Blazored modal to capture and return an email address
+    /// entered by the user. It provides mechanisms to confirm or cancel the input, communicating the result back to the
+    /// modal infrastructure. The class relies on a cascading parameter for modal interaction and is intended for use in
+    /// Blazor applications.</remarks>
     public partial class Email
     {
         /// <summary>

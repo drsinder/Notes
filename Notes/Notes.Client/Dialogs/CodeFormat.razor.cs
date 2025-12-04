@@ -9,8 +9,13 @@ using System.Web;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Prepare a block of code for insertion
+    /// Provides functionality for formatting code snippets and managing code format options within a modal dialog
+    /// component.
     /// </summary>
+    /// <remarks>Use this class to select code formats, edit code content, and interact with modal dialogs for
+    /// code insertion. The available code formats include common programming and markup languages such as C#, C++,
+    /// JavaScript, HTML, and others. This class is typically used in Blazor applications to facilitate rich text
+    /// editing and code formatting scenarios.</remarks>
     public partial class CodeFormat
     {
         /// <summary>

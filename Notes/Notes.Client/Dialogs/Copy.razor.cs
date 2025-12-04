@@ -5,10 +5,14 @@ using Notes.Protos;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class Copy.
-    /// Implements the <see cref="ComponentBase" />
+    /// Represents a Blazor component that provides functionality for copying note data to a selected file within a
+    /// modal dialog.
     /// </summary>
-    /// <seealso cref="ComponentBase" />
+    /// <remarks>This component is intended to be used within a Blazored modal context to facilitate the
+    /// selection of a note file and the copying of note content. It interacts with external services to retrieve
+    /// available files and perform the copy operation. The component requires a valid note to be provided via the <see
+    /// cref="Note"/> parameter. The modal instance is managed through the <see cref="ModalInstance"/> property. This
+    /// component is not thread-safe and should be used only within the Blazor UI thread.</remarks>
     public partial class Copy
     {
         /// <summary>

@@ -5,6 +5,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Notes.Client.Dialogs
 {
+    /// <summary>
+    /// Represents a component for creating a new note file within a modal dialog.
+    /// </summary>
+    /// <remarks>This class is typically used as part of a Blazor modal workflow to collect and submit
+    /// information for a new note file. It manages the modal state and handles user interactions for submitting or
+    /// cancelling the creation process.</remarks>
     public partial class CreateNoteFile
     {
         /// <summary>

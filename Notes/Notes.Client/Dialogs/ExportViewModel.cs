@@ -4,8 +4,14 @@ using Notes.Protos;
 namespace Notes.Client.Dialogs
 {
     /// <summary>
-    /// Class ExportViewModel.
+    /// Represents the configuration and options for exporting notes from a note file, including format, scope,
+    /// destination, and related metadata.      
     /// </summary>
+    /// <remarks>Use this view model to specify export parameters such as the source note file, archive
+    /// selection, output format (HTML or plain), whether the export should be collapsible, direct output or via a
+    /// dialog, the specific note ordinal to export, a set of marked notes to limit the export scope, an optional email
+    /// address for sending exported notes, and an associated menu for export actions. All properties should be set
+    /// prior to initiating the export operation.</remarks>
     public class ExportViewModel
     {
         /// <summary>
@@ -67,8 +73,14 @@ namespace Notes.Client.Dialogs
     }
 
     /// <summary>
-    /// Class Mark.
+    /// Represents a marker or reference to a specific note, response, or header within an archive or note file for a
+    /// user.
     /// </summary>
+    /// <remarks>The Mark class encapsulates identifiers and ordinals that uniquely locate a note, response,
+    /// or header in a structured archive system. It is typically used to track or reference user-specific notes and
+    /// their associated metadata. The ResponseOrdinal property distinguishes between the whole note string, the base
+    /// note, and individual responses: a value of -1 refers to the entire note string, 0 refers to the base note only,
+    /// and values greater than 0 refer to specific responses.</remarks>
     public class Mark
     {
         /// <summary>
