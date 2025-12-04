@@ -31,7 +31,12 @@ namespace Notes.Client.Comp
         /// <value>The note file.</value>
         [Parameter] public GNotefile NoteFile { get; set; }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the component has been triggered.
+        /// </summary>
         [Parameter] public bool Triggered { get; set; } = false;
+        
+        [Parameter] public long Ordinal { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets the navigation.
@@ -53,8 +58,16 @@ namespace Notes.Client.Comp
         /// called.</remarks>
         protected void OnClick()
         {
-            Navigation.NavigateTo("noteindex/" + NoteFile.Id);
+            if (Ordinal == 0)
+            {
+                Navigation.NavigateTo("noteindex/" + NoteFile.Id);
+            }
+            else
+            {
+                Navigation.NavigateTo("noteindex/" + NoteFile.Id + "/" + Ordinal);
+            }
         }
+
 
         protected override void OnParametersSet()
         {

@@ -29,6 +29,13 @@ namespace Notes.Client.Pages
         [Parameter] public int NotesfileId { get; set; }
 
         /// <summary>
+        /// Gets or sets the ordinal position of the note within its collection.
+        /// Used for navigation purposes. - Direct entry of note ordinal
+        /// </summary>
+        [Parameter] public long NoteOrdinal { get; set; } = 0;
+
+
+        /// <summary>
         /// Non zero when viewing a note
         /// </summary>
         /// <value>The current note identifier.</value>
@@ -123,18 +130,6 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <value>The session storage.</value>
         [Inject] Blazored.SessionStorage.ISessionStorageService sessionStorage { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NoteIndex"/> class.
-        /// </summary>
-       // public NoteIndex()
-       // {
-       // }
-
-        //protected override void OnParametersSet()
-        //{
-        //    OnParametersSetAsync().GetAwaiter();    // notified of login status change
-        //    StateHasChanged();
-        //}
 
         /// <summary>
         /// Set up and get data
@@ -190,6 +185,16 @@ namespace Notes.Client.Pages
                 {
                     CurrentNoteId = Globals.GotoNote;
                     Globals.GotoNote = 0;
+                }
+
+                if (NoteOrdinal > 0)
+                {
+                    GNoteHeader? val = Model.AllNotes.List.Where(
+                        e => e.NoteOrdinal == NoteOrdinal && e.ResponseOrdinal == 0 && e.Version == 0)
+                        .FirstOrDefault();
+                    NoteOrdinal = 0;
+                    if (val is not null)
+                        CurrentNoteId = val.Id;
                 }
             }
             catch (Exception ex)

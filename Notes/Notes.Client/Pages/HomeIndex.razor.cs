@@ -19,9 +19,15 @@ namespace Notes.Client.Pages
         /// </summary>
         [Parameter] public int EnterNotesfileId { get; set; } = 0;
 
-
+        /// <summary>
+        /// Gets or sets the file name to be used when directly entering file.
+        /// </summary>
         [Parameter] public string EnterNotesfileName { get; set; } = "";
 
+        /// <summary>
+        /// Gets or sets the ordinal position used to determine note file entry behavior.
+        /// </summary>
+        [Parameter] public long Ordinal { get; set; } = 0;
 
         /// <summary>
         /// Gets or sets the current server time information, if available.
