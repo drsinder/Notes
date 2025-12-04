@@ -212,7 +212,7 @@ namespace Notes.Client.Shared
         {
             get
             {
-                if (LoginReply is null || LoginReply.Status != 200)
+                if (!IsAuthenticated)
                     return false;
                 return UserInfo is not null && UserInfo.IsAdmin;
             }
@@ -226,7 +226,7 @@ namespace Notes.Client.Shared
         {
             get
             {
-                if (LoginReply is null || LoginReply.Status != 200)
+                if (!IsAuthenticated)
                     return false;
                 return UserInfo is not null && UserInfo.IsUser;
             }
