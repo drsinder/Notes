@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Preferences.OnInitializedAsync Method</title>
+	<title>NoteIndex.OnAfterRenderAsync Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -76,11 +76,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Preferences.OnInitializedAsync Method</h1>
+		<h1 class="title">NoteIndex.OnAfterRenderAsync Method</h1>
         <p />
        
 
-        <summary-info>On initialized as an asynchronous operation.</summary-info>
+        <summary-info>On after render as an asynchronous operation.</summary-info>
 
 
 <div class="section_container">
@@ -101,16 +101,20 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
     </tr>
             <tr>
               <td>
-<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync">OnInitializedAsync()</a>
+<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a>
               
               </td>
               <td>
 
-Method invoked when the component is ready to start, having received its
-             initial parameters from its parent in the render tree.
+Method invoked after each time the component has been rendered interactively and the UI has finished
+             updating (for example, after elements have been added to the browser DOM). Any <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
+             fields will be populated by the time this runs.
             
-             Override this method if you will perform an asynchronous operation and
-             want the component to refresh when that operation is completed.
+             This method is not invoked during prerendering or server-side rendering, because those processes
+             are not attached to any live browser DOM and are already complete before the DOM is updated.
+            
+             Note that the component does not automatically re-render after the completion of any returned <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>,
+             because that would cause an infinite render loop.
 (Microsoft.AspNetCore.Components.ComponentBase).
 
               </td>
@@ -118,12 +122,12 @@ Method invoked when the component is ready to start, having received its
             <tr>
               <td>
 
-<a href="topic_0000000000000148.html">OnInitializedAsync()</a>
+<a href="topic_0000000000000148.html">OnAfterRenderAsync(bool)</a>
               
               </td>
               <td>
 
-On initialized as an asynchronous operation.
+On after render as an asynchronous operation.
 
               </td>
             </tr>
@@ -144,11 +148,11 @@ On initialized as an asynchronous operation.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000147.html">Preferences Class</a><br />
+			<a href="topic_0000000000000112.html">NoteIndex Class</a><br />
 
 
 
-<a href="topic_00000000000000F6.html">Notes.Client.Pages Namespace</a><br />
+<a href="topic_00000000000000F9.html">Notes.Client.Pages Namespace</a><br />
 
 
 			

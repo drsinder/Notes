@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['87',"Notes.Client.Dialogs Namespace","topic_000000000000001C.html"],['131',"CodeFormat Class","topic_0000000000000045.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['91',"Notes.Client.Dialogs Namespace","topic_000000000000001F.html"],['122',"AddAccessDlg Class","topic_000000000000003E.html"],['123',"AddAccessDlg Constructor","topic_0000000000000045.html"]];

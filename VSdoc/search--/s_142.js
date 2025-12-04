@@ -1,1 +1,1 @@
-search_result['142']=["topic_0000000000000051.html","Copy Class","Class Copy.\r\nImplements the ComponentBase"];
+search_result['142']=["topic_000000000000003B_methods--.html","AddAccessDlg Methods",""];

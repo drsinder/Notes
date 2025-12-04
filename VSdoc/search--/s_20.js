@@ -1,1 +1,1 @@
-search_result['20']=["topic_0000000000000008.html","Clock.Interval Property","Gets or sets the interval."];
+search_result['20']=["topic_0000000000000008.html","Clock.Interval Property","Gets or sets the interval, in milliseconds, between consecutive operations."];

@@ -1,1 +1,1 @@
-search_result['14']=["topic_0000000000000007.html","Clock Class","Class Clock.\r\nImplements the ComponentBase"];
+search_result['14']=["topic_0000000000000007.html","Clock Class","Represents a component that displays and updates the current time at a specified interval."];

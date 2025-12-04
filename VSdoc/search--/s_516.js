@@ -1,1 +1,1 @@
-search_result['516']=["topic_0000000000000107_methods--.html","NewNote Methods",""];
+search_result['516']=["topic_00000000000000BA.html","YesNo.MessageInput Property","Gets or sets the message input."];

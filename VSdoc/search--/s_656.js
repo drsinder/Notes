@@ -1,1 +1,1 @@
-search_result['656']=["topic_0000000000000161_vars--.html","NotePanel Fields",""];
+search_result['656']=["topic_00000000000000F6.html","UserList Constructor","Initializes a new instance of the UserList class."];

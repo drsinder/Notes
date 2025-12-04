@@ -1,1 +1,1 @@
-search_result['934']=["topic_0000000000000219.html","LinkedFile Class","This class defines a table in the database.\r\nIt is used to link a file to a file on a remote system\r\nsuch that notes written on one system will be transmitted\r\nto the other."];
+search_result['934']=["topic_0000000000000180.html","NotePanel.OnParametersSetAsync Method","Get our data and set IsSeq flag from state"];

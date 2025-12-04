@@ -1,1 +1,1 @@
-search_result['853']=["topic_00000000000001DD.html","BodySearch.BuildTargetModel Method","Implemented to build the TargetModel."];
+search_result['853']=["topic_0000000000000153.html","ShowNote Class","Class ShowNote.\r\nImplements the ComponentBase"];

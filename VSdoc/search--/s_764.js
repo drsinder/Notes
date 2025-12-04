@@ -1,1 +1,1 @@
-search_result['764']=["topic_00000000000001B0.html","Globals.Base64Encode Method","Base64s the encode."];
+search_result['764']=["topic_0000000000000124.html","NoteIndex.DisplayIt Method","Note selected for display"];

@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['11',"Notes Namespace","topic_0000000000000313.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['918',"Notes.Services Namespace","topic_00000000000002E1.html"],['933',"NotesService Class","topic_00000000000002EB.html"],['934',"Methods","topic_00000000000002EB_methods--.html"],['993',"GetTextFile Method","topic_0000000000000313_overloads--.html"],['994',"GetTextFile(AString, ServerCallContext) Method","topic_0000000000000313.html"]];

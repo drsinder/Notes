@@ -1,1 +1,1 @@
-search_result['113']=["topic_0000000000000040.html","AddAccessDlg.delay Property","Gets or sets the delay."];
+search_result['113']=["topic_0000000000000031.html","AccessItem Class","Used for editing an access token segment (one flag)"];

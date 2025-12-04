@@ -1,1 +1,1 @@
-search_result['1322']=["topic_000000000000030F_overloads--.html","NotesService.GetHomePageMessage Method","Retrieves the current home page message to be displayed to users."];
+search_result['1322']=["topic_0000000000000239_events--.html","LinkQueue Events",""];

@@ -1,1 +1,1 @@
-search_result['847']=["topic_00000000000001DA_props--.html","BodySearch Properties",""];
+search_result['847']=["topic_000000000000014F_overloads--.html","LocalModel2 Constructor","Initializes a new instance of the LocalModel2 class."];

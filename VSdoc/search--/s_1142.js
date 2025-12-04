@@ -1,1 +1,1 @@
-search_result['1142']=["topic_00000000000002B3.html","Subscription.SubscriberId Property","Gets or sets the subscriber identifier."];
+search_result['1142']=["topic_00000000000001DA.html","Notesdata.BuildTargetModel Method","Implemented to build the TargetModel."];

@@ -1,1 +1,1 @@
-search_result['80']=["topic_000000000000002E_attached_props--.html","AccessItem Attached Properties",""];
+search_result['80']=["topic_0000000000000020.html","AccessCheckBox Class","Represents a UI component that displays and manages access permissions using a checkbox interface."];

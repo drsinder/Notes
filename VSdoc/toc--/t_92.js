@@ -1,1 +1,1 @@
-c['92']=[['93',"OnClick Method","topic_0000000000000020.html",0]];
+c['92']=[['93',"AccessCheckBox Constructor","topic_0000000000000022.html",0],['94',"Properties","topic_0000000000000020_props--.html",1],['96',"Methods","topic_0000000000000020_methods--.html",1]];

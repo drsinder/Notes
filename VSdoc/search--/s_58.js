@@ -1,1 +1,1 @@
-search_result['58']=["topic_000000000000001C.html","Notes.Client.Dialogs Namespace",""];
+search_result['58']=["topic_0000000000000017.html","SCheckBox.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.UpdateNoteFile Method</title>
+	<title>NotesService.GetUserRoles Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.UpdateNoteFile Method</h1>
+		<h1 class="title">NotesService.GetUserRoles Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Updates an existing note file with new name and title information.</summary-info>
+        <summary-info>Retrieves the roles assigned to a specified user and returns a view model containing user information and
+role membership status.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function UpdateNoteFile( _&nbsp;<br />   ByVal <i>noteFile</i> As <strong>GNotefile</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNotefile</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function GetUserRoles( _&nbsp;<br />   ByVal <i>request</i> As <strong>AppUserRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>EditUserViewModel</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; UpdateNoteFile(&nbsp;<br />   <strong>GNotefile</strong> <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>&gt; GetUserRoles(&nbsp;<br />   <strong>AppUserRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>^&gt;^ UpdateNoteFile(&nbsp;<br />   <strong>GNotefile</strong>^ <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>^&gt;^ GetUserRoles(&nbsp;<br />   <strong>AppUserRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,19 +271,19 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="noteFile" class="parameterList">
+	Parameters</h4><dl paramName="request" class="parameterList">
 	<dt>
 		<span class="parameter">
-			noteFile
+			request
 		</span>
 	</dt>
 	<dd>
-		<strong>GNotefile</strong> 
+		<strong>AppUserRequest</strong> 
 	</dd>
 </dl>
 <p>
-	The note file containing the updated name and title. The <code>Id</code> property must correspond to an existing
-note file. 
+	An object containing the user's identifier and related request data. The user's identifier is used to locate
+the user whose roles are to be retrieved. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,16 +296,18 @@ note file.
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC request. 
+	The server call context for the current gRPC request. Provides information about the call, such as
+cancellation and authentication details. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">GNotefile</a> representing the updated note file. 
+		An EditUserViewModel containing the user's data and a list of all available roles, each indicating whether
+the user is a member of that role. 
 	</p>
 	
 
@@ -335,8 +338,9 @@ note file.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			This method requires the caller to have the &quot;Admin&quot; role. The note file is updated in
-the database based on the provided <code>Id</code>. Changes are persisted asynchronously.
+			This method requires the caller to have the 'Admin' role. The returned view model
+includes all roles in the system, with membership status for the specified user. The method is asynchronous
+and should be awaited.
 	</div>					
 </div>
 
@@ -405,11 +409,11 @@ the database based on the provided <code>Id</code>. Changes are persisted asynch
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

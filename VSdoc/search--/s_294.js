@@ -1,1 +1,1 @@
-search_result['294']=["topic_0000000000000099_events--.html","HelpDialog Events",""];
+search_result['294']=["topic_0000000000000074.html","Email.emailaddr Property","Gets or sets the emailaddr."];

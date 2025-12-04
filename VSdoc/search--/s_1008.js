@@ -1,1 +1,1 @@
-search_result['1008']=["topic_000000000000024E.html","NoteAccess.Respond Property","Gets or sets a value indicating whether this NoteAccess is respond."];
+search_result['1008']=["topic_00000000000001A1.html","CookieStateAgent.AuthHeader Property","Get a Metadata/header for authetication to server in gRPC calls"];

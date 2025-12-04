@@ -1,1 +1,1 @@
-search_result['1210']=["topic_00000000000002DD_attached_props--.html","EmailSender Attached Properties",""];
+search_result['1210']=["topic_00000000000001F8.html","ApplicationUser.DisplayName Property","Gets or sets the display name."];

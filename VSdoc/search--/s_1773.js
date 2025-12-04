@@ -1,0 +1,1 @@
+search_result['1773']=["topic_0000000000000316.html","NotesService.GetNoteCount Method","Retrieves the number of notes in the specified note file and archive that are not deleted and are not\r\nresponses."];

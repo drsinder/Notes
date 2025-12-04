@@ -1,1 +1,1 @@
-search_result['1090']=["topic_0000000000000293.html","Search.Time Property","Gets or sets the time."];
+search_result['1090']=["topic_00000000000001CE.html","CreateIdentitySchema Class","A base class inherited by each EF Core migration."];

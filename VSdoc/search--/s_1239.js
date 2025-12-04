@@ -1,1 +1,1 @@
-search_result['1239']=["topic_00000000000002E6_props--.html","NotesService Properties",""];
+search_result['1239']=["topic_0000000000000210.html","ApplicationUser.GetGAppUser Method","Gets the g application user.\r\nConversions between Db Entity space and gRPC space."];

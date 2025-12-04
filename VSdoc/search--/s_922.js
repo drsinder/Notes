@@ -1,1 +1,1 @@
-search_result['922']=["topic_0000000000000212.html","Audit.UserID Property","Gets or sets the user identifier."];
+search_result['922']=["topic_0000000000000175.html","NotePanel.ResetShown Property","Gets or sets a value indicating whether [reset shown]."];

@@ -1,1 +1,1 @@
-search_result['773']=["topic_00000000000001B9.html","Globals.AppUrl Property",""];
+search_result['773']=["topic_000000000000012D.html","NoteIndex.GetNoteHeaderId Method","Get note header Id given note ordinal and response ordinal"];

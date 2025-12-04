@@ -1,1 +1,1 @@
-search_result['178']=["topic_0000000000000060.html","CreateFileModel Class","Class CreateFileModel."];
+search_result['178']=["topic_000000000000004B.html","CodeFormat.TextObj Property","Gets or sets the text object."];

@@ -1,1 +1,1 @@
-search_result['779']=["topic_00000000000001BF.html","Globals.GetNotesClient Method",""];
+search_result['779']=["topic_0000000000000131_props--.html","Search Properties",""];

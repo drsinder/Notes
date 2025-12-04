@@ -1,1 +1,1 @@
-search_result['754']=["topic_00000000000001A6.html","Globals.TimeZoneDefaultID Property","Gets or sets the time zone default identifier."];
+search_result['754']=["topic_000000000000011C.html","NoteIndex.PageSettings Property","Filter setting for the grid"];

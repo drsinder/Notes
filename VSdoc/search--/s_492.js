@@ -1,1 +1,1 @@
-search_result['492']=["topic_00000000000000F9_vars--.html","EditNote Fields",""];
+search_result['492']=["topic_00000000000000B3.html","UserEdit Class","Represents a Blazor component for editing a user\u0027s roles and details within a modal dialog."];

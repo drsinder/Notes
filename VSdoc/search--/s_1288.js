@@ -1,1 +1,1 @@
-search_result['1288']=["topic_00000000000002FE_overloads--.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];
+search_result['1288']=["topic_0000000000000226_events--.html","LinkLog Events",""];

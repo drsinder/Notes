@@ -1,1 +1,1 @@
-search_result['1250']=["topic_00000000000002EB_overloads--.html","NotesService.GetUserRoles Method","Retrieves the roles assigned to a specified user and returns a view model containing user information and\r\nrole membership status."];
+search_result['1250']=["topic_0000000000000215_attached_props--.html","HomePageMessage Attached Properties",""];

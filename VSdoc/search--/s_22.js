@@ -1,1 +1,1 @@
-search_result['22']=["topic_0000000000000009_overloads--.html","Clock.OnAfterRender Method","Method invoked after each time the component has been rendered."];
+search_result['22']=["topic_0000000000000009_overloads--.html","Clock.OnAfterRender Method","Handles post-render logic for the component, initializing resources when rendering for the first time."];

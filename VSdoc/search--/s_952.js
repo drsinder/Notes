@@ -1,1 +1,1 @@
-search_result['952']=["topic_0000000000000226.html","LinkLog Class","This class defines a table in the database.\r\nLog of link activity."];
+search_result['952']=["topic_0000000000000186_vars--.html","Responses Fields",""];

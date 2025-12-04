@@ -1,1 +1,1 @@
-search_result['942']=["topic_000000000000021C.html","LinkedFile.HomeFileName Property","Gets or sets the name of the home file."];
+search_result['942']=["topic_0000000000000182.html","NotePanel.PrintString Method","Print a whole string if wholeString is true"];

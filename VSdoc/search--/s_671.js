@@ -1,1 +1,1 @@
-search_result['671']=["topic_0000000000000170.html","NotePanel.ResetShown Property","Gets or sets a value indicating whether [reset shown]."];
+search_result['671']=["topic_00000000000000F9_vars--.html","EditNote Fields",""];

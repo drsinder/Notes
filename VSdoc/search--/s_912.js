@@ -1,1 +1,1 @@
-search_result['912']=["topic_000000000000020D.html","ApplicationUser.GetGAppUserList Method","Gets the g application user list.\r\nConversions between Db Entity space and gRPC space."];
+search_result['912']=["topic_000000000000016B.html","NotePanel.ShowButtons Property","Should optional buttons be shown"];

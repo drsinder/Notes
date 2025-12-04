@@ -1,0 +1,1 @@
+search_result['1700']=["topic_00000000000002F4.html","NotesService.GetAdminPageModel Method","Retrieves the administrative home page model, including user and note access data, for authorized admin\r\nusers."];

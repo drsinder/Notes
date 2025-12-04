@@ -1,1 +1,1 @@
-search_result['910']=["topic_000000000000020B.html","ApplicationUser.GetGAppUser Method","Gets the g application user.\r\nConversions between Db Entity space and gRPC space."];
+search_result['910']=["topic_0000000000000169.html","NotePanel.ShowChild Property","Whether or not child windows should be shown.  These might include\r\nResponses, versions, references."];

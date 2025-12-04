@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>PasskeyInputModel.Error Property</title>
+	<title>SubdirectoryHandler.SendAsync Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,21 +75,22 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">PasskeyInputModel.Error Property</h1>
+		<h1 class="title">SubdirectoryHandler.SendAsync Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001C4.html">Notes.Components.Account</a>
+<a href="topic_00000000000001A6.html">Notes.Client</a>
 
 
 
 
-        <br />Assembly: Notes (in Notes.dll)
+        <br />Assembly: Notes.Client (in Notes.Client.dll)
 
 		</div>
 
        
        
+        <summary-info>Sends an HTTP request to the inner handler to send to the server as an asynchronous operation.</summary-info>
 
 
 
@@ -139,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Property Error() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Overrides Function SendAsync( _&nbsp;<br />   ByVal <i>request</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a>, _&nbsp;<br />   ByVal <i>cancellationToken</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -178,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> Error {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a>&gt; SendAsync(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a> <i>request</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> <i>cancellationToken</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -218,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ Error {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a>^&gt;^ SendAsync(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a>^ <i>request</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> <i>cancellationToken</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -257,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function get Error() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;&nbsp;<br />public function set Error(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -268,10 +269,42 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="request" class="parameterList">
+	<dt>
+		<span class="parameter">
+			request
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httprequestmessage">HttpRequestMessage</a> 
+	</dd>
+</dl>
+<p>
+	The HTTP request message to send to the server. 
+</p>
+<dl paramName="cancellationToken" class="parameterList">
+	<dt>
+		<span class="parameter">
+			cancellationToken
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> 
+	</dd>
+</dl>
+<p>
+	A cancellation token to cancel operation. 
+</p>
+
+<p />
 
 	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
+		Return Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpresponsemessage">HttpResponseMessage</a>&gt; 
+		<p>
+		The task object representing the asynchronous operation. 
+	</p>
 	
 
 
@@ -292,6 +325,52 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Exceptions</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="exceptionsSection" class="section">	
+	<table>
+		<tr>
+			<th>
+				Exception type
+			</th>
+			<th>
+				Condition
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<p>
+<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception">ArgumentNullException</a>
+
+				</p>
+			</td>
+			<td>
+				<p>
+					The <i>request</i> was null reference (<strong>Nothing</strong> in Visual Basic). 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.operationcanceledexception">OperationCanceledException</a>
+
+				</p>
+			</td>
+			<td>
+				<p>
+					The cancellation token was canceled. This exception is stored into the returned task. 
+				</p>
+			</td>
+		</tr>
+			
+	</table>
+	</div>
+</div>
 
 
 
@@ -360,11 +439,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000001C5.html">PasskeyInputModel Class</a><br />
+			<a href="topic_00000000000001C5.html">SubdirectoryHandler Class</a><br />
 
 
 
-<a href="topic_00000000000001C4.html">Notes.Components.Account Namespace</a><br />
+<a href="topic_00000000000001A6.html">Notes.Client Namespace</a><br />
 
 
 			

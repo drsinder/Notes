@@ -1,0 +1,1 @@
+search_result['1712']=["topic_00000000000002FA.html","NotesService.GetAccessList Method","Retrieves the access list for a specified note file and archive for the requesting user."];

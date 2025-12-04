@@ -1,1 +1,1 @@
-search_result['276']=["topic_000000000000008F_props--.html","Mark Properties",""];
+search_result['276']=["topic_000000000000006D.html","EditNoteFile.Owner Property","Gets or sets the owner."];

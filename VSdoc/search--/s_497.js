@@ -1,1 +1,1 @@
-search_result['497']=["topic_00000000000000FE.html","EditNote Constructor","Initializes a new instance of the EditNote class."];
+search_result['497']=["topic_00000000000000B3_vars--.html","UserEdit Fields",""];

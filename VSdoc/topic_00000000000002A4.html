@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Sequencer.GetGSequencerList Method</title>
+	<title>Sequencer.StartTime Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Sequencer.GetGSequencerList Method</h1>
+		<h1 class="title">Sequencer.StartTime Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,8 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets the g sequencer list.
-Conversions between Db Entity space and gRPC space.</summary-info>
+        <summary-info>Gets or sets the start time.
+Time a run in this file started - will get copied to LastTime when complete</summary-info>
 
 
 
@@ -141,7 +141,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function GetGSequencerList( _&nbsp;<br />   ByVal <i>other</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>(Of <a target="_top" href="topic_000000000000029A.html" onclick="this.target='';return true;">Sequencer</a>) _&nbsp;<br />) As <strong>GSequencerList</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;DataMember(Order = 5)&gt; _&nbsp;<br />Public Property StartTime() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">Date</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +180,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <strong>GSequencerList</strong> GetGSequencerList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_000000000000029A.html" onclick="this.target='';return true;">Sequencer</a>&gt; <i>other</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[DataMember(Order = 5)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> StartTime {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +220,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <strong>GSequencerList</strong>^ GetGSequencerList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_000000000000029A.html" onclick="this.target='';return true;">Sequencer</a>^&gt;^ <i>other</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[DataMember(Order = 5)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> StartTime {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +259,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   DataMember(Order = 5)&nbsp;<br />function get StartTime() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>;&nbsp;<br />public &nbsp;<br />   DataMember(Order = 5)&nbsp;<br />function set StartTime(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,28 +270,12 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="other" class="parameterList">
-	<dt>
-		<span class="parameter">
-			other
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_000000000000029A.html" onclick="this.target='';return true;">Sequencer</a>&gt; 
-	</dd>
-</dl>
-<p>
-	The other. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<strong>GSequencerList</strong> 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> 
 		<p>
-		GSequencerList. 
+		The start time. 
 	</p>
 	
 
@@ -381,11 +365,11 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000029A.html">Sequencer Class</a><br />
+			<a href="topic_000000000000029F.html">Sequencer Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

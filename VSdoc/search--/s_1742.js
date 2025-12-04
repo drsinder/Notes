@@ -1,0 +1,1 @@
+search_result['1742']=["topic_0000000000000309.html","NotesService.UpdateNote Method","Updates an existing note with new content and subject information if the caller is authorized to edit the\r\nnote."];

@@ -1,1 +1,1 @@
-c['556']=[['557',"DataBoundHandler Method","topic_0000000000000187.html",0],['558',"DisplayIt Method","topic_0000000000000188.html",0]];
+c['556']=[['557',"Responses Constructor","topic_000000000000018B.html",0],['558',"Properties","topic_0000000000000186_props--.html",1],['563',"Methods","topic_0000000000000186_methods--.html",1]];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteAccess.ReadAccess Property</title>
+	<title>Mark.NoteFile Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteAccess.ReadAccess Property</h1>
+		<h1 class="title">Mark.NoteFile Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets a value indicating whether [read access].</summary-info>
+        <summary-info>Gets or sets the note file.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;Display(Name = &quot;Read&quot;)&gt; _&nbsp;<br />&lt;DataMember(Order = 4)&gt; _&nbsp;<br />Public Property ReadAccess() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;ForeignKey(&quot;NoteFileId&quot;)&gt; _&nbsp;<br />Public Property NoteFile() As <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[Display(Name = &quot;Read&quot;)]&nbsp;<br />[DataMember(Order = 4)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> ReadAccess {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[ForeignKey(&quot;NoteFileId&quot;)]&nbsp;<br />public <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a> NoteFile {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[Display(Name = &quot;Read&quot;)]&nbsp;<br />[DataMember(Order = 4)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> ReadAccess {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[ForeignKey(&quot;NoteFileId&quot;)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a>^ NoteFile {&nbsp;<br /> <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;Read&quot;)&nbsp;<br />   DataMember(Order = 4)&nbsp;<br />function get ReadAccess() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;Read&quot;)&nbsp;<br />   DataMember(Order = 4)&nbsp;<br />function set ReadAccess(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   ForeignKey(&quot;NoteFileId&quot;)&nbsp;<br />function get NoteFile() : <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a>;&nbsp;<br />public &nbsp;<br />   ForeignKey(&quot;NoteFileId&quot;)&nbsp;<br />function set NoteFile(value : <a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +272,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
+	<a target="_top" href="topic_0000000000000265.html" onclick="this.target='';return true;">NoteFile</a> 
 		<p>
-		<code>true</code> if [read access]; otherwise, <code>false</code>. 
+		The note file. 
 	</p>
 	
 
@@ -364,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000249.html">NoteAccess Class</a><br />
+			<a href="topic_0000000000000245.html">Mark Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

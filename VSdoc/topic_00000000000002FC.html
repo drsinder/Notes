@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetVersions Method</title>
+	<title>NotesService.UpdateAccessItem Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetVersions Method</h1>
+		<h1 class="title">NotesService.UpdateAccessItem Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves a list of all available versions of a note that match the specified criteria.</summary-info>
+        <summary-info>Updates the access permissions for a note file if the current user has edit access.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetVersions( _&nbsp;<br />   ByVal <i>request</i> As <strong>GetVersionsRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteHeaderList</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function UpdateAccessItem( _&nbsp;<br />   ByVal <i>request</i> As <strong>GNoteAccess</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteAccess</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; GetVersions(&nbsp;<br />   <strong>GetVersionsRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; UpdateAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>^&gt;^ GetVersions(&nbsp;<br />   <strong>GetVersionsRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>^&gt;^ UpdateAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -277,12 +277,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		</span>
 	</dt>
 	<dd>
-		<strong>GetVersionsRequest</strong> 
+		<strong>GNoteAccess</strong> 
 	</dd>
 </dl>
 <p>
-	The request containing the identifiers and ordinals used to filter note versions. Must specify valid values
-for FileId, ArcId, NoteOrdinal, and ResponseOrdinal. 
+	The access item containing the updated permissions and identifiers for the note file. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,17 +294,17 @@ for FileId, ArcId, NoteOrdinal, and ResponseOrdinal.
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC request. Used to identify the authenticated user. 
+	The server call context that provides information about the current gRPC request and user. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; 
 		<p>
-		A GNoteHeaderList containing the headers of all note versions that match the request parameters. Returns an
-empty list if the user does not have read access or if no matching versions are found. 
+		The updated access item reflecting the requested changes. If the user does not have edit access, the item is
+returned unchanged. 
 	</p>
 	
 
@@ -336,8 +335,9 @@ empty list if the user does not have read access or if no matching versions are 
 	</div>
 
 	<div id="remarksSection" class="section">	
-			The caller must have read access to the specified note file and archive to receive
-results. Only note versions with a non-zero version number are included in the response.
+			This method requires the caller to be authorized. The update is performed only if the
+current user has edit access to the specified note file. No changes are made if edit access is not
+granted.
 	</div>					
 </div>
 
@@ -406,11 +406,11 @@ results. Only note versions with a non-zero version number are included in the r
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

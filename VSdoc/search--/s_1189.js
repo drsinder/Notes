@@ -1,1 +1,1 @@
-search_result['1189']=["topic_00000000000002CF_attached_props--.html","NoteDataManager Attached Properties",""];
+search_result['1189']=["topic_00000000000001ED.html","NotesDbContext.Search Property","Gets or sets the search."];

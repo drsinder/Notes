@@ -1,0 +1,1 @@
+search_result['1451']=["topic_0000000000000285.html","NoteHeader.Clone Method","Clones this instance."];

@@ -1,1 +1,1 @@
-search_result['706']=["topic_0000000000000189_methods--.html","Versions Methods",""];
+search_result['706']=["topic_0000000000000105.html","HomeIndex.Ordinal Property","Gets or sets the ordinal position used to determine note file entry behavior."];

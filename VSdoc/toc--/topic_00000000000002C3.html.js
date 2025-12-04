@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['849',"Notes.Manager Namespace","topic_00000000000002C3.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['627',"Notes.Entities Namespace","topic_00000000000001F6.html"],['836',"Tags Class","topic_00000000000002BA.html"],['842',"Methods","topic_00000000000002BA_methods--.html"],['843',"CloneForLink Method","topic_00000000000002C3.html"]];

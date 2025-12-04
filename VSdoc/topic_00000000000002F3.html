@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetNoteFileIndexData Method</title>
+	<title>NotesService.GetHomePageModel Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetNoteFileIndexData Method</h1>
+		<h1 class="title">NotesService.GetHomePageModel Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves index data for a note file, including access information, note headers, linked files, tags, and
-user details, based on the specified request and the current user's permissions.</summary-info>
+        <summary-info>Retrieves the data model for the home page in response to a client request.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteFileIndexData( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteFileRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoteDisplayIndexModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetHomePageModel( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>HomePageModel</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>&gt; GetNoteFileIndexData(&nbsp;<br />   <strong>NoteFileRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; GetHomePageModel(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>^&gt;^ GetNoteFileIndexData(&nbsp;<br />   <strong>NoteFileRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>^&gt;^ GetHomePageModel(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -278,11 +277,11 @@ user details, based on the specified request and the current user's permissions.
 		</span>
 	</dt>
 	<dd>
-		<strong>NoteFileRequest</strong> 
+		<strong>NoRequest</strong> 
 	</dd>
 </dl>
 <p>
-	The request containing the note file identifier and archive ID for which to retrieve index data. 
+	An object representing the request parameters for the home page. This value must not be null. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,18 +294,18 @@ user details, based on the specified request and the current user's permissions.
 	</dd>
 </dl>
 <p>
-	The server call context that provides user authentication and request metadata. 
+	The server call context for the current gRPC request. Provides information about the call, such as user
+identity and cancellation tokens. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; 
 		<p>
-		A NoteDisplayIndexModel containing the note file's index data, user access details, notes, tags, and any
-relevant messages. If the user does not have access or the file does not exist, the model will include an
-appropriate message. 
+		A task that represents the asynchronous operation. The task result contains a <a target="_top" href=".html" onclick="this.target='';return true;">HomePageModel</a>
+with the data for the home page. 
 	</p>
 	
 
@@ -337,9 +336,8 @@ appropriate message.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			Only users with the appropriate access rights can retrieve note file index data.
-Administrators have additional viewing privileges. If the user lacks access or the file is missing, the
-returned model will indicate the reason in the message property.
+			This method requires the caller to be authorized. The returned model may vary based
+on the user's authentication and authorization status.
 	</div>					
 </div>
 
@@ -408,11 +406,11 @@ returned model will indicate the reason in the message property.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

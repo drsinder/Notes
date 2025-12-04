@@ -1,1 +1,1 @@
-search_result['774']=["topic_00000000000001BA.html","Globals.ValidIssuerURL Property",""];
+search_result['774']=["topic_000000000000012E.html","SearchOption Enumeration","Enum SearchOption"];

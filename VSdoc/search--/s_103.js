@@ -1,1 +1,1 @@
-search_result['103']=["topic_000000000000003B.html","AddAccessDlg Class","Add a user to the access list"];
+search_result['103']=["topic_0000000000000028.html","AccessDeleteButton.Delete Method","Deletes this instance."];

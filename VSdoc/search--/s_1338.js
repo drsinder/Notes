@@ -1,0 +1,1 @@
+search_result['1338']=["topic_0000000000000241.html","LinkQueue.GetLinkQueue Method","Gets the link queue."];

@@ -1,1 +1,1 @@
-search_result['928']=["topic_0000000000000215_methods--.html","HomePageMessage Methods",""];
+search_result['928']=["topic_000000000000017B.html","NotePanel.MyMenu Property","Reference to our menu so we can talk to it"];

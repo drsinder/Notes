@@ -1,1 +1,1 @@
-search_result['1032']=["topic_0000000000000260_attached_props--.html","NoteFile Attached Properties",""];
+search_result['1032']=["topic_00000000000001AA.html","Globals.GuestId Property","Gets or sets the guest identifier."];

@@ -1,1 +1,1 @@
-search_result['366']=["topic_00000000000000B6.html","YesNo Class","Class YesNo.\r\nImplements the ComponentBase"];
+search_result['366']=["topic_000000000000008D.html","ExportViewModel.isDirectOutput Property","Direct output or destination collected via a dailog?"];

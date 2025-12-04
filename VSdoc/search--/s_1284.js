@@ -1,1 +1,1 @@
-search_result['1284']=["topic_00000000000002FC_overloads--.html","NotesService.GetVersions Method","Retrieves a list of all available versions of a note that match the specified criteria."];
+search_result['1284']=["topic_0000000000000224.html","LinkedFile.AcceptFrom Property","Gets or sets a value indicating whether [accept from]."];

@@ -1,1 +1,1 @@
-search_result['450']=["topic_00000000000000E6.html","Notes.Client.Pages.Admin Namespace",""];
+search_result['450']=["topic_00000000000000A7.html","PrintDlg Class","This takes the provided PrintStuff string and puts it in a\r\nSyncfusion editor component for the user to see.  It then allows\r\nthe user to press a button to print.  TO do the printing\r\nthe built in pri..."];

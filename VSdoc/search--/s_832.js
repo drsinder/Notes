@@ -1,1 +1,1 @@
-search_result['832']=["topic_00000000000001D6_attached_props--.html","fix Attached Properties",""];
+search_result['832']=["topic_000000000000014C.html","Preferences Class","Represents a container for managing user preferences and related data within the application."];

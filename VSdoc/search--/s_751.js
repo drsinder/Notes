@@ -1,1 +1,1 @@
-search_result['751']=["topic_00000000000001A3.html","Globals.AccessOtherId Property","Gets the access other identifier."];
+search_result['751']=["topic_0000000000000119.html","NoteIndex.NavString Property","Accumulator for the navigation string"];

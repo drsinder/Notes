@@ -1,1 +1,1 @@
-search_result['980']=["topic_000000000000023C.html","LinkQueue.GetLinkQueue Method","Gets the link queue."];
+search_result['980']=["topic_0000000000000192_vars--.html","CookieStateAgent Fields",""];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>HomeIndex.TextHasChanged Method</title>
+	<title>HomeIndex.hpData Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">HomeIndex.TextHasChanged Method</h1>
+		<h1 class="title">HomeIndex.hpData Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000F6.html">Notes.Client.Pages</a>
+<a href="topic_00000000000000F9.html">Notes.Client.Pages</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Handle typed in file name</summary-info>
+        <summary-info>Gets or sets the data model for the home page.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Sub TextHasChanged( _&nbsp;<br />   ByVal <i>value</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a> _&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Property hpData() As <strong>HomePageModel</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> TextHasChanged(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>value</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected <strong>HomePageModel</strong> hpData {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> TextHasChanged(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>value</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br />property <strong>HomePageModel</strong>^ hpData {&nbsp;<br /> <strong>HomePageModel</strong>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>HomePageModel</strong>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">protected function TextHasChanged(&nbsp;<br />    <i>value</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>&nbsp;<br />);</pre>			
+					<pre xml:space="preserve" class="brush: js">protected function get hpData() : <strong>HomePageModel</strong>;&nbsp;<br />protected function set hpData(value : <strong>HomePageModel</strong>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,23 +269,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="value" class="parameterList">
-	<dt>
-		<span class="parameter">
-			value
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	The value. 
-</p>
 
-<p />
-
+	<h4 class="subHeading">
+		Property Value</h4>
+	<strong>HomePageModel</strong> 
+	
 
 
 
@@ -373,11 +361,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000100.html">HomeIndex Class</a><br />
+			<a href="topic_0000000000000103.html">HomeIndex Class</a><br />
 
 
 
-<a href="topic_00000000000000F6.html">Notes.Client.Pages Namespace</a><br />
+<a href="topic_00000000000000F9.html">Notes.Client.Pages Namespace</a><br />
 
 
 			

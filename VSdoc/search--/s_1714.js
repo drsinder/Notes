@@ -1,0 +1,1 @@
+search_result['1714']=["topic_00000000000002FB.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];

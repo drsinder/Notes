@@ -1,1 +1,1 @@
-search_result['33']=["topic_000000000000000F.html","SCheckBox Class","Class SCheckBox.\r\nImplements the ComponentBase"];
+search_result['33']=["topic_000000000000000F.html","FileButton Constructor","Initializes a new instance of the FileButton class."];

@@ -1,1 +1,1 @@
-search_result['1045']=["topic_0000000000000269.html","NoteFile.GetNoteFiles Method","Gets the note files.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1045']=["topic_00000000000001B7.html","Globals.UTimeBlazor Method","us the time blazor."];

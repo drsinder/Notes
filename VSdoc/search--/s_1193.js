@@ -1,1 +1,1 @@
-search_result['1193']=["topic_00000000000002CF_vars--.html","NoteDataManager Fields",""];
+search_result['1193']=["topic_00000000000001F1.html","NotesDbContext.SQLFileContent Property","Gets or sets the content of the SQL file."];

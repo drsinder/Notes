@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['620',"Notes.Entities Namespace","topic_00000000000001F1.html"],['651',"Audit Class","topic_000000000000020E.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['627',"Notes.Entities Namespace","topic_00000000000001F6.html"],['628',"ApplicationUser Class","topic_00000000000001F7.html"],['652',"Methods","topic_00000000000001F7_methods--.html"],['653',"GetApplicationUser Method","topic_000000000000020E.html"]];

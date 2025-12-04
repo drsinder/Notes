@@ -1,1 +1,1 @@
-search_result['798']=["topic_00000000000001C8.html","PasskeyOperation Enumeration",""];
+search_result['798']=["topic_000000000000013E.html","Search.ResponseOrdinal Property","Gets or sets the response ordinal."];

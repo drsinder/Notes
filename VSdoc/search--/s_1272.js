@@ -1,1 +1,1 @@
-search_result['1272']=["topic_00000000000002F6_overloads--.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];
+search_result['1272']=["topic_000000000000021D.html","HomePageMessage.Posted Property","Gets or sets the posted."];

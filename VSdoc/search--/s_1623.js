@@ -1,0 +1,1 @@
+search_result['1623']=["topic_00000000000002DB.html","NoteDataManager.NextBaseNoteOrdinal Method","Get next available BaseNoteOrdinal"];

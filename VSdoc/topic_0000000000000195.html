@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>CookieStateAgent.ReadCookie Method</title>
+	<title>Versions.OnParametersSetAsync Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">CookieStateAgent.ReadCookie Method</h1>
+		<h1 class="title">Versions.OnParametersSetAsync Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000191.html">Notes.Client.Shared</a>
+<a href="topic_000000000000015B.html">Notes.Client.Panels</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Read a cookie</summary-info>
+        <summary-info>On parameters set as an asynchronous operation.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Function ReadCookie( _&nbsp;<br />   ByVal <i>cookieName</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Overrides Function OnParametersSetAsync() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a>&gt; ReadCookie(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>cookieName</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> OnParametersSetAsync()</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^&gt;^ ReadCookie(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>cookieName</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ OnParametersSetAsync() </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">protected function OnParametersSetAsync() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,28 +269,12 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="cookieName" class="parameterList">
-	<dt>
-		<span class="parameter">
-			cookieName
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	cookie name 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> 
 		<p>
-		needs to be deserialized) 
+		A Task representing the asynchronous operation. 
 	</p>
 	
 
@@ -380,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000192.html">CookieStateAgent Class</a><br />
+			<a href="topic_000000000000018E.html">Versions Class</a><br />
 
 
 
-<a href="topic_0000000000000191.html">Notes.Client.Shared Namespace</a><br />
+<a href="topic_000000000000015B.html">Notes.Client.Panels Namespace</a><br />
 
 
 			

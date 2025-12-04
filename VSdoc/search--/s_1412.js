@@ -1,0 +1,1 @@
+search_result['1412']=["topic_0000000000000268.html","NoteFile.OwnerId Property","Gets or sets the owner identifier."];

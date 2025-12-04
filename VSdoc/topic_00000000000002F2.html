@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.Import Method</title>
+	<title>NotesService.CreateNoteFile Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.Import Method</h1>
+		<h1 class="title">NotesService.CreateNoteFile Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Imports data from the specified payload into the system using the provided import request.
-The payload is a notefile.</summary-info>
+        <summary-info>Creates a new note file using the specified request data and returns the created note file.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ The payload is a notefile.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function Import( _&nbsp;<br />   ByVal <i>request</i> As <strong>ImportRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function CreateNoteFile( _&nbsp;<br />   ByVal <i>request</i> As <strong>GNotefile</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNotefile</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ The payload is a notefile.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; Import(&nbsp;<br />   <strong>ImportRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; CreateNoteFile(&nbsp;<br />   <strong>GNotefile</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ The payload is a notefile.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ Import(&nbsp;<br />   <strong>ImportRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>^&gt;^ CreateNoteFile(&nbsp;<br />   <strong>GNotefile</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -278,11 +277,11 @@ The payload is a notefile.</summary-info>
 		</span>
 	</dt>
 	<dd>
-		<strong>ImportRequest</strong> 
+		<strong>GNotefile</strong> 
 	</dd>
 </dl>
 <p>
-	The import request containing the payload data and associated metadata to be imported. 
+	An object containing the details of the note file to create, including its name and title. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,17 +294,18 @@ The payload is a notefile.</summary-info>
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC operation, providing information about the call and its
-environment. 
+	The server call context associated with the current gRPC request. Used to identify the calling user and
+manage request metadata. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> instance indicating that the import operation has completed. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">GNotefile</a> representing the newly created note file, or null reference (<strong>Nothing</strong> in Visual Basic) if the
+creation fails. 
 	</p>
 	
 
@@ -336,8 +336,9 @@ environment.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			This method can only be accessed by users with the 'Admin' role. The import operation
-processes the payload contained in the request and may affect the system's data state.
+			This method requires the caller to have the 'Admin' role. The returned note file
+reflects the data provided in the request. The operation is asynchronous and may involve database
+access.
 	</div>					
 </div>
 
@@ -406,11 +407,11 @@ processes the payload contained in the request and may affect the system's data 
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

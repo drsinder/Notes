@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['87',"Notes.Client.Dialogs Namespace","topic_000000000000001C.html"],['298',"AccessX Enumeration","topic_0000000000000026.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['91',"Notes.Client.Dialogs Namespace","topic_000000000000001F.html"],['98',"AccessDeleteButton Class","topic_0000000000000024.html"],['100',"Properties","topic_0000000000000024_props--.html"],['101',"OnClick Property","topic_0000000000000026.html"]];

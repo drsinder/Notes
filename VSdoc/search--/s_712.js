@@ -1,1 +1,1 @@
-search_result['712']=["topic_000000000000018D.html","Versions.ArcId Property","Gets or sets the arc identifier."];
+search_result['712']=["topic_0000000000000107_methods--.html","NewNote Methods",""];

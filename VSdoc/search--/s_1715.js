@@ -1,0 +1,1 @@
+search_result['1715']=["topic_00000000000002FB_overloads--.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];

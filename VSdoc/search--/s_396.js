@@ -1,1 +1,1 @@
-search_result['396']=["topic_00000000000000C5.html","ListMenu.currNote Property","Ordinal of the current note"];
+search_result['396']=["topic_0000000000000099_methods--.html","HelpDialog Methods",""];

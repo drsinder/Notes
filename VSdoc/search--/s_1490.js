@@ -1,0 +1,1 @@
+search_result['1490']=["topic_000000000000029F.html","Sequencer Class","This class defines a table in the database.\r\nObject of this class may be associated with a user\r\nand file to be used to find notes written since the\r\n\"Recent\" function was last invoked."];

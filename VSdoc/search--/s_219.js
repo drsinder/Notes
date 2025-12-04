@@ -1,1 +1,1 @@
-search_result['219']=["topic_0000000000000072_events--.html","ExportJson Events",""];
+search_result['219']=["topic_0000000000000058.html","CreateNoteFile Class","Represents a component for creating a new note file within a modal dialog."];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Versions.ArcId Property</title>
+	<title>Responses.DisplayIt Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Versions.ArcId Property</h1>
+		<h1 class="title">Responses.DisplayIt Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000156.html">Notes.Client.Panels</a>
+<a href="topic_000000000000015B.html">Notes.Client.Panels</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the arc identifier.</summary-info>
+        <summary-info>GO show the note</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property ArcId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Sub DisplayIt( _&nbsp;<br />   ByVal <i>args</i> As <strong>RowSelectEventArgs</strong>(Of <strong>GNoteHeader</strong>) _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> ArcId {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> DisplayIt(&nbsp;<br />   <strong>RowSelectEventArgs</strong>&lt;<strong>GNoteHeader</strong>&gt; <i>args</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> ArcId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> DisplayIt(&nbsp;<br />   <strong>RowSelectEventArgs</strong>&lt;<strong>GNoteHeader</strong>&gt;^ <i>args</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get ArcId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set ArcId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +269,23 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="args" class="parameterList">
+	<dt>
+		<span class="parameter">
+			args
+		</span>
+	</dt>
+	<dd>
+		<strong>RowSelectEventArgs</strong>&lt;<strong>GNoteHeader</strong>&gt; 
+	</dd>
+</dl>
+<p>
+	The arguments. 
+</p>
 
-	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-		<p>
-		The arc identifier. 
-	</p>
-	
+<p />
+
 
 
 
@@ -364,11 +373,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000189.html">Versions Class</a><br />
+			<a href="topic_0000000000000186.html">Responses Class</a><br />
 
 
 
-<a href="topic_0000000000000156.html">Notes.Client.Panels Namespace</a><br />
+<a href="topic_000000000000015B.html">Notes.Client.Panels Namespace</a><br />
 
 
 			

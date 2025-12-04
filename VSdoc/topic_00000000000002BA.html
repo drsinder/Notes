@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Tags.ToString Method</title>
+	<title>Tags Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Tags.ToString Method</h1>
+		<h1 class="title">Tags Class</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Returns a <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> that represents this instance.</summary-info>
+        <summary-info>This class defines a table in the database.
+Zero or more of these objects may be associated with each note.
+Defines a simple tag or set of tags for a note.</summary-info>
 
 
 
@@ -140,7 +142,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Overrides Function ToString() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;DataContract()&gt; _&nbsp;<br />Public Class Tags</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +181,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> ToString()</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[DataContract()]&nbsp;<br />public class Tags</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +221,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ ToString() </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[DataContract()]&nbsp;<br />public ref class Tags </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +260,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function ToString() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   DataContract()&nbsp;<br />class Tags</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +271,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-
-	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-		<p>
-		A <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> that represents this instance. 
-	</p>
-	
 
 
 
@@ -297,11 +291,691 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002BC.html">ArchiveId</a>
+
+	</td>
+	<td>
+
+Gets or sets the archive identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002BB.html">NoteFileId</a>
+
+	</td>
+	<td>
+
+Gets or sets the note file identifier.
+The fileid the tag belongs to
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002BD.html">NoteHeaderId</a>
+
+	</td>
+	<td>
+
+Gets or sets the note header identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002BE.html">Tag</a>
+
+	</td>
+	<td>
+
+Gets or sets the tag.
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
 
 
 
 
 
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C3.html">CloneForLink(List&lt;Tags&gt;)</a>
+
+	</td>
+	<td>
+
+Clones for link.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object instances are considered equal.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object is equal to the current object.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.finalize">~Object()</a>
+
+	</td>
+	<td>
+
+Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C5.html">GetGTags()</a>
+
+	</td>
+	<td>
+
+Gets the g tags.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C7.html">GetGTagsList(List&lt;Tags&gt;)</a>
+
+	</td>
+	<td>
+
+Gets the g tags list.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode">GetHashCode()</a>
+
+	</td>
+	<td>
+
+Serves as the default hash function.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C4.html">GetTags(GTags)</a>
+
+	</td>
+	<td>
+
+Gets the tags.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C6.html">GetTagsList(GTagsList)</a>
+
+	</td>
+	<td>
+
+Gets the tags list.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype">GetType()</a>
+
+	</td>
+	<td>
+
+Gets the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.type">Type</a> of the current instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C0.html">ListToString(List&lt;Tags&gt;)</a>
+
+	</td>
+	<td>
+
+Lists to string.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone">MemberwiseClone()</a>
+
+	</td>
+	<td>
+
+Creates a shallow copy of the current <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.referenceequals">ReferenceEquals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> instances are the same instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C1.html">StringToList(string)</a>
+
+	</td>
+	<td>
+
+Strings to list.
+
+	</td>
+</tr>
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002C2.html">StringToList(string, long, int, int)</a>
+
+	</td>
+	<td>
+
+Strings to list.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002BF.html">ToString()</a>
+
+	</td>
+	<td>
+
+Returns a <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> that represents this instance.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
+</div>
+
+
+
+<div style="padding-left:1em;">Notes.Entities.Tags</div>
+
+				
+</div>
+</div>
 
 
 
@@ -356,6 +1030,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>					
 </div>
 
+
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -364,14 +1039,10 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002B5.html">Tags Class</a><br />
+	<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
-
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
-
-
-			
+	
 
 		</div>
 	</div>					

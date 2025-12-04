@@ -1,1 +1,1 @@
-search_result['1249']=["topic_00000000000002EB.html","NotesService.GetUserRoles Method","Retrieves the roles assigned to a specified user and returns a view model containing user information and\r\nrole membership status."];
+search_result['1249']=["topic_0000000000000215.html","Audit.EventType Property","Gets or sets the type of the event."];

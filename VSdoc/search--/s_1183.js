@@ -1,1 +1,1 @@
-search_result['1183']=["topic_00000000000002CA_vars--.html","Importer Fields",""];
+search_result['1183']=["topic_00000000000001E7.html","NotesDbContext.NoteHeader Property","Gets or sets the note header."];

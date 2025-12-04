@@ -1,0 +1,1 @@
+search_result['1720']=["topic_00000000000002FE.html","NotesService.AddAccessItem Method","Adds a new access item for a note if the current user has edit permissions."];

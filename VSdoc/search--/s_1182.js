@@ -1,1 +1,1 @@
-search_result['1182']=["topic_00000000000002CA_props--.html","Importer Properties",""];
+search_result['1182']=["topic_00000000000001E6.html","NotesDbContext.NoteAccess Property","Gets or sets the note access."];

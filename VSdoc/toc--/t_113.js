@@ -1,1 +1,1 @@
-c['113']=[['114',"ClickHandler Method","topic_000000000000003A.html",0],['115',"CreateNew Method","topic_0000000000000039.html",0],['116',"OnParametersSetAsync Method","topic_0000000000000038_overloads--.html",1]];
+c['113']=[['114',"Modal Property","topic_0000000000000037.html",0],['115',"ModalInstance Property","topic_0000000000000038.html",0],['116',"fileId Property","topic_0000000000000039.html",0]];

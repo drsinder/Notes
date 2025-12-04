@@ -1,1 +1,1 @@
-c['849']=[['850',"AccessManager Class","topic_00000000000002C4.html",1],['857',"Importer Class","topic_00000000000002CA.html",1],['863',"NoteDataManager Class","topic_00000000000002CF.html",1]];
+c['849']=[['850',"StringToList(string) Method","topic_00000000000002C1.html",0],['851',"StringToList(string, long, int, int) Method","topic_00000000000002C2.html",0]];

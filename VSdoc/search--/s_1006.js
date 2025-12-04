@@ -1,1 +1,1 @@
-search_result['1006']=["topic_000000000000024C.html","NoteAccess.ArchiveId Property","Gets or sets the archive identifier."];
+search_result['1006']=["topic_000000000000019F.html","CookieStateAgent.IsAdmin Property","Is user in Admin role"];

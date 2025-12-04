@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetSequencer Method</title>
+	<title>NotesService.DeleteAccessItem Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetSequencer Method</h1>
+		<h1 class="title">NotesService.DeleteAccessItem Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves a list of sequencers owned by the current user for which read access is granted.</summary-info>
+        <summary-info>Deletes the specified access item for a note if the current user has edit permissions.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetSequencer( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GSequencerList</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function DeleteAccessItem( _&nbsp;<br />   ByVal <i>request</i> As <strong>GNoteAccess</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GSequencerList</strong>&gt; GetSequencer(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; DeleteAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GSequencerList</strong>^&gt;^ GetSequencer(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ DeleteAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -277,11 +277,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		</span>
 	</dt>
 	<dd>
-		<strong>NoRequest</strong> 
+		<strong>GNoteAccess</strong> 
 	</dd>
 </dl>
 <p>
-	A request object containing no parameters. This value is ignored. 
+	The access item to delete, containing information about the note and associated access rights. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -294,18 +294,16 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The server call context that provides information about the current RPC call, including user authentication
-details. 
+	The server call context that provides information about the current request and user. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GSequencerList</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">GSequencerList</a> containing sequencers owned by the user and accessible for reading. The list
-will be empty if no accessible sequencers are found. 
+		A NoRequest object indicating that the operation has completed. 
 	</p>
 	
 
@@ -336,8 +334,8 @@ will be empty if no accessible sequencers are found.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			Only sequencers for which the user currently has read access are included in the
-returned list. Sequencers are ordered by their ordinal value.
+			The access item is only deleted if the current user has edit access to the note. If
+the user does not have sufficient permissions, no changes are made.
 	</div>					
 </div>
 
@@ -406,11 +404,11 @@ returned list. Sequencers are ordered by their ordinal value.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

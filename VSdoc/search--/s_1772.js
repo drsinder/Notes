@@ -1,0 +1,1 @@
+search_result['1772']=["topic_0000000000000315_overloads--.html","NotesService.GetNoteHeaders Method","Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in\r\nthe request."];

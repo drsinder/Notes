@@ -1,1 +1,1 @@
-search_result['1297']=["topic_0000000000000303.html","NotesService.CreateNewNote Method","Creates a new note or response in the system using the provided text and subject information."];
+search_result['1297']=["topic_000000000000022B_attached_props--.html","LinkLog Attached Properties",""];

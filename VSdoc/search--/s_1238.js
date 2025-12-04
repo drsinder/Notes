@@ -1,1 +1,1 @@
-search_result['1238']=["topic_00000000000002E6_methods--.html","NotesService Methods",""];
+search_result['1238']=["topic_000000000000020F.html","ApplicationUser.MergeApplicationUser Method","Merges the application user."];

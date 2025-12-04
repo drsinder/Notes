@@ -1,1 +1,1 @@
-search_result['1295']=["topic_0000000000000302.html","NotesService.GetNoteFile Method","Retrieves the note file specified by the request if the current user has appropriate access permissions."];
+search_result['1295']=["topic_000000000000022A.html","LinkedFile.GetGLinkedFileList Method","Gets the g linked file list."];

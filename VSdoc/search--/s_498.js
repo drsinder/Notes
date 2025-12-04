@@ -1,1 +1,1 @@
-search_result['498']=["topic_00000000000000FF.html","EditNote.OnParametersSetAsync Method","On parameters set as an asynchronous operation."];
+search_result['498']=["topic_00000000000000B4.html","UserEdit.ModalInstance Property","Gets or sets the modal instance."];

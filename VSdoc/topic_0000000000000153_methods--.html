@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Tracker Methods</title>
+	<title>ShowNote Methods</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -76,11 +76,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Tracker Methods</h1>
+		<h1 class="title">ShowNote Methods</h1>
         <p />
         <p>
           The following tables list the members exposed by the  
-              <a href="topic_0000000000000153.html">Tracker</a>
+              <a href="topic_0000000000000153.html">ShowNote</a>
              type.
         </p>
 
@@ -277,7 +277,9 @@ Method invoked after each time the component has rendered interactively and the 
 
 
 
-			<tr class="
+
+	<tr class="
+inheritedMember 
 
 
 ">
@@ -291,16 +293,24 @@ Method invoked after each time the component has rendered interactively and the 
     
 	</td>
 	<td>
-	<a href="topic_0000000000000154.html">OnAfterRenderAsync(bool)</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a>
 
 	</td>
 	<td>
 
-On parameters set as an asynchronous operation.
+Method invoked after each time the component has been rendered interactively and the UI has finished
+             updating (for example, after elements have been added to the browser DOM). Any <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
+             fields will be populated by the time this runs.
+            
+             This method is not invoked during prerendering or server-side rendering, because those processes
+             are not attached to any live browser DOM and are already complete before the DOM is updated.
+            
+             Note that the component does not automatically re-render after the completion of any returned <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>,
+             because that would cause an infinite render loop.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
 	</td>
 </tr>
-	
 
 
 
@@ -413,9 +423,7 @@ Method invoked when the component has received parameters from its parent in
 
 
 
-
-	<tr class="
-inheritedMember 
+			<tr class="
 
 
 ">
@@ -429,17 +437,16 @@ inheritedMember
     
 	</td>
 	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync">OnParametersSetAsync()</a>
+	<a href="topic_0000000000000157.html">OnParametersSetAsync()</a>
 
 	</td>
 	<td>
 
-Method invoked when the component has received parameters from its parent in
-            the render tree, and the incoming values have been assigned to properties.
-(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+On parameters set as an asynchronous operation.
 
 	</td>
 </tr>
+	
 
 
 
@@ -500,34 +507,6 @@ inheritedMember
 
 Returns a flag to indicate whether the component should render.
 (inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000155.html">Shuffle()</a>
-
-	</td>
-	<td>
-
-Shuffles this instance.
 
 	</td>
 </tr>
@@ -603,7 +582,6 @@ Notifies the component that its state has changed. When applicable, this will
 
 
 
-
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -612,13 +590,12 @@ Notifies the component that its state has changed. When applicable, this will
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000153.html">Tracker Class</a><br />
-	<a href="topic_00000000000000F6.html">Notes.Client.Pages Namespace</a><br />
+			<a href="topic_0000000000000153.html">ShowNote Class</a><br />
+	<a href="topic_00000000000000F9.html">Notes.Client.Pages Namespace</a><br />
 
 
 			
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>
-<br />
+	<a href="#">ComponentBase</a><br />
 
 		</div>
 	</div>					

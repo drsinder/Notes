@@ -1,1 +1,1 @@
-search_result['732']=["topic_000000000000019A.html","CookieStateAgent.IsAdmin Property","Is user in Admin role"];
+search_result['732']=["topic_000000000000010E_methods--.html","NoteIndex Methods",""];

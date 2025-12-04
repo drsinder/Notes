@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.CopyNote Method</title>
+	<title>NotesService.GetAbout Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.CopyNote Method</h1>
+		<h1 class="title">NotesService.GetAbout Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Copies a note or an entire note thread to a specified target file for the current user, preserving content
-and associated tags.</summary-info>
+        <summary-info>Gets the about.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ and associated tags.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function CopyNote( _&nbsp;<br />   ByVal <i>Model</i> As <strong>CopyModel</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Overrides Function GetAbout( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>AboutModel</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ and associated tags.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; CopyNote(&nbsp;<br />   <strong>CopyModel</strong> <i>Model</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AboutModel</strong>&gt; GetAbout(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ and associated tags.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ CopyNote(&nbsp;<br />   <strong>CopyModel</strong>^ <i>Model</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AboutModel</strong>^&gt;^ GetAbout(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -271,19 +270,18 @@ and associated tags.</summary-info>
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="Model" class="parameterList">
+	Parameters</h4><dl paramName="request" class="parameterList">
 	<dt>
 		<span class="parameter">
-			Model
+			request
 		</span>
 	</dt>
 	<dd>
-		<strong>CopyModel</strong> 
+		<strong>NoRequest</strong> 
 	</dd>
 </dl>
 <p>
-	The model containing information about the note to copy, the target file ID, and whether to copy the entire
-note thread. Must not be null. 
+	The request. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -296,17 +294,16 @@ note thread. Must not be null.
 	</dd>
 </dl>
 <p>
-	The server call context for the current request, used to identify and authorize the user. 
+	The context. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AboutModel</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> object indicating the completion of the copy operation. Returns an empty response
-if the user does not have read access to the source note or write access to the target file. 
+		AboutModel. 
 	</p>
 	
 
@@ -330,19 +327,6 @@ if the user does not have read access to the source note or write access to the 
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
-
-	<div id="remarksSection" class="section">	
-			The method requires the caller to have read access to the source note and write
-access to the target file. If copying the entire note thread, all responses associated with the note are
-also copied. The copied note will be attributed to the current user. This operation is performed
-asynchronously.
-	</div>					
-</div>
 
 
 
@@ -409,11 +393,11 @@ asynchronously.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

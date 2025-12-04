@@ -1,1 +1,1 @@
-search_result['1097']=["topic_000000000000029A.html","Sequencer Class","This class defines a table in the database.\r\nObject of this class may be associated with a user\r\nand file to be used to find notes written since the\r\n\"Recent\" function was last invoked."];
+search_result['1097']=["topic_00000000000001CF_overloads--.html","CreateIdentitySchema.Up Method","Builds the operations that will migrate the database \u0027up\u0027."];

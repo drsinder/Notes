@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['620',"Notes.Entities Namespace","topic_00000000000001F1.html"],['675',"LinkQueue Class","topic_0000000000000234.html"],['676',"Properties","topic_0000000000000234_props--.html"],['677',"Activity Property","topic_0000000000000238.html"]];

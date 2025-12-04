@@ -1,0 +1,1 @@
+search_result['1501']=["topic_00000000000002A5.html","Sequencer.Active Property","Gets or sets a value indicating whether this Sequencer is active."];

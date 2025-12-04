@@ -1,1 +1,1 @@
-search_result['864']=["topic_00000000000001E2.html","NotesDbContext.NoteHeader Property","Gets or sets the note header."];
+search_result['864']=["topic_0000000000000157_attached_props--.html","NoteEditor Attached Properties",""];

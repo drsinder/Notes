@@ -1,1 +1,1 @@
-search_result['954']=["topic_0000000000000226_events--.html","LinkLog Events",""];
+search_result['954']=["topic_0000000000000188.html","Responses.ShowContentR Property","Show content for responses"];

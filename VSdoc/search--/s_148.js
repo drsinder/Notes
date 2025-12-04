@@ -1,1 +1,1 @@
-search_result['148']=["topic_0000000000000052.html","Copy.Note Property","Gets or sets the note."];
+search_result['148']=["topic_000000000000003E.html","AddAccessDlg Class","Add a user to the access list"];

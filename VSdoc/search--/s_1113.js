@@ -1,1 +1,1 @@
-search_result['1113']=["topic_00000000000002A5.html","SQLFile Class","This class defines a table in the database.\r\nNot currently in use."];
+search_result['1113']=["topic_00000000000001D3.html","CreateIdentitySchema Class","A base class inherited by each EF Core migration."];

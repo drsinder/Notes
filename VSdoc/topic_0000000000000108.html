@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NewNote.NotesfileId Property</title>
+	<title>HomeIndex.OnAfterRender Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NewNote.NotesfileId Property</h1>
+		<h1 class="title">HomeIndex.OnAfterRender Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000F6.html">Notes.Client.Pages</a>
+<a href="topic_00000000000000F9.html">Notes.Client.Pages</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the notesfile identifier.</summary-info>
+        <summary-info>Invoked after the component has rendered. Allows performing post-render logic, such as initialization, based
+on whether this is the first render.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property NotesfileId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Overrides Sub OnAfterRender( _&nbsp;<br />   ByVal <i>firstRender</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a> _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NotesfileId {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> OnAfterRender(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> <i>firstRender</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NotesfileId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> OnAfterRender(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> <i>firstRender</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +259,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get NotesfileId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set NotesfileId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">protected function OnAfterRender(&nbsp;<br />    <i>firstRender</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>&nbsp;<br />);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +270,24 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="firstRender" class="parameterList">
+	<dt>
+		<span class="parameter">
+			firstRender
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
+	</dd>
+</dl>
+<p>
+	Indicates whether this is the first time the component has rendered. <strong>true</strong> if this is the
+initial render; otherwise, <strong>false</strong>. 
+</p>
 
-	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-		<p>
-		The notesfile identifier. 
-	</p>
-	
+<p />
+
 
 
 
@@ -364,11 +375,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000107.html">NewNote Class</a><br />
+			<a href="topic_0000000000000103.html">HomeIndex Class</a><br />
 
 
 
-<a href="topic_00000000000000F6.html">Notes.Client.Pages Namespace</a><br />
+<a href="topic_00000000000000F9.html">Notes.Client.Pages Namespace</a><br />
 
 
 			

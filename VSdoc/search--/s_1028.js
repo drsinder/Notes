@@ -1,1 +1,1 @@
-search_result['1028']=["topic_000000000000025D.html","NoteContent.GetGNoteContent Method","Gets the content of the g note.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1028']=["topic_00000000000001A7_props--.html","Globals Properties",""];

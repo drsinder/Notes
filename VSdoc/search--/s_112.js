@@ -1,1 +1,1 @@
-search_result['112']=["topic_000000000000003F.html","AddAccessDlg.selectedUserId Property","Gets or sets the selected user identifier."];
+search_result['112']=["topic_0000000000000030.html","AccessItem.which Property","Indicates which segment we are dealing with"];

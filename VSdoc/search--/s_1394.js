@@ -1,0 +1,1 @@
+search_result['1394']=["topic_0000000000000260.html","NoteContent.CloneForLink Method","Clones for link."];

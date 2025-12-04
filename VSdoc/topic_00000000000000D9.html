@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>MainMenu.OnParametersSetAsync Method</title>
+	<title>MainMenu.TimerTick2 Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">MainMenu.OnParametersSetAsync Method</h1>
+		<h1 class="title">MainMenu.TimerTick2 Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000BC.html">Notes.Client.Menus</a>
+<a href="topic_00000000000000BF.html">Notes.Client.Menus</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>On parameters set as an asynchronous operation.</summary-info>
+        <summary-info>Invoked once per second</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Overrides Function OnParametersSetAsync() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Sub TimerTick2( _&nbsp;<br />   ByVal <i>source</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">Object</a>, _&nbsp;<br />   ByVal <i>e</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a> _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> OnParametersSetAsync()</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> TimerTick2(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> <i>source</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a> <i>e</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ OnParametersSetAsync() </pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> TimerTick2(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>^ <i>source</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a>^ <i>e</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">protected function OnParametersSetAsync() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">protected function TimerTick2(&nbsp;<br />    <i>source</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>,&nbsp;<br />    <i>e</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a>&nbsp;<br />);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +269,36 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="source" class="parameterList">
+	<dt>
+		<span class="parameter">
+			source
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> 
+	</dd>
+</dl>
+<p>
+	The source. 
+</p>
+<dl paramName="e" class="parameterList">
+	<dt>
+		<span class="parameter">
+			e
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a> 
+	</dd>
+</dl>
+<p>
+	The <a target="_top" href=".html" onclick="this.target='';return true;">ElapsedEventArgs</a> instance containing the event data. 
+</p>
 
-	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> 
-		<p>
-		A Task representing the asynchronous operation. 
-	</p>
-	
+<p />
+
 
 
 
@@ -364,11 +386,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000D0.html">MainMenu Class</a><br />
+			<a href="topic_00000000000000D3.html">MainMenu Class</a><br />
 
 
 
-<a href="topic_00000000000000BC.html">Notes.Client.Menus Namespace</a><br />
+<a href="topic_00000000000000BF.html">Notes.Client.Menus Namespace</a><br />
 
 
 			

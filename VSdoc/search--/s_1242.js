@@ -1,1 +1,1 @@
-search_result['1242']=["topic_00000000000002E7_overloads--.html","NotesService.GetServerTime Method","Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset."];
+search_result['1242']=["topic_0000000000000213.html","Audit Class","This class defines a table in the database.\r\nNot currently in use."];

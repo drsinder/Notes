@@ -1,0 +1,1 @@
+search_result['1386']=["topic_000000000000025D.html","NoteContent Class","This class defines a table in the database.\r\nEach NoteContent object is associated with one NoteHeader\r\nIt contains the \"Body\" text of the note."];

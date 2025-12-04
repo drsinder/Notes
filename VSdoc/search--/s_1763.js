@@ -1,0 +1,1 @@
+search_result['1763']=["topic_0000000000000313_overloads--.html","NotesService.GetTextFile Method","Gets text from server for display in client.\r\nfiles: about.html | help.html | helpdialog.html | helpdialog2.html | license.html"];

@@ -1,1 +1,1 @@
-search_result['755']=["topic_00000000000001A7.html","Globals.ImportRoot Property","Gets or sets the import root."];
+search_result['755']=["topic_000000000000011D.html","NoteIndex.PageSize Property","Grid page size"];

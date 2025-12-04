@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['91',"Notes.Client.Dialogs Namespace","topic_000000000000001F.html"],['98',"AccessDeleteButton Class","topic_0000000000000024.html"],['103',"Methods","topic_0000000000000024_methods--.html"],['104',"Delete Method","topic_0000000000000028.html"]];

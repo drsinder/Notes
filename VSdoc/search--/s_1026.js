@@ -1,1 +1,1 @@
-search_result['1026']=["topic_000000000000025B.html","NoteContent.CloneForLink Method","Clones for link."];
+search_result['1026']=["topic_00000000000001A7_events--.html","Globals Events",""];

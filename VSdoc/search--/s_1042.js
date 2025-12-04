@@ -1,1 +1,1 @@
-search_result['1042']=["topic_0000000000000266.html","NoteFile.LastEdited Property","Gets or sets the last edited.\r\nwhen anything in the file was last created or edited"];
+search_result['1042']=["topic_00000000000001B4.html","Globals.ImportMailInterval Property",""];

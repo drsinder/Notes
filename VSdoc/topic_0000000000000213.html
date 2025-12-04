@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Audit.EventTime Property</title>
+	<title>Audit Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Audit.EventTime Property</h1>
+		<h1 class="title">Audit Class</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the event time.</summary-info>
+        <summary-info>This class defines a table in the database.
+Not currently in use.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;Display(Name = &quot;Event Time&quot;)&gt; _&nbsp;<br />Public Property EventTime() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">Date</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Class Audit</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[Display(Name = &quot;Event Time&quot;)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> EventTime {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public class Audit</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[Display(Name = &quot;Event Time&quot;)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> EventTime {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public ref class Audit </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +259,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;Event Time&quot;)&nbsp;<br />function get EventTime() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;Event Time&quot;)&nbsp;<br />function set EventTime(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public class Audit</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +270,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-
-	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> 
-		<p>
-		The event time. 
-	</p>
-	
 
 
 
@@ -297,11 +290,510 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000214.html">AuditID</a>
+
+	</td>
+	<td>
+
+Gets or sets the audit identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000219.html">Event</a>
+
+	</td>
+	<td>
+
+Gets or sets the event.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000218.html">EventTime</a>
+
+	</td>
+	<td>
+
+Gets or sets the event time.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000215.html">EventType</a>
+
+	</td>
+	<td>
+
+Gets or sets the type of the event.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000217.html">UserID</a>
+
+	</td>
+	<td>
+
+Gets or sets the user identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000216.html">UserName</a>
+
+	</td>
+	<td>
+
+Gets or sets the name of the user.
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
 
 
 
 
 
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object instances are considered equal.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object is equal to the current object.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.finalize">~Object()</a>
+
+	</td>
+	<td>
+
+Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode">GetHashCode()</a>
+
+	</td>
+	<td>
+
+Serves as the default hash function.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype">GetType()</a>
+
+	</td>
+	<td>
+
+Gets the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.type">Type</a> of the current instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone">MemberwiseClone()</a>
+
+	</td>
+	<td>
+
+Creates a shallow copy of the current <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.referenceequals">ReferenceEquals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> instances are the same instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring">ToString()</a>
+
+	</td>
+	<td>
+
+Returns a string that represents the current object.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
+</div>
+
+
+
+<div style="padding-left:1em;">Notes.Entities.Audit</div>
+
+				
+</div>
+</div>
 
 
 
@@ -356,6 +848,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>					
 </div>
 
+
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -364,14 +857,10 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000020E.html">Audit Class</a><br />
+	<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
-
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
-
-
-			
+	
 
 		</div>
 	</div>					

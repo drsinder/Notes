@@ -1,1 +1,1 @@
-search_result['1201']=["topic_00000000000002D7.html","NoteDataManager.GetFileById Method","Get notefile entity from its Id"];
+search_result['1201']=["topic_00000000000001F4.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];

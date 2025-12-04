@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetAccessList Method</title>
+	<title>NotesService.UpdateNoteFile Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetAccessList Method</h1>
+		<h1 class="title">NotesService.UpdateNoteFile Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the access list for a specified note file and archive for the requesting user.</summary-info>
+        <summary-info>Updates an existing note file with new name and title information.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetAccessList( _&nbsp;<br />   ByVal <i>request</i> As <strong>AccessAndUserListRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteAccessList</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function UpdateNoteFile( _&nbsp;<br />   ByVal <i>noteFile</i> As <strong>GNotefile</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNotefile</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccessList</strong>&gt; GetAccessList(&nbsp;<br />   <strong>AccessAndUserListRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; UpdateNoteFile(&nbsp;<br />   <strong>GNotefile</strong> <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccessList</strong>^&gt;^ GetAccessList(&nbsp;<br />   <strong>AccessAndUserListRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>^&gt;^ UpdateNoteFile(&nbsp;<br />   <strong>GNotefile</strong>^ <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,19 +270,19 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
+	Parameters</h4><dl paramName="noteFile" class="parameterList">
 	<dt>
 		<span class="parameter">
-			request
+			noteFile
 		</span>
 	</dt>
 	<dd>
-		<strong>AccessAndUserListRequest</strong> 
+		<strong>GNotefile</strong> 
 	</dd>
 </dl>
 <p>
-	An object containing the identifiers for the note file and archive, as well as user information used to
-determine access rights. 
+	The note file containing the updated name and title. The <code>Id</code> property must correspond to an existing
+note file. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -302,9 +302,9 @@ determine access rights.
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccessList</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNotefile</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">GNoteAccessList</a> representing the access permissions for the specified note file and archive. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">GNotefile</a> representing the updated note file. 
 	</p>
 	
 
@@ -328,6 +328,17 @@ determine access rights.
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			This method requires the caller to have the &quot;Admin&quot; role. The note file is updated in
+the database based on the provided <code>Id</code>. Changes are persisted asynchronously.
+	</div>					
+</div>
 
 
 
@@ -394,11 +405,11 @@ determine access rights.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

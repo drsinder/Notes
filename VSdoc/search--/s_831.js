@@ -1,1 +1,1 @@
-search_result['831']=["topic_00000000000001D6.html","fix Class","A base class inherited by each EF Core migration."];
+search_result['831']=["topic_000000000000014B_overloads--.html","LocalModel2 Constructor","Initializes a new instance of the LocalModel2 class."];

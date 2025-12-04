@@ -1,1 +1,1 @@
-search_result['962']=["topic_000000000000022B.html","LinkLog.GetLinkLog Method","Gets the link log."];
+search_result['962']=["topic_000000000000018B.html","Responses Constructor","Initializes a new instance of the Responses class."];

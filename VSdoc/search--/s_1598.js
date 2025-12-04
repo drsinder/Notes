@@ -1,0 +1,1 @@
+search_result['1598']=["topic_00000000000002CE.html","AccessManager.TestLinkAccess Method","Tests the link access."];

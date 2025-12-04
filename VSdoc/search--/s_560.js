@@ -1,1 +1,1 @@
-search_result['560']=["topic_0000000000000131.html","Search Class","Class Search."];
+search_result['560']=["topic_00000000000000CE.html","LoginDisplay Class",""];

@@ -1,1 +1,1 @@
-search_result['687']=["topic_000000000000017F.html","NotePanel.SeqNext Method","Find next recent note"];
+search_result['687']=["topic_00000000000000FE.html","EditNote.Model Property","our data for the note in edit model"];

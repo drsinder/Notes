@@ -1,0 +1,1 @@
+search_result['1510']=["topic_00000000000002A9.html","Sequencer.GetGSequencerList Method","Gets the g sequencer list.\r\nConversions between Db Entity space and gRPC space."];

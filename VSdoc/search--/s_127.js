@@ -1,1 +1,1 @@
-search_result['127']=["topic_0000000000000048.html","CodeFormat.TextObj Property","Gets or sets the text object."];
+search_result['127']=["topic_0000000000000035.html","AccessItem.canEdit Property","Can current user change it?"];

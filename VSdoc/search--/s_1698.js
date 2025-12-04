@@ -1,0 +1,1 @@
+search_result['1698']=["topic_00000000000002F3.html","NotesService.GetHomePageModel Method","Retrieves the data model for the home page in response to a client request."];

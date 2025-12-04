@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the interval.</summary-info>
+        <summary-info>Gets or sets the interval, in milliseconds, between consecutive operations.</summary-info>
 
 
 
@@ -273,9 +273,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	<h4 class="subHeading">
 		Property Value</h4>
 	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-		<p>
-		The interval. 
-	</p>
 	
 
 
@@ -298,6 +295,17 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			The interval determines how frequently the associated action is performed. Setting a
+lower value increases the operation rate, which may impact performance depending on the workload.
+	</div>					
+</div>
 
 
 

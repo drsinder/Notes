@@ -1,1 +1,1 @@
-search_result['1204']=["topic_00000000000002D9_overloads--.html","NoteDataManager.GetBaseNoteHeader Method","Get a NoteHeader given its Id"];
+search_result['1204']=["topic_00000000000001F7.html","ApplicationUser Class","Extentions to the base IdentityUser\r\nContains fields mirrored locally in UserData\r\nThese fields are accessed and edited there and then written back\r\nenmass.  By contrast the predefined field not seen ..."];

@@ -1,1 +1,1 @@
-search_result['270']=["topic_000000000000008D.html","ExportViewModel.Email Property","Email address if being mailed to someone"];
+search_result['270']=["topic_000000000000006C.html","EditNoteFile.NumberArchives Property","Gets or sets the number archives."];

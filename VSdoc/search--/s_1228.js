@@ -1,1 +1,1 @@
-search_result['1228']=["topic_00000000000002E4.html","LocalService Class","Class LocalService."];
+search_result['1228']=["topic_000000000000020A.html","ApplicationUser.Pref7 Property","Gets or sets a value indicating whether this ApplicationUser is pref7.\r\nshow content when expanded"];

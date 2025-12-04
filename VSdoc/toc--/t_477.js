@@ -1,1 +1,0 @@
-c['477']=[['478',"NotesFilesAdmin Constructor","topic_00000000000000E9.html",0],['479',"Properties","topic_00000000000000E7_props--.html",1],['482',"Methods","topic_00000000000000E7_methods--.html",1],['487',"Fields","topic_00000000000000E7_vars--.html",1]];

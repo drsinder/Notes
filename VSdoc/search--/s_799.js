@@ -1,1 +1,1 @@
-search_result['799']=["topic_00000000000001CB.html","Notes.Components Namespace",""];
+search_result['799']=["topic_000000000000013F.html","Search.NoteID Property","Gets or sets the note identifier."];

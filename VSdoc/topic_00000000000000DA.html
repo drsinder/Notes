@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>MainMenu.UpdateMenu Method</title>
+	<title>MainMenu.OnSelect Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">MainMenu.UpdateMenu Method</h1>
+		<h1 class="title">MainMenu.OnSelect Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000BC.html">Notes.Client.Menus</a>
+<a href="topic_00000000000000BF.html">Notes.Client.Menus</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Enable only items available to logged in user</summary-info>
+        <summary-info>Invoked when an Item is selected</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;System.Diagnostics.CodeAnalysis.SuppressMessage(&quot;Usage&quot;, &quot;BL0005:Component parameter should not be set outside of its component.&quot;, Justification = &quot;&lt;Pending&gt;&quot;)&gt; _&nbsp;<br />Public Function UpdateMenu() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Function OnSelect( _&nbsp;<br />   ByVal <i>e</i> As <strong>MenuEventArgs</strong>(Of <strong>MenuItem</strong>) _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[System.Diagnostics.CodeAnalysis.SuppressMessage(&quot;Usage&quot;, &quot;BL0005:Component parameter should not be set outside of its component.&quot;, Justification = &quot;&lt;Pending&gt;&quot;)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> UpdateMenu()</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> OnSelect(&nbsp;<br />   <strong>MenuEventArgs</strong>&lt;<strong>MenuItem</strong>&gt; <i>e</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[System.Diagnostics.CodeAnalysis.SuppressMessage(&quot;Usage&quot;, &quot;BL0005:Component parameter should not be set outside of its component.&quot;, Justification = &quot;&lt;Pending&gt;&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ UpdateMenu() </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ OnSelect(&nbsp;<br />   <strong>MenuEventArgs</strong>&lt;<strong>MenuItem</strong>^&gt;^ <i>e</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   System.Diagnostics.CodeAnalysis.SuppressMessage(&quot;Usage&quot;, &quot;BL0005:Component parameter should not be set outside of its component.&quot;, Justification = &quot;&lt;Pending&gt;&quot;)&nbsp;<br />function UpdateMenu() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,6 +269,22 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="e" class="parameterList">
+	<dt>
+		<span class="parameter">
+			e
+		</span>
+	</dt>
+	<dd>
+		<strong>MenuEventArgs</strong>&lt;<strong>MenuItem</strong>&gt; 
+	</dd>
+</dl>
+<p>
+	The e. 
+</p>
+
+<p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
@@ -361,11 +377,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000D0.html">MainMenu Class</a><br />
+			<a href="topic_00000000000000D3.html">MainMenu Class</a><br />
 
 
 
-<a href="topic_00000000000000BC.html">Notes.Client.Menus Namespace</a><br />
+<a href="topic_00000000000000BF.html">Notes.Client.Menus Namespace</a><br />
 
 
 			

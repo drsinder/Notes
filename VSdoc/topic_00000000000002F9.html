@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.AddAccessItem Method</title>
+	<title>NotesService.GetNoteContent Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.AddAccessItem Method</h1>
+		<h1 class="title">NotesService.GetNoteContent Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Adds a new access item for a note if the current user has edit permissions.</summary-info>
+        <summary-info>Retrieves the content and metadata of a note specified by the request, including header, body, tags, file
+information, and access permissions.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function AddAccessItem( _&nbsp;<br />   ByVal <i>request</i> As <strong>GNoteAccess</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteAccess</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteContent( _&nbsp;<br />   ByVal <i>request</i> As <strong>DisplayModelRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>DisplayModel</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; AddAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>&gt; GetNoteContent(&nbsp;<br />   <strong>DisplayModelRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>^&gt;^ AddAccessItem(&nbsp;<br />   <strong>GNoteAccess</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>^&gt;^ GetNoteContent(&nbsp;<br />   <strong>DisplayModelRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -277,11 +278,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		</span>
 	</dt>
 	<dd>
-		<strong>GNoteAccess</strong> 
+		<strong>DisplayModelRequest</strong> 
 	</dd>
 </dl>
 <p>
-	The access item to add, containing note and archive identifiers and access details. 
+	An object containing the note identifier and version to specify which note content to retrieve. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -294,17 +295,17 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The server call context that provides information about the current request and user. 
+	The server call context for the current gRPC request, used to identify and authorize the user. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>&gt; 
 		<p>
-		The access item that was requested to be added. If the user does not have edit access, the item is not
-added. 
+		A DisplayModel containing the note's header, content, tags, file information, access details, and edit
+permissions. Returns an empty DisplayModel if the user does not have read access to the note. 
 	</p>
 	
 
@@ -335,8 +336,9 @@ added.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			This method requires the caller to have edit access to the specified note. If edit
-access is not granted, no changes are made to the database and the request is returned unchanged.
+			Only users with appropriate read access can retrieve note content. Edit permissions
+are granted to administrators and the note's author. The returned model includes information about whether
+the user can edit the note and whether they have administrative privileges.
 	</div>					
 </div>
 
@@ -405,11 +407,11 @@ access is not granted, no changes are made to the database and the request is re
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

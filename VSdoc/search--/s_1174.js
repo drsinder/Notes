@@ -1,1 +1,1 @@
-search_result['1174']=["topic_00000000000002C6.html","AccessManager.GetAccess Method","All access checks call this."];
+search_result['1174']=["topic_00000000000001E3.html","Notes.Data Namespace",""];

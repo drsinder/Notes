@@ -1,1 +1,1 @@
-search_result['1308']=["topic_0000000000000308_overloads--.html","NotesService.GetExport2 Method","Gets the export info for phase 2. (note content)"];
+search_result['1308']=["topic_0000000000000232.html","LinkLog.GetLinkLogList Method","Gets the link log list."];

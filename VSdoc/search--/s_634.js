@@ -1,1 +1,1 @@
-search_result['634']=["topic_0000000000000156.html","Notes.Client.Panels Namespace",""];
+search_result['634']=["topic_00000000000000EC.html","NotesFilesAdmin Constructor","Initializes a new instance of the NotesFilesAdmin class."];

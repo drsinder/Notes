@@ -1,0 +1,1 @@
+search_result['1607']=["topic_00000000000002D2.html","Importer.GetBaseNoteHeader Method","Get the BaseNoteHeader for a NoteContent"];

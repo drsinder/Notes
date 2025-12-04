@@ -1,1 +1,1 @@
-search_result['170']=["topic_000000000000005B_events--.html","DeleteNoteFile Events",""];
+search_result['170']=["topic_0000000000000048.html","CodeFormat Class","Provides functionality for formatting code snippets and managing code format options within a modal dialog\r\ncomponent."];

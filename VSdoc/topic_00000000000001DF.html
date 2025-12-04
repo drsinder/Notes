@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesDbContext Class</title>
+	<title>BodySearch Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesDbContext Class</h1>
+		<h1 class="title">BodySearch Class</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001DE.html">Notes.Data</a>
+<a href="topic_00000000000001D2.html">Notes.Migrations</a>
 
 
 
@@ -90,6 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
+        <summary-info>A base class inherited by each EF Core migration.</summary-info>
 
 
 
@@ -139,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Class NotesDbContext&nbsp;<br />    Inherits <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">IdentityDbContext</a>(Of <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;DbContext(typeof(NotesDbContext))&gt; _&nbsp;<br />&lt;Migration(&quot;20251202133931_BodySearch&quot;)&gt; _&nbsp;<br />Public Class BodySearch&nbsp;<br />    Inherits <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -178,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public class NotesDbContext : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">IdentityDbContext</a>&lt;<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>&gt;</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[DbContext(typeof(NotesDbContext))]&nbsp;<br />[Migration(&quot;20251202133931_BodySearch&quot;)]&nbsp;<br />public class BodySearch : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -218,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public ref class NotesDbContext : public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft::aspnetcore::identity::entityframeworkcore::identitydbcontext-1">IdentityDbContext</a>&lt;<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>^&gt;^</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[DbContext(typeof(NotesDbContext))]&nbsp;<br />[Migration(&quot;20251202133931_BodySearch&quot;)]&nbsp;<br />public ref class BodySearch : public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft::entityframeworkcore::migrations::migration">Migration</a>^</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -257,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   DbContext(typeof(NotesDbContext))&nbsp;<br />   Migration(&quot;20251202133931_BodySearch&quot;)&nbsp;<br />class BodySearch&nbsp;<br />   extends <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -309,6 +310,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	
 		<tr class="
+inheritedMember 
 
 
 ">
@@ -319,12 +321,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
     
 	</td>
 	<td>
-	<a href="topic_00000000000001E5.html">Audit</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration.activeprovider">ActiveProvider</a>
 
 	</td>
 	<td>
 
-Gets or sets the audit.
+The name of the current database provider.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a>).
 
 	</td>
 </tr>
@@ -333,6 +336,7 @@ Gets or sets the audit.
 
 	
 		<tr class="
+inheritedMember 
 
 
 ">
@@ -343,12 +347,13 @@ Gets or sets the audit.
     
 	</td>
 	<td>
-	<a href="topic_00000000000001E6.html">HomePageMessage</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration.downoperations">DownOperations</a>
 
 	</td>
 	<td>
 
-Gets or sets the home page message.
+The <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.operations.migrationoperation">MigrationOperation</a>s that will migrate the database 'down'.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a>).
 
 	</td>
 </tr>
@@ -357,6 +362,7 @@ Gets or sets the home page message.
 
 	
 		<tr class="
+inheritedMember 
 
 
 ">
@@ -367,12 +373,13 @@ Gets or sets the home page message.
     
 	</td>
 	<td>
-	<a href="topic_00000000000001EF.html">LinkLog</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration.targetmodel">TargetModel</a>
 
 	</td>
 	<td>
 
-Gets or sets the link log.
+The <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.metadata.imodel">IModel</a> that the database will map to after the migration has been applied.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a>).
 
 	</td>
 </tr>
@@ -381,6 +388,7 @@ Gets or sets the link log.
 
 	
 		<tr class="
+inheritedMember 
 
 
 ">
@@ -391,300 +399,13 @@ Gets or sets the link log.
     
 	</td>
 	<td>
-	<a href="topic_00000000000001EE.html">LinkQueue</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration.upoperations">UpOperations</a>
 
 	</td>
 	<td>
 
-Gets or sets the link queue.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001ED.html">LinkedFile</a>
-
-	</td>
-	<td>
-
-Gets or sets the linked file.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E7.html">Mark</a>
-
-	</td>
-	<td>
-
-Gets or sets the mark.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E1.html">NoteAccess</a>
-
-	</td>
-	<td>
-
-Gets or sets the note access.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E3.html">NoteContent</a>
-
-	</td>
-	<td>
-
-Gets or sets the content of the note.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E0.html">NoteFile</a>
-
-	</td>
-	<td>
-
-Gets or sets the note file.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E2.html">NoteHeader</a>
-
-	</td>
-	<td>
-
-Gets or sets the note header.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001EB.html">SQLFile</a>
-
-	</td>
-	<td>
-
-Gets or sets the SQL file.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001EC.html">SQLFileContent</a>
-
-	</td>
-	<td>
-
-Gets or sets the content of the SQL file.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E8.html">Search</a>
-
-	</td>
-	<td>
-
-Gets or sets the search.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E9.html">Sequencer</a>
-
-	</td>
-	<td>
-
-Gets or sets the sequencer.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001EA.html">Subscription</a>
-
-	</td>
-	<td>
-
-Gets or sets the subscription.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000001E4.html">Tags</a>
-
-	</td>
-	<td>
-
-Gets or sets the tags.
+The <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.operations.migrationoperation">MigrationOperation</a>s that will migrate the database 'up'.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a>).
 
 	</td>
 </tr>
@@ -725,8 +446,7 @@ Gets or sets the tags.
 
 
 
-
-	<tr class="
+			<tr class="
 
 
 ">
@@ -740,15 +460,78 @@ Gets or sets the tags.
     
 	</td>
 	<td>
-	<a href="topic_00000000000001F0.html">OnModelCreating(ModelBuilder)</a>
+	<a href="topic_00000000000001E2.html">BuildTargetModel(ModelBuilder)</a>
 
 	</td>
 	<td>
 
-Called when [model creating].
+Implemented to build the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration.targetmodel">TargetModel</a>.
 
 	</td>
 </tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E1.html">Down(MigrationBuilder)</a>
+
+	</td>
+	<td>
+
+Builds the operations that will migrate the database 'down'.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E0.html">Up(MigrationBuilder)</a>
+
+	</td>
+	<td>
+
+Builds the operations that will migrate the database 'up'.
+
+	</td>
+</tr>
+	
 
 
 
@@ -776,6 +559,62 @@ Called when [model creating].
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Extension Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="ExtensionMethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+inheritedMember 
+
+
+">
+	<td>
+	<img alt="Public extension method" title="Public extension method" src="msdn2019/pubextensionmethod.png"></img>
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.internal.migrationextensions.getid">GetId(Migration)</a>
+
+	</td>
+	<td>
+
+This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+(Defined by <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.internal.migrationextensions">MigrationExtensions</a>).
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
   
 
 <!-- Classes -->
@@ -795,6 +634,16 @@ Called when [model creating].
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			See <a target="_top" href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+	</div>					
+</div>
 
 
 
@@ -810,27 +659,12 @@ Called when [model creating].
 <div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
 </div>
 
-<div style="padding-left:1em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext">Microsoft.EntityFrameworkCore.DbContext</a>
-</div>
-
-<div style="padding-left:2em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identityusercontext-6">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;TUser, TKey, TUserClaim, TUserLogin, TUserToken, TUserPasskey&gt;</a>
-</div>
-
-<div style="padding-left:3em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-9">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken, TUserPasskey&gt;</a>
-</div>
-
-<div style="padding-left:4em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-8">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken&gt;</a>
-</div>
-
-<div style="padding-left:5em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-3">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey&gt;</a>
-</div>
-
-<div style="padding-left:6em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser&gt;</a>
+<div style="padding-left:1em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Microsoft.EntityFrameworkCore.Migrations.Migration</a>
 </div>
 
 
 
-<div style="padding-left:7em;">Notes.Data.NotesDbContext</div>
+<div style="padding-left:2em;">Notes.Migrations.BodySearch</div>
 
 				
 </div>
@@ -898,7 +732,7 @@ Called when [model creating].
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-	<a href="topic_00000000000001DE.html">Notes.Data Namespace</a><br />
+	<a href="topic_00000000000001D2.html">Notes.Migrations Namespace</a><br />
 
 
 	

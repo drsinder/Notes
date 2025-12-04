@@ -1,1 +1,1 @@
-search_result['756']=["topic_00000000000001A8.html","Globals.SendGridEmail Property","Gets or sets the send grid email."];
+search_result['756']=["topic_000000000000011E.html","NoteIndex.CurPage Property","Current page of grid"];

@@ -1,0 +1,1 @@
+search_result['1404']=["topic_0000000000000265.html","NoteFile Class","This class defines a table in the database.\r\nObjects of this class serve as the highest level\r\nof the hierarchy of the system.  Notes are\r\nthought to be contained in a file, but are\r\nin fact are relat..."];

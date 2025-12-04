@@ -1,1 +1,1 @@
-search_result['1000']=["topic_0000000000000249_events--.html","NoteAccess Events",""];
+search_result['1000']=["topic_000000000000019E.html","CookieStateAgent.IsAuthenticated Property","Check if user is authenticated - Login reply is not null and status == 200"];

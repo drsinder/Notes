@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['87',"Notes.Client.Dialogs Namespace","topic_000000000000001C.html"],['175',"EditNoteFile Class","topic_0000000000000063.html"],['180',"Properties","topic_0000000000000063_props--.html"],['182',"FileName Property","topic_0000000000000066.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['91',"Notes.Client.Dialogs Namespace","topic_000000000000001F.html"],['179',"EditNoteFile Class","topic_0000000000000066.html"]];

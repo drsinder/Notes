@@ -1,1 +1,1 @@
-search_result['466']=["topic_00000000000000F0.html","fileId Field",""];
+search_result['466']=["topic_00000000000000AB.html","SearchDlg Class","Represents a modal dialog component used for configuring and initiating a search operation within the\r\napplication."];

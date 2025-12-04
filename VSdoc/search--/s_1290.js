@@ -1,1 +1,1 @@
-search_result['1290']=["topic_00000000000002FF_overloads--.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];
+search_result['1290']=["topic_0000000000000226_props--.html","LinkLog Properties",""];

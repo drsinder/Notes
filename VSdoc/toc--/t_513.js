@@ -1,1 +1,1 @@
-c['513']=[['514',"NotePanel Constructor","topic_000000000000017A.html",0],['515',"Properties","topic_0000000000000161_props--.html",1],['540',"Methods","topic_0000000000000161_methods--.html",1]];
+c['513']=[['514',"CancelEdit Method","topic_0000000000000165.html",0],['515',"HandleValidSubmit Method","topic_0000000000000162.html",0],['516',"InsertCode1 Method","topic_0000000000000163.html",0],['517',"InsertCode2 Method","topic_0000000000000164.html",0],['518',"OnParametersSetAsync Method","topic_0000000000000161_overloads--.html",1]];

@@ -1,1 +1,1 @@
-search_result['302']=["topic_000000000000009A_props--.html","HelpDialog2 Properties",""];
+search_result['302']=["topic_0000000000000076.html","ExportJson.ModalInstance Property","Gets or sets the modal instance."];

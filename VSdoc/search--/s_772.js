@@ -1,1 +1,1 @@
-search_result['772']=["topic_00000000000001B8.html","Globals.CookieName Property",""];
+search_result['772']=["topic_000000000000012C.html","NoteIndex.GetModel Method","Get the Index model - used by the NotePanel"];

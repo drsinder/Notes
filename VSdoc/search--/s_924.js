@@ -1,1 +1,1 @@
-search_result['924']=["topic_0000000000000214.html","Audit.Event Property","Gets or sets the event."];
+search_result['924']=["topic_0000000000000177.html","NotePanel.EatEnter Property","Should the typing box \"eat\" the next enter key?"];

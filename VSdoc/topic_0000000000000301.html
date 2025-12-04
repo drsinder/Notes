@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.UpdateSequencer Method</title>
+	<title>NotesService.GetVersions Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.UpdateSequencer Method</h1>
+		<h1 class="title">NotesService.GetVersions Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Updates the sequencer state for the specified user and note file, setting its active status and relevant
-timestamps.</summary-info>
+        <summary-info>Retrieves a list of all available versions of a note that match the specified criteria.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function UpdateSequencer( _&nbsp;<br />   ByVal <i>request</i> As <strong>GSequencer</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetVersions( _&nbsp;<br />   ByVal <i>request</i> As <strong>GetVersionsRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteHeaderList</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; UpdateSequencer(&nbsp;<br />   <strong>GSequencer</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; GetVersions(&nbsp;<br />   <strong>GetVersionsRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ UpdateSequencer(&nbsp;<br />   <strong>GSequencer</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>^&gt;^ GetVersions(&nbsp;<br />   <strong>GetVersionsRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -278,11 +277,12 @@ timestamps.</summary-info>
 		</span>
 	</dt>
 	<dd>
-		<strong>GSequencer</strong> 
+		<strong>GetVersionsRequest</strong> 
 	</dd>
 </dl>
 <p>
-	The sequencer update request containing the user ID, note file ID, and the desired active status. 
+	The request containing the identifiers and ordinals used to filter note versions. Must specify valid values
+for FileId, ArcId, NoteOrdinal, and ResponseOrdinal. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,17 +295,17 @@ timestamps.</summary-info>
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC request. 
+	The server call context for the current gRPC request. Used to identify the authenticated user. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; 
 		<p>
-		A NoRequest instance indicating that the operation completed successfully and no additional data is
-returned. 
+		A GNoteHeaderList containing the headers of all note versions that match the request parameters. Returns an
+empty list if the user does not have read access or if no matching versions are found. 
 	</p>
 	
 
@@ -336,9 +336,8 @@ returned.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			If the sequencer is activated, its start time is set to the current UTC time. If
-deactivated, the last time is updated to match the previous start time. This method requires authorization
-and persists changes to the database.
+			The caller must have read access to the specified note file and archive to receive
+results. Only note versions with a non-zero version number are included in the response.
 	</div>					
 </div>
 
@@ -407,11 +406,11 @@ and persists changes to the database.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

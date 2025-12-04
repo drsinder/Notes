@@ -1,0 +1,1 @@
+search_result['1589']=["topic_00000000000002CA.html","AccessManager.CreateBaseEntries Method","Create standard starting entires for a access controls for a new file.\r\n\"Other\" -- no access\r\ncreating user (Admin) -- Full Access"];

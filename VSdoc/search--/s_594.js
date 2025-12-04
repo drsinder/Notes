@@ -1,1 +1,1 @@
-search_result['594']=["topic_0000000000000147.html","Preferences Class","Class Preferences.\r\nImplements the ComponentBase"];
+search_result['594']=["topic_00000000000000DB_attached_props--.html","NoteMenu Attached Properties",""];

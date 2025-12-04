@@ -1,1 +1,1 @@
-search_result['729']=["topic_0000000000000197.html","CookieStateAgent.LoginReply Property","Gets or sets the login reply.  Setting also notifies subsrcibers"];
+search_result['729']=["topic_000000000000010E.html","NewNote.RefId Property","Gets or sets the reference identifier."];

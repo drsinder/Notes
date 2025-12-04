@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.UpdateUserData Method</title>
+	<title>NotesService.GetAccessAndUserList Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.UpdateUserData Method</h1>
+		<h1 class="title">NotesService.GetAccessAndUserList Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Updates the user data for the authenticated user based on the provided information.</summary-info>
+        <summary-info>Retrieves the access permissions and user list associated with the specified note file and archive for a
+given user.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function UpdateUserData( _&nbsp;<br />   ByVal <i>request</i> As <strong>GAppUser</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GAppUser</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetAccessAndUserList( _&nbsp;<br />   ByVal <i>request</i> As <strong>AccessAndUserListRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>AccessAndUserList</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUser</strong>&gt; UpdateUserData(&nbsp;<br />   <strong>GAppUser</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AccessAndUserList</strong>&gt; GetAccessAndUserList(&nbsp;<br />   <strong>AccessAndUserListRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUser</strong>^&gt;^ UpdateUserData(&nbsp;<br />   <strong>GAppUser</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AccessAndUserList</strong>^&gt;^ GetAccessAndUserList(&nbsp;<br />   <strong>AccessAndUserListRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -277,12 +278,12 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		</span>
 	</dt>
 	<dd>
-		<strong>GAppUser</strong> 
+		<strong>AccessAndUserListRequest</strong> 
 	</dd>
 </dl>
 <p>
-	An object containing the updated user data. Only fields corresponding to the authenticated user will be
-applied. 
+	An object containing the identifiers for the note file, archive, and user for which to retrieve access and
+user information. Cannot be null. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,17 +296,18 @@ applied.
 	</dd>
 </dl>
 <p>
-	The server call context that provides information about the current request and authenticated user. 
+	The server call context for the current gRPC request. Provides information about the call, such as
+cancellation and metadata. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUser</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AccessAndUserList</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">GAppUser</a> object containing the user data after the update operation. If the request does not
-pertain to the authenticated user, returns the original request object without changes. 
+		An AccessAndUserList object containing the access permissions, the list of application users, and the user's
+specific access for the requested note file and archive. 
 	</p>
 	
 
@@ -329,18 +331,6 @@ pertain to the authenticated user, returns the original request object without c
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
-
-	<div id="remarksSection" class="section">	
-			This method only allows users to update their own data. Attempts to update data for
-other users will be ignored. The operation requires authentication and is subject to authorization
-policies.
-	</div>					
-</div>
 
 
 
@@ -407,11 +397,11 @@ policies.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

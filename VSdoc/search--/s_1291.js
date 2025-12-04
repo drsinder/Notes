@@ -1,1 +1,1 @@
-search_result['1291']=["topic_0000000000000300.html","NotesService.UpdateSequencerOrdinal Method","Updates the ordinal and last modification time of a sequencer for the specified user and note file."];
+search_result['1291']=["topic_0000000000000226_vars--.html","LinkLog Fields",""];

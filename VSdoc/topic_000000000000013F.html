@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteIndex.SearchHeader Method</title>
+	<title>Search.NoteID Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteIndex.SearchHeader Method</h1>
+		<h1 class="title">Search.NoteID Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000F6.html">Notes.Client.Pages</a>
+<a href="topic_00000000000000F9.html">Notes.Client.Pages</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Searches the header.</summary-info>
+        <summary-info>Gets or sets the note identifier.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Function SearchHeader( _&nbsp;<br />   ByVal <i>target</i> As <a target="_top" href="topic_0000000000000131.html" onclick="this.target='';return true;">Search</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Column(Order = 4)&gt; _&nbsp;<br />&lt;DataMember(Order = 9)&gt; _&nbsp;<br />Public Property NoteID() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">Long</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> SearchHeader(&nbsp;<br />   <a target="_top" href="topic_0000000000000131.html" onclick="this.target='';return true;">Search</a> <i>target</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Column(Order = 4)]&nbsp;<br />[DataMember(Order = 9)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> NoteID {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ SearchHeader(&nbsp;<br />   <a target="_top" href="topic_0000000000000131.html" onclick="this.target='';return true;">Search</a>^ <i>target</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Column(Order = 4)]&nbsp;<br />[DataMember(Order = 9)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> NoteID {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">protected function SearchHeader(&nbsp;<br />    <i>target</i> : <a target="_top" href="topic_0000000000000131.html" onclick="this.target='';return true;">Search</a>&nbsp;<br />) : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Column(Order = 4)&nbsp;<br />   DataMember(Order = 9)&nbsp;<br />function get NoteID() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a>;&nbsp;<br />public &nbsp;<br />   Column(Order = 4)&nbsp;<br />   DataMember(Order = 9)&nbsp;<br />function set NoteID(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,26 +269,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="target" class="parameterList">
-	<dt>
-		<span class="parameter">
-			target
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="topic_0000000000000131.html" onclick="this.target='';return true;">Search</a> 
-	</dd>
-</dl>
-<p>
-	The target. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> 
+		<p>
+		The note identifier. 
+	</p>
 	
 
 
@@ -377,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000010E.html">NoteIndex Class</a><br />
+			<a href="topic_0000000000000136.html">Search Class</a><br />
 
 
 
-<a href="topic_00000000000000F6.html">Notes.Client.Pages Namespace</a><br />
+<a href="topic_00000000000000F9.html">Notes.Client.Pages Namespace</a><br />
 
 
 			

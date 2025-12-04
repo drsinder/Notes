@@ -1,0 +1,1 @@
+search_result['1693']=["topic_00000000000002F0_overloads--.html","NotesService.GetUserRoles Method","Retrieves the roles assigned to a specified user and returns a view model containing user information and\r\nrole membership status."];

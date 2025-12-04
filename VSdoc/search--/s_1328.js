@@ -1,1 +1,1 @@
-search_result['1328']=["topic_0000000000000312_overloads--.html","NotesService.ContentSearch Method","Searches note content for matches to the specified search criteria and returns the results."];
+search_result['1328']=["topic_000000000000023C.html","LinkQueue.LinkGuid Property","Gets or sets the link unique identifier."];

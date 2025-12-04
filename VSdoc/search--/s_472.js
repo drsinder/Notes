@@ -1,1 +1,1 @@
-search_result['472']=["topic_00000000000000F1_vars--.html","UserList Fields",""];
+search_result['472']=["topic_00000000000000AC.html","SearchDlg.searchtype Property","Gets or sets the searchtype."];

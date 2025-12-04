@@ -1,1 +1,1 @@
-search_result['92']=["topic_0000000000000033_methods--.html","AccessList Methods",""];
+search_result['92']=["topic_0000000000000022.html","AccessCheckBox Constructor","Initializes a new instance of the AccessCheckBox class."];

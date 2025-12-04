@@ -1,1 +1,1 @@
-search_result['42']=["topic_0000000000000013.html","SCheckBox.Model Property","Gets or sets the model."];
+search_result['42']=["topic_0000000000000012.html","SCheckBox Class","Represents a checkbox component that tracks its checked state and file association, and interacts with a tracker\r\nand model for sequencer operations."];

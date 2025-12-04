@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotePanel.RespShown Property</title>
+	<title>NotePanel.Vers Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotePanel.RespShown Property</h1>
+		<h1 class="title">NotePanel.Vers Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000156.html">Notes.Client.Panels</a>
+<a href="topic_000000000000015B.html">Notes.Client.Panels</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Are responses shown</summary-info>
+        <summary-info>Are we showing history versions</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Property RespShown() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property Vers() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> RespShown {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> Vers {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> RespShown {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> Vers {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">protected function get RespShown() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;&nbsp;<br />protected function set RespShown(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get Vers() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set Vers(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +272,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
 		<p>
-		<code>true</code> if [resp shown]; otherwise, <code>false</code>. 
+		The vers. 
 	</p>
 	
 
@@ -364,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000161.html">NotePanel Class</a><br />
+			<a href="topic_0000000000000166.html">NotePanel Class</a><br />
 
 
 
-<a href="topic_0000000000000156.html">Notes.Client.Panels Namespace</a><br />
+<a href="topic_000000000000015B.html">Notes.Client.Panels Namespace</a><br />
 
 
 			

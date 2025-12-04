@@ -1,1 +1,1 @@
-search_result['1068']=["topic_000000000000027B.html","NoteHeader.IsDeleted Property","Gets or sets a value indicating whether this instance is deleted."];
+search_result['1068']=["topic_00000000000001C5_methods--.html","SubdirectoryHandler Methods",""];

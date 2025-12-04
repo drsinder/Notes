@@ -1,1 +1,1 @@
-search_result['758']=["topic_00000000000001AA.html","Globals.SendGridApiKey Property","Gets or sets the send grid API key."];
+search_result['758']=["topic_000000000000011F.html","NoteIndex.ShowContent Property","Should note body be shown?"];

@@ -1,1 +1,1 @@
-search_result['1305']=["topic_0000000000000307.html","NotesService.SendEmailAuth Method","Send email authenticated."];
+search_result['1305']=["topic_000000000000022F.html","LinkLog.Event Property","Gets or sets the event."];

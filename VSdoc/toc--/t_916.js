@@ -1,1 +1,1 @@
-c['916']=[['917',"EmailSender() Constructor","topic_00000000000002DF.html",0],['918',"EmailSender(IOptions\u003cAuthMessageSenderOptions\u003e) Constructor","topic_00000000000002DE.html",0]];
+c['916']=[['917',"Up(MigrationBuilder) Method","topic_00000000000001DC.html",0]];

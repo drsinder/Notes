@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetTextFile Method</title>
+	<title>NotesService.DoForward Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetTextFile Method</h1>
+		<h1 class="title">NotesService.DoForward Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets text from server for display in client.
-files: about.html | help.html | helpdialog.html | helpdialog2.html | license.html</summary-info>
+        <summary-info>Sends a note email to the current user if they have read access to the specified file and archive.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Overrides Function GetTextFile( _&nbsp;<br />   ByVal <i>request</i> As <strong>AString</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>AString</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function DoForward( _&nbsp;<br />   ByVal <i>fv</i> As <strong>ForwardViewModel</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>&gt; GetTextFile(&nbsp;<br />   <strong>AString</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; DoForward(&nbsp;<br />   <strong>ForwardViewModel</strong> <i>fv</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>^&gt;^ GetTextFile(&nbsp;<br />   <strong>AString</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ DoForward(&nbsp;<br />   <strong>ForwardViewModel</strong>^ <i>fv</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -271,18 +270,19 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
+	Parameters</h4><dl paramName="fv" class="parameterList">
 	<dt>
 		<span class="parameter">
-			request
+			fv
 		</span>
 	</dt>
 	<dd>
-		<strong>AString</strong> 
+		<strong>ForwardViewModel</strong> 
 	</dd>
 </dl>
 <p>
-	The request received from the client. 
+	The view model containing information about the note, including file and archive identifiers, note content,
+and subject. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,16 +295,16 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 	</dd>
 </dl>
 <p>
-	The context of the server-side call handler being invoked. 
+	The server call context that provides information about the current gRPC request and user. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
 		<p>
-		The response to send back to the client (wrapped by a task). 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> instance indicating the completion of the operation. 
 	</p>
 	
 
@@ -328,6 +328,17 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			If the user does not have read access to the specified file and archive, no email is
+sent and a default response is returned. This method requires the caller to be authorized.
+	</div>					
+</div>
 
 
 
@@ -394,11 +405,11 @@ files: about.html | help.html | helpdialog.html | helpdialog2.html | license.htm
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

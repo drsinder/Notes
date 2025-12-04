@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Method invoked after each time the component has been rendered.</summary-info>
+        <summary-info>Handles post-render logic for the component, initializing resources when rendering for the first time.</summary-info>
 
 
 
@@ -281,8 +281,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	Set to <code>true</code> if this is the first time <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender">OnAfterRender</a> has been invoked
-on this component instance; otherwise <code>false</code>. 
+	Indicates whether this is the first time the component has been rendered. If <strong>true</strong>,
+initialization logic is performed. 
 </p>
 
 <p />
@@ -315,10 +315,9 @@ on this component instance; otherwise <code>false</code>.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			The <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender">OnAfterRender</a> and <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync</a> lifecycle methods
-are useful for performing interop, or interacting with values received from <code>@ref</code>.
-Use the <i>firstRender</i> parameter to ensure that initialization work is only performed
-once.
+			Override this method to perform actions that should occur after the component has
+rendered. Initialization code should be placed within the <i>firstRender</i> check to ensure it
+runs only once.
 	</div>					
 </div>
 

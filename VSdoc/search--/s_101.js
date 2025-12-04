@@ -1,1 +1,1 @@
-search_result['101']=["topic_0000000000000039.html","AccessList.CreateNew Method","Add a new token for another user"];
+search_result['101']=["topic_0000000000000026.html","AccessDeleteButton.OnClick Property","Gets or sets the on click."];

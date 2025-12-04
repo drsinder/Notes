@@ -1,1 +1,1 @@
-search_result['1040']=["topic_0000000000000264.html","NoteFile.NoteFileName Property","Gets or sets the name of the note file."];
+search_result['1040']=["topic_00000000000001B2.html","Globals.PrimeAdminEmail Property",""];

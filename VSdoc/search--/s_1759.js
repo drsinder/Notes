@@ -1,0 +1,1 @@
+search_result['1759']=["topic_0000000000000311_overloads--.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];

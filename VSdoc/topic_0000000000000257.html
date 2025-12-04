@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteAccess.GetGNoteAccessList Method</title>
+	<title>NoteAccess.ViewAccess Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteAccess.GetGNoteAccessList Method</h1>
+		<h1 class="title">NoteAccess.ViewAccess Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets the g note access list.
-Conversions between Db Entity space and gRPC space.</summary-info>
+        <summary-info>Gets or sets a value indicating whether [view access].</summary-info>
 
 
 
@@ -141,7 +140,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function GetGNoteAccessList( _&nbsp;<br />   ByVal <i>other</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>(Of <a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>) _&nbsp;<br />) As <strong>GNoteAccessList</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;Display(Name = &quot;View Access&quot;)&gt; _&nbsp;<br />&lt;DataMember(Order = 9)&gt; _&nbsp;<br />Public Property ViewAccess() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <strong>GNoteAccessList</strong> GetGNoteAccessList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>&gt; <i>other</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[Display(Name = &quot;View Access&quot;)]&nbsp;<br />[DataMember(Order = 9)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> ViewAccess {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <strong>GNoteAccessList</strong>^ GetGNoteAccessList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>^&gt;^ <i>other</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[Display(Name = &quot;View Access&quot;)]&nbsp;<br />[DataMember(Order = 9)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> ViewAccess {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +258,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;View Access&quot;)&nbsp;<br />   DataMember(Order = 9)&nbsp;<br />function get ViewAccess() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   Display(Name = &quot;View Access&quot;)&nbsp;<br />   DataMember(Order = 9)&nbsp;<br />function set ViewAccess(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,28 +269,12 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="other" class="parameterList">
-	<dt>
-		<span class="parameter">
-			other
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>&gt; 
-	</dd>
-</dl>
-<p>
-	The other. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<strong>GNoteAccessList</strong> 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
 		<p>
-		GNoteAccessList. 
+		<code>true</code> if [view access]; otherwise, <code>false</code>. 
 	</p>
 	
 
@@ -381,11 +364,11 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000249.html">NoteAccess Class</a><br />
+			<a href="topic_000000000000024E.html">NoteAccess Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

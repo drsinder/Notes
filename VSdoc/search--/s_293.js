@@ -1,1 +1,1 @@
-search_result['293']=["topic_0000000000000099_attached_props--.html","HelpDialog Attached Properties",""];
+search_result['293']=["topic_0000000000000073.html","Email.ModalInstance Property","Gets or sets the modal instance."];

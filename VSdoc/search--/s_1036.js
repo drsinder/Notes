@@ -1,1 +1,1 @@
-search_result['1036']=["topic_0000000000000260_vars--.html","NoteFile Fields",""];
+search_result['1036']=["topic_00000000000001AE.html","Globals.SendGridName Property","Gets or sets the name of the send grid."];

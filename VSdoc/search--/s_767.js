@@ -1,1 +1,1 @@
-search_result['767']=["topic_00000000000001B3.html","Globals.LocalTimeBlazor Method","GMT to Local."];
+search_result['767']=["topic_0000000000000127.html","NoteIndex.GetNextBaseNote Method","Get the next base note header given the current one"];

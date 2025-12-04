@@ -1,1 +1,1 @@
-search_result['696']=["topic_0000000000000182.html","Responses.Headers Property","List of response headers"];
+search_result['696']=["topic_0000000000000101.html","EditNote Constructor","Initializes a new instance of the EditNote class."];

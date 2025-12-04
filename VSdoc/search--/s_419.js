@@ -1,1 +1,1 @@
-search_result['419']=["topic_00000000000000D0_props--.html","MainMenu Properties",""];
+search_result['419']=["topic_000000000000009E.html","HelpDialog2.OnInitializedAsync Method","Get some simple stuff from server"];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>ApplicationUser.GetGAppUserList Method</title>
+	<title>ApplicationUser.MyGuid Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">ApplicationUser.GetGAppUserList Method</h1>
+		<h1 class="title">ApplicationUser.MyGuid Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets the g application user list.
-Conversions between Db Entity space and gRPC space.</summary-info>
+        <summary-info>Gets or sets my unique identifier.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function GetGAppUserList( _&nbsp;<br />   ByVal <i>other</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>(Of <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>) _&nbsp;<br />) As <strong>GAppUserList</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;StringLength(100)&gt; _&nbsp;<br />&lt;PersonalData()&gt; _&nbsp;<br />Public Property MyGuid() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <strong>GAppUserList</strong> GetGAppUserList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>&gt; <i>other</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[StringLength(100)]&nbsp;<br />[PersonalData()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> MyGuid {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <strong>GAppUserList</strong>^ GetGAppUserList(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>^&gt;^ <i>other</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[StringLength(100)]&nbsp;<br />[PersonalData()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ MyGuid {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +258,7 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   StringLength(100)&nbsp;<br />   PersonalData()&nbsp;<br />function get MyGuid() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;&nbsp;<br />public &nbsp;<br />   StringLength(100)&nbsp;<br />   PersonalData()&nbsp;<br />function set MyGuid(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,28 +269,12 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="other" class="parameterList">
-	<dt>
-		<span class="parameter">
-			other
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>&gt; 
-	</dd>
-</dl>
-<p>
-	The other. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<strong>GAppUserList</strong> 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
 		<p>
-		GAppUserList. 
+		My unique identifier. 
 	</p>
 	
 
@@ -381,11 +364,11 @@ Conversions between Db Entity space and gRPC space.</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000001F2.html">ApplicationUser Class</a><br />
+			<a href="topic_00000000000001F7.html">ApplicationUser Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

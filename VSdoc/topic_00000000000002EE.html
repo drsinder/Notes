@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetHomePageModel Method</title>
+	<title>NotesService.GetAccess Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetHomePageModel Method</h1>
+		<h1 class="title">NotesService.GetAccess Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the data model for the home page in response to a client request.</summary-info>
+        <summary-info>Retrieves the access permissions for a specified note file based on the current user's context.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetHomePageModel( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>HomePageModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Overrides Function GetAccess( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteFileRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteAccess</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; GetHomePageModel(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; GetAccess(&nbsp;<br />   <strong>NoteFileRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>^&gt;^ GetHomePageModel(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>^&gt;^ GetAccess(&nbsp;<br />   <strong>NoteFileRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -277,11 +277,12 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		</span>
 	</dt>
 	<dd>
-		<strong>NoRequest</strong> 
+		<strong>NoteFileRequest</strong> 
 	</dd>
 </dl>
 <p>
-	An object representing the request parameters for the home page. This value must not be null. 
+	The request containing the identifiers of the note file and archive for which access permissions are being
+queried. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -294,18 +295,17 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC request. Provides information about the call, such as user
-identity and cancellation tokens. 
+	The server call context that provides information about the current gRPC call, including user authentication
+and metadata. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteAccess</strong>&gt; 
 		<p>
-		A task that represents the asynchronous operation. The task result contains a <a target="_top" href=".html" onclick="this.target='';return true;">HomePageModel</a>
-with the data for the home page. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">GNoteAccess</a> object representing the user's access permissions for the specified note file. 
 	</p>
 	
 
@@ -329,17 +329,6 @@ with the data for the home page.
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
-
-	<div id="remarksSection" class="section">	
-			This method requires the caller to be authorized. The returned model may vary based
-on the user's authentication and authorization status.
-	</div>					
-</div>
 
 
 
@@ -406,11 +395,11 @@ on the user's authentication and authorization status.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

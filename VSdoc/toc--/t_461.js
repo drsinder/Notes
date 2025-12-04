@@ -1,1 +1,1 @@
-c['461']=[['462',"OnInitializedAsync() Method","topic_0000000000000148.html",0]];
+c['461']=[['462',"LocalModel2(string) Constructor","topic_000000000000014F.html",0],['463',"LocalModel2(string, string) Constructor","topic_0000000000000150.html",0]];

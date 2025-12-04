@@ -1,1 +1,1 @@
-search_result['610']=["topic_000000000000014B.html","LocalModel2(String, String) Constructor","Initializes a new instance of the LocalModel2 class."];
+search_result['610']=["topic_00000000000000E1.html","NoteMenu.MyNoteIndex Property","Reference to our caller/container so we can call back into it."];

@@ -1,1 +1,1 @@
-search_result['155']=["topic_0000000000000055_methods--.html","CreateNoteFile Methods",""];
+search_result['155']=["topic_0000000000000040.html","AddAccessDlg.userList Property","Gets or sets the user list."];

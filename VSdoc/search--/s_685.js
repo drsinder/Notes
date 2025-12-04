@@ -1,1 +1,1 @@
-search_result['685']=["topic_000000000000017D.html","NotePanel.PrintString Method","Print a whole string if wholeString is true"];
+search_result['685']=["topic_00000000000000FC_vars--.html","EditNote Fields",""];

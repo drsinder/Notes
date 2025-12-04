@@ -1,1 +1,1 @@
-search_result['467']=["topic_00000000000000F1.html","UserList Class","Class UserList.\r\nImplements the ComponentBase"];
+search_result['467']=["topic_00000000000000AB_attached_props--.html","SearchDlg Attached Properties",""];

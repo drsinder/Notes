@@ -1,1 +1,1 @@
-search_result['473']=["topic_00000000000000F2.html","UserList.Modal Property","Gets or sets the modal."];
+search_result['473']=["topic_00000000000000AD.html","SearchDlg.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];

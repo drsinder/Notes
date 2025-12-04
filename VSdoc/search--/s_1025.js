@@ -1,1 +1,1 @@
-search_result['1025']=["topic_000000000000025A.html","NoteContent.NoteBody Property","Gets or sets the note body.\r\nThe Body or content of the note"];
+search_result['1025']=["topic_00000000000001A7_attached_props--.html","Globals Attached Properties",""];

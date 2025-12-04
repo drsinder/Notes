@@ -1,1 +1,1 @@
-search_result['1294']=["topic_0000000000000301_overloads--.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];
+search_result['1294']=["topic_0000000000000229.html","LinkedFile.GetSequencerList Method","Gets the sequencer list."];

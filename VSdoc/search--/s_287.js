@@ -1,1 +1,1 @@
-search_result['287']=["topic_0000000000000097_events--.html","Forward Events",""];
+search_result['287']=["topic_0000000000000072.html","Email Class","Represents an email input component that interacts with a modal dialog."];

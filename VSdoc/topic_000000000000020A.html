@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>ApplicationUser.MergeApplicationUser Method</title>
+	<title>ApplicationUser.Pref7 Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">ApplicationUser.MergeApplicationUser Method</h1>
+		<h1 class="title">ApplicationUser.Pref7 Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Merges the application user.</summary-info>
+        <summary-info>Gets or sets a value indicating whether this <a target="_top" href="topic_00000000000001F7.html" onclick="this.target='';return true;">ApplicationUser</a> is pref7.
+show content when expanded</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function MergeApplicationUser( _&nbsp;<br />   ByVal <i>other</i> As <strong>GAppUser</strong>, _&nbsp;<br />   ByVal <i>u</i> As <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a> _&nbsp;<br />) As <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;PersonalData()&gt; _&nbsp;<br />Public Property Pref7() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a> MergeApplicationUser(&nbsp;<br />   <strong>GAppUser</strong> <i>other</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a> <i>u</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[PersonalData()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> Pref7 {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>^ MergeApplicationUser(&nbsp;<br />   <strong>GAppUser</strong>^ <i>other</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>^ <i>u</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[PersonalData()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> Pref7 {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +259,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public static function MergeApplicationUser(&nbsp;<br />    <i>other</i> : <strong>GAppUser</strong>,&nbsp;<br />    <i>u</i> : <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>&nbsp;<br />) : <a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   PersonalData()&nbsp;<br />function get Pref7() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;&nbsp;<br />public &nbsp;<br />   PersonalData()&nbsp;<br />function set Pref7(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,41 +270,12 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="other" class="parameterList">
-	<dt>
-		<span class="parameter">
-			other
-		</span>
-	</dt>
-	<dd>
-		<strong>GAppUser</strong> 
-	</dd>
-</dl>
-<p>
-	The other. 
-</p>
-<dl paramName="u" class="parameterList">
-	<dt>
-		<span class="parameter">
-			u
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a> 
-	</dd>
-</dl>
-<p>
-	The u. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="topic_00000000000001F2.html" onclick="this.target='';return true;">ApplicationUser</a> 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
 		<p>
-		ApplicationUser. 
+		<code>true</code> if pref7; otherwise, <code>false</code>. 
 	</p>
 	
 
@@ -393,11 +365,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000001F2.html">ApplicationUser Class</a><br />
+			<a href="topic_00000000000001F7.html">ApplicationUser Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

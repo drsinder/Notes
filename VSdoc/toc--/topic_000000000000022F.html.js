@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['620',"Notes.Entities Namespace","topic_00000000000001F1.html"],['847',"LinkAction Enumeration","topic_000000000000022F.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['627',"Notes.Entities Namespace","topic_00000000000001F6.html"],['671',"LinkLog Class","topic_000000000000022B.html"],['672',"Properties","topic_000000000000022B_props--.html"],['673',"Event Property","topic_000000000000022F.html"]];

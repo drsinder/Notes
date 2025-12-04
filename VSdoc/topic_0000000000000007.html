@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Class Clock.
-Implements the <a target="_top" href=".html" onclick="this.target='';return true;">ComponentBase</a></summary-info>
+        <summary-info>Represents a component that displays and updates the current time at a specified interval.</summary-info>
 
 
 
@@ -384,7 +383,7 @@ Gets the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/micr
 	</td>
 	<td>
 
-Gets or sets the interval.
+Gets or sets the interval, in milliseconds, between consecutive operations.
 
 	</td>
 </tr>
@@ -604,7 +603,7 @@ Executes the supplied work item on the associated renderer's
 	</td>
 	<td>
 
-Method invoked after each time the component has been rendered.
+Handles post-render logic for the component, initializing resources when rendering for the first time.
 
 	</td>
 </tr>
@@ -913,7 +912,7 @@ Notifies the component that its state has changed. When applicable, this will
 	</td>
 	<td>
 
-Timers the tick2.
+Handles the timer's elapsed event by updating the current time and triggering a UI refresh.
 
 	</td>
 </tr>
@@ -975,6 +974,18 @@ Timers the tick2.
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			Use the <a target="_top" href="topic_0000000000000008.html" onclick="this.target='';return true;">Interval</a> property to configure how frequently the time is updated. The
+component initializes its timer and starts updating the displayed time after the first render. This class is
+intended for use in Blazor applications where periodic UI updates are required.
+	</div>					
+</div>
 
 
 
@@ -1067,7 +1078,6 @@ Timers the tick2.
 
 
 	
-	<a href="#">ComponentBase</a><br />
 
 		</div>
 	</div>					

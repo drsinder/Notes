@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesDbContext.Tags Property</title>
+	<title>NotesDbContext Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesDbContext.Tags Property</h1>
+		<h1 class="title">NotesDbContext Class</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001DE.html">Notes.Data</a>
+<a href="topic_00000000000001E3.html">Notes.Data</a>
 
 
 
@@ -90,7 +90,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the tags.</summary-info>
 
 
 
@@ -140,7 +139,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Property Tags() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>(Of <a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Class NotesDbContext&nbsp;<br />    Inherits <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">IdentityDbContext</a>(Of <a target="_top" href="topic_00000000000001F7.html" onclick="this.target='';return true;">ApplicationUser</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +178,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>&gt; Tags {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public class NotesDbContext : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">IdentityDbContext</a>&lt;<a target="_top" href="topic_00000000000001F7.html" onclick="this.target='';return true;">ApplicationUser</a>&gt;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +218,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>&gt;^ Tags {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public ref class NotesDbContext : public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft::aspnetcore::identity::entityframeworkcore::identitydbcontext-1">IdentityDbContext</a>&lt;<a target="_top" href="topic_00000000000001F7.html" onclick="this.target='';return true;">ApplicationUser</a>^&gt;^</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,14 +269,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
-	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000002B5.html" onclick="this.target='';return true;">Tags</a>&gt; 
-		<p>
-		The tags. 
-	</p>
-	
-
 
 
 
@@ -297,11 +288,553 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001EA.html">Audit</a>
+
+	</td>
+	<td>
+
+Gets or sets the audit.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001EB.html">HomePageMessage</a>
+
+	</td>
+	<td>
+
+Gets or sets the home page message.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F4.html">LinkLog</a>
+
+	</td>
+	<td>
+
+Gets or sets the link log.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F3.html">LinkQueue</a>
+
+	</td>
+	<td>
+
+Gets or sets the link queue.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F2.html">LinkedFile</a>
+
+	</td>
+	<td>
+
+Gets or sets the linked file.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001EC.html">Mark</a>
+
+	</td>
+	<td>
+
+Gets or sets the mark.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E6.html">NoteAccess</a>
+
+	</td>
+	<td>
+
+Gets or sets the note access.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E8.html">NoteContent</a>
+
+	</td>
+	<td>
+
+Gets or sets the content of the note.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E5.html">NoteFile</a>
+
+	</td>
+	<td>
+
+Gets or sets the note file.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E7.html">NoteHeader</a>
+
+	</td>
+	<td>
+
+Gets or sets the note header.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F0.html">SQLFile</a>
+
+	</td>
+	<td>
+
+Gets or sets the SQL file.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F1.html">SQLFileContent</a>
+
+	</td>
+	<td>
+
+Gets or sets the content of the SQL file.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001ED.html">Search</a>
+
+	</td>
+	<td>
+
+Gets or sets the search.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001EE.html">Sequencer</a>
+
+	</td>
+	<td>
+
+Gets or sets the sequencer.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001EF.html">Subscription</a>
+
+	</td>
+	<td>
+
+Gets or sets the subscription.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2019/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001E9.html">Tags</a>
+
+	</td>
+	<td>
+
+Gets or sets the tags.
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
 
 
 
 
 
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000001F5.html">OnModelCreating(ModelBuilder)</a>
+
+	</td>
+	<td>
+
+Called when [model creating].
+
+	</td>
+</tr>
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
+</div>
+
+<div style="padding-left:1em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext">Microsoft.EntityFrameworkCore.DbContext</a>
+</div>
+
+<div style="padding-left:2em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identityusercontext-6">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;TUser, TKey, TUserClaim, TUserLogin, TUserToken, TUserPasskey&gt;</a>
+</div>
+
+<div style="padding-left:3em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-9">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken, TUserPasskey&gt;</a>
+</div>
+
+<div style="padding-left:4em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-8">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken&gt;</a>
+</div>
+
+<div style="padding-left:5em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-3">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser, TRole, TKey&gt;</a>
+</div>
+
+<div style="padding-left:6em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.entityframeworkcore.identitydbcontext-1">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;TUser&gt;</a>
+</div>
+
+
+
+<div style="padding-left:7em;">Notes.Data.NotesDbContext</div>
+
+				
+</div>
+</div>
 
 
 
@@ -356,6 +889,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>					
 </div>
 
+
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -364,14 +898,10 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000001DF.html">NotesDbContext Class</a><br />
+	<a href="topic_00000000000001E3.html">Notes.Data Namespace</a><br />
 
 
-
-<a href="topic_00000000000001DE.html">Notes.Data Namespace</a><br />
-
-
-			
+	
 
 		</div>
 	</div>					

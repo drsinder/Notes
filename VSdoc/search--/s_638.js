@@ -1,1 +1,1 @@
-search_result['638']=["topic_0000000000000157_methods--.html","NoteEditor Methods",""];
+search_result['638']=["topic_00000000000000EF.html","NotesFilesAdmin.GetStuff Method","Gets the stuff."];

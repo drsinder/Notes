@@ -1,1 +1,1 @@
-search_result['1057']=["topic_0000000000000270.html","NoteHeader.NoteOrdinal Property","Gets or sets the note ordinal.\r\nthe ordinal on a Base note and all its responses"];
+search_result['1057']=["topic_00000000000001C0_methods--.html","SubdirectoryHandler Methods",""];

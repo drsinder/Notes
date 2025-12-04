@@ -1,1 +1,1 @@
-search_result['699']=["topic_0000000000000185.html","Responses.sfGrid2 Property","Gets or sets the sf grid2."];
+search_result['699']=["topic_0000000000000103.html","HomeIndex Class","Represents the main component for the home page, providing data models, file lists, and navigation logic for\r\ninteracting with note files and server information."];

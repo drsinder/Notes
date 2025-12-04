@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotePanel.OnAfterRenderAsync Method</title>
+	<title>NotePanel.OnParametersSetAsync Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -76,11 +76,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotePanel.OnAfterRenderAsync Method</h1>
+		<h1 class="title">NotePanel.OnParametersSetAsync Method</h1>
         <p />
        
 
-        <summary-info>On after render as an asynchronous operation.</summary-info>
+        <summary-info>Get our data and set IsSeq flag from state</summary-info>
 
 
 <div class="section_container">
@@ -101,20 +101,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
     </tr>
             <tr>
               <td>
-<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a>
+<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync">OnParametersSetAsync()</a>
               
               </td>
               <td>
 
-Method invoked after each time the component has been rendered interactively and the UI has finished
-             updating (for example, after elements have been added to the browser DOM). Any <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
-             fields will be populated by the time this runs.
-            
-             This method is not invoked during prerendering or server-side rendering, because those processes
-             are not attached to any live browser DOM and are already complete before the DOM is updated.
-            
-             Note that the component does not automatically re-render after the completion of any returned <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>,
-             because that would cause an infinite render loop.
+Method invoked when the component has received parameters from its parent in
+            the render tree, and the incoming values have been assigned to properties.
 (Microsoft.AspNetCore.Components.ComponentBase).
 
               </td>
@@ -122,12 +115,12 @@ Method invoked after each time the component has been rendered interactively and
             <tr>
               <td>
 
-<a href="topic_0000000000000180.html">OnAfterRenderAsync(bool)</a>
+<a href="topic_0000000000000180.html">OnParametersSetAsync()</a>
               
               </td>
               <td>
 
-On after render as an asynchronous operation.
+Get our data and set IsSeq flag from state
 
               </td>
             </tr>
@@ -148,11 +141,11 @@ On after render as an asynchronous operation.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000161.html">NotePanel Class</a><br />
+			<a href="topic_0000000000000166.html">NotePanel Class</a><br />
 
 
 
-<a href="topic_0000000000000156.html">Notes.Client.Panels Namespace</a><br />
+<a href="topic_000000000000015B.html">Notes.Client.Panels Namespace</a><br />
 
 
 			

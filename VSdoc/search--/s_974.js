@@ -1,1 +1,1 @@
-search_result['974']=["topic_0000000000000236.html","LinkQueue.LinkedFileId Property","Gets or sets the linked file identifier."];
+search_result['974']=["topic_0000000000000191.html","Versions.ResponseOrdinal Property","Gets or sets the response ordinal."];

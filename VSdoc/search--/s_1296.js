@@ -1,1 +1,1 @@
-search_result['1296']=["topic_0000000000000302_overloads--.html","NotesService.GetNoteFile Method","Retrieves the note file specified by the request if the current user has appropriate access permissions."];
+search_result['1296']=["topic_000000000000022B.html","LinkLog Class","This class defines a table in the database.\r\nLog of link activity."];

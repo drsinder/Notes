@@ -1,1 +1,1 @@
-search_result['1303']=["topic_0000000000000306.html","NotesService.GetAbout Method","Gets the about."];
+search_result['1303']=["topic_000000000000022D.html","LinkLog.EventType Property","Gets or sets the type of the event."];

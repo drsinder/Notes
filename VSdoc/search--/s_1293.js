@@ -1,1 +1,1 @@
-search_result['1293']=["topic_0000000000000301.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];
+search_result['1293']=["topic_0000000000000228.html","LinkedFile.GetGLinkedFile Method","Gets the g linked file."];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>SubdirectoryHandler Constructor</title>
+	<title>Globals.SecretKey Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">SubdirectoryHandler Constructor</h1>
+		<h1 class="title">Globals.SecretKey Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001A1.html">Notes.Client</a>
+<a href="topic_00000000000001A6.html">Notes.Client</a>
 
 
 
@@ -139,7 +139,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Sub New( _&nbsp;<br />   ByVal <i>innerHandler</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpmessagehandler">HttpMessageHandler</a>, _&nbsp;<br />   ByVal <i>subdirectory</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a> _&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Shared Property SecretKey() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -178,7 +178,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public SubdirectoryHandler(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpmessagehandler">HttpMessageHandler</a> <i>innerHandler</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>subdirectory</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> SecretKey {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -218,7 +218,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />SubdirectoryHandler(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpmessagehandler">HttpMessageHandler</a>^ <i>innerHandler</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>subdirectory</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ SecretKey {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -257,7 +257,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function SubdirectoryHandler(&nbsp;<br />    <i>innerHandler</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpmessagehandler">HttpMessageHandler</a>,&nbsp;<br />    <i>subdirectory</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>&nbsp;<br />);</pre>			
+					<pre xml:space="preserve" class="brush: js">public static function get SecretKey() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;&nbsp;<br />public static function set SecretKey(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -268,36 +268,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="innerHandler" class="parameterList">
-	<dt>
-		<span class="parameter">
-			innerHandler
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpmessagehandler">HttpMessageHandler</a> 
-	</dd>
-</dl>
-<p>
-	 
-</p>
-<dl paramName="subdirectory" class="parameterList">
-	<dt>
-		<span class="parameter">
-			subdirectory
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	 
-</p>
 
-<p />
-
+	<h4 class="subHeading">
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
+	
 
 
 
@@ -385,11 +360,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000001C0.html">SubdirectoryHandler Class</a><br />
+			<a href="topic_00000000000001A7.html">Globals Class</a><br />
 
 
 
-<a href="topic_00000000000001A1.html">Notes.Client Namespace</a><br />
+<a href="topic_00000000000001A6.html">Notes.Client Namespace</a><br />
 
 
 			

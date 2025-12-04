@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>ExportJson.SaveAs Method</title>
+	<title>ExportJson.model Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">ExportJson.SaveAs Method</h1>
+		<h1 class="title">ExportJson.model Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_000000000000001C.html">Notes.Client.Dialogs</a>
+<a href="topic_000000000000001F.html">Notes.Client.Dialogs</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Saves as.</summary-info>
+        <summary-info>Gets or sets the model.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Function SaveAs( _&nbsp;<br />   ByVal <i>filename</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>, _&nbsp;<br />   ByVal <i>data</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte">Byte</a>() _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property model() As <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> SaveAs(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>filename</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte">byte</a>[] <i>data</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a> model {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>^ SaveAs(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>filename</i>,&nbsp;<br />   array&lt; <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte">Byte</a> &gt;^ <i>data</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a>^ model {&nbsp;<br /> <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function SaveAs(&nbsp;<br />    <i>filename</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>,&nbsp;<br />    <i>data</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte">byte</a>[]&nbsp;<br />) : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get model() : <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set model(value : <a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,39 +269,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="filename" class="parameterList">
-	<dt>
-		<span class="parameter">
-			filename
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	The filename. 
-</p>
-<dl paramName="data" class="parameterList">
-	<dt>
-		<span class="parameter">
-			data
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.byte">byte</a>[] 
-	</dd>
-</dl>
-<p>
-	The data. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a> 
+		Property Value</h4>
+	<a target="_top" href="topic_0000000000000088.html" onclick="this.target='';return true;">ExportViewModel</a> 
+		<p>
+		The model. 
+	</p>
 	
 
 
@@ -390,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000072.html">ExportJson Class</a><br />
+			<a href="topic_0000000000000075.html">ExportJson Class</a><br />
 
 
 
-<a href="topic_000000000000001C.html">Notes.Client.Dialogs Namespace</a><br />
+<a href="topic_000000000000001F.html">Notes.Client.Dialogs Namespace</a><br />
 
 
 			

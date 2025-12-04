@@ -1,1 +1,1 @@
-search_result['1285']=["topic_00000000000002FD.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];
+search_result['1285']=["topic_0000000000000225.html","LinkedFile.SendTo Property","Gets or sets a value indicating whether [send to]."];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>MainLayout Methods</title>
+	<title>YesNo Methods</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -76,11 +76,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">MainLayout Methods</h1>
+		<h1 class="title">YesNo Methods</h1>
         <p />
         <p>
           The following tables list the members exposed by the  
-              <a href="topic_00000000000000B9.html">MainLayout</a>
+              <a href="topic_00000000000000B9.html">YesNo</a>
              type.
         </p>
 
@@ -110,6 +110,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 	<tr class="
+inheritedMember 
 
 
 ">
@@ -123,7 +124,138 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
     
 	</td>
 	<td>
-	<a href="topic_00000000000000BA.html">OnAfterRender(bool)</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree">BuildRenderTree(RenderTreeBuilder)</a>
+
+	</td>
+	<td>
+
+Renders the component to the supplied <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder">RenderTreeBuilder</a>.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync">DispatchExceptionAsync(Exception)</a>
+
+	</td>
+	<td>
+
+Treats the supplied <i>exception</i> as being thrown by this component. This will cause the
+             enclosing ErrorBoundary to transition into a failed state. If there is no enclosing ErrorBoundary,
+             it will be regarded as an exception from the enclosing renderer.
+            
+             This is useful if an exception occurs outside the component lifecycle methods, but you wish to treat it
+             the same as an exception from a component lifecycle method.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync">InvokeAsync(Func&lt;Task&gt;)</a>
+
+	</td>
+	<td>
+
+Executes the supplied work item on the associated renderer's
+            synchronization context.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync">InvokeAsync(Action)</a>
+
+	</td>
+	<td>
+
+Executes the supplied work item on the associated renderer's
+            synchronization context.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender">OnAfterRender(bool)</a>
 
 	</td>
 	<td>
@@ -134,6 +266,187 @@ Method invoked after each time the component has rendered interactively and the 
             
              This method is not invoked during prerendering or server-side rendering, because those processes
              are not attached to any live browser DOM and are already complete before the DOM is updated.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a>
+
+	</td>
+	<td>
+
+Method invoked after each time the component has been rendered interactively and the UI has finished
+             updating (for example, after elements have been added to the browser DOM). Any <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
+             fields will be populated by the time this runs.
+            
+             This method is not invoked during prerendering or server-side rendering, because those processes
+             are not attached to any live browser DOM and are already complete before the DOM is updated.
+            
+             Note that the component does not automatically re-render after the completion of any returned <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>,
+             because that would cause an infinite render loop.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized">OnInitialized()</a>
+
+	</td>
+	<td>
+
+Method invoked when the component is ready to start, having received its
+            initial parameters from its parent in the render tree.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync">OnInitializedAsync()</a>
+
+	</td>
+	<td>
+
+Method invoked when the component is ready to start, having received its
+             initial parameters from its parent in the render tree.
+            
+             Override this method if you will perform an asynchronous operation and
+             want the component to refresh when that operation is completed.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onparametersset">OnParametersSet()</a>
+
+	</td>
+	<td>
+
+Method invoked when the component has received parameters from its parent in
+            the render tree, and the incoming values have been assigned to properties.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync">OnParametersSetAsync()</a>
+
+	</td>
+	<td>
+
+Method invoked when the component has received parameters from its parent in
+            the render tree, and the incoming values have been assigned to properties.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
 	</td>
 </tr>
@@ -157,13 +470,13 @@ inheritedMember
     
 	</td>
 	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase.setparametersasync">SetParametersAsync(ParameterView)</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync">SetParametersAsync(ParameterView)</a>
 
 	</td>
 	<td>
 
-
-(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.layoutcomponentbase">LayoutComponentBase</a>).
+Sets parameters supplied by the component's parent in the render tree.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
 	</td>
 </tr>
@@ -176,6 +489,7 @@ inheritedMember
 
 
 	<tr class="
+inheritedMember 
 
 
 ">
@@ -189,12 +503,47 @@ inheritedMember
     
 	</td>
 	<td>
-	<a href="topic_00000000000000BB.html">TimerTick2(object, ElapsedEventArgs)</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender">ShouldRender()</a>
 
 	</td>
 	<td>
 
+Returns a flag to indicate whether the component should render.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged">StateHasChanged()</a>
+
+	</td>
+	<td>
+
+Notifies the component that its state has changed. When applicable, this will
+            cause the component to be re-rendered.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
 	</td>
 </tr>
@@ -227,6 +576,15 @@ inheritedMember
 
 
 
+
+
+
+
+
+
+
+
+
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -235,8 +593,8 @@ inheritedMember
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000B9.html">MainLayout Class</a><br />
-	<a href="topic_00000000000000B8.html">Notes.Client.Layout Namespace</a><br />
+			<a href="topic_00000000000000B9.html">YesNo Class</a><br />
+	<a href="topic_000000000000001F.html">Notes.Client.Dialogs Namespace</a><br />
 
 
 			

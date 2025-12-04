@@ -1,1 +1,1 @@
-search_result['752']=["topic_00000000000001A4.html","Globals.ImportedAuthorId Property","Gets the imported author identifier."];
+search_result['752']=["topic_000000000000011A.html","NoteIndex.sfTextBox Property","Our direct navigation typin box"];

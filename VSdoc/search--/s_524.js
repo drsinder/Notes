@@ -1,1 +1,1 @@
-search_result['524']=["topic_000000000000010D.html","NewNote.OnParametersSet Method","Just fill in a few fields and we are ready..."];
+search_result['524']=["topic_00000000000000BD.html","MainLayout.OnAfterRender Method","Method invoked after each time the component has rendered interactively and the UI has finished\r\n             updating (for example, after elements have been added to the browser DOM). Any ElementRefe..."];

@@ -1,1 +1,1 @@
-search_result['914']=["topic_000000000000020E_attached_props--.html","Audit Attached Properties",""];
+search_result['914']=["topic_000000000000016D.html","NotePanel.IsMini Property","Should certain functions be suppressed at head and tail of panel"];

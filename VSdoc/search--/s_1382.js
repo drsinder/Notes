@@ -1,0 +1,1 @@
+search_result['1382']=["topic_0000000000000259.html","NoteAccess.GetNoteAccess Method","Gets the note access.\r\nConversions between Db Entity space and gRPC space."];

@@ -1,1 +1,1 @@
-search_result['768']=["topic_00000000000001B4.html","Globals.MainMenu Property",""];
+search_result['768']=["topic_0000000000000128.html","NoteIndex.GetNextNote Method","Get the next note given the current one"];

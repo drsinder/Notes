@@ -1,1 +1,1 @@
-search_result['474']=["topic_00000000000000F3.html","UserList Constructor","Initializes a new instance of the UserList class."];
+search_result['474']=["topic_00000000000000AD_overloads--.html","SearchDlg.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];

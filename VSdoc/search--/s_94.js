@@ -1,1 +1,1 @@
-search_result['94']=["topic_0000000000000033_vars--.html","AccessList Fields",""];
+search_result['94']=["topic_0000000000000024.html","AccessDeleteButton Class","Represents a button component that allows deletion of note access within the application."];

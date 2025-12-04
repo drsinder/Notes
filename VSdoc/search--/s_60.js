@@ -1,1 +1,1 @@
-search_result['60']=["topic_000000000000001D_attached_props--.html","AccessCheckBox Attached Properties",""];
+search_result['60']=["topic_0000000000000018.html","SCheckBox.OnClick Method","Toggles the checked state and asynchronously creates or deletes the sequencer item based on the new state."];

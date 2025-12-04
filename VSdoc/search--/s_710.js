@@ -1,1 +1,1 @@
-search_result['710']=["topic_000000000000018B.html","Versions.NoteOrdinal Property","Gets or sets the note ordinal."];
+search_result['710']=["topic_0000000000000107_attached_props--.html","NewNote Attached Properties",""];

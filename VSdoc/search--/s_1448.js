@@ -1,0 +1,1 @@
+search_result['1448']=["topic_0000000000000282.html","NoteHeader.DirectorMessage Property","Gets or sets the director message."];

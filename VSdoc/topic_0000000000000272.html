@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteHeader.NoteSubject Property</title>
+	<title>NoteHeader.NoteFileId Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteHeader.NoteSubject Property</h1>
+		<h1 class="title">NoteHeader.NoteFileId Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,8 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the note subject.
-Subject/Title of a note</summary-info>
+        <summary-info>Gets or sets the note file identifier.
+The fileid the note belongs to</summary-info>
 
 
 
@@ -141,7 +141,7 @@ Subject/Title of a note</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;StringLength(200)&gt; _&nbsp;<br />&lt;Display(Name = &quot;Subject&quot;)&gt; _&nbsp;<br />&lt;DataMember(Order = 7)&gt; _&nbsp;<br />Public Property NoteSubject() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;DataMember(Order = 2)&gt; _&nbsp;<br />Public Property NoteFileId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +180,7 @@ Subject/Title of a note</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[StringLength(200)]&nbsp;<br />[Display(Name = &quot;Subject&quot;)]&nbsp;<br />[DataMember(Order = 7)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> NoteSubject {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +220,7 @@ Subject/Title of a note</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[StringLength(200)]&nbsp;<br />[Display(Name = &quot;Subject&quot;)]&nbsp;<br />[DataMember(Order = 7)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ NoteSubject {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +259,7 @@ Subject/Title of a note</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   StringLength(200)&nbsp;<br />   Display(Name = &quot;Subject&quot;)&nbsp;<br />   DataMember(Order = 7)&nbsp;<br />function get NoteSubject() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   StringLength(200)&nbsp;<br />   Display(Name = &quot;Subject&quot;)&nbsp;<br />   DataMember(Order = 7)&nbsp;<br />function set NoteSubject(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function get NoteFileId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function set NoteFileId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -273,9 +273,9 @@ Subject/Title of a note</summary-info>
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
 		<p>
-		The note subject. 
+		The note file identifier. 
 	</p>
 	
 
@@ -365,11 +365,11 @@ Subject/Title of a note</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000026B.html">NoteHeader Class</a><br />
+			<a href="topic_0000000000000270.html">NoteHeader Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

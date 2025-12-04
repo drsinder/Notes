@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteMenu.topMenu Property</title>
+	<title>NoteMenu.Modal Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteMenu.topMenu Property</h1>
+		<h1 class="title">NoteMenu.Modal Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000BC.html">Notes.Client.Menus</a>
+<a href="topic_00000000000000BF.html">Notes.Client.Menus</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Top level menu instance</summary-info>
+        <summary-info>For dialogs</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Property topMenu() As <strong>SfMenu</strong>(Of <strong>MenuItem</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;CascadingParameter()&gt; _&nbsp;<br />Public Property Modal() As <strong>IModalService</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>&gt; topMenu {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[CascadingParameter()]&nbsp;<br />public <strong>IModalService</strong> Modal {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br />property <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ topMenu {&nbsp;<br /> <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[CascadingParameter()]&nbsp;<br />public: &nbsp;<br />property <strong>IModalService</strong>^ Modal {&nbsp;<br /> <strong>IModalService</strong>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>IModalService</strong>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   CascadingParameter()&nbsp;<br />function get Modal() : <strong>IModalService</strong>;&nbsp;<br />public &nbsp;<br />   CascadingParameter()&nbsp;<br />function set Modal(value : <strong>IModalService</strong>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +272,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<strong>SfMenu</strong>&lt;<strong>MenuItem</strong>&gt; 
+	<strong>IModalService</strong> 
 		<p>
-		The top menu. 
+		The modal. 
 	</p>
 	
 
@@ -364,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000DB.html">NoteMenu Class</a><br />
+			<a href="topic_00000000000000DE.html">NoteMenu Class</a><br />
 
 
 
-<a href="topic_00000000000000BC.html">Notes.Client.Menus Namespace</a><br />
+<a href="topic_00000000000000BF.html">Notes.Client.Menus Namespace</a><br />
 
 
 			

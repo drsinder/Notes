@@ -1,1 +1,1 @@
-search_result['1013']=["topic_0000000000000253.html","NoteAccess.EditAccess Property","Gets or sets a value indicating whether [edit access]."];
+search_result['1013']=["topic_00000000000001A2_props--.html","Globals Properties",""];

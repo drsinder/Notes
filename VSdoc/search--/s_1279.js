@@ -1,1 +1,1 @@
-search_result['1279']=["topic_00000000000002FA.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];
+search_result['1279']=["topic_000000000000021F.html","LinkedFile.Id Property","Gets or sets the identifier."];

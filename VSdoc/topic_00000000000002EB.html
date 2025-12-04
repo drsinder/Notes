@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetUserRoles Method</title>
+	<title>NotesService Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetUserRoles Method</h1>
+		<h1 class="title">NotesService Class</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the roles assigned to a specified user and returns a view model containing user information and
-role membership status.</summary-info>
 
 
 
@@ -141,7 +139,7 @@ role membership status.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function GetUserRoles( _&nbsp;<br />   ByVal <i>request</i> As <strong>AppUserRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>EditUserViewModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Class NotesService&nbsp;<br />    Inherits <strong>NotesServerBase</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +178,7 @@ role membership status.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>&gt; GetUserRoles(&nbsp;<br />   <strong>AppUserRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public class NotesService : <strong>NotesServerBase</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +218,7 @@ role membership status.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>^&gt;^ GetUserRoles(&nbsp;<br />   <strong>AppUserRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public ref class NotesService : public <strong>NotesServerBase</strong>^</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +257,7 @@ role membership status.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public class NotesService&nbsp;<br />   extends <strong>NotesServerBase</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,45 +268,72 @@ role membership status.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
-	<dt>
-		<span class="parameter">
-			request
-		</span>
-	</dt>
-	<dd>
-		<strong>AppUserRequest</strong> 
-	</dd>
-</dl>
-<p>
-	An object containing the user's identifier and related request data. The user's identifier is used to locate
-the user whose roles are to be retrieved. 
-</p>
-<dl paramName="context" class="parameterList">
-	<dt>
-		<span class="parameter">
-			context
-		</span>
-	</dt>
-	<dd>
-		<strong>ServerCallContext</strong> 
-	</dd>
-</dl>
-<p>
-	The server call context for the current gRPC request. Provides information about the call, such as
-cancellation and authentication details. 
-</p>
 
-<p />
 
-	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>EditUserViewModel</strong>&gt; 
-		<p>
-		An EditUserViewModel containing the user's data and a list of all available roles, each indicating whether
-the user is a member of that role. 
-	</p>
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FE.html">AddAccessItem(GNoteAccess, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Adds a new access item for a note if the current user has edit permissions.
+
+	</td>
+</tr>
 	
 
 
@@ -317,6 +342,27 @@ the user is a member of that role.
 
 
 
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000317.html">ContentSearch(ContentSearchRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Searches note content for matches to the specified search criteria and returns the results.
+
+	</td>
+</tr>
+	
 
 
 
@@ -324,8 +370,1279 @@ the user is a member of that role.
 
 
 
-	</div>
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000310.html">CopyNote(CopyModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Copies a note or an entire note thread to a specified target file for the current user, preserving content
+and associated tags.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000308.html">CreateNewNote(TextViewModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Creates a new note or response in the system using the provided text and subject information.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F2.html">CreateNoteFile(GNotefile, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Creates a new note file using the specified request data and returns the created note file.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000303.html">CreateSequencer(SCheckModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Creates a new sequencer entry for the authenticated user using the specified check model.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FD.html">DeleteAccessItem(GNoteAccess, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Deletes the specified access item for a note if the current user has edit permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000311.html">DeleteNote(NoteId, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Deletes the specified note if the current user has delete permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F6.html">DeleteNoteFile(GNotefile, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Deletes the specified note file and all associated data from the database.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000304.html">DeleteSequencer(SCheckModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Deletes the sequencer associated with the specified note file for the current user.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030E.html">DoForward(ForwardViewModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Sends a note email to the current user if they have read access to the specified file and archive.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030B.html">GetAbout(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Gets the about.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002EE.html">GetAccess(NoteFileRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the access permissions for a specified note file based on the current user's context.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FB.html">GetAccessAndUserList(AccessAndUserListRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the access permissions and user list associated with the specified note file and archive for a
+given user.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FA.html">GetAccessList(AccessAndUserListRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the access list for a specified note file and archive for the requesting user.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F4.html">GetAdminPageModel(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the administrative home page model, including user and note access data, for authorized admin
+users.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030D.html">GetExport2(NoteId, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Gets the export info for phase 2. (note content)
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000312.html">GetExportJson(ExportRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Gets the export json.  Well it's called json here because it was intended to be used to export a
+file as json.  But the fact is this is a good way to grab every thing the file contains
+relevant to the requesting user.  In here you have the file object, all headers including their
+content object and tag objects.  Finally, the users access token.
+Grab this and you have all you need to display a file.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030A.html">GetHeaderForNoteId(NoteId, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the header information for the specified note identifier, subject to access permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000314.html">GetHomePageMessage(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the current home page message to be displayed to users.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F3.html">GetHomePageModel(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the data model for the home page in response to a client request.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F9.html">GetNoteContent(DisplayModelRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the content and metadata of a note specified by the request, including header, body, tags, file
+information, and access permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000316.html">GetNoteCount(NoteFileRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the number of notes in the specified note file and archive that are not deleted and are not
+responses.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000307.html">GetNoteFile(NoteFileRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the note file specified by the request if the current user has appropriate access permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F8.html">GetNoteFileIndexData(NoteFileRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves index data for a note file, including access information, note headers, linked files, tags, and
+user details, based on the specified request and the current user's permissions.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030F.html">GetNoteFilesOrderedByName(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Gets the note files ordered by name.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000315.html">GetNoteHeaders(NoteHeadersRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in
+the request.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000302.html">GetSequencer(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves a list of sequencers owned by the current user for which read access is granted.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002EC.html">GetServerTime(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000313.html">GetTextFile(AString, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Gets text from server for display in client.
+files: about.html | help.html | helpdialog.html | helpdialog2.html | license.html
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FF.html">GetUserData(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves user data for the authenticated user associated with the current server call context.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002EF.html">GetUserList(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves a list of all application users accessible to administrators.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F0.html">GetUserRoles(AppUserRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves the roles assigned to a specified user and returns a view model containing user information and
+role membership status.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000301.html">GetVersions(GetVersionsRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Retrieves a list of all available versions of a note that match the specified criteria.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F7.html">Import(ImportRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Imports data from the specified payload into the system using the provided import request.
+The payload is a notefile.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002ED.html">NoOp(NoRequest, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Handles a no-operation request and returns a default response.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000030C.html">SendEmailAuth(GEmail, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Send email authenticated.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002FC.html">UpdateAccessItem(GNoteAccess, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates the access permissions for a note file if the current user has edit access.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000309.html">UpdateNote(TextViewModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates an existing note with new content and subject information if the caller is authorized to edit the
+note.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F5.html">UpdateNoteFile(GNotefile, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates an existing note file with new name and title information.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000306.html">UpdateSequencer(GSequencer, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates the sequencer state for the specified user and note file, setting its active status and relevant
+timestamps.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000305.html">UpdateSequencerOrdinal(GSequencer, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates the ordinal and last modification time of a sequencer for the specified user and note file.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000300.html">UpdateUserData(GAppUser, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates the user data for the authenticated user based on the provided information.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+			<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000002F1.html">UpdateUserRoles(EditUserViewModel, ServerCallContext)</a>
+
+	</td>
+	<td>
+
+Updates the roles assigned to a user based on the specified role selections.
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
 
 
 
@@ -333,20 +1650,25 @@ the user is a member of that role.
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
 		<div>&nbsp;</div>
 	</div>
 
-	<div id="remarksSection" class="section">	
-			This method requires the caller to have the 'Admin' role. The returned view model
-includes all roles in the system, with membership status for the specified user. The method is asynchronous
-and should be awaited.
-	</div>					
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
+</div>
+
+<div style="padding-left:1em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/notes.protos.notesserver.notesserverbase">Notes.Protos.NotesServer.NotesServerBase</a>
 </div>
 
 
 
+<div style="padding-left:2em;">Notes.Services.NotesService</div>
 
+				
+</div>
+</div>
 
 
 
@@ -401,6 +1723,7 @@ and should be awaited.
 	</div>					
 </div>
 
+
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -409,14 +1732,10 @@ and should be awaited.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+	<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
-
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
-
-
-			
+	
 
 		</div>
 	</div>					

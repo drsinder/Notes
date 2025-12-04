@@ -1,1 +1,1 @@
-search_result['846']=["topic_00000000000001DA_methods--.html","BodySearch Methods",""];
+search_result['846']=["topic_000000000000014F.html","LocalModel2(String) Constructor","Initializes a new instance of the LocalModel2 class."];

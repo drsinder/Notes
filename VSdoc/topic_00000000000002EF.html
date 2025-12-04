@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetAdminPageModel Method</title>
+	<title>NotesService.GetUserList Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetAdminPageModel Method</h1>
+		<h1 class="title">NotesService.GetUserList Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the administrative home page model, including user and note access data, for authorized admin
-users.</summary-info>
+        <summary-info>Retrieves a list of all application users accessible to administrators.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ users.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function GetAdminPageModel( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>HomePageModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function GetUserList( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GAppUserList</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ users.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; GetAdminPageModel(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUserList</strong>&gt; GetUserList(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ users.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>^&gt;^ GetAdminPageModel(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUserList</strong>^&gt;^ GetUserList(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -282,8 +281,7 @@ users.</summary-info>
 	</dd>
 </dl>
 <p>
-	A request object containing parameters for the page retrieval. This parameter is required but does not carry
-any data. 
+	A request object containing no parameters. This value is ignored. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -296,18 +294,18 @@ any data.
 	</dd>
 </dl>
 <p>
-	The server call context for the current gRPC request, providing information about the call and its
-environment. 
+	The server call context for the current gRPC request. Provides access to request metadata and cancellation
+tokens. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>HomePageModel</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GAppUserList</strong>&gt; 
 		<p>
-		A task that represents the asynchronous operation. The task result contains a populated HomePageModel with
-user and note access information for the admin view. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">GAppUserList</a> containing information about all users in the application. The list will be
+empty if no users exist. 
 	</p>
 	
 
@@ -338,9 +336,8 @@ user and note access information for the admin view.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			This method is restricted to users with the 'Admin' role. The returned model includes
-a list of all application users and their note access details, intended for administrative
-overview.
+			This method can only be called by users with the 'Admin' role. The returned user list
+reflects the current state of the application's user store.
 	</div>					
 </div>
 
@@ -409,11 +406,11 @@ overview.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

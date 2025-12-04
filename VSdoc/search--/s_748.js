@@ -1,1 +1,1 @@
-search_result['748']=["topic_00000000000001A2_methods--.html","Globals Methods",""];
+search_result['748']=["topic_0000000000000116.html","NoteIndex.CurrentNoteId Property","Non zero when viewing a note"];

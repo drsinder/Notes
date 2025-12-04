@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000316.html"],['54',"Notes.Client.Comp Namespace","topic_0000000000000006.html"],['68',"SCheckBox Class","topic_000000000000000F.html"],['69',"Properties","topic_000000000000000F_props--.html"],['73',"isChecked Property","topic_0000000000000012.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['54',"Notes.Client.Comp Namespace","topic_0000000000000006.html"],['72',"SCheckBox Class","topic_0000000000000012.html"]];

@@ -1,1 +1,1 @@
-search_result['997']=["topic_0000000000000248.html","Mark.NoteFile Property","Gets or sets the note file."];
+search_result['997']=["topic_000000000000019B.html","CookieStateAgent.WriteCookie Method","Write a Cookie"];

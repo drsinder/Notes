@@ -1,1 +1,1 @@
-search_result['138']=["topic_000000000000004E.html","CFormat.Code Property","Gets or sets the code."];
+search_result['138']=["topic_000000000000003A.html","AccessList Constructor","Initializes a new instance of the AccessList class."];

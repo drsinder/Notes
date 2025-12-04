@@ -1,1 +1,1 @@
-c['460']=[['461',"OnInitializedAsync Method","topic_0000000000000148_overloads--.html",1]];
+c['460']=[['461',"LocalModel2 Constructor","topic_000000000000014F_overloads--.html",1],['464',"Properties","topic_000000000000014E_props--.html",1]];

@@ -1,1 +1,1 @@
-search_result['735']=["topic_000000000000019D.html","CookieStateAgent.UserInfo Property","Get the decoded user info"];
+search_result['735']=["topic_000000000000010F.html","NewNote.Model Property","Gets or sets the model."];

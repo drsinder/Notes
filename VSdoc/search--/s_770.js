@@ -1,1 +1,1 @@
-search_result['770']=["topic_00000000000001B6.html","Globals.GotoNote Property",""];
+search_result['770']=["topic_000000000000012A.html","NoteIndex.GetPreviousNote Method","Get the previous note"];

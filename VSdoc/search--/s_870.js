@@ -1,1 +1,1 @@
-search_result['870']=["topic_00000000000001E8.html","NotesDbContext.Search Property","Gets or sets the search."];
+search_result['870']=["topic_0000000000000158.html","Tracker Class","Represents a component that manages and organizes collections of note files and sequencers, providing\r\nfunctionality to retrieve, order, and shuffle these items asynchronously."];

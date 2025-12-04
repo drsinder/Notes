@@ -1,1 +1,1 @@
-search_result['335']=["topic_00000000000000A8_attached_props--.html","SearchDlg Attached Properties",""];
+search_result['335']=["topic_0000000000000081.html","ExportUtil1 Class","Provides utility methods and component logic for exporting note files and related data, supporting both direct\r\nfile downloads and email-based exports within a Blazor application."];

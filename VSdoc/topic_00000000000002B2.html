@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Subscription.NoteFileId Property</title>
+	<title>SQLFileContent.SQLFileId Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Subscription.NoteFileId Property</h1>
+		<h1 class="title">SQLFileContent.SQLFileId Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the note file identifier.</summary-info>
+        <summary-info>Gets or sets the SQL file identifier.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;DataMember(Order = 2)&gt; _&nbsp;<br />Public Property NoteFileId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Key()&gt; _&nbsp;<br />Public Property SQLFileId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">Long</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Key()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> SQLFileId {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Key()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> SQLFileId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function get NoteFileId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function set NoteFileId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Key()&nbsp;<br />function get SQLFileId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a>;&nbsp;<br />public &nbsp;<br />   Key()&nbsp;<br />function set SQLFileId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +272,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int64">long</a> 
 		<p>
-		The note file identifier. 
+		The SQL file identifier. 
 	</p>
 	
 
@@ -364,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002B0.html">Subscription Class</a><br />
+			<a href="topic_00000000000002B1.html">SQLFileContent Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

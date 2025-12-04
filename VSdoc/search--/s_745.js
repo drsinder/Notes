@@ -1,1 +1,1 @@
-search_result['745']=["topic_00000000000001A2.html","Globals Class","Class Globals."];
+search_result['745']=["topic_0000000000000113.html","NoteIndex.Modal Property","For dialogs"];

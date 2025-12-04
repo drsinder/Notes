@@ -1,0 +1,1 @@
+search_result['1446']=["topic_0000000000000280.html","NoteHeader.IsDeleted Property","Gets or sets a value indicating whether this instance is deleted."];

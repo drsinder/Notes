@@ -1,1 +1,1 @@
-search_result['909']=["topic_000000000000020A.html","ApplicationUser.MergeApplicationUser Method","Merges the application user."];
+search_result['909']=["topic_0000000000000168.html","NotePanel.NoteId Property","Gets or sets the unique identifier for the note we are displaying."];

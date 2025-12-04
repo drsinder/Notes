@@ -1,1 +1,1 @@
-search_result['1011']=["topic_0000000000000251.html","NoteAccess.DeleteEdit Property","Gets or sets a value indicating whether [delete edit]."];
+search_result['1011']=["topic_00000000000001A2_events--.html","Globals Events",""];

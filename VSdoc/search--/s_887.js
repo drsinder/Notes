@@ -1,1 +1,1 @@
-search_result['887']=["topic_00000000000001F4.html","ApplicationUser.Ipref0 Property","Gets or sets the ipref0."];
+search_result['887']=["topic_000000000000015D.html","NoteEditor.Modal Property","For dialogs"];

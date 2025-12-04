@@ -1,1 +1,1 @@
-search_result['1190']=["topic_00000000000002CF_events--.html","NoteDataManager Events",""];
+search_result['1190']=["topic_00000000000001EE.html","NotesDbContext.Sequencer Property","Gets or sets the sequencer."];

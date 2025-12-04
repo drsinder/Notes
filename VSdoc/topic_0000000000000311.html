@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetNoteCount Method</title>
+	<title>NotesService.DeleteNote Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetNoteCount Method</h1>
+		<h1 class="title">NotesService.DeleteNote Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the number of notes in the specified note file and archive that are not deleted and are not
-responses.</summary-info>
+        <summary-info>Deletes the specified note if the current user has delete permissions.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteCount( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteFileRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoteCount</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function DeleteNote( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteId</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>&gt; GetNoteCount(&nbsp;<br />   <strong>NoteFileRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; DeleteNote(&nbsp;<br />   <strong>NoteId</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>^&gt;^ GetNoteCount(&nbsp;<br />   <strong>NoteFileRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ DeleteNote(&nbsp;<br />   <strong>NoteId</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -278,11 +277,11 @@ responses.</summary-info>
 		</span>
 	</dt>
 	<dd>
-		<strong>NoteFileRequest</strong> 
+		<strong>NoteId</strong> 
 	</dd>
 </dl>
 <p>
-	The request containing the identifiers of the note file and archive for which to count notes. 
+	An object containing the identifier of the note to delete. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,17 +294,16 @@ responses.</summary-info>
 	</dd>
 </dl>
 <p>
-	The context for the server call, which provides user and request information. 
+	The server call context for the current request, providing user and request metadata. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoteCount</a> object containing the count of notes matching the specified criteria. If the user
-does not have read access, the count will be zero. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> object indicating the completion of the delete operation. 
 	</p>
 	
 
@@ -336,9 +334,8 @@ does not have read access, the count will be zero.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			Only notes that are not deleted, are not responses, and are in the initial version
-are included in the count. The caller must have read access to the specified note file and archive;
-otherwise, the result will indicate a count of zero.
+			If the user does not have permission to delete the note, the operation completes
+without deleting the note and without throwing an exception.
 	</div>					
 </div>
 
@@ -407,11 +404,11 @@ otherwise, the result will indicate a count of zero.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

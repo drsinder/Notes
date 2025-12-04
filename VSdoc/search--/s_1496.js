@@ -1,0 +1,1 @@
+search_result['1496']=["topic_00000000000002A0.html","Sequencer.UserId Property","Gets or sets the user identifier.\r\nID of the user who owns the item"];

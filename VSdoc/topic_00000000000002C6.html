@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>AccessManager.GetAccess Method</title>
+	<title>Tags.GetTagsList Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">AccessManager.GetAccess Method</h1>
+		<h1 class="title">Tags.GetTagsList Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002C3.html">Notes.Manager</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>All access checks call this.</summary-info>
+        <summary-info>Gets the tags list.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function GetAccess( _&nbsp;<br />   ByVal <i>db</i> As <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>, _&nbsp;<br />   ByVal <i>userId</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>, _&nbsp;<br />   ByVal <i>fileId</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a>, _&nbsp;<br />   ByVal <i>arcId</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Shared Function GetTagsList( _&nbsp;<br />   ByVal <i>other</i> As <strong>GTagsList</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>(Of <a target="_top" href="topic_00000000000002BA.html" onclick="this.target='';return true;">Tags</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>&gt; GetAccess(&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>userId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>fileId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>arcId</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000002BA.html" onclick="this.target='';return true;">Tags</a>&gt; GetTagsList(&nbsp;<br />   <strong>GTagsList</strong> <i>other</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>^&gt;^ GetAccess(&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>^ <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>userId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>fileId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>arcId</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000002BA.html" onclick="this.target='';return true;">Tags</a>^&gt;^ GetTagsList(&nbsp;<br />   <strong>GTagsList</strong>^ <i>other</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,66 +270,27 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="db" class="parameterList">
+	Parameters</h4><dl paramName="other" class="parameterList">
 	<dt>
 		<span class="parameter">
-			db
+			other
 		</span>
 	</dt>
 	<dd>
-		<a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> 
+		<strong>GTagsList</strong> 
 	</dd>
 </dl>
 <p>
-	NotesDbContext 
-</p>
-<dl paramName="userId" class="parameterList">
-	<dt>
-		<span class="parameter">
-			userId
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	ID of logged in user 
-</p>
-<dl paramName="fileId" class="parameterList">
-	<dt>
-		<span class="parameter">
-			fileId
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-	</dd>
-</dl>
-<p>
-	NoteFileID 
-</p>
-<dl paramName="arcId" class="parameterList">
-	<dt>
-		<span class="parameter">
-			arcId
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-	</dd>
-</dl>
-<p>
-	The arc identifier. 
+	The other. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000249.html" onclick="this.target='';return true;">NoteAccess</a>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000002BA.html" onclick="this.target='';return true;">Tags</a>&gt; 
 		<p>
-		NoteAcess Object 
+		List&lt;Tags&gt;. 
 	</p>
 	
 
@@ -419,11 +380,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002C4.html">AccessManager Class</a><br />
+			<a href="topic_00000000000002BA.html">Tags Class</a><br />
 
 
 
-<a href="topic_00000000000002C3.html">Notes.Manager Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

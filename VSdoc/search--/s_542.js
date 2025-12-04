@@ -1,1 +1,1 @@
-search_result['542']=["topic_0000000000000119.html","NoteIndex.CurPage Property","Current page of grid"];
+search_result['542']=["topic_00000000000000C5.html","ListMenu.myGauge Property","Gets or sets my gauge."];

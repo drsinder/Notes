@@ -1,1 +1,1 @@
-search_result['102']=["topic_000000000000003A.html","AccessList.ClickHandler Method","Item deleted - refresh list"];
+search_result['102']=["topic_0000000000000027.html","AccessDeleteButton Constructor","Initializes a new instance of the AccessDeleteButton class."];

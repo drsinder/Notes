@@ -1,1 +1,1 @@
-search_result['1009']=["topic_000000000000024F.html","NoteAccess.Write Property","Gets or sets a value indicating whether this NoteAccess is write."];
+search_result['1009']=["topic_00000000000001A2.html","CookieStateAgent.UserInfo Property","Get the decoded user info"];

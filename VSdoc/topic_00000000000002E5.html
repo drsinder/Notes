@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>LocalService.MakeNoteForEmail Method</title>
+	<title>EmailSender.Options Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">LocalService.MakeNoteForEmail Method</h1>
+		<h1 class="title">EmailSender.Options Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Makes the note for email.</summary-info>
+        <summary-info>Gets the options.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function MakeNoteForEmail( _&nbsp;<br />   ByVal <i>fv</i> As <strong>ForwardViewModel</strong>, _&nbsp;<br />   ByVal <i>NoteFile</i> As <strong>GNotefile</strong>, _&nbsp;<br />   ByVal <i>db</i> As <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>, _&nbsp;<br />   ByVal <i>email</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>, _&nbsp;<br />   ByVal <i>name</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public ReadOnly Property Options() As <a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a>&gt; MakeNoteForEmail(&nbsp;<br />   <strong>ForwardViewModel</strong> <i>fv</i>,&nbsp;<br />   <strong>GNotefile</strong> <i>NoteFile</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>email</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>name</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a> Options {get;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^&gt;^ MakeNoteForEmail(&nbsp;<br />   <strong>ForwardViewModel</strong>^ <i>fv</i>,&nbsp;<br />   <strong>GNotefile</strong>^ <i>NoteFile</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>^ <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>email</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>name</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a>^ Options {&nbsp;<br /> <a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a>^ get( );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public function get Options() : <a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,80 +269,12 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="fv" class="parameterList">
-	<dt>
-		<span class="parameter">
-			fv
-		</span>
-	</dt>
-	<dd>
-		<strong>ForwardViewModel</strong> 
-	</dd>
-</dl>
-<p>
-	The fv. 
-</p>
-<dl paramName="NoteFile" class="parameterList">
-	<dt>
-		<span class="parameter">
-			NoteFile
-		</span>
-	</dt>
-	<dd>
-		<strong>GNotefile</strong> 
-	</dd>
-</dl>
-<p>
-	The note file. 
-</p>
-<dl paramName="db" class="parameterList">
-	<dt>
-		<span class="parameter">
-			db
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> 
-	</dd>
-</dl>
-<p>
-	The database. 
-</p>
-<dl paramName="email" class="parameterList">
-	<dt>
-		<span class="parameter">
-			email
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	The email. 
-</p>
-<dl paramName="name" class="parameterList">
-	<dt>
-		<span class="parameter">
-			name
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	The name. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a>&gt; 
+		Property Value</h4>
+	<a target="_top" href="topic_00000000000002E7.html" onclick="this.target='';return true;">AuthMessageSenderOptions</a> 
 		<p>
-		System.String. 
+		The options. 
 	</p>
 	
 
@@ -432,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E4.html">LocalService Class</a><br />
+			<a href="topic_00000000000002E2.html">EmailSender Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

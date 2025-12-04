@@ -1,1 +1,1 @@
-search_result['588']=["topic_0000000000000144_methods--.html","NotesFiles Methods",""];
+search_result['588']=["topic_00000000000000D8.html","MainMenu.OnAfterRender Method","Update the clock once per second"];

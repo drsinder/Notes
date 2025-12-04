@@ -1,1 +1,1 @@
-search_result['771']=["topic_00000000000001B7.html","Globals.returnUrl Property",""];
+search_result['771']=["topic_000000000000012B.html","NoteIndex.GetResponseHeaders Method","Get just the response headers for the given noteid"];

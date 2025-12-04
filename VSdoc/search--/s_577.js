@@ -1,1 +1,1 @@
-search_result['577']=["topic_000000000000013D.html","NoteIndex.StartSearch Method","Starts the search."];
+search_result['577']=["topic_00000000000000D3.html","MainMenu Class","Represents the main navigation menu component for the application, providing menu structure, navigation, and\r\nuser-specific menu item visibility."];

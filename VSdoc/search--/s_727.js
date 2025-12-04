@@ -1,1 +1,1 @@
-search_result['727']=["topic_0000000000000195.html","CookieStateAgent.ReadCookie Method","Read a cookie"];
+search_result['727']=["topic_000000000000010D.html","NewNote.BaseNoteHeaderId Property","Gets or sets the base note header identifier."];

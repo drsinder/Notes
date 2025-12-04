@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>AccessManager.CreateBaseEntries Method</title>
+	<title>Tags.GetGTags Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">AccessManager.CreateBaseEntries Method</h1>
+		<h1 class="title">Tags.GetGTags Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002C3.html">Notes.Manager</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,9 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Create standard starting entires for a access controls for a new file.
-&quot;Other&quot; -- no access
-creating user (Admin) -- Full Access</summary-info>
+        <summary-info>Gets the g tags.</summary-info>
 
 
 
@@ -142,7 +140,7 @@ creating user (Admin) -- Full Access</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Shared Function CreateBaseEntries( _&nbsp;<br />   ByVal <i>db</i> As <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>, _&nbsp;<br />   ByVal <i>userId</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>, _&nbsp;<br />   ByVal <i>fileId</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Function GetGTags() As <strong>GTags</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -181,7 +179,7 @@ creating user (Admin) -- Full Access</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a>&gt; CreateBaseEntries(&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>userId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>fileId</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <strong>GTags</strong> GetGTags()</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -221,7 +219,7 @@ creating user (Admin) -- Full Access</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a>&gt;^ CreateBaseEntries(&nbsp;<br />   <a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a>^ <i>db</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>userId</i>,&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> <i>fileId</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><strong>GTags</strong>^ GetGTags() </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -260,7 +258,7 @@ creating user (Admin) -- Full Access</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public function GetGTags() : <strong>GTags</strong>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -271,54 +269,12 @@ creating user (Admin) -- Full Access</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="db" class="parameterList">
-	<dt>
-		<span class="parameter">
-			db
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="topic_00000000000001DF.html" onclick="this.target='';return true;">NotesDbContext</a> 
-	</dd>
-</dl>
-<p>
-	The database. 
-</p>
-<dl paramName="userId" class="parameterList">
-	<dt>
-		<span class="parameter">
-			userId
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-	</dd>
-</dl>
-<p>
-	The user identifier. 
-</p>
-<dl paramName="fileId" class="parameterList">
-	<dt>
-		<span class="parameter">
-			fileId
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
-	</dd>
-</dl>
-<p>
-	The file identifier. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a>&gt; 
+	<strong>GTags</strong> 
 		<p>
-		<code>true</code> if XXXX, <code>false</code> otherwise. 
+		GTags. 
 	</p>
 	
 
@@ -408,11 +364,11 @@ creating user (Admin) -- Full Access</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002C4.html">AccessManager Class</a><br />
+			<a href="topic_00000000000002BA.html">Tags Class</a><br />
 
 
 
-<a href="topic_00000000000002C3.html">Notes.Manager Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

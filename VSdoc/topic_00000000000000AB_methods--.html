@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Upload4 Methods</title>
+	<title>SearchDlg Methods</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -76,11 +76,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Upload4 Methods</h1>
+		<h1 class="title">SearchDlg Methods</h1>
         <p />
         <p>
           The following tables list the members exposed by the  
-              <a href="topic_00000000000000AB.html">Upload4</a>
+              <a href="topic_00000000000000AB.html">SearchDlg</a>
              type.
         </p>
 
@@ -277,7 +277,9 @@ Method invoked after each time the component has rendered interactively and the 
 
 
 
-			<tr class="
+
+	<tr class="
+inheritedMember 
 
 
 ">
@@ -291,16 +293,24 @@ Method invoked after each time the component has rendered interactively and the 
     
 	</td>
 	<td>
-	<a href="topic_00000000000000AF.html">OnAfterRenderAsync(bool)</a>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrenderasync">OnAfterRenderAsync(bool)</a>
 
 	</td>
 	<td>
 
-On after render as an asynchronous operation.
+Method invoked after each time the component has been rendered interactively and the UI has finished
+             updating (for example, after elements have been added to the browser DOM). Any <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.elementreference">ElementReference</a>
+             fields will be populated by the time this runs.
+            
+             This method is not invoked during prerendering or server-side rendering, because those processes
+             are not attached to any live browser DOM and are already complete before the DOM is updated.
+            
+             Note that the component does not automatically re-render after the completion of any returned <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Task</a>,
+             because that would cause an infinite render loop.
+(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
 
 	</td>
 </tr>
-	
 
 
 
@@ -379,9 +389,7 @@ Method invoked when the component is ready to start, having received its
 
 
 
-
-	<tr class="
-inheritedMember 
+			<tr class="
 
 
 ">
@@ -395,17 +403,17 @@ inheritedMember
     
 	</td>
 	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.onparametersset">OnParametersSet()</a>
+	<a href="topic_00000000000000AD.html">OnParametersSet()</a>
 
 	</td>
 	<td>
 
 Method invoked when the component has received parameters from its parent in
-            the render tree, and the incoming values have been assigned to properties.
-(inherited from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase">ComponentBase</a>).
+the render tree, and the incoming values have been assigned to properties.
 
 	</td>
 </tr>
+	
 
 
 
@@ -583,8 +591,8 @@ Notifies the component that its state has changed. When applicable, this will
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000AB.html">Upload4 Class</a><br />
-	<a href="topic_000000000000001C.html">Notes.Client.Dialogs Namespace</a><br />
+			<a href="topic_00000000000000AB.html">SearchDlg Class</a><br />
+	<a href="topic_000000000000001F.html">Notes.Client.Dialogs Namespace</a><br />
 
 
 			

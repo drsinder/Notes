@@ -1,1 +1,1 @@
-search_result['1306']=["topic_0000000000000307_overloads--.html","NotesService.SendEmailAuth Method","Send email authenticated."];
+search_result['1306']=["topic_0000000000000230.html","LinkLog.GetLinkLog Method","Gets the link log."];

@@ -1,1 +1,1 @@
-search_result['510']=["topic_0000000000000105.html","HomeIndex.OnParametersSetAsync Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];
+search_result['510']=["topic_00000000000000B9.html","YesNo Class","Represents a modal dialog component that displays a yes/no confirmation message."];

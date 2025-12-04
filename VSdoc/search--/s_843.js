@@ -1,1 +1,1 @@
-search_result['843']=["topic_00000000000001DA.html","BodySearch Class","A base class inherited by each EF Core migration."];
+search_result['843']=["topic_000000000000014E_methods--.html","LocalModel2 Methods",""];

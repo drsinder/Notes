@@ -1,1 +1,1 @@
-search_result['1300']=["topic_0000000000000304_overloads--.html","NotesService.UpdateNote Method","Updates an existing note with new content and subject information if the caller is authorized to edit the\r\nnote."];
+search_result['1300']=["topic_000000000000022B_props--.html","LinkLog Properties",""];

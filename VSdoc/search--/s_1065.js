@@ -1,1 +1,1 @@
-search_result['1065']=["topic_0000000000000278.html","NoteHeader.AuthorName Property","Gets or sets the name of the author."];
+search_result['1065']=["topic_00000000000001C5.html","SubdirectoryHandler Class","A delegating handler that adds a subdirectory to the URI of gRPC requests."];

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.DoForward Method</title>
+	<title>NotesService.UpdateNote Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.DoForward Method</h1>
+		<h1 class="title">NotesService.UpdateNote Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Sends a note email to the current user if they have read access to the specified file and archive.</summary-info>
+        <summary-info>Updates an existing note with new content and subject information if the caller is authorized to edit the
+note.</summary-info>
 
 
 
@@ -140,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function DoForward( _&nbsp;<br />   ByVal <i>fv</i> As <strong>ForwardViewModel</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function UpdateNote( _&nbsp;<br />   ByVal <i>tvm</i> As <strong>TextViewModel</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteHeader</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; DoForward(&nbsp;<br />   <strong>ForwardViewModel</strong> <i>fv</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeader</strong>&gt; UpdateNote(&nbsp;<br />   <strong>TextViewModel</strong> <i>tvm</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ DoForward(&nbsp;<br />   <strong>ForwardViewModel</strong>^ <i>fv</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeader</strong>^&gt;^ UpdateNote(&nbsp;<br />   <strong>TextViewModel</strong>^ <i>tvm</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,19 +271,18 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="fv" class="parameterList">
+	Parameters</h4><dl paramName="tvm" class="parameterList">
 	<dt>
 		<span class="parameter">
-			fv
+			tvm
 		</span>
 	</dt>
 	<dd>
-		<strong>ForwardViewModel</strong> 
+		<strong>TextViewModel</strong> 
 	</dd>
 </dl>
 <p>
-	The view model containing information about the note, including file and archive identifiers, note content,
-and subject. 
+	A model containing the updated note content, subject, and related metadata to apply to the note. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -295,16 +295,17 @@ and subject.
 	</dd>
 </dl>
 <p>
-	The server call context that provides information about the current gRPC request and user. 
+	The server call context that provides information about the current gRPC request and caller identity. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeader</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> instance indicating the completion of the operation. 
+		A GNoteHeader representing the updated note if the operation succeeds; otherwise, an empty GNoteHeader if
+the caller is not authorized or required data is missing. 
 	</p>
 	
 
@@ -335,8 +336,8 @@ and subject.
 	</div>
 
 	<div id="remarksSection" class="section">	
-			If the user does not have read access to the specified file and archive, no email is
-sent and a default response is returned. This method requires the caller to be authorized.
+			Only the note's author or users with the 'Admin' role are permitted to update a note.
+If the caller lacks permission or required fields are null, the method returns an empty result.
 	</div>					
 </div>
 
@@ -405,11 +406,11 @@ sent and a default response is returned. This method requires the caller to be a
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

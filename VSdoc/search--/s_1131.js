@@ -1,1 +1,1 @@
-search_result['1131']=["topic_00000000000002AD.html","SQLFileContent.SQLFileId Property","Gets or sets the SQL file identifier."];
+search_result['1131']=["topic_00000000000001D7.html","Notesdata Class","A base class inherited by each EF Core migration."];

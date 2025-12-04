@@ -1,1 +1,1 @@
-search_result['1200']=["topic_00000000000002D6.html","NoteDataManager.NextBaseNoteOrdinal Method","Get next available BaseNoteOrdinal"];
+search_result['1200']=["topic_00000000000001F3.html","NotesDbContext.LinkQueue Property","Gets or sets the link queue."];

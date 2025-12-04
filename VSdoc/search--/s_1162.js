@@ -1,1 +1,1 @@
-search_result['1162']=["topic_00000000000002BF.html","Tags.GetTags Method","Gets the tags."];
+search_result['1162']=["topic_00000000000001DF.html","BodySearch Class","A base class inherited by each EF Core migration."];

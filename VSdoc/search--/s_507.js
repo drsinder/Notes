@@ -1,1 +1,1 @@
-search_result['507']=["topic_0000000000000102.html","HomeIndex.hpData Property",""];
+search_result['507']=["topic_00000000000000B7.html","UserEdit Constructor","Initializes a new instance of the UserEdit class."];

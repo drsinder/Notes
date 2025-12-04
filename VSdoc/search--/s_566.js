@@ -1,1 +1,1 @@
-search_result['566']=["topic_0000000000000132.html","Search.UserId Property","Gets or sets the user identifier."];
+search_result['566']=["topic_00000000000000CF.html","LoginDisplay.OnInitialized Method","Method invoked when the component is ready to start, having received its\r\ninitial parameters from its parent in the render tree."];

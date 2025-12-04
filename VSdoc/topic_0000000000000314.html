@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>MyAuthorizationFilter Class</title>
+	<title>NotesService.GetHomePageMessage Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">MyAuthorizationFilter Class</h1>
+		<h1 class="title">NotesService.GetHomePageMessage Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000313.html">Notes</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,6 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
+        <summary-info>Retrieves the current home page message to be displayed to users.</summary-info>
 
 
 
@@ -139,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Class MyAuthorizationFilter&nbsp;<br />    Implements <strong>IDashboardAuthorizationFilter</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Overrides Function GetHomePageMessage( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>AString</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -178,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public class MyAuthorizationFilter : <strong>IDashboardAuthorizationFilter</strong></pre>			
+					<pre xml:space="preserve" class="brush: csharp">public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>&gt; GetHomePageMessage(&nbsp;<br />   <strong>NoRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -218,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public ref class MyAuthorizationFilter  : public <strong>IDashboardAuthorizationFilter</strong>^</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>^&gt;^ GetHomePageMessage(&nbsp;<br />   <strong>NoRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -257,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public class MyAuthorizationFilter&nbsp;<br />   implements <strong>IDashboardAuthorizationFilter</strong></pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -268,125 +269,43 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="request" class="parameterList">
+	<dt>
+		<span class="parameter">
+			request
+		</span>
+	</dt>
+	<dd>
+		<strong>NoRequest</strong> 
+	</dd>
+</dl>
+<p>
+	A request object containing no parameters. This value is ignored. 
+</p>
+<dl paramName="context" class="parameterList">
+	<dt>
+		<span class="parameter">
+			context
+		</span>
+	</dt>
+	<dd>
+		<strong>ServerCallContext</strong> 
+	</dd>
+</dl>
+<p>
+	The context for the server-side call, providing information about the RPC environment. 
+</p>
 
+<p />
 
-
-
-
-
-
-
-
-
-
-
-
-
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
-		<div>&nbsp;</div>
-	</div>
-
-	<div id="MethodsSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000315.html">Authorize(DashboardContext)</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-			<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?, object?)</a>
-
-	</td>
-	<td>
-
-Determines whether the specified object instances are considered equal.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-			<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?)</a>
-
-	</td>
-	<td>
-
-Determines whether the specified object is equal to the current object.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
+	<h4 class="subHeading">
+		Return Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>AString</strong>&gt; 
+		<p>
+		A task that represents the asynchronous operation. The task result contains an <a target="_top" href=".html" onclick="this.target='';return true;">AString</a> with
+the home page message text. If no message is available, the value will be empty. 
+	</p>
 	
 
 
@@ -396,260 +315,23 @@ Determines whether the specified object is equal to the current object.
 
 
 
-	<tr class="
-inheritedMember 
 
 
-">
-	<td>
-   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
 
-    
-	  
 
 
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.finalize">~Object()</a>
 
-	</td>
-	<td>
-
-Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode">GetHashCode()</a>
-
-	</td>
-	<td>
-
-Serves as the default hash function.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype">GetType()</a>
-
-	</td>
-	<td>
-
-Gets the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.type">Type</a> of the current instance.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-inheritedMember 
-
-
-">
-	<td>
-   <img alt="Protected method" title="Protected method" src="msdn2019/protmethod.png"></img>
-
-    
-	  
-
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone">MemberwiseClone()</a>
-
-	</td>
-	<td>
-
-Creates a shallow copy of the current <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-	<img alt="Static" title="Static" src="msdn2019/static.png"></img>
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.referenceequals">ReferenceEquals(object?, object?)</a>
-
-	</td>
-	<td>
-
-Determines whether the specified <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> instances are the same instance.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2019/pubmethod.png"></img>
-
-
-    
-	</td>
-	<td>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring">ToString()</a>
-
-	</td>
-	<td>
-
-Returns a string that represents the current object.
-(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
-
-	</td>
-</tr>
-
-
-
-
-
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
-	</div>					
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-<!-- Classes -->
-
-<!-- Classes End -->
-
-<!-- Standard Modules -->
-
-<!-- Standard Modules End -->
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
-		<div>&nbsp;</div>
 	</div>
-
-<div id="inheritanceHierarchySection" class="section">
-
-<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
 </div>
 
 
 
-<div style="padding-left:1em;">Notes.MyAuthorizationFilter</div>
 
-				
-</div>
-</div>
+
+
+
+
+
 
 
 
@@ -704,7 +386,6 @@ Returns a string that represents the current object.
 	</div>					
 </div>
 
-
 <div class="section_container">
 	<div class="section_heading">
 		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
@@ -713,10 +394,14 @@ Returns a string that represents the current object.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-	<a href="topic_0000000000000313.html">Notes Namespace</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
-	
+
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
+
+
+			
 
 		</div>
 	</div>					

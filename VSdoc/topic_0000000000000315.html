@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>MyAuthorizationFilter.Authorize Method</title>
+	<title>NotesService.GetNoteHeaders Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">MyAuthorizationFilter.Authorize Method</h1>
+		<h1 class="title">NotesService.GetNoteHeaders Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000313.html">Notes</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,6 +90,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
+        <summary-info>Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in
+the request.</summary-info>
 
 
 
@@ -139,7 +141,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Function Authorize( _&nbsp;<br />   ByVal <i>context</i> As <strong>DashboardContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a> Implements  _&nbsp;<br />   <strong>IDashboardAuthorizationFilter.Authorize</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteHeaders( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteHeadersRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>GNoteHeaderList</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -178,7 +180,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> Authorize(&nbsp;<br />   <strong>DashboardContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; GetNoteHeaders(&nbsp;<br />   <strong>NoteHeadersRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -218,7 +220,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> Authorize(&nbsp;<br />   <strong>DashboardContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>^&gt;^ GetNoteHeaders(&nbsp;<br />   <strong>NoteHeadersRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -257,7 +259,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function Authorize(&nbsp;<br />    <i>context</i> : <strong>DashboardContext</strong>&nbsp;<br />) : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,29 +271,45 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="context" class="parameterList">
+	Parameters</h4><dl paramName="request" class="parameterList">
+	<dt>
+		<span class="parameter">
+			request
+		</span>
+	</dt>
+	<dd>
+		<strong>NoteHeadersRequest</strong> 
+	</dd>
+</dl>
+<p>
+	An object containing the criteria for selecting note headers, including note file ID, archive ID, note
+ordinal, response ordinal, and additional options such as whether to include content, tags, or nested
+responses. Cannot be null. 
+</p>
+<dl paramName="context" class="parameterList">
 	<dt>
 		<span class="parameter">
 			context
 		</span>
 	</dt>
 	<dd>
-		<strong>DashboardContext</strong> 
+		<strong>ServerCallContext</strong> 
 	</dd>
 </dl>
 <p>
-	 
+	The context for the server call, providing user and request metadata. Cannot be null. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>GNoteHeaderList</strong>&gt; 
+		<p>
+		A list of note headers matching the specified criteria. If the user does not have read access, the list will
+be empty. 
+	</p>
 	
-
-	<h4 class="subHeading">
-		Implements</h4><a href="#">IDashboardAuthorizationFilter.Authorize</a><br />
 
 
 
@@ -313,6 +331,20 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			The returned list may include base notes, responses, or both, depending on the values
+specified in the request. If the ContentAndTags option is set, each note header will include its associated
+content and tags. If the NestResponses option is set, responses will be nested under their corresponding
+base notes. The method requires the caller to have read access to the specified note file and
+archive.
+	</div>					
+</div>
 
 
 
@@ -379,11 +411,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000314.html">MyAuthorizationFilter Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_0000000000000313.html">Notes Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

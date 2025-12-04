@@ -1,1 +1,1 @@
-search_result['295']=["topic_0000000000000099_methods--.html","HelpDialog Methods",""];
+search_result['295']=["topic_0000000000000075.html","ExportJson Class","Represents a Blazor component that exports note data as a JSON file and provides functionality to save the\r\nexported file using JavaScript interop."];

@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Timers the tick2.</summary-info>
+        <summary-info>Handles the timer's elapsed event by updating the current time and triggering a UI refresh.</summary-info>
 
 
 
@@ -281,7 +281,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The source. 
+	The source of the timer event, typically the timer object that raised the event. 
 </p>
 <dl paramName="e" class="parameterList">
 	<dt>
@@ -294,7 +294,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The <a target="_top" href=".html" onclick="this.target='';return true;">ElapsedEventArgs</a> instance containing the event data. 
+	An <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.timers.elapsedeventargs">ElapsedEventArgs</a> instance containing the event data for the elapsed timer
+event. 
 </p>
 
 <p />
@@ -320,6 +321,17 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			This method is intended to be used as an event handler for timer events. It updates
+the time and refreshes the component's state to reflect the change.
+	</div>					
+</div>
 
 
 

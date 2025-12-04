@@ -1,1 +1,1 @@
-search_result['1064']=["topic_0000000000000277.html","NoteHeader.AuthorID Property","Gets or sets the author identifier."];
+search_result['1064']=["topic_00000000000001C4.html","Globals.GetNotesClient Method",""];

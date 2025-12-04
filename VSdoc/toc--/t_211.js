@@ -1,1 +1,1 @@
-c['211']=[['212',"OnAfterRenderAsync(bool) Method","topic_000000000000007C.html",0]];
+c['211']=[['212',"ModalInstance Property","topic_000000000000007C.html",0],['213',"model Property","topic_000000000000007D.html",0]];

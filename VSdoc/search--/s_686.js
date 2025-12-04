@@ -1,1 +1,1 @@
-search_result['686']=["topic_000000000000017E.html","NotePanel.NextSearch Method","GET next matching item from search"];
+search_result['686']=["topic_00000000000000FD.html","EditNote.NoteId Property","Gets or sets the note identifier."];

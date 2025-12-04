@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Sequencer.LastTime Property</title>
+	<title>Search.Clone Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Sequencer.LastTime Property</h1>
+		<h1 class="title">Search.Clone Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F1.html">Notes.Entities</a>
+<a href="topic_00000000000001F6.html">Notes.Entities</a>
 
 
 
@@ -90,8 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets the last time.
-Time we last completed a run with this</summary-info>
+        <summary-info>Clones the specified s.</summary-info>
 
 
 
@@ -141,7 +140,7 @@ Time we last completed a run with this</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Display(Name = &quot;Last Time&quot;)&gt; _&nbsp;<br />&lt;DataMember(Order = 4)&gt; _&nbsp;<br />Public Property LastTime() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">Date</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Shared Function Clone( _&nbsp;<br />   ByVal <i>s</i> As <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a> _&nbsp;<br />) As <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +179,7 @@ Time we last completed a run with this</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Display(Name = &quot;Last Time&quot;)]&nbsp;<br />[DataMember(Order = 4)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> LastTime {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a> Clone(&nbsp;<br />   <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a> <i>s</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +219,7 @@ Time we last completed a run with this</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Display(Name = &quot;Last Time&quot;)]&nbsp;<br />[DataMember(Order = 4)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> LastTime {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a>^ Clone(&nbsp;<br />   <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a>^ <i>s</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +258,7 @@ Time we last completed a run with this</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Display(Name = &quot;Last Time&quot;)&nbsp;<br />   DataMember(Order = 4)&nbsp;<br />function get LastTime() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>;&nbsp;<br />public &nbsp;<br />   Display(Name = &quot;Last Time&quot;)&nbsp;<br />   DataMember(Order = 4)&nbsp;<br />function set LastTime(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public static function Clone(&nbsp;<br />    <i>s</i> : <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a>&nbsp;<br />) : <a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,12 +269,28 @@ Time we last completed a run with this</summary-info>
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="s" class="parameterList">
+	<dt>
+		<span class="parameter">
+			s
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a> 
+	</dd>
+</dl>
+<p>
+	The s. 
+</p>
+
+<p />
 
 	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> 
+		Return Value</h4>
+	<a target="_top" href="topic_0000000000000294.html" onclick="this.target='';return true;">Search</a> 
 		<p>
-		The last time. 
+		Search. 
 	</p>
 	
 
@@ -365,11 +380,11 @@ Time we last completed a run with this</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000029A.html">Sequencer Class</a><br />
+			<a href="topic_0000000000000294.html">Search Class</a><br />
 
 
 
-<a href="topic_00000000000001F1.html">Notes.Entities Namespace</a><br />
+<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
 
 
 			

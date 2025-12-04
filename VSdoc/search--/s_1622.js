@@ -1,0 +1,1 @@
+search_result['1622']=["topic_00000000000002DA_overloads--.html","NoteDataManager.GetBaseNoteHeader Method","Get the BaseNoteHeader for a Note"];

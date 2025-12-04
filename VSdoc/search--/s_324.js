@@ -1,1 +1,1 @@
-search_result['324']=["topic_00000000000000A4.html","PrintDlg Class","This takes the provided PrintStuff string and puts it in a\r\nSyncfusion editor component for the user to see.  It then allows\r\nthe user to press a button to print.  TO do the printing\r\nthe built in pri..."];
+search_result['324']=["topic_000000000000007D.html","ExportJsonString.model Property","Gets or sets the model.  Represents what we want to export"];

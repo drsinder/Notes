@@ -1,1 +1,1 @@
-search_result['753']=["topic_00000000000001A5.html","Globals.GuestId Property","Gets or sets the guest identifier."];
+search_result['753']=["topic_000000000000011B.html","NoteIndex.sfGrid1 Property","Our index grid"];

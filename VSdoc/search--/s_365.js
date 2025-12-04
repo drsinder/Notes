@@ -1,1 +1,1 @@
-search_result['365']=["topic_00000000000000B5_overloads--.html","UserEdit.OnParametersSetAsync Method","On parameters set as an asynchronous operation."];
+search_result['365']=["topic_000000000000008C.html","ExportViewModel.isCollapsible Property","Collapsible or \"flat\""];

@@ -1,1 +1,1 @@
-search_result['736']=["topic_000000000000019E.html","UserRoles Class","Class UserRoles."];
+search_result['736']=["topic_0000000000000110.html","NewNote Constructor","Initializes a new instance of the NewNote class."];

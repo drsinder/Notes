@@ -1,1 +1,1 @@
-search_result['680']=["topic_0000000000000179.html","NotePanel.respY Property","Gets or sets the resp y."];
+search_result['680']=["topic_00000000000000FC.html","EditNote Class","Setup for calling note editor panel to edit an existing note"];

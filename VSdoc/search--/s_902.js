@@ -1,1 +1,1 @@
-search_result['902']=["topic_0000000000000203.html","ApplicationUser.Pref5 Property","Gets or sets a value indicating whether this ApplicationUser is pref5.\r\nexpanded responses"];
+search_result['902']=["topic_0000000000000166.html","NotePanel Class","Represents a panel for displaying and interacting with notes, including support for responses, navigation, and\r\nvarious display modes within a note management application."];

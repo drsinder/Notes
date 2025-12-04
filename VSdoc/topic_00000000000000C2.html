@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>ListMenu.myGauge Property</title>
+	<title>ListMenu.Model Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">ListMenu.myGauge Property</h1>
+		<h1 class="title">ListMenu.Model Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000BC.html">Notes.Client.Menus</a>
+<a href="topic_00000000000000BF.html">Notes.Client.Menus</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Gets or sets my gauge.</summary-info>
+        <summary-info>reference to data model for index display</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Property myGauge() As <strong>SfLinearGauge</strong></pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property Model() As <strong>NoteDisplayIndexModel</strong></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <strong>SfLinearGauge</strong> myGauge {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <strong>NoteDisplayIndexModel</strong> Model {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <strong>SfLinearGauge</strong>^ myGauge {&nbsp;<br /> <strong>SfLinearGauge</strong>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>SfLinearGauge</strong>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <strong>NoteDisplayIndexModel</strong>^ Model {&nbsp;<br /> <strong>NoteDisplayIndexModel</strong>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>NoteDisplayIndexModel</strong>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +258,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function get myGauge() : <strong>SfLinearGauge</strong>;&nbsp;<br />public function set myGauge(value : <strong>SfLinearGauge</strong>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get Model() : <strong>NoteDisplayIndexModel</strong>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set Model(value : <strong>NoteDisplayIndexModel</strong>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +272,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<strong>SfLinearGauge</strong> 
+	<strong>NoteDisplayIndexModel</strong> 
 		<p>
-		My gauge. 
+		The model. 
 	</p>
 	
 
@@ -364,11 +364,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000BD.html">ListMenu Class</a><br />
+			<a href="topic_00000000000000C0.html">ListMenu Class</a><br />
 
 
 
-<a href="topic_00000000000000BC.html">Notes.Client.Menus Namespace</a><br />
+<a href="topic_00000000000000BF.html">Notes.Client.Menus Namespace</a><br />
 
 
 			

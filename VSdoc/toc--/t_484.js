@@ -1,1 +1,1 @@
-c['484']=[['485',"OnParametersSetAsync() Method","topic_00000000000000EB.html",0]];
+c['484']=[['485',"NotesFilesAdmin Constructor","topic_00000000000000EC.html",0],['486',"Properties","topic_00000000000000EA_props--.html",1],['489',"Methods","topic_00000000000000EA_methods--.html",1],['494',"Fields","topic_00000000000000EA_vars--.html",1]];

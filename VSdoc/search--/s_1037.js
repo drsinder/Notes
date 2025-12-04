@@ -1,1 +1,1 @@
-search_result['1037']=["topic_0000000000000261.html","NoteFile.Id Property","Gets or sets the identifier.\r\nIdentity of the file"];
+search_result['1037']=["topic_00000000000001AF.html","Globals.SendGridApiKey Property","Gets or sets the send grid API key."];

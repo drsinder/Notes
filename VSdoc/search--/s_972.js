@@ -1,1 +1,1 @@
-search_result['972']=["topic_0000000000000234_vars--.html","LinkQueue Fields",""];
+search_result['972']=["topic_0000000000000190.html","Versions.NoteOrdinal Property","Gets or sets the note ordinal."];

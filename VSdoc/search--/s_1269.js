@@ -1,1 +1,1 @@
-search_result['1269']=["topic_00000000000002F5.html","NotesService.GetAccessList Method","Retrieves the access list for a specified note file and archive for the requesting user."];
+search_result['1269']=["topic_000000000000021A_vars--.html","HomePageMessage Fields",""];

@@ -1,1 +1,1 @@
-search_result['105']=["topic_000000000000003B_events--.html","AddAccessDlg Events",""];
+search_result['105']=["topic_000000000000002E.html","AccessItem Class","Used for editing an access token segment (one flag)"];

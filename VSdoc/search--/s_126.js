@@ -1,1 +1,1 @@
-search_result['126']=["topic_0000000000000047.html","CodeFormat.EditObj Property","Gets or sets the edit object."];
+search_result['126']=["topic_0000000000000034.html","AccessItem.isChecked Property","Is it currently checked?"];

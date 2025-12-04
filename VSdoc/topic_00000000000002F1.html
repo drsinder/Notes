@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.DeleteNoteFile Method</title>
+	<title>NotesService.UpdateUserRoles Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
 	<script src="msdn2019/toc.js"></script>
@@ -75,11 +75,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.DeleteNoteFile Method</h1>
+		<h1 class="title">NotesService.UpdateUserRoles Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002DC.html">Notes.Services</a>
+<a href="topic_00000000000002E1.html">Notes.Services</a>
 
 
 
@@ -90,7 +90,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Deletes the specified note file and all associated data from the database.</summary-info>
+        <summary-info>Updates the roles assigned to a user based on the specified role selections.</summary-info>
 
 
 
@@ -140,7 +140,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function DeleteNoteFile( _&nbsp;<br />   ByVal <i>noteFile</i> As <strong>GNotefile</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;Authorize(Roles = &quot;Admin&quot;)&gt; _&nbsp;<br />Public Overrides Function UpdateUserRoles( _&nbsp;<br />   ByVal <i>model</i> As <strong>EditUserViewModel</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +179,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; DeleteNoteFile(&nbsp;<br />   <strong>GNotefile</strong> <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; UpdateUserRoles(&nbsp;<br />   <strong>EditUserViewModel</strong> <i>model</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +219,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ DeleteNoteFile(&nbsp;<br />   <strong>GNotefile</strong>^ <i>noteFile</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[Authorize(Roles = &quot;Admin&quot;)]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ UpdateUserRoles(&nbsp;<br />   <strong>EditUserViewModel</strong>^ <i>model</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,18 +270,19 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="noteFile" class="parameterList">
+	Parameters</h4><dl paramName="model" class="parameterList">
 	<dt>
 		<span class="parameter">
-			noteFile
+			model
 		</span>
 	</dt>
 	<dd>
-		<strong>GNotefile</strong> 
+		<strong>EditUserViewModel</strong> 
 	</dd>
 </dl>
 <p>
-	The note file to delete. Must contain a valid identifier for an existing note file. 
+	An object containing the user's data and a list of roles to be added or removed. The roles list indicates
+which roles the user should be a member of after the update. 
 </p>
 <dl paramName="context" class="parameterList">
 	<dt>
@@ -294,7 +295,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</dd>
 </dl>
 <p>
-	The server call context for the current request. 
+	The server call context for the current gRPC request. Provides information about the request and its
+execution environment. 
 </p>
 
 <p />
@@ -303,7 +305,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 		Return Value</h4>
 	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> object indicating that the operation completed successfully. 
+		A <a target="_top" href=".html" onclick="this.target='';return true;">NoRequest</a> object indicating that the operation has completed. No additional data is
+returned. 
 	</p>
 	
 
@@ -334,8 +337,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 	<div id="remarksSection" class="section">	
-			This method removes the note file along with all related tags, headers, content, and
-access records. Only users with the 'Admin' role are authorized to perform this operation.
+			This method requires the caller to have the 'Admin' role. Roles are updated to match
+the selections provided in <i>model</i>; roles not selected are removed, and selected roles are
+added. The operation is performed asynchronously.
 	</div>					
 </div>
 
@@ -404,11 +408,11 @@ access records. Only users with the 'Admin' role are authorized to perform this 
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002E6.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
 
 
 
-<a href="topic_00000000000002DC.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
 
 
 			

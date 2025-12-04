@@ -1,1 +1,1 @@
-search_result['996']=["topic_0000000000000247.html","Mark.ResponseOrdinal Property","Gets or sets the response ordinal."];
+search_result['996']=["topic_000000000000019A.html","CookieStateAgent.ReadCookie Method","Read a cookie"];
