@@ -89,7 +89,13 @@ namespace Notes.Services
             {
                 UtcTime = Google.Protobuf.WellKnownTypes.Timestamp.FromDateTime(now),
                 OffsetHours = (int)TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).TotalHours,
-                OffsetMinutes = TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).Minutes % 60
+                OffsetMinutes = TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).Minutes % 60,
+                Status = new RequestStatus()
+                {
+                    Success = true,
+                    Status = 0,
+                    Message = $"Server time: {DateTime.Now}"
+                }
             };
             return (response);
         }
@@ -188,7 +194,13 @@ namespace Notes.Services
         {
             EditUserViewModel model = new()
             {
-                RolesList = new CheckedUserList()
+                RolesList = new CheckedUserList(),
+                Status = new RequestStatus()
+                {
+                    Success = true,
+                    Status = 0,
+                    Message = "User roles retrieved."
+                }
             };
             string Id = request.Subject;
             ApplicationUser user = await _userManager.FindByIdAsync(Id);
@@ -337,6 +349,13 @@ namespace Notes.Services
                 homepageModel.NoteAccesses.List.Add(na.GetGNoteAccess());
             }
 
+            homepageModel.Status = new()
+            {
+                Success = true,
+                Status = 0,
+                Message = "Admin page model retrieved."
+            };
+
             return homepageModel;
         }
 
@@ -357,7 +376,10 @@ namespace Notes.Services
         private async Task<HomePageModel> GetBaseHomePageModelAsync(NoRequest request, ServerCallContext context)
 #pragma warning restore IDE0060 // Remove unused parameter
         {
-            HomePageModel homepageModel = new();
+            HomePageModel homepageModel = new()
+            {Status = new()
+                { Success = true, Status = 0, Message = "Home page model retrieved." }
+            };
 
             NoteFile? hpmf = _db.NoteFile.Where(p => p.NoteFileName == "homepagemessages").FirstOrDefault();
             if (hpmf is not null)
@@ -374,7 +396,6 @@ namespace Notes.Services
                 try
                 {
                     ClaimsPrincipal user = context.GetHttpContext().User;
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     if (user.FindFirst(ClaimTypes.NameIdentifier) is not null && user.FindFirst(ClaimTypes.NameIdentifier).Value != null)
                     {
                         ApplicationUser appUser = await GetAppUser(context);
@@ -400,10 +421,15 @@ namespace Notes.Services
 
                         homepageModel.NoteFiles = NoteFile.GetGNotefileList(myNoteFiles);
                     }
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    homepageModel.Status = new()
+                    {
+                        Success = false,
+                        Status = -1,
+                        Message = ex.Message
+                    };
                 }
             }
 
@@ -515,7 +541,8 @@ namespace Notes.Services
         {
             ClaimsPrincipal user;
             ApplicationUser appUser;
-            NoteDisplayIndexModel idxModel = new();
+            NoteDisplayIndexModel idxModel = new()
+            { Status = new() { Success = false } };
             bool isAdmin;
             bool isUser;
 
@@ -534,12 +561,16 @@ namespace Notes.Services
                         isAdmin = await _userManager.IsInRoleAsync(appUser, "Admin");
                         isUser = await _userManager.IsInRoleAsync(appUser, "User");
                         if (!isUser)
+                        {
+                            idxModel.Status.Message = idxModel.Message = "You are not authorized to access notes.";
+                            
                             return idxModel;    // not a User?  You get NOTHING!
+                        }
 
                         NoteAccess noteAccess = await AccessManager.GetAccess(_db, appUser.Id, request.NoteFileId, arcId);
                         if (noteAccess is null)
                         {
-                            idxModel.Message = "File does not exist";
+                            idxModel.Status.Message = idxModel.Message = "File does not exist";
                             return idxModel;
                         }
                         if (isAdmin)
@@ -552,7 +583,7 @@ namespace Notes.Services
 
                         if (!idxModel.MyAccess.ReadAccess && !idxModel.MyAccess.Write)
                         {
-                            idxModel.Message = "You do not have access to file " + idxModel.NoteFile.NoteFileName;
+                            idxModel.Status.Message = idxModel.Message = "You do not have access to file " + idxModel.NoteFile.NoteFileName;
                             return idxModel;
                         }
 
@@ -581,14 +612,17 @@ namespace Notes.Services
                     }
                     catch (Exception ex1)
                     {
-                        idxModel.Message = ex1.Message;
+                        idxModel.Status.Message = idxModel.Message = ex1.Message;
                     }
                 }
             }
             catch (Exception ex)
             {
-                idxModel.Message = ex.Message;
+                idxModel.Status.Message = idxModel.Message = ex.Message;
             }
+
+            idxModel.Status.Success = true;
+            idxModel.Status.Message = "Note file index data retrieved.";
 
             return idxModel;
         }
@@ -629,7 +663,8 @@ namespace Notes.Services
             NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, nh.NoteFileId, nh.ArchiveId);
 
             if (!na.ReadAccess)
-                return new DisplayModel();
+                return new DisplayModel()
+                { Status = new() { Message = "You do not have read access", Success = false } };
 
             DisplayModel model = new()
             {
@@ -639,7 +674,9 @@ namespace Notes.Services
                 NoteFile = nf.GetGNotefile(),
                 Access = access.GetGNoteAccess(),
                 CanEdit = canEdit,
-                IsAdmin = isAdmin
+                IsAdmin = isAdmin,
+                Status = new()
+                { Message = "Note content retrieved", Success = true }
             };
 
             return model;

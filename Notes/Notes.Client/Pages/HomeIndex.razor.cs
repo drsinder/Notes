@@ -116,6 +116,8 @@ namespace Notes.Client.Pages
         /// </summary>
         private bool initDone { get; set; } = false;
 
+        private ServerTime? sTime { get; set; }
+        
         /// <summary>
         /// Invoked after the component has rendered. Allows performing post-render logic, such as initialization, based
         /// on whether this is the first render.
@@ -146,7 +148,7 @@ namespace Notes.Client.Pages
             impfileList = new GNotefileList();
 
             // If this is not done things don't progress - that's OK - but why is a mystery!
-            _ = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
+            sTime = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
 
             if (myState.IsAuthenticated)
             {

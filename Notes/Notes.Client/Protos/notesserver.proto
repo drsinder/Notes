@@ -89,6 +89,7 @@ message ServerTime {
 	google.protobuf.Timestamp utcTime = 1;
 	int32 offsetHours = 2;
 	int32 offsetMinutes = 3;
+	RequestStatus status = 4;
 }
 
 ///////////////////////////////////////////////
@@ -157,6 +158,7 @@ message CheckedUserList {
 message EditUserViewModel {
 	GAppUser userData = 1;				// a representation of the user
 	CheckedUserList rolesList = 2;		// their role/memberships
+	RequestStatus status = 3;			// status of the request
 }
 
 
@@ -361,6 +363,7 @@ message HomePageModel {
 	string message = 3;					// banner message text to display
 	GAppUser userData = 4;				// user data
 	GAppUserList userDataList = 5;		// list of all users
+	RequestStatus status = 6;			// status of the request
 }
 
 // request to import a file
@@ -390,6 +393,7 @@ message NoteDisplayIndexModel
 	string message = 11;			
 	GAppUser userData = 12;			// user data
 	GTagsList tags = 13;			// all tags for file
+	RequestStatus status = 14;		// status of the request
 }
 
 // used to requst a NoteDisplayIndexModel or other items related to a specific file/archive
@@ -407,6 +411,7 @@ message DisplayModel {
 	GNoteAccess access = 5;			// access item/token for file/user
 	bool canEdit = 6;				// can user edit the note
 	bool isAdmin = 7;				// is user an admin
+	RequestStatus status = 8;		// status of the request
 }
 
 // request a DisplayModel
