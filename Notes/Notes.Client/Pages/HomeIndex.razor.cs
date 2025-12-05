@@ -111,6 +111,9 @@ namespace Notes.Client.Pages
         /// <value>The histfile list.</value>
         private GNotefileList? histfileList { get; set; }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether initialization has completed.
+        /// </summary>
         private bool initDone { get; set; } = false;
 
         /// <summary>
@@ -170,28 +173,36 @@ namespace Notes.Client.Pages
                 hpData = hpModel = await NotesClient.GetHomePageModelAsync(new NoRequest(), myState.AuthHeader);
 
                 GNotefileList fileList1 = hpModel.NoteFiles;
-                GNotefileList nameList1 = hpModel.NoteFiles;
-                fileList = fileList1.List.ToList().OrderBy(p => p.NoteFileName).ToList();
-                nameList = nameList1;
+                nameList = fileList1;
+
+                fileList = fileList1.List
+                    .Select(f => new GNotefile { Id = f.Id, NoteFileName = f.NoteFileName, NoteFileTitle = f.NoteFileTitle })
+                    .OrderBy(p => p.NoteFileName, System.StringComparer.Ordinal)
+                    .ToList();
 
                 impfileList.List.Clear();
                 histfileList.List.Clear();
 
-                for (int i = 0; i < fileList1.List.Count; i++)
+                foreach (var f in fileList1.List)
                 {
                     GNotefile work = new GNotefile 
-                        { Id = fileList1.List[i].Id, NoteFileName = fileList1.List[i].NoteFileName, 
-                        NoteFileTitle = fileList1.List[i].NoteFileTitle };
+                        { Id = f.Id, NoteFileName = f.NoteFileName, 
+                        NoteFileTitle = f.NoteFileTitle };
 
                     if (EnterNotesfileName == work.NoteFileName)    // direct goto specified file
                         GoToFile = work;
 
                     // handle special important and history files
                     string fname = work.NoteFileName;
-                    if (fname == "Opbnotes" || fname == "Gnotes" || fname.StartsWith("sysnotes") || fname == "Cannounce")
+                    if (fname.Equals("Opbnotes", System.StringComparison.Ordinal) 
+                        || fname.Equals("Gnotes", System.StringComparison.Ordinal) 
+                        || fname.StartsWith("sysnotes", System.StringComparison.Ordinal) 
+                        || fname.Equals("Cannounce", System.StringComparison.Ordinal))
                         histfileList.List.Add(work);
 
-                    if (fname == "announce" || fname == "pbnotes" || fname == "noteshelp")
+                    if (fname.Equals("announce", System.StringComparison.Ordinal) 
+                        || fname.Equals("pbnotes", System.StringComparison.Ordinal) 
+                        || fname.Equals("noteshelp", System.StringComparison.Ordinal))
                         impfileList.List.Add(work);
                 }
             }
