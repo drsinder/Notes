@@ -26,7 +26,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Notes.Client;
-using Notes.Client.Shared;
+using Notes.Client.Comp;
 using Notes.Data;
 using Notes.Entities;
 using Notes.Manager;
@@ -36,6 +36,9 @@ using System.Runtime;
 using System.Security.Claims;
 using System.Text;
 
+/// <summary>
+/// The Notes.Services namespace contains gRPC service implementations for managing notes, user access,
+/// Email, and related operations in the notes application.  
 namespace Notes.Services
 {
     /// <summary>

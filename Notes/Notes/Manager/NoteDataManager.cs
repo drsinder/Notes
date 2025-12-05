@@ -23,6 +23,10 @@ using Notes.Client;
 using Notes.Data;
 using Notes.Entities;
 
+/// <summary>
+/// The Notes.Manager namespace contains classes for managing note-related data operations,
+/// access control, and business logic within the notes application.
+/// </summary>
 namespace Notes.Manager
 {
     /// <summary>

@@ -1,9 +1,10 @@
 ﻿@using System.ComponentModel.DataAnnotations
 @using Blazored.Modal.Services
+@using Notes.Client.Comp
 
 @inject IModalService Modal
 @inject NotesServer.NotesServerClient Client
-@inject Notes.Client.Shared.CookieStateAgent myState
+@inject CookieStateAgent myState
 
 <div class="dialogs">
     <h3>Delete Note File Id: @FileId</h3>

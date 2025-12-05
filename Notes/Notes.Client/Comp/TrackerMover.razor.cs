@@ -6,7 +6,7 @@
 // ***********************************************************************
 using Microsoft.AspNetCore.Components;
 using Notes.Client.Pages;
-using Notes.Client.Shared;
+using Notes.Client.Comp;
 using Notes.Protos;
 using Syncfusion.Blazor.SplitButtons;
 

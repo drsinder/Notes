@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Notes.Protos;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// The Notes.Entities namespace contains the Entity Framework Core Table
+/// definitions for the Notes application.  These classes define the schema.
+/// </summary>
 namespace Notes.Entities
 {
     /// <summary>

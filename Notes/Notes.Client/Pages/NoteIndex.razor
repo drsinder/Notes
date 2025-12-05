@@ -25,13 +25,14 @@
 @page "/noteindex/{NotesfileId:int}"
 @page "/noteindex/{NotesfileId:int}/{NoteOrdinal:long}"
 
+@using Notes.Client.Comp
+@using Notes.Client.Menus
 @using Notes.Client.Panels
 @using Notes.Protos
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using Notes.Client.Menus
 @using Syncfusion.Blazor.Inputs
 
 @inject CookieStateAgent myState

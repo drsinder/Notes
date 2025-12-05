@@ -25,6 +25,9 @@ using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 using Syncfusion.Blazor.DropDowns;
 
+/// <summary>
+/// The Notes.Client.Pages namespace contains page components for the Notes client application.
+/// </summary>
 namespace Notes.Client.Pages
 {
     /// <summary>

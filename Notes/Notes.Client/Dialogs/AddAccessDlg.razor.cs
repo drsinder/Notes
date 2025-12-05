@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 using System.Timers;
 
+/// <summary>
+/// The Notes.Client.Dialogs namespace contains dialog components for the Notes client application.
+/// </summary>
 namespace Notes.Client.Dialogs
 {
     /// <summary>

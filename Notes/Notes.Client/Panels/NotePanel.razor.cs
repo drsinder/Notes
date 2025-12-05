@@ -10,6 +10,9 @@ using Notes.Protos;
 using Syncfusion.Blazor.Inputs;
 using System.Text;
 
+/// <summary>
+/// The Notes.Client.Panels namespace contains components for displaying and managing notes within the client application.
+/// </summary>
 namespace Notes.Client.Panels
 {
     /// <summary>

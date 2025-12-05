@@ -1,9 +1,9 @@
 using Blazored.Modal;
 using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
+using Notes.Client.Comp;
 using Notes.Client.Dialogs;
 using Notes.Client.Pages;
-using Notes.Client.Shared;
 using Notes.Protos;
 using Syncfusion.Blazor.Navigations;
 using System.Timers;

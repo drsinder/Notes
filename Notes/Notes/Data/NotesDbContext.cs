@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Notes.Entities;
 
+/// <summary>
+/// The Notes.Data namespace contains the Entity Framework Core database context for the notes application,
+/// providing access to note-related entities and ASP.NET Core Identity features.
+/// </summary>
 namespace Notes.Data;
 /// <summary>
 /// Represents the Entity Framework Core database context for the notes application, providing access to note-related

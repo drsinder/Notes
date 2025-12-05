@@ -30,7 +30,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Notes.Client;
-using Notes.Client.Shared;
+using Notes.Client.Comp;
 using Notes.Components;
 using Notes.Components.Account;
 using Notes.Data;

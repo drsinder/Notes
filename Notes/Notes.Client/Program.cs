@@ -24,7 +24,7 @@ using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Notes.Client;
-using Notes.Client.Shared;
+using Notes.Client.Comp;
 using Notes.Protos;
 using Syncfusion.Blazor;
 using Syncfusion.Licensing;

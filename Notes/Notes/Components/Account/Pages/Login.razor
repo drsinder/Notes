@@ -1,18 +1,18 @@
 ﻿@page "/Account/Login"
 
 @using System.ComponentModel.DataAnnotations
+@using System.IdentityModel.Tokens.Jwt
+@using System.Security.Claims
+@using System.Text
+@using System.Text.Json
 @using Grpc.Core
 @using Microsoft.AspNetCore.Authentication
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.IdentityModel.Tokens
+@using Notes.Client.Comp
 @using Notes.Data
-@using System.Security.Claims
-@using System.IdentityModel.Tokens.Jwt
-@using Notes.Protos
-@using Notes.Client.Shared
-@using System.Text.Json
-@using System.Text
 @using Notes.Entities
+@using Notes.Protos
 
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager

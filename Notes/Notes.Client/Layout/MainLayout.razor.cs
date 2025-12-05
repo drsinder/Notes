@@ -1,5 +1,8 @@
 using System.Timers;
 
+/// <summary>
+/// The Notes.Client.Layout namespace contains layout components for the Notes client application.
+/// </summary>
 namespace Notes.Client.Layout
 {
     public partial class MainLayout

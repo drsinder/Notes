@@ -1,4 +1,4 @@
-﻿namespace Notes.Client.Shared
+﻿namespace Notes.Client.Comp
 {
     /// <summary>
     /// Class UserRoles.

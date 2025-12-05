@@ -5,6 +5,9 @@ using Notes.Protos;
 using Syncfusion.Blazor.Navigations;
 using System.Timers;
 
+/// <summary>
+/// The Notes.Client.Menus namespace contains menu components for the Notes client application.
+/// </summary>
 namespace Notes.Client.Menus
 {
     /// <summary>

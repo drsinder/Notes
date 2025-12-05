@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Components;
 using Notes.Protos;
 using W8lessLabs.Blazor.LocalFiles;
 
+/// <summary>
+/// The notes client.Pages.Admin namespace Contains admin page components for the Notes application.
+/// </summary>
 namespace Notes.Client.Pages.Admin
 {
     public partial class NotesFilesAdmin

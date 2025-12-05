@@ -5,7 +5,10 @@ using Microsoft.JSInterop;
 using Notes.Protos;
 using System.Text.Json;
 
-namespace Notes.Client.Shared
+/// <summary>
+/// The Notes.Client.Comp namespace contains Blazor components and related classes for the Notes client application.
+/// </summary>
+namespace Notes.Client.Comp
 {
     /// <summary>
     /// Provides state management and authentication logic for user login using cookies in a Blazor component. Enables

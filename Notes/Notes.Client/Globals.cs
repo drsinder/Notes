@@ -6,11 +6,19 @@ using Notes.Client.Menus;
 using Notes.Protos;
 using System.Text;
 
+/// <summary>
+/// The Notes.Client namespace contains classes and components for the client-side application of the Notes system,
+/// </summary>
 namespace Notes.Client
 {
     /// <summary>
-    /// Class Globals.
+    /// Provides global constants, configuration values, and utility methods used throughout the application.
     /// </summary>
+    /// <remarks>The Globals class contains static properties for application-wide identifiers, configuration
+    /// settings, and helper methods such as Base64 encoding/decoding and time zone conversions. These members are
+    /// intended for use across different components to ensure consistent access to shared values and functionality. All
+    /// members are static and thread-safe for read operations; however, callers should ensure thread safety when
+    /// modifying settable properties in multi-threaded scenarios.</remarks>
     public static class Globals
     {
         /// <summary>
