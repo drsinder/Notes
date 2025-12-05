@@ -134,3 +134,17 @@ button {
     background-image: url("https://www.drsinder.com/NotesStuff/Notes2022/Images/index-bgnd.jpg");
     min-height: 100%;
 }
+
+.my-home {
+    color: white;
+}
+
+.my-left {
+    position: absolute;
+    left: 0;
+}
+
+.my-main-backgound {
+    background-color: #eee;
+    min-height: 100%;
+}

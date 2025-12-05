@@ -23,7 +23,7 @@
         </div>
         @if (!Navigation.Uri.EndsWith("/"))
         {
-            <article class="content px-4">
+            <article class="content px-4 my-main-backgound">
                 @Body
             </article>
         }
@@ -41,13 +41,3 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
-<style>
-    .my-home {
-        color: white;
-    }
-    .my-left {
-        position: absolute;
-        left: 0;
-    }
-
-</style>
