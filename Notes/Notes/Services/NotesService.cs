@@ -487,7 +487,7 @@ namespace Notes.Services
             StreamReader file = new (input);
 
             Importer? imp = new();
-            bool result = await imp.Import(_db, file, request.NoteFile);
+            RequestStatus result = await imp.Import(_db, file, request.NoteFile);
 
             file.DiscardBufferedData();
             file.Dispose();
@@ -495,12 +495,7 @@ namespace Notes.Services
             GC.Collect();
             GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
             GC.Collect();
-            return new RequestStatus()
-                {
-                Success = result,
-                Status = 0,
-                Message = "Import completed"
-                };
+            return result;
         }
 
         /// <summary>

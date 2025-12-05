@@ -1,6 +1,8 @@
 using Blazored.Modal;
+using Blazored.Modal.Services;
 using Microsoft.AspNetCore.Components;
 using Notes.Protos;
+using System.Reflection;
 
 namespace Notes.Client.Dialogs
 {
@@ -18,6 +20,13 @@ namespace Notes.Client.Dialogs
         /// <value>The modal instance.</value>
         [CascadingParameter]
         public BlazoredModalInstance ModalInstance { get; set; }
+
+        /// <summary>
+        /// For dialogs
+        /// </summary>
+        /// <value>The modal.</value>
+        [CascadingParameter] public required IModalService Modal { get; set; }
+
 
         /// <summary>
         /// Gets or sets the note file.
@@ -43,10 +52,23 @@ namespace Notes.Client.Dialogs
         {
             if (firstRender)
             {
-                _ = await Client.ImportAsync(new ImportRequest()
+                RequestStatus rstatus = await Client.ImportAsync(new ImportRequest()
                 { NoteFile = NoteFile, Payload = Google.Protobuf.ByteString.CopyFrom(UploadFile) }, myState.AuthHeader, deadline: DateTime.UtcNow.AddMinutes(10));
                 await ModalInstance.CancelAsync();
+                if (!rstatus.Success)
+                {
+                    ShowMessage($"Import failed: {rstatus.Message}");
+                }
             }
         }
+        private void ShowMessage(string message)
+        {
+            var parameters = new ModalParameters
+            {
+                { "MessageInput", message }
+            };
+            Modal.Show<MessageBox>("", parameters);
+        }
+
     }
 }

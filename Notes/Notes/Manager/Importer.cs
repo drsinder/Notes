@@ -20,6 +20,7 @@
 using Notes.Client;
 using Notes.Data;
 using Notes.Entities;
+using Notes.Protos;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -89,13 +90,17 @@ namespace Notes.Manager
         /// <param name="file">StreamReader to read from</param>
         /// <param name="myNotesFile">Output notefile</param>
         /// <returns><c>true</c> if success, <c>false</c> otherwise.</returns>
-        public async Task<bool> Import(NotesDbContext _db, StreamReader file, string myNotesFile)
+        public async Task<RequestStatus> Import(NotesDbContext _db, StreamReader file, string myNotesFile)
         {
             // get the target file
             NoteFile noteFile = await NoteDataManager.GetFileByName(_db, myNotesFile);
 
             if (noteFile is null)
-                return false;
+                return  new RequestStatus
+                {
+                    Success = false,
+                    Message = "Note file not found: " + myNotesFile
+                };
 
             // Some initial setup
             //int id = noteFile.Id;
@@ -119,7 +124,7 @@ namespace Notes.Manager
 
             // Read the file and process it line by line.
             // we first determine the file type
-            //try
+            try
             {
                 NoteHeader bnh;
                 string line;
@@ -619,10 +624,15 @@ namespace Notes.Manager
                 }
 
             }
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+            catch (Exception ex)
+            {
+                return new RequestStatus
+                {
+                    Status = ex.HResult,
+                    Success = false,
+                    Message = "Error importing notes: " + ex.Message
+                };
+            }
 
             file.Close();
 
@@ -633,7 +643,11 @@ namespace Notes.Manager
             Output("  Basenotes: " + basenotes + "   Completed!!");
 
 
-            return true;
+            return new RequestStatus
+            {
+                Success = true,
+                Message = "Import completed successfully."
+            };
         }
 
         /// <summary>
