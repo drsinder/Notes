@@ -39,6 +39,8 @@
 
 @if (CurrentNoteId > 0) @*    Note display mode *@
 {
+    <h3 class="center">@Model.NoteFile.NoteFileTitle - (@Model.NoteFile.NoteFileName)  @Model.Message</h3>
+
     <NotePanel @ref="@MyNotePanel" NoteId="@CurrentNoteId" ShowChild="false" IsRootNote="true" MyNoteIndex="@this"></NotePanel>
 }
 else                    @*    Index mode        *@
@@ -55,7 +57,7 @@ else                    @*    Index mode        *@
     }
     else
     {
-        <h3 class="center">@Model.NoteFile.NoteFileTitle - @Model.NoteFile.NoteFileName  @Model.Message</h3>
+        <h3 class="center">@Model.NoteFile.NoteFileTitle - (@Model.NoteFile.NoteFileName)  @Model.Message</h3>
 
         <div>
             <ListMenu Model=@Model Caller="@this" @ref="@MyMenu"></ListMenu>
