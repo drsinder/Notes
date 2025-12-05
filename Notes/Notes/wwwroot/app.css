@@ -144,7 +144,11 @@ button {
     left: 0;
 }
 
-.my-main-backgound {
+.my-main-background {
     background-color: #eee;
     min-height: 100%;
+}
+
+.my-main-box-background {
+    background-color: wheat;
 }

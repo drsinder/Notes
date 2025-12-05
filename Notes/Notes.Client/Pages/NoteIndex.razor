@@ -64,7 +64,7 @@ else                    @*    Index mode        *@
         {
             <div class="col-lg-12 control-section dialoglist">
                 <div class="content-wrapper">
-                    <div class="row">
+                    <div class="row my-main-box-background">
                         Show Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContent"></SfSwitch>&nbsp;
                         Show Response Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContentR"></SfSwitch>&nbsp;
                         <SfGrid @ref="@sfGrid1" DataSource="@Model.Notes.List" AllowPaging="true" AllowSelection="true" EnableHover="true" AllowSorting="true" AllowFiltering="true" AllowExcelExport="true" AllowPdfExport="true">
@@ -119,6 +119,7 @@ else                    @*    Index mode        *@
 
                             </GridColumns>
                         </SfGrid>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -170,5 +171,27 @@ else                    @*    Index mode        *@
         .e-detail-disable .e-detailrowcollapse .e-icon-grightarrow {
             visibility: hidden;
         }
+    .e-grid .e-gridpager {
+        font-family: cursive;
+        background-color: bisque;
+        border: 4px solid black;
+    }
+    .e-grid .e-headercelldiv {
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+    }
+    .e-grid .e-headercell {
+        font-family: cursive;
+        background-color: lightgray;
+    }
+
+    .e-grid .e-gridheader {
+        border: 4px solid black;
+    }
+
+    .e-grid .e-altrow .e-rowcell {
+        background-color: #E8EEFA;
+    }
 </style>
 

@@ -126,7 +126,9 @@
 
         @if (IsRootNote && @model != null && !model.Header.IsDeleted && !model.NoteFile.InhibitVersions)
         {
-            <span><strong>Show versions </strong></span><SfSwitch @bind-Checked="ShowVers" TChecked="bool"></SfSwitch>
+            <div class="my-main-box-background">
+                <span><strong>Show versions </strong></span><SfSwitch @bind-Checked="ShowVers" TChecked="bool"></SfSwitch>
+            </div>
         }
 
         @if (!IsMini)
@@ -137,6 +139,7 @@
                 ResetShown = false;
                 StateHasChanged();
             }
+            <div class="my-main-box-background">
             @if (IsRootNote && model is not null &&  model.Header.RefId != 0 && !model.Header.IsDeleted)
             {
                 <span><strong>Show References</strong></span><SfSwitch @bind-Checked="ShowChild" TChecked="bool"></SfSwitch>
@@ -159,7 +162,7 @@
                     }
                 }
             }
-
+            </div>
             @if (IsRootNote)
             {
                 <div class="arrow2">
