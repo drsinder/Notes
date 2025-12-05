@@ -60,3 +60,40 @@ else
         </GridColumns>
     </SfGrid>
 }
+
+<style>
+    /*to disable the mouse actions*/
+    .e-detail-disable .e-detailrowcollapse {
+        pointer-events: none;
+    }
+
+        /*if required hide the icons*/
+        .e-detail-disable .e-detailrowcollapse .e-icon-grightarrow {
+            visibility: hidden;
+        }
+
+    .e-grid .e-gridpager {
+        font-family: cursive;
+        background-color: bisque;
+        border: 4px solid black;
+    }
+
+    .e-grid .e-headercelldiv {
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+    }
+
+    .e-grid .e-headercell {
+        font-family: cursive;
+        background-color: lightgray;
+    }
+
+    .e-grid .e-gridheader {
+        border: 4px solid black;
+    }
+
+    .e-grid .e-altrow .e-rowcell {
+        background-color: #E8EEFA;
+    }
+</style>

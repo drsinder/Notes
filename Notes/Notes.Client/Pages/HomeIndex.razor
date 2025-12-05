@@ -47,9 +47,9 @@
     <CookieStateAgent @ref="myState" />
 }
 
-<PageTitle>Notes Index</PageTitle>
+<PageTitle>Notes Home</PageTitle>
 
-<h2 class="center">Welcome to Notes @myState?.UserInfo?.Displayname</h2>
+<h2 class="center welcome">Welcome to Notes @myState?.UserInfo?.Displayname</h2>
 <div>
     <h5 class="center">
         <Clock Interval="1000"/>  @* update the clock every second *@
@@ -95,7 +95,7 @@
                             </label>
                         </p>
                         <p class="center">
-                            Or select a file<br />
+                            <strong>Or select a file</strong><br />
                             <div class="btn btn-file form-control short-input">
                             <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a File" DataSource="@fileList" >
                                 <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
@@ -105,7 +105,7 @@
                         </p>
 
                         <p class="center">
-                            Or select a title<br />
+                            <strong>Or select a title</strong><br />
                             <div class="btn btn-title form-control short-input">
                             <SfDropDownList TValue="int" TItem="GNotefile" Placeholder="Select a Title" DataSource="@nameList.List" >
                                 <DropDownListEvents TItem="GNotefile" TValue="int" ValueChange="@ValueChangeHandler" ></DropDownListEvents>
@@ -116,7 +116,7 @@
                     </ChildContent>
                 </EditForm>
                 <p class="center">
-                    <a href="notesfiles"><strong>List of all NotesFiles</strong></a>
+                    <h4><a href="notesfiles"><strong>List of all NotesFiles</strong></a></h4>
                 </p>
             </div>
         </div>
@@ -125,7 +125,7 @@
             <div class="col-md-2">
             </div>
             <div class="col-md-4 roundedindex">
-                <h4>Important Files</h4>
+                <h4 class="files-headers">Important Files</h4>
                 <ul>
                     @if (impfileList?.List != null)
                     {
@@ -140,7 +140,7 @@
                 </ul>
             </div>
             <div class="col-md-4 roundedindex">
-                <h4>History Files</h4>
+                <h4 class="files-headers">History Files</h4>
                 <ul>
                     @if (histfileList?.List != null)
                     {
@@ -158,3 +158,14 @@
 
     } 
 </div>
+
+<style>
+    .files-headers {
+        font-weight: bold;
+        font-family: cursive;
+    }
+    .welcome {
+        font-weight: bold;
+        font-family: cursive;
+    }
+</style>
