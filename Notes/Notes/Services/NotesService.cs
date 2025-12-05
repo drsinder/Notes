@@ -38,7 +38,8 @@ using System.Text;
 
 /// <summary>
 /// The Notes.Services namespace contains gRPC service implementations for managing notes, user access,
-/// Email, and related operations in the notes application.  
+/// Email, and related operations in the notes application.
+/// </summary>
 namespace Notes.Services
 {
     /// <summary>
