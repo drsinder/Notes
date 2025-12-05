@@ -12,15 +12,15 @@
         <AntiforgeryToken />
         <input type="hidden" name="ReturnUrl" value="" />
         <button type="submit" class="logbutton">
-            <span aria-hidden="true"></span> Logout
+            <span aria-hidden="true"></span>Logout
         </button>
     </form>
 }
 else
 {
     <SfButton @onclick="GotoHome" class="homebutton">Home</SfButton>
-    <SfButton @onclick="GotoRegister" class="logbutton">Register</SfButton>
     <SfButton @onclick="GotoLogin" class="logbutton">Login</SfButton>
+    <SfButton @onclick="GotoRegister" class="logbutton">Register</SfButton>
 }
 
 <style>
