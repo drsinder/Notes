@@ -3,8 +3,8 @@
 @using Syncfusion.Blazor.Navigations
 @inject CookieStateAgent myState
 
-<div class="top-row ps-4 navbar my-left">
-    <LoginDisplay></LoginDisplay>
+<span class="top-row ps-4 navbar my-left">
+    <LoginDisplay/>
     <SfMenu Items="@menuItemsTop" @ref="@topMenu" CssClass="e-std-menu">
             <MenuEvents TValue="MenuItem" ItemSelected="@OnSelect" ></MenuEvents>
     </SfMenu>
@@ -13,8 +13,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>   
     *@
-    <span class="clockcolor">&nbsp;&nbsp;<Notes.Client.Comp.Clock Interval="10000"></Notes.Client.Comp.Clock></span>
-</div>
+</span>
+<span class="clockcolor"><Notes.Client.Comp.Clock Interval="10000"></Notes.Client.Comp.Clock></span>
 
 <style>
     .my-left {
