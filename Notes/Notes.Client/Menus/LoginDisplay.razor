@@ -6,6 +6,14 @@
 
 @if (myState.IsAuthenticated)
 {
+    <form action="Account/Logout" method="post">
+        <AntiforgeryToken />
+        <input type="hidden" name="ReturnUrl" value="" />
+        <button type="submit" class="logbutton">
+            <span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> Logout
+        </button>
+    </form>
+
     <SfButton @onclick="GotoProfile" class="logbutton">@myState.UserInfo?.Displayname</SfButton> 
 @*    <SfButton @onclick="BeginSignOut" class="logbutton">Log out</SfButton> *@
     <SfButton @onclick="GotoHome" class="homebutton">Home</SfButton>

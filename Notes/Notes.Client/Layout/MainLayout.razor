@@ -1,17 +1,24 @@
-﻿@inherits LayoutComponentBase
+﻿@using Notes.Client.Menus
+@inherits LayoutComponentBase
 
 @inject NavigationManager Navigation
 
 <div class="page">
+ 
     <div class="sidebar">
-        <NavMenu />
+        @* <NavMenu /> *@
     </div>
-    
+ 
+
     <main>
         <div class="top-row px-4 auth">
             @if (menuVisible)
             { 
                 <Notes.Client.Menus.MainMenu/>
+            }
+            else
+            {
+                <div class="my-left"><a href="" class="my-home"><b>Home</b></a></div>
             }
         </div>
         @if (!Navigation.Uri.EndsWith("/"))
@@ -34,3 +41,13 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+<style>
+    .my-home {
+        color: white;
+    }
+    .my-left {
+        position: absolute;
+        left: 0;
+    }
+
+</style>

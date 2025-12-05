@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Layout\NavMenu.razor" />
     <Content Remove="Pages\Auth.razor" />
     <Content Remove="Pages\Counter.razor" />
     <Content Remove="Pages\Home.razor" />
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Layout\NavMenu.razor.css" />
     <None Remove="Protos\notesserver.proto" />
   </ItemGroup>
 
