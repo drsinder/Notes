@@ -5,13 +5,15 @@
 
 <div class="top-row ps-4 navbar my-left">
     <LoginDisplay></LoginDisplay>
-    <span class="clockcolor"><Notes.Client.Comp.Clock Interval="10000"></Notes.Client.Comp.Clock> &nbsp;</span>
     <SfMenu Items="@menuItemsTop" @ref="@topMenu" CssClass="e-std-menu">
             <MenuEvents TValue="MenuItem" ItemSelected="@OnSelect" ></MenuEvents>
     </SfMenu>
+    @*
     <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
-    </button>    
+    </button>   
+    *@
+    <span class="clockcolor">&nbsp;&nbsp;<Notes.Client.Comp.Clock Interval="10000"></Notes.Client.Comp.Clock></span>
 </div>
 
 <style>

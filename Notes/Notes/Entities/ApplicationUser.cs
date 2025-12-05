@@ -133,6 +133,7 @@ namespace Notes.Entities
 
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="ApplicationUser"/> is pref4.
+        /// Flip Response order by default
         /// </summary>
         /// <value><c>true</c> if pref4; otherwise, <c>false</c>.</value>
         [PersonalData]
