@@ -101,10 +101,14 @@ namespace Notes.Services
         /// <param name="context">The context for the server-side call, providing information about the RPC environment.</param>
         /// <returns>A default <see cref="NoRequest"/> response representing the result of the no-operation call.</returns>
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public override async Task<NoRequest> NoOp(NoRequest request, ServerCallContext context)
-
+        public override async Task<RequestStatus> NoOp(NoRequest request, ServerCallContext context)
         {
-            return new();
+            return new RequestStatus()
+            {
+                Success = true,
+                Status = 0,
+                Message = "No operation performed."
+            };
         }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 
@@ -223,7 +227,7 @@ namespace Notes.Services
         /// <returns>A <see cref="NoRequest"/> object indicating that the operation has completed. No additional data is
         /// returned.</returns>
         [Authorize(Roles = "Admin")]
-        public override async Task<NoRequest> UpdateUserRoles(EditUserViewModel model, ServerCallContext context)
+        public override async Task<RequestStatus> UpdateUserRoles(EditUserViewModel model, ServerCallContext context)
         {
             ApplicationUser user = await _userManager.FindByIdAsync(model.UserData.Id);
             var myRoles = await _userManager.GetRolesAsync(user);
@@ -239,7 +243,8 @@ namespace Notes.Services
                 }
             }
 
-            return new NoRequest();
+            return new RequestStatus()
+                { Message = "User roles updated", Status = 0, Success = true };
         }
 
         /// <summary>
@@ -434,7 +439,7 @@ namespace Notes.Services
         /// <param name="context">The server call context for the current request.</param>
         /// <returns>A <see cref="NoRequest"/> object indicating that the operation completed successfully.</returns>
         [Authorize(Roles = "Admin")]
-        public override async Task<NoRequest> DeleteNoteFile(GNotefile noteFile, ServerCallContext context)
+        public override async Task<RequestStatus> DeleteNoteFile(GNotefile noteFile, ServerCallContext context)
         {
             NoteFile nf = await NoteDataManager.GetFileById(_db, noteFile.Id);
 
@@ -460,7 +465,8 @@ namespace Notes.Services
             // remove file
             _db.NoteFile.Remove(nf);
             await _db.SaveChangesAsync();
-            return new NoRequest();
+            return new RequestStatus()
+                { Message = "Note file deleted", Status = 0, Success = true };
         }
 
 
@@ -475,13 +481,13 @@ namespace Notes.Services
         /// environment.</param>
         /// <returns>A <see cref="NoRequest"/> instance indicating that the import operation has completed.</returns>
         [Authorize(Roles = "Admin")]
-        public override async Task<NoRequest> Import(ImportRequest request, ServerCallContext context)
+        public override async Task<RequestStatus> Import(ImportRequest request, ServerCallContext context)
         {
             MemoryStream? input = new ([.. request.Payload]);
             StreamReader file = new (input);
 
             Importer? imp = new();
-            _ = await imp.Import(_db, file, request.NoteFile);
+            bool result = await imp.Import(_db, file, request.NoteFile);
 
             file.DiscardBufferedData();
             file.Dispose();
@@ -489,7 +495,12 @@ namespace Notes.Services
             GC.Collect();
             GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
             GC.Collect();
-            return new NoRequest();
+            return new RequestStatus()
+                {
+                Success = result,
+                Status = 0,
+                Message = "Import completed"
+                };
         }
 
         /// <summary>
@@ -711,7 +722,7 @@ namespace Notes.Services
         /// <param name="context">The server call context that provides information about the current request and user.</param>
         /// <returns>A NoRequest object indicating that the operation has completed.</returns>
         [Authorize]
-        public override async Task<NoRequest> DeleteAccessItem(GNoteAccess request, ServerCallContext context)
+        public override async Task<RequestStatus> DeleteAccessItem(GNoteAccess request, ServerCallContext context)
         {
             NoteAccess access = NoteAccess.GetNoteAccess(request);
             ApplicationUser appUser = await GetAppUser(context);
@@ -720,9 +731,13 @@ namespace Notes.Services
             {
                 _db.NoteAccess.Remove(access);
                 await _db.SaveChangesAsync();
+                return new RequestStatus()
+                { Message = "Access item deleted", Status = 0, Success = true };
+
             }
 
-            return new NoRequest();
+            return new RequestStatus()
+                { Message = "Permission denied", Status = 0, Success = false };
         }
 
         /// <summary>
@@ -869,7 +884,7 @@ namespace Notes.Services
         /// details.</param>
         /// <returns>A <see cref="NoRequest"/> instance indicating that the operation completed successfully.</returns>
         [Authorize]
-        public override async Task<NoRequest> CreateSequencer(SCheckModel request, ServerCallContext context)
+        public override async Task<RequestStatus> CreateSequencer(SCheckModel request, ServerCallContext context)
         {
             ApplicationUser appUser = await GetAppUser(context);
 
@@ -901,7 +916,8 @@ namespace Notes.Services
             _db.Sequencer.Add(tracker);
             await _db.SaveChangesAsync();
 
-            return new NoRequest();
+            return new RequestStatus()
+                { Message = "Sequencer created", Status = 0, Success = true };
         }
 
         /// <summary>
@@ -914,18 +930,20 @@ namespace Notes.Services
         /// <returns>A <see cref="NoRequest"/> instance indicating the completion of the operation. If no sequencer is found for
         /// the specified note file and user, the operation completes without error.</returns>
         [Authorize]
-        public override async Task<NoRequest> DeleteSequencer(SCheckModel request, ServerCallContext context)
+        public override async Task<RequestStatus> DeleteSequencer(SCheckModel request, ServerCallContext context)
         {
             ApplicationUser appUser = await GetAppUser(context);
 
             Sequencer mine = await _db.Sequencer.SingleOrDefaultAsync(p => p.UserId == appUser.Id && p.NoteFileId == request.FileId);
             if (mine is null)
-                return new NoRequest();
+                return new RequestStatus() 
+                    { Message = "Sequencer not found", Status = 0, Success = false };
 
             _db.Sequencer.Remove(mine);
             await _db.SaveChangesAsync();
 
-            return new NoRequest();
+            return new RequestStatus() 
+                { Message = "Sequencer deleted", Status = 0, Success = true };
         }
 
         /// <summary>
@@ -938,7 +956,7 @@ namespace Notes.Services
         /// <param name="context">The server call context for the current gRPC request.</param>
         /// <returns>A <see cref="NoRequest"/> instance indicating that the update operation has completed.</returns>
         [Authorize]
-        public override async Task<NoRequest> UpdateSequencerOrdinal(GSequencer request, ServerCallContext context)
+        public override async Task<RequestStatus> UpdateSequencerOrdinal(GSequencer request, ServerCallContext context)
         {
             Sequencer modified = await _db.Sequencer
                 .SingleAsync(p => p.UserId == request.UserId && p.NoteFileId == request.NoteFileId);
@@ -949,7 +967,8 @@ namespace Notes.Services
             _db.Entry(modified).State = EntityState.Modified;
             await _db.SaveChangesAsync();
 
-            return new NoRequest();
+            return new RequestStatus() 
+                { Message = "Sequencer ordinal updated", Status = 0, Success = true };
         }
 
         /// <summary>
@@ -964,7 +983,7 @@ namespace Notes.Services
         /// <returns>A NoRequest instance indicating that the operation completed successfully and no additional data is
         /// returned.</returns>
         [Authorize]
-        public override async Task<NoRequest> UpdateSequencer(GSequencer request, ServerCallContext context)
+        public override async Task<RequestStatus> UpdateSequencer(GSequencer request, ServerCallContext context)
         {
             Sequencer modified = await _db.Sequencer.SingleAsync(p => p.UserId == request.UserId && p.NoteFileId == request.NoteFileId);
 
@@ -981,7 +1000,8 @@ namespace Notes.Services
             _db.Entry(modified).State = EntityState.Modified;
             await _db.SaveChangesAsync();
 
-            return new NoRequest();
+            return new RequestStatus() 
+                { Message = "Sequencer updated", Status = 0, Success = true };
         }
 
         /// <summary>
@@ -1237,10 +1257,10 @@ namespace Notes.Services
         /// <param name="context">The context of the server-side call handler being invoked.</param>
         /// <returns>The response to send back to the client (wrapped by a task).</returns>
         [Authorize]
-        public override async Task<NoRequest> SendEmailAuth(GEmail request, ServerCallContext context)
+        public override async Task<RequestStatus> SendEmailAuth(GEmail request, ServerCallContext context)
         {
             await _emailSender.SendEmailAsync(request.Address, request.Subject, request.Body);
-            return new NoRequest();
+            return new RequestStatus() { Success = true };
         }
 
         ///// <summary>
@@ -1313,15 +1333,15 @@ namespace Notes.Services
         /// <param name="context">The server call context that provides information about the current gRPC request and user.</param>
         /// <returns>A <see cref="NoRequest"/> instance indicating the completion of the operation.</returns>
         [Authorize]
-        public override async Task<NoRequest> DoForward(ForwardViewModel fv, ServerCallContext context)
+        public override async Task<RequestStatus> DoForward(ForwardViewModel fv, ServerCallContext context)
         {
             ApplicationUser appUser = await GetAppUser(context);
             NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, fv.FileID, fv.ArcID);
             if (!na.ReadAccess)
-                return new NoRequest();
+                return new RequestStatus() { Success = false, Message = "No read access" };
             string myEmail = await LocalService.MakeNoteForEmail(fv, fv.NoteFile, _db, appUser.Email, appUser.DisplayName);
             await _emailSender.SendEmailAsync(appUser.Email, fv.NoteSubject, myEmail);
-            return new NoRequest();
+            return new RequestStatus() { Success = true, Message = "Email sent" };
         }
 
         /// <summary>
@@ -1351,13 +1371,13 @@ namespace Notes.Services
         /// <returns>A <see cref="NoRequest"/> object indicating the completion of the copy operation. Returns an empty response
         /// if the user does not have read access to the source note or write access to the target file.</returns>
         [Authorize]
-        public override async Task<NoRequest> CopyNote(CopyModel Model, ServerCallContext context)
+        public override async Task<RequestStatus> CopyNote(CopyModel Model, ServerCallContext context)
         {
             ApplicationUser appUser = await GetAppUser(context);
 
             NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, Model.Note.NoteFileId, Model.Note.ArchiveId);
             if (!na.ReadAccess)
-                return new NoRequest();         // can not read file
+                return new RequestStatus() { Success = false, Message = "No read access" };         // can not read file
 
             int fileId = Model.FileId;
 
@@ -1365,7 +1385,7 @@ namespace Notes.Services
             string uid = appUser.Id;
             NoteAccess myAccess = await AccessManager.GetAccess(_db, uid, fileId, 0);
             if (!myAccess.Write)
-                return new NoRequest();         // can not write to file
+                return new RequestStatus() { Success = false, Message = "No write access" };
 
             // Prepare to copy
             NoteHeader Header = NoteHeader.GetNoteHeader(Model.Note);
@@ -1477,7 +1497,7 @@ namespace Notes.Services
                     _ = await NoteDataManager.CreateResponse(_db, Header, Body, Tags.ListToString(tags), Header.DirectorMessage, true, false);
                 }
             }
-            return new NoRequest();
+            return new RequestStatus() { Success = true  };
         }
 
         // Utility method - makes a viewable header for the copied note
@@ -1516,7 +1536,7 @@ namespace Notes.Services
         /// <param name="context">The server call context for the current request, providing user and request metadata.</param>
         /// <returns>A <see cref="NoRequest"/> object indicating the completion of the delete operation.</returns>
         [Authorize]
-        public override async Task<NoRequest> DeleteNote(NoteId request, ServerCallContext context)
+        public override async Task<RequestStatus> DeleteNote(NoteId request, ServerCallContext context)
         {
             NoteHeader note = await NoteDataManager.GetNoteByIdWithFile(_db, request.Id);
 
@@ -1524,12 +1544,12 @@ namespace Notes.Services
             NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, note.NoteFileId, note.ArchiveId);
             if (!na.DeleteEdit)
             {
-                return new();
+                return new() { Success = false, Message = "No delete access" };
             }
 
             await NoteDataManager.DeleteNote(_db, note);
 
-            return new();
+            return new() { Success = true, Message = "Note deleted" };
         }
 
         /// <summary>

@@ -73,7 +73,7 @@
         <p class="center"><em>Loading...</em></p>
     }
     @* if we have a goto file, show it *@
-    else if (GoToFile.Id != 0)
+    else if (GoToFile?.Id != 0)
     {
         <p class="center"><b>Click to goto: </b><FileButton Triggered="true" NoteFile="@GoToFile" Ordinal="@Ordinal"></FileButton></p>
     }
@@ -127,24 +127,30 @@
             <div class="col-md-4">
                 <h4>Important Files</h4>
                 <ul>
-                    @for (int i = 0; i < impfileList.List.Count; i++)
+                    @if (impfileList?.List != null)
                     {
-                         item = impfileList.List[i];
-                        <li> 
-                           <FileButton NoteFile="@item"></FileButton>
-                        </li>
+                        foreach (var localItem in impfileList.List)
+                        {
+                             item = localItem;
+                            <li> 
+                               <FileButton NoteFile="@item"></FileButton>
+                            </li>
+                        }
                     }
                 </ul>
             </div>
             <div class="col-md-4">
                 <h4>History Files</h4>
                 <ul>
-                    @for (int i = 0; i < histfileList.List.Count; i++)
+                    @if (histfileList?.List != null)
                     {
-                         item = histfileList.List[i];
-                        <li>
-                           <FileButton NoteFile="@item"></FileButton>
-                        </li>
+                        foreach (var localItem in histfileList.List)
+                        {
+                             item = localItem;
+                            <li>
+                               <FileButton NoteFile="@item"></FileButton>
+                            </li>
+                        }
                     }
                 </ul>
             </div>

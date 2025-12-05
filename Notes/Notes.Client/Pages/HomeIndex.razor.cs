@@ -148,8 +148,6 @@ namespace Notes.Client.Pages
             // If this is not done things don't progress - that's OK - but why is a mystery!
             _ = await NotesClient.GetServerTimeAsync(new NoRequest(), myState.AuthHeader);
 
-            //initDone = true;
-
             if (myState.IsAuthenticated)
             {
                 // Set and reset local state vars
@@ -240,5 +238,6 @@ namespace Notes.Client.Pages
             Navigation.NavigateTo("noteindex/" + args.Value); // goto the file
 
         }
+
     }
 }

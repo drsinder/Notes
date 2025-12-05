@@ -27,31 +27,31 @@ service NotesServer {
 	rpc GetAccessAndUserList(AccessAndUserListRequest) returns (AccessAndUserList);	// gets access data and user list
 	rpc GetAccessList(AccessAndUserListRequest) returns (GNoteAccessList);			// gets the access list for a file
 	rpc GetAccess(NoteFileRequest) returns (GNoteAccess);				// gets the access for user
-	rpc UpdateUserRoles(EditUserViewModel) returns (NoRequest);			// updates roles for a user
+	rpc UpdateUserRoles(EditUserViewModel) returns (RequestStatus);		// updates roles for a user
 	rpc CreateNoteFile(GNotefile) returns (GNotefile);					// create a note file
 	rpc UpdateNoteFile(GNotefile) returns (GNotefile);					// updates note file data
-	rpc DeleteNoteFile(GNotefile) returns (NoRequest);					// deletes a note file
+	rpc DeleteNoteFile(GNotefile) returns (RequestStatus);				// deletes a note file
 //	rpc Import(ImportRequest) returns (NoRequest);						// runs an import given server side file name
-	rpc Import(ImportRequest) returns (NoRequest);						// runs an import given client side file contents as btye[]
+	rpc Import(ImportRequest) returns (RequestStatus);					// runs an import given client side file contents as btye[]
 	rpc UpdateAccessItem(GNoteAccess) returns (GNoteAccess);			// get a single access item
-	rpc DeleteAccessItem(GNoteAccess) returns (NoRequest);				// deletes an access item
+	rpc DeleteAccessItem(GNoteAccess) returns (RequestStatus);			// deletes an access item
 	rpc AddAccessItem(GNoteAccess) returns (GNoteAccess);				// adds an access item
 	rpc UpdateUserData(GAppUser) returns (GAppUser);					// updates user data
 	rpc GetVersions(GetVersionsRequest) returns (GNoteHeaderList);		// gets the non-zero version headers
 	rpc GetSequencer(NoRequest) returns (GSequencerList);				// gets the sequencer list for a user
-	rpc CreateSequencer(SCheckModel) returns (NoRequest);				// creates a sequencer item
-	rpc DeleteSequencer(SCheckModel) returns (NoRequest);				// deletes a sequencer item
-	rpc UpdateSequencer(GSequencer) returns (NoRequest);				// updates a sequencer item - while sequencing
-	rpc UpdateSequencerOrdinal(GSequencer) returns (NoRequest);			// updates a sequencer item ordinal
+	rpc CreateSequencer(SCheckModel) returns (RequestStatus);			// creates a sequencer item
+	rpc DeleteSequencer(SCheckModel) returns (RequestStatus);			// deletes a sequencer item
+	rpc UpdateSequencer(GSequencer) returns (RequestStatus);			// updates a sequencer item - while sequencing
+	rpc UpdateSequencerOrdinal(GSequencer) returns (RequestStatus);		// updates a sequencer item ordinal
 	rpc GetNoteFile(NoteFileRequest) returns (GNotefile);				// get the notefile for the note index
 	rpc CreateNewNote(TextViewModel) returns (GNoteHeader);				// get a note header
 	rpc UpdateNote(TextViewModel) returns (GNoteHeader);				// updates a note header
-	rpc SendEmailAuth(GEmail) returns (NoRequest);						// authenticated
+	rpc SendEmailAuth(GEmail) returns (RequestStatus);					// authenticated
 	rpc GetExport2(NoteId) returns (GNoteContent);						// gets note content during an export
-	rpc DoForward(ForwardViewModel) returns (NoRequest);				// forwards note(s) via email
+	rpc DoForward(ForwardViewModel) returns (RequestStatus);			// forwards note(s) via email
 	rpc GetNoteFilesOrderedByName(NoRequest) returns (GNotefileList);	// get list of the note files ordered by name
-	rpc CopyNote(CopyModel) returns (NoRequest);						// copies note(s) to another file
-	rpc DeleteNote(NoteId) returns (NoRequest);							// deletes a note
+	rpc CopyNote(CopyModel) returns (RequestStatus);					// copies note(s) to another file
+	rpc DeleteNote(NoteId) returns (RequestStatus);						// deletes a note
 	rpc GetExportJson(ExportRequest) returns (JsonExport);				// returns data for a json export see GetNoteHeaders for a more flexible way to get filtered data
 	rpc GetNoteHeaders(NoteHeadersRequest) returns (GNoteHeaderList);	// request all or some slice of a note file - headers w or wo content and tags
 	rpc GetHomePageMessage(NoRequest) returns (AString);				// Gets the current homepage message if any
@@ -67,7 +67,7 @@ service NotesServer {
 //	rpc SendEmail(GEmail) returns (NoRequest);							// unauthenticated - slower - use it too much and it really hurts you!
 //	rpc GetExport(ExportRequest) returns (GNoteHeaderList);				// gets a note header list during an Export
 	rpc GetTextFile(AString) returns (AString);	// files: about.html | help.html | helpdialog.html | helpdialog2.html | license.html
-	rpc NoOp(NoRequest) returns (NoRequest);
+	rpc NoOp(NoRequest) returns (RequestStatus);
 
 	rpc GetServerTime(NoRequest) returns (ServerTime);				// gets server time
 
@@ -76,6 +76,13 @@ service NotesServer {
 
 // used generically -  used when no data needed for request or response
 message NoRequest {
+}
+
+message RequestStatus
+{
+	bool success = 1;
+	int32 status = 2;
+	string message = 3;
 }
 
 message ServerTime {

@@ -54,7 +54,7 @@ namespace Notes.Client.Pages
             await sessionStorage.SetItemAsync("IndexPage", 1);
 
             // grab data from server
-            HomePageModel model = await Client.GetHomePageModelAsync(new NoRequest(), myState.AuthHeader);
+            HomePageModel model = await Client.GetHomePageModelAsync(new (), myState.AuthHeader);
 
             Files = model.NoteFiles;
             UserData = model.UserData;

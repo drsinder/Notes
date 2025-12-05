@@ -163,8 +163,7 @@ namespace Notes.Client.Pages
         {
             try
             {
-                bool x = myState.IsAuthenticated;
-                if (!x)
+                if (!myState.IsAuthenticated)
                 {
                     await myState.GetLoginReplyAsync();
                     if (!myState.IsAuthenticated)
@@ -273,7 +272,8 @@ namespace Notes.Client.Pages
         {
             long newId = 0;
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-            GNoteHeader nh = Model.Notes.List.SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal + 1 && p.ResponseOrdinal == 0 && p.Version == 0);
+            GNoteHeader nh = Model.Notes.List
+                .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal + 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             if (nh is not null)
                 newId = nh.Id;
             return newId;
@@ -288,9 +288,11 @@ namespace Notes.Client.Pages
         {
             long newId = 0;
             GNoteHeader nh = null;
-            nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal && p.ResponseOrdinal == (oh.ResponseOrdinal + 1) && p.Version == 0);
+            nh = Model.AllNotes.List
+                .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal && p.ResponseOrdinal == (oh.ResponseOrdinal + 1) && p.Version == 0);
             if (nh is null)
-                nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == (oh.NoteOrdinal + 1) && p.ResponseOrdinal == 0 && p.Version == 0);
+                nh = Model.AllNotes.List
+                    .SingleOrDefault(p => p.NoteOrdinal == (oh.NoteOrdinal + 1) && p.ResponseOrdinal == 0 && p.Version == 0);
             if (nh is not null)
                 newId = nh.Id;
             return newId;
@@ -304,7 +306,8 @@ namespace Notes.Client.Pages
         public long GetPreviousBaseNote(GNoteHeader oh)
         {
             long newId = 0;
-            GNoteHeader nh = Model.Notes.List.SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
+            GNoteHeader nh = Model.Notes.List
+                .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             if (nh is not null)
                 newId = nh.Id;
             return newId;
@@ -319,9 +322,11 @@ namespace Notes.Client.Pages
         {
             long newId = 0;
             GNoteHeader nh = null;
-            nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal && p.ResponseOrdinal == oh.ResponseOrdinal - 1 && p.Version == 0);
+            nh = Model.AllNotes.List
+                .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal && p.ResponseOrdinal == oh.ResponseOrdinal - 1 && p.Version == 0);
             if (nh is null)
-                nh = Model.Notes.List.SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
+                nh = Model.Notes.List
+                    .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             if (nh is not null)
                 newId = nh.Id;
             return newId;
@@ -334,8 +339,9 @@ namespace Notes.Client.Pages
         /// <returns>List&lt;GNoteHeader&gt;.</returns>
         public List<GNoteHeader> GetResponseHeaders(long headerId)
         {
-            return Model.AllNotes.List.Where(p => p.BaseNoteId == headerId && (p.ResponseOrdinal != 0) && p.IsDeleted == false && p.Version == 0)
-                .OrderBy(p => p.ResponseOrdinal).ToList();
+            return [.. Model.AllNotes.List
+                .Where(p => p.BaseNoteId == headerId && (p.ResponseOrdinal != 0) && p.IsDeleted == false && p.Version == 0)
+                .OrderBy(p => p.ResponseOrdinal)];
         }
 
         /// <summary>
@@ -358,14 +364,17 @@ namespace Notes.Client.Pages
             long newId = 0;
             GNoteHeader nh;
 
-            nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == noteOrd && p.ResponseOrdinal == respOrd && p.Version == 0);
+            nh = Model.AllNotes.List
+                .SingleOrDefault(p => p.NoteOrdinal == noteOrd && p.ResponseOrdinal == respOrd && p.Version == 0);
             if (nh is null && respOrd > -1) // try next base note -- special case if noteOrd == 0 and ResponseOrd == 0  ==> get first base note in file
             {
-                nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == noteOrd + 1 && p.ResponseOrdinal == 0 && p.Version == 0);
+                nh = Model.AllNotes.List
+                    .SingleOrDefault(p => p.NoteOrdinal == noteOrd + 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             }
             else if (nh is null)    // try previous base note
             {
-                nh = Model.AllNotes.List.SingleOrDefault(p => p.NoteOrdinal == noteOrd - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
+                nh = Model.AllNotes.List
+                    .SingleOrDefault(p => p.NoteOrdinal == noteOrd - 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             }
             if (nh is not null)
                 newId = nh.Id;
@@ -539,8 +548,7 @@ namespace Notes.Client.Pages
                 return;
             }
 
-#pragma warning disable CS8604 // Possible null reference argument.
-            List<GTags> tags = Model.Tags.List.Where(p => p.Tag.ToLower().Contains(target.Text)).ToList();
+            List<GTags> tags = [.. Model.Tags.List.Where(p => p.Tag.ToLower().Contains(target.Text))];
             if (tags == null || tags.Count == 0)
             {
                 ShowMessage("Nothing Found.");
@@ -561,7 +569,7 @@ namespace Notes.Client.Pages
                 return;
             }
 
-            results = results.OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal).ToList();
+            results = [.. results.OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal)];
 
             mode = results[0].Id;
             isSearch = true;
@@ -581,8 +589,9 @@ namespace Notes.Client.Pages
         protected async Task SearchHeader(Search target)
         {
             results = new List<GNoteHeader>();
-            List<GNoteHeader> lookin = Model.AllNotes.List.ToList();
+            List<GNoteHeader> lookin = [.. Model.AllNotes.List];
 
+            target.Text = target.Text.ToLower();
             foreach (GNoteHeader nh in lookin)
             {
                 bool isMatch = false;
@@ -615,7 +624,7 @@ namespace Notes.Client.Pages
                 return;
             }
 
-            results = results.OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal).ToList();
+            results = [.. results.OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal)];
 
             mode = results[0].Id;
             isSearch = true;
@@ -677,7 +686,6 @@ namespace Notes.Client.Pages
             CurrentNoteId = mode;
             StateHasChanged();
         }
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
         /// <summary>
         /// Starts the seq.
@@ -690,7 +698,7 @@ namespace Notes.Client.Pages
 
             List<GNoteHeader> noteHeaders1 = Model.AllNotes.List.ToList().FindAll(p => p.IsDeleted == false && p.Version == 0);
 
-            List<GNoteHeader> noteHeaders2 = new List<GNoteHeader>();
+            List<GNoteHeader> noteHeaders2 = [];
             foreach (GNoteHeader noteHeader in noteHeaders1)
             {
                 if (DateTime.Compare(noteHeader.LastEdited.ToDateTime(), seq.LastTime.ToDateTime()) >= 0L)
@@ -699,10 +707,9 @@ namespace Notes.Client.Pages
                 }
             }
 
-            List<GNoteHeader> noteHeaders = noteHeaders2
+            List<GNoteHeader> noteHeaders = [.. noteHeaders2
                     .OrderBy(p => p.NoteOrdinal)
-                    .ThenBy(p => p.ResponseOrdinal)
-                    .ToList();
+                    .ThenBy(p => p.ResponseOrdinal)];
 
             if (noteHeaders.Count == 0)
             {
@@ -916,9 +923,7 @@ namespace Notes.Client.Pages
         /// </summary>
         private async Task ClearNav()
         {
-#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             NavString = null;
-#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
 
             await Task.CompletedTask;
         }
@@ -929,11 +934,12 @@ namespace Notes.Client.Pages
         /// <param name="message">The message.</param>
         private void ShowMessage(string message)
         {
-            var parameters = new ModalParameters();
-            parameters.Add("MessageInput", message);
+            var parameters = new ModalParameters
+            {
+                { "MessageInput", message }
+            };
             Modal.Show<MessageBox>("", parameters);
         }
-#pragma warning restore CS8604 // Possible null reference argument.
 
         /// <summary>
         /// On after render as an asynchronous operation.

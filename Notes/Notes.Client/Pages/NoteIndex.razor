@@ -85,7 +85,7 @@ else                    @*    Index mode        *@
                                         current = current is not null ? current : new();
                                         List<GNoteHeader>? Resp = null;
                                         if ( current.ResponseCount > 0 ) {
-                                            Resp = Model.AllNotes.List.Where(p => p.NoteOrdinal == current.NoteOrdinal && p.ResponseOrdinal != 0 && p.IsDeleted == false && p.Version == 0).OrderBy(p => p.ResponseOrdinal).ToList();
+                                            Resp = GetResponses(current.NoteOrdinal);
                                         }
                                     }
                                     @if (ShowContent)
@@ -136,6 +136,28 @@ else                    @*    Index mode        *@
 
     }
 
+}
+
+@code {
+    private readonly Dictionary<long, List<GNoteHeader>> _responseCache = new();
+    private int _lastAllNotesCount = -1;
+
+    private List<GNoteHeader> GetResponses(long noteOrdinal)
+    {
+        if (Model?.AllNotes?.List == null) return new List<GNoteHeader>();
+        var all = Model.AllNotes.List;
+        if (_lastAllNotesCount != all.Count)
+        {
+            _responseCache.Clear();
+            _lastAllNotesCount = all.Count;
+        }
+        if (!_responseCache.TryGetValue(noteOrdinal, out var list))
+        {
+            list = all.Where(p => p.NoteOrdinal == noteOrdinal && p.ResponseOrdinal != 0 && p.IsDeleted == false && p.Version == 0).OrderBy(p => p.ResponseOrdinal).ToList();
+            _responseCache[noteOrdinal] = list;
+        }
+        return list;
+    }
 }
 
 <style>
