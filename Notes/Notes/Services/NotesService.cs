@@ -60,7 +60,8 @@ namespace Notes.Services
     /// <param name="_roleManager">The role manager used to query and manage user roles within the application.</param>
     /// <param name="_emailSender">The email sender service used to send notification and system emails to users.</param>
     /// <param name="_userManager">The user manager responsible for user identity operations, including user lookup and role assignment.</param>
-    public class NotesService(ILogger<NotesService> logger,
+    public class NotesService(
+        //ILogger<NotesService> logger,
         NotesDbContext _db,
         IConfiguration _configuration,
         RoleManager<IdentityRole> _roleManager,
@@ -186,9 +187,7 @@ namespace Notes.Services
                 RolesList = new CheckedUserList()
             };
             string Id = request.Subject;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             ApplicationUser user = await _userManager.FindByIdAsync(Id);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
             model.UserData = user?.GetGAppUser();
 
@@ -226,9 +225,7 @@ namespace Notes.Services
         [Authorize(Roles = "Admin")]
         public override async Task<NoRequest> UpdateUserRoles(EditUserViewModel model, ServerCallContext context)
         {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             ApplicationUser user = await _userManager.FindByIdAsync(model.UserData.Id);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             var myRoles = await _userManager.GetRolesAsync(user);
             foreach (CheckedUser item in model.RolesList.List)
             {
@@ -258,12 +255,8 @@ namespace Notes.Services
         private async Task<ApplicationUser> GetAppUser(ServerCallContext context)
         {
             var user = context.GetHttpContext().User;
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             ApplicationUser? appUser = await _userManager.FindByIdAsync(user.FindFirst(ClaimTypes.NameIdentifier).Value);
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8603 // Possible null reference return.
             return appUser;
-#pragma warning restore CS8603 // Possible null reference return.
         }
 
         /// <summary>
@@ -361,17 +354,13 @@ namespace Notes.Services
         {
             HomePageModel homepageModel = new();
 
-            logger.LogInformation("Received GetBaseHomePageModelAsync request");
-
             NoteFile? hpmf = _db.NoteFile.Where(p => p.NoteFileName == "homepagemessages").FirstOrDefault();
             if (hpmf is not null)
             {
                 NoteHeader? hpmh = _db.NoteHeader.Where(p => p.NoteFileId == hpmf.Id && !p.IsDeleted).OrderByDescending(p => p.CreateDate).FirstOrDefault();
                 if (hpmh is not null)
                 {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     homepageModel.Message = _db.NoteContent.Where(p => p.NoteHeaderId == hpmh.Id).FirstOrDefault().NoteBody;
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
             }
 
@@ -529,8 +518,8 @@ namespace Notes.Services
             user = context.GetHttpContext().User;
             try
             {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-                if (user.FindFirst(ClaimTypes.NameIdentifier) != null && user.FindFirst(ClaimTypes.NameIdentifier).Value != null)
+                if (user.FindFirst(ClaimTypes.NameIdentifier) is not null 
+                    && user.FindFirst(ClaimTypes.NameIdentifier).Value is not null)
                 {
                     try
                     {
@@ -561,11 +550,15 @@ namespace Notes.Services
                             return idxModel;
                         }
 
-                        List<LinkedFile> linklist = await _db.LinkedFile.Where(p => p.HomeFileId == request.NoteFileId).ToListAsync();
+                        List<LinkedFile> linklist = await _db.LinkedFile
+                            .Where(p => p.HomeFileId == request.NoteFileId)
+                            .ToListAsync();
                         if (linklist is not null && linklist.Count > 0)
                             idxModel.LinkedText = " (Linked)";
 
-                        List<NoteHeader> allhead = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == arcId).ToListAsync(); // await NoteDataManager.GetAllHeaders(_db, request.NoteFileId, arcId);
+                        List<NoteHeader> allhead = await _db.NoteHeader
+                            .Where(p => p.NoteFileId == request.NoteFileId 
+                                && p.ArchiveId == arcId).ToListAsync(); // await NoteDataManager.GetAllHeaders(_db, request.NoteFileId, arcId);
                         idxModel.AllNotes = NoteHeader.GetGNoteHeaderList(allhead);
 
                         List<NoteHeader> notes = [.. allhead.FindAll(p => p.ResponseOrdinal == 0).OrderBy(p => p.NoteOrdinal)];
@@ -573,7 +566,9 @@ namespace Notes.Services
 
                         idxModel.UserData = appUser.GetGAppUser();
 
-                        List<Tags> tags = await _db.Tags.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == arcId).ToListAsync();
+                        List<Tags> tags = await _db.Tags
+                            .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == arcId)
+                            .ToListAsync();
                         idxModel.Tags = Tags.GetGTagsList(tags);
 
                         idxModel.ArcId = arcId;
@@ -583,7 +578,6 @@ namespace Notes.Services
                         idxModel.Message = ex1.Message;
                     }
                 }
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
             }
             catch (Exception ex)
             {
@@ -611,10 +605,15 @@ namespace Notes.Services
 
             bool isAdmin = await _userManager.IsInRoleAsync(appUser, "Admin");
 
-            NoteHeader nh = await _db.NoteHeader.SingleAsync(p => p.Id == request.NoteId && p.Version == request.Vers);
-            NoteContent c = await _db.NoteContent.SingleAsync(p => p.NoteHeaderId == nh.Id);
-            List<Tags> tags = await _db.Tags.Where(p => p.NoteHeaderId == nh.Id).ToListAsync();
-            NoteFile nf = await _db.NoteFile.SingleAsync(p => p.Id == nh.NoteFileId);
+            NoteHeader nh = await _db.NoteHeader
+                .SingleAsync(p => p.Id == request.NoteId && p.Version == request.Vers);
+            NoteContent c = await _db.NoteContent
+                .SingleAsync(p => p.NoteHeaderId == nh.Id);
+            List<Tags> tags = await _db.Tags
+                .Where(p => p.NoteHeaderId == nh.Id)
+                .ToListAsync();
+            NoteFile nf = await _db.NoteFile
+                .SingleAsync(p => p.Id == nh.NoteFileId);
             NoteAccess access = await AccessManager.GetAccess(_db, appUser.Id, nh.NoteFileId, nh.ArchiveId);
 
             bool canEdit = isAdmin;         // admins can always edit a note
@@ -668,9 +667,11 @@ namespace Notes.Services
         {
             AccessAndUserList accessAndUserList = new()
             {
-                AccessList = NoteAccess.GetGNoteAccessList([.. _db.NoteAccess.Where(p => p.NoteFileId == request.FileId && p.ArchiveId == request.ArcId)]),
+                AccessList = NoteAccess.GetGNoteAccessList([.. _db.NoteAccess
+                    .Where(p => p.NoteFileId == request.FileId && p.ArchiveId == request.ArcId)]),
                 AppUsers = ApplicationUser.GetGAppUserList([.. (await _userManager.GetUsersInRoleAsync("User"))]),
-                UserAccess = (await AccessManager.GetAccess(_db, request.UserId, request.FileId, request.ArcId)).GetGNoteAccess()
+                UserAccess = (await AccessManager.GetAccess(_db, request.UserId, request.FileId, request.ArcId))
+                    .GetGNoteAccess()
             };
 
             return accessAndUserList;
@@ -778,7 +779,7 @@ namespace Notes.Services
         {
             ApplicationUser appUser = await GetAppUser(context);
 
-            if (appUser.Id != request.Id)   // can onlt update self
+            if (appUser.Id != request.Id)   // can only update self
                 return request;
 
             ApplicationUser? appUserBase = await _userManager.FindByIdAsync(request.Id);
@@ -810,9 +811,12 @@ namespace Notes.Services
 
             List<NoteHeader> hl;
 
-            hl = [.. _db.NoteHeader.Where(p => p.NoteFileId == request.FileId && p.Version != 0
-                    && p.NoteOrdinal == request.NoteOrdinal && p.ResponseOrdinal == request.ResponseOrdinal && p.ArchiveId == request.ArcId)
-                .OrderBy(p => p.Version)];
+            hl = [.. _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.FileId && p.Version != 0
+                        && p.NoteOrdinal == request.NoteOrdinal 
+                        && p.ResponseOrdinal == request.ResponseOrdinal 
+                        && p.ArchiveId == request.ArcId)
+                    .OrderBy(p => p.Version)];
 
             return NoteHeader.GetGNoteHeaderList(hl);
         }
@@ -833,7 +837,11 @@ namespace Notes.Services
             ApplicationUser appUser = await GetAppUser(context);
 
             // My list
-            List<Sequencer> mine = await _db.Sequencer.Where(p => p.UserId == appUser.Id).OrderBy(p => p.Ordinal).ThenBy(p => p.LastTime).ToListAsync();
+            List<Sequencer> mine = await _db.Sequencer
+                .Where(p => p.UserId == appUser.Id)
+                .OrderBy(p => p.Ordinal)
+                .ThenBy(p => p.LastTime)
+                .ToListAsync();
 
             mine ??= [];
 
@@ -865,7 +873,10 @@ namespace Notes.Services
         {
             ApplicationUser appUser = await GetAppUser(context);
 
-            List<Sequencer> mine = await _db.Sequencer.Where(p => p.UserId == appUser.Id).OrderByDescending(p => p.Ordinal).ToListAsync();
+            List<Sequencer> mine = await _db.Sequencer
+                .Where(p => p.UserId == appUser.Id)
+                .OrderByDescending(p => p.Ordinal)
+                .ToListAsync();
 
             int ord;
             if (mine is null || mine.Count == 0)
@@ -907,9 +918,7 @@ namespace Notes.Services
         {
             ApplicationUser appUser = await GetAppUser(context);
 
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             Sequencer mine = await _db.Sequencer.SingleOrDefaultAsync(p => p.UserId == appUser.Id && p.NoteFileId == request.FileId);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             if (mine is null)
                 return new NoRequest();
 
@@ -931,7 +940,8 @@ namespace Notes.Services
         [Authorize]
         public override async Task<NoRequest> UpdateSequencerOrdinal(GSequencer request, ServerCallContext context)
         {
-            Sequencer modified = await _db.Sequencer.SingleAsync(p => p.UserId == request.UserId && p.NoteFileId == request.NoteFileId);
+            Sequencer modified = await _db.Sequencer
+                .SingleAsync(p => p.UserId == request.UserId && p.NoteFileId == request.NoteFileId);
 
             modified.LastTime = request.LastTime.ToDateTime();
             modified.Ordinal = request.Ordinal;
@@ -987,13 +997,19 @@ namespace Notes.Services
         public override async Task<GNotefile> GetNoteFile(NoteFileRequest request, ServerCallContext context)
         {
             ApplicationUser appUser = await GetAppUser(context);
-            NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, request.NoteFileId, 0);
-            if (na.Write || na.ReadAccess || na.EditAccess || na.Respond)      // TODO is this right??
-            { }
-            else
+            if (appUser is null)
                 return new GNotefile();
 
-            NoteFile nf = _db.NoteFile.Single(p => p.Id == request.NoteFileId);
+            NoteAccess na = await AccessManager.GetAccess(_db, appUser.Id, request.NoteFileId, 0);
+            if (na is null || !(na.Write || na.ReadAccess || na.EditAccess || na.Respond))      // TODO is this right??
+                return new GNotefile();
+
+            NoteFile? nf = await _db.NoteFile
+                .AsNoTracking()
+                .SingleOrDefaultAsync(p => p.Id == request.NoteFileId);
+
+            if (nf is null)
+                return new GNotefile();
 
             return nf.GetGNotefile();
         }
@@ -1354,14 +1370,18 @@ namespace Notes.Services
             // Prepare to copy
             NoteHeader Header = NoteHeader.GetNoteHeader(Model.Note);
             bool whole = Model.WholeString;
-            NoteFile noteFile = await _db.NoteFile.SingleAsync(p => p.Id == fileId);
+            NoteFile noteFile = await _db.NoteFile
+                .SingleAsync(p => p.Id == fileId);
 
             // Just the note
             if (!whole)
             {
-                NoteContent cont = await _db.NoteContent.SingleAsync(p => p.NoteHeaderId == Header.Id);
+                NoteContent cont = await _db.NoteContent
+                    .SingleAsync(p => p.NoteHeaderId == Header.Id);
                 //cont.NoteHeader = null;
-                List<Tags> tags = await _db.Tags.Where(p => p.NoteHeaderId == Header.Id).ToListAsync();
+                List<Tags> tags = await _db.Tags
+                    .Where(p => p.NoteHeaderId == Header.Id)
+                    .ToListAsync();
 
                 string Body = string.Empty;
                 Body = MakeHeader(Header, noteFile);
@@ -1387,10 +1407,11 @@ namespace Notes.Services
             {
                 // get base note first
                 NoteHeader BaseHeader;
-                BaseHeader = await _db.NoteHeader.SingleAsync(p => p.NoteFileId == Header.NoteFileId
-                    && p.ArchiveId == Header.ArchiveId
-                    && p.NoteOrdinal == Header.NoteOrdinal
-                    && p.ResponseOrdinal == 0);
+                BaseHeader = await _db.NoteHeader
+                    .SingleAsync(p => p.NoteFileId == Header.NoteFileId
+                        && p.ArchiveId == Header.ArchiveId
+                        && p.NoteOrdinal == Header.NoteOrdinal
+                        && p.ResponseOrdinal == 0);
 
                 Header = BaseHeader.CloneForLink();
 
@@ -1416,20 +1437,25 @@ namespace Notes.Services
                 Header.CreateDate = Header.ThreadLastEdited = Header.LastEdited = DateTime.Now.ToUniversalTime();
 
                 Header.NoteContent = null;
-                NoteHeader NewHeader = await NoteDataManager.CreateNote(_db, Header, Body, Tags.ListToString(tags), Header.DirectorMessage, true, false);
+                NoteHeader NewHeader = await NoteDataManager
+                    .CreateNote(_db, Header, Body, Tags.ListToString(tags), Header.DirectorMessage, true, false);
 
                 // now deal with any responses
                 for (int i = 1; i <= BaseHeader.ResponseCount; i++)
                 {
-                    NoteHeader RHeader = await _db.NoteHeader.SingleAsync(p => p.NoteFileId == BaseHeader.NoteFileId
-                        && p.ArchiveId == BaseHeader.ArchiveId
-                        && p.NoteOrdinal == BaseHeader.NoteOrdinal
-                        && p.ResponseOrdinal == i);
+                    NoteHeader RHeader = await _db.NoteHeader
+                        .SingleAsync(p => p.NoteFileId == BaseHeader.NoteFileId
+                            && p.ArchiveId == BaseHeader.ArchiveId
+                            && p.NoteOrdinal == BaseHeader.NoteOrdinal
+                            && p.ResponseOrdinal == i);
 
                     Header = RHeader.CloneForLinkR();
 
-                    cont = await _db.NoteContent.SingleAsync(p => p.NoteHeaderId == Header.Id);
-                    tags = await _db.Tags.Where(p => p.NoteHeaderId == Header.Id).ToListAsync();
+                    cont = await _db.NoteContent
+                        .SingleAsync(p => p.NoteHeaderId == Header.Id);
+                    tags = await _db.Tags
+                        .Where(p => p.NoteHeaderId == Header.Id)
+                        .ToListAsync();
 
                     Body = string.Empty;
                     Body = MakeHeader(Header, noteFile);
@@ -1604,15 +1630,20 @@ namespace Notes.Services
         {
             var message = new AString();
 
-            NoteFile? hpmf = _db.NoteFile.Where(p => p.NoteFileName == "homepagemessages").FirstOrDefault();
+            NoteFile? hpmf = _db.NoteFile.Where(p => p.NoteFileName == "homepagemessages")
+                .FirstOrDefault();
             if (hpmf is not null)
             {
-                NoteHeader? hpmh = _db.NoteHeader.Where(p => p.NoteFileId == hpmf.Id && !p.IsDeleted).OrderByDescending(p => p.CreateDate).FirstOrDefault();
+                NoteHeader? hpmh = _db.NoteHeader
+                    .Where(p => p.NoteFileId == hpmf.Id && !p.IsDeleted)
+                    .OrderByDescending(p => p.CreateDate)
+                    .FirstOrDefault();
                 if (hpmh is not null)
                 {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-                    message.Val = _db.NoteContent.Where(p => p.NoteHeaderId == hpmh.Id).FirstOrDefault().NoteBody;
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
+                    message.Val = _db.NoteContent
+                        .Where(p => p.NoteHeaderId == hpmh.Id)
+                        .FirstOrDefault()
+                        .NoteBody;
                 }
             }
 
@@ -1646,47 +1677,63 @@ namespace Notes.Services
 
             if (request.NoteOrdinal == -1 && request.MinNote > 0 && request.MaxNote >= request.MinNote)      // base notes and responses
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
-                    && p.NoteOrdinal >= request.MinNote && p.NoteOrdinal <= request.MaxNote
-                    && !p.IsDeleted && p.Version == 0)
-                    .OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
+                        && p.NoteOrdinal >= request.MinNote && p.NoteOrdinal <= request.MaxNote
+                        && !p.IsDeleted && p.Version == 0)
+                    .OrderBy(p => p.NoteOrdinal)
+                    .ThenBy(p => p.ResponseOrdinal)
+                    .ToListAsync();
             }
             else if (request.NoteOrdinal == -1) // base notes and responses
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
-                    && !p.IsDeleted && p.Version == 0)
-                    .OrderBy(p => p.NoteOrdinal).ThenBy(p => p.ResponseOrdinal).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
+                        && !p.IsDeleted && p.Version == 0)
+                    .OrderBy(p => p.NoteOrdinal)
+                    .ThenBy(p => p.ResponseOrdinal)
+                    .ToListAsync();
             }
             else if (request.NoteOrdinal == 0 && request.MinNote > 0 && request.MaxNote >= request.MinNote)  // base notes only
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
-                    && p.NoteOrdinal >= request.MinNote && p.NoteOrdinal <= request.MaxNote
-                    && !p.IsDeleted && p.Version == 0)
-                    .OrderBy(p => p.NoteOrdinal).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
+                        && p.NoteOrdinal >= request.MinNote && p.NoteOrdinal <= request.MaxNote
+                        && !p.IsDeleted && p.Version == 0)
+                    .OrderBy(p => p.NoteOrdinal)
+                    .ToListAsync();
             }
             else if (request.NoteOrdinal == 0)  // base notes only
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
-                    && !p.IsDeleted && p.Version == 0)
-                    .OrderBy(p => p.NoteOrdinal).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
+                        && !p.IsDeleted && p.Version == 0)
+                    .OrderBy(p => p.NoteOrdinal)
+                    .ToListAsync();
             }
             else if (request.ResponseOrdinal <= 0) // specifc base note plus all responses
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.NoteOrdinal == request.NoteOrdinal
-                    && !p.IsDeleted && p.Version == 0)
-                    .OrderBy(p => p.ResponseOrdinal).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.NoteOrdinal == request.NoteOrdinal
+                        && !p.IsDeleted && p.Version == 0)
+                    .OrderBy(p => p.ResponseOrdinal)
+                    .ToListAsync();
             }
             else if (request.ResponseOrdinal == 0) // specifc base note 
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
-                    && p.ResponseOrdinal == 0 && p.NoteOrdinal == request.NoteOrdinal
-                    && !p.IsDeleted && p.Version == 0).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId
+                        && p.ResponseOrdinal == 0 && p.NoteOrdinal == request.NoteOrdinal
+                        && !p.IsDeleted && p.Version == 0)
+                    .ToListAsync();
             }
             else    // specific response
             {
-                work = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == request.ResponseOrdinal
-                    && p.NoteOrdinal == request.NoteOrdinal
-                    && !p.IsDeleted && p.Version == 0).ToListAsync();
+                work = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == request.ResponseOrdinal
+                        && p.NoteOrdinal == request.NoteOrdinal
+                        && !p.IsDeleted && p.Version == 0)
+                    .ToListAsync();
             }
 
             GNoteHeaderList returnval = NoteHeader.GetGNoteHeaderList(work);
@@ -1694,8 +1741,13 @@ namespace Notes.Services
             if (request.ContentAndTags)
             {
                 long[] items = [.. work.Select(p => p.Id)];
-                List<NoteContent> cont = await _db.NoteContent.Where(p => items.Contains(p.NoteHeaderId)).ToListAsync();
-                List<Tags> tags = await (_db.Tags.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId)).ToListAsync();
+                List<NoteContent> cont = await _db.NoteContent
+                    .Where(p => items.Contains(p.NoteHeaderId))
+                    .ToListAsync();
+
+                List<Tags> tags = await (_db.Tags
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId))
+                    .ToListAsync();
 
                 foreach (GNoteHeader item in returnval.List)
                 {
@@ -1710,7 +1762,9 @@ namespace Notes.Services
                 List<GNoteHeader> bases = [.. returnval.List.Where(p => p.ResponseOrdinal == 0)];
                 foreach (GNoteHeader bn in bases)
                 {
-                    List<GNoteHeader> rn = [.. returnval.List.Where(p => p.NoteOrdinal == bn.NoteOrdinal && p.ResponseOrdinal > 0).OrderBy(p => p.ResponseOrdinal)];
+                    List<GNoteHeader> rn = [.. returnval.List
+                        .Where(p => p.NoteOrdinal == bn.NoteOrdinal && p.ResponseOrdinal > 0)
+                        .OrderBy(p => p.ResponseOrdinal)];
                     if (rn.Count == 0)
                         continue;
                     bn.Responses = new();
@@ -1746,8 +1800,10 @@ namespace Notes.Services
 
             NoteCount returnval = new()
             {
-                Count = await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
-                   && !p.IsDeleted && p.Version == 0).CountAsync()
+                Count = await _db.NoteHeader
+                    .Where(p => p.NoteFileId == request.NoteFileId && p.ArchiveId == request.ArcId && p.ResponseOrdinal == 0
+                       && !p.IsDeleted && p.Version == 0)
+                    .CountAsync()
             };
 
             return returnval;
@@ -1776,17 +1832,16 @@ namespace Notes.Services
                 if (request.WholeWords)
                 {
                     request.SearchText = " " + request.SearchText.Trim() + " ";
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     List<NoteHeader> stuff =
-                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
-                        && p.ArchiveId == request.ArcId
-                        && !p.IsDeleted
-                        && p.Version == 0)
+                        await _db.NoteHeader
+                        .Where(p => p.NoteFileId == request.NoteFileId
+                            && p.ArchiveId == request.ArcId
+                            && !p.IsDeleted
+                            && p.Version == 0)
                         .Include(s => s.NoteContent)
                         .Where(s => s.NoteContent.NoteBody.Contains(request.SearchText)
-                        && s.Id == s.NoteContent.NoteHeaderId
-                        ).ToListAsync();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
+                            && s.Id == s.NoteContent.NoteHeaderId)
+                        .ToListAsync();
 
                     SearchResult result = new();
 
@@ -1800,17 +1855,16 @@ namespace Notes.Services
                 else
                 {
                     // case sensitive search
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     List<NoteHeader> stuff =
-                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
-                        && p.ArchiveId == request.ArcId
-                        && !p.IsDeleted
-                        && p.Version == 0)
+                        await _db.NoteHeader
+                        .Where(p => p.NoteFileId == request.NoteFileId
+                            && p.ArchiveId == request.ArcId
+                            && !p.IsDeleted
+                            && p.Version == 0)
                         .Include(s => s.NoteContent)
                         .Where(s => s.NoteContent.NoteBody.Contains(request.SearchText)
-                        && s.Id == s.NoteContent.NoteHeaderId
-                        ).ToListAsync();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
+                            && s.Id == s.NoteContent.NoteHeaderId)
+                        .ToListAsync();
                     SearchResult result = new();
                     foreach (NoteHeader stuffItem in stuff)
                     {
@@ -1824,19 +1878,18 @@ namespace Notes.Services
                 if (request.WholeWords)
                 {
                     request.SearchText = " " + request.SearchText.Trim() + " ";
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
 #pragma warning disable CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
                     List<NoteHeader> stuff =
-                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
-                        && p.ArchiveId == request.ArcId
-                        && !p.IsDeleted
-                        && p.Version == 0)
+                        await _db.NoteHeader
+                        .Where(p => p.NoteFileId == request.NoteFileId
+                            && p.ArchiveId == request.ArcId
+                            && !p.IsDeleted
+                            && p.Version == 0)
                         .Include(s => s.NoteContent)
                         .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
-                        && s.Id == s.NoteContent.NoteHeaderId
-                        ).ToListAsync();
+                            && s.Id == s.NoteContent.NoteHeaderId)
+                        .ToListAsync();
 #pragma warning restore CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
                     SearchResult result = new();
 
@@ -1850,19 +1903,18 @@ namespace Notes.Services
                 else
                 {
 
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
 #pragma warning disable CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
                     List<NoteHeader> stuff =
-                        await _db.NoteHeader.Where(p => p.NoteFileId == request.NoteFileId
-                        && p.ArchiveId == request.ArcId
-                        && !p.IsDeleted
-                        && p.Version == 0)
+                        await _db.NoteHeader
+                        .Where(p => p.NoteFileId == request.NoteFileId
+                            && p.ArchiveId == request.ArcId
+                            && !p.IsDeleted
+                            && p.Version == 0)
                         .Include(s => s.NoteContent)
                         .Where(s => s.NoteContent.NoteBody.ToLower().Contains(request.SearchText.ToLower())
-                        && s.Id == s.NoteContent.NoteHeaderId
-                        ).ToListAsync();
+                            && s.Id == s.NoteContent.NoteHeaderId)
+                        .ToListAsync();
 #pragma warning restore CA1862 // Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
                     SearchResult result = new();
 

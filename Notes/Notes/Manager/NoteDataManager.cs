@@ -50,8 +50,8 @@ namespace Notes.Manager
         public static async Task<bool> CreateNoteFile(NotesDbContext db,
             string userId, string name, string title)
         {
-            IQueryable<NoteFile>? query = db.NoteFile.Where(p => p.NoteFileName == name);
-            if (!query.Any())
+            bool exists = await db.NoteFile.AnyAsync(p => p.NoteFileName == name);
+            if (!exists)
             {
                 NoteFile noteFile = new()
                 {
@@ -263,108 +263,121 @@ namespace Notes.Manager
                 nh.ThreadLastEdited = nh.CreateDate;
             }
 
-            NoteFile? nf = await db.NoteFile
-                .Where(p => p.Id == nh.NoteFileId)
-                .FirstOrDefaultAsync();
+            // Use a correlation id to aid troubleshooting if we throw
+            string correlationId = Guid.NewGuid().ToString("N");
 
-            nf.LastEdited = nh.CreateDate;
-            db.Entry(nf).State = EntityState.Modified;
-            db.NoteHeader.Add(nh);
-            await db.SaveChangesAsync();
-
-            NoteHeader newHeader = nh;
-
-            if (newHeader.ResponseOrdinal == 0) // base note
+            try
             {
-                newHeader.BaseNoteId = newHeader.Id;
-                db.Entry(newHeader).State = EntityState.Modified;
+                NoteFile? nf = await db.NoteFile.FindAsync(nh.NoteFileId);
+                if (nf is null)
+                    throw new InvalidOperationException($"NoteFile with Id {nh.NoteFileId} not found. (correlationId={correlationId})");
+
+                // update notefile last edited based on create date
+                nf.LastEdited = nh.CreateDate;
+                db.Entry(nf).State = EntityState.Modified;
+
+                // Add header to context and save to obtain an Id (needed for BaseNoteId, RefId updates)
+                db.NoteHeader.Add(nh);
+                await db.SaveChangesAsync();
+
+                NoteHeader newHeader = nh;
+
+                if (newHeader.ResponseOrdinal == 0) // base note
+                {
+                    newHeader.BaseNoteId = newHeader.Id;
+                    db.Entry(newHeader).State = EntityState.Modified;
+
+                    if (editing)
+                    {
+                        // update BaseNoteId for all responses
+                        List<NoteHeader> rhl = await db.NoteHeader.Where(p => p.BaseNoteId == editingId && p.ResponseOrdinal > 0).ToListAsync();
+                        foreach (NoteHeader ln in rhl)
+                        {
+                            ln.BaseNoteId = newHeader.Id;
+                            db.Entry(ln).State = EntityState.Modified;
+                        }
+                    }
+                }
+                else    // response
+                {
+                    NoteHeader? baseNote = await db.NoteHeader
+                        .Where(p => p.NoteFileId == newHeader.NoteFileId && p.ArchiveId == newHeader.ArchiveId && p.NoteOrdinal == newHeader.NoteOrdinal && p.ResponseOrdinal == 0)
+                        .FirstOrDefaultAsync();
+
+                    if (baseNote is null)
+                        throw new InvalidOperationException($"Base note not found for file {newHeader.NoteFileId}, arc {newHeader.ArchiveId}, ordinal {newHeader.NoteOrdinal}. (correlationId={correlationId})");
+
+                    newHeader.BaseNoteId = baseNote.Id;
+                    db.Entry(newHeader).State = EntityState.Modified;
+                }
 
                 if (editing)
                 {
-                    // update BaseNoteId for all responses
-                    List<NoteHeader> rhl = db.NoteHeader.Where(p => p.BaseNoteId == editingId && p.ResponseOrdinal > 0).ToList();
+                    // update RefId
+                    List<NoteHeader> rhl = await db.NoteHeader.Where(p => p.RefId == editingId).ToListAsync();
                     foreach (NoteHeader ln in rhl)
                     {
-                        ln.BaseNoteId = newHeader.Id;
+                        ln.RefId = newHeader.Id;
                         db.Entry(ln).State = EntityState.Modified;
                     }
                 }
 
-                await db.SaveChangesAsync();
-            }
-            else    // response
-            {
-                NoteHeader? baseNote = await db.NoteHeader
-                    .Where(p => p.NoteFileId == newHeader.NoteFileId && p.ArchiveId == newHeader.ArchiveId && p.NoteOrdinal == newHeader.NoteOrdinal && p.ResponseOrdinal == 0)
-                    .FirstOrDefaultAsync();
-
-                newHeader.BaseNoteId = baseNote.Id;
-                db.Entry(newHeader).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-            }
-
-            if (editing)
-            {
-                // update RefId
-                List<NoteHeader> rhl = db.NoteHeader.Where(p => p.RefId == editingId).ToList();
-                foreach (NoteHeader ln in rhl)
+                NoteContent newContent = new()
                 {
-                    ln.RefId = newHeader.Id;
-                    db.Entry(ln).State = EntityState.Modified;
-                }
-                await db.SaveChangesAsync();
-            }
+                    NoteHeaderId = newHeader.Id,
+                    NoteBody = body
+                };
+                db.NoteContent.Add(newContent);
 
-            NoteContent newContent = new()
-            {
-                NoteHeaderId = newHeader.Id,
-                NoteBody = body
-            };
-            db.NoteContent.Add(newContent);
-            await db.SaveChangesAsync();
+                // deal with tags
 
-            // deal with tags
-
-            if (tags is not null && tags.Length > 1)
-            {
-                var theTags = Tags.StringToList(tags, newHeader.Id, newHeader.NoteFileId, newHeader.ArchiveId);
-
-                if (theTags.Count > 0)
+                if (tags is not null && tags.Length > 1)
                 {
-                    await db.Tags.AddRangeAsync(theTags);
-                    await db.SaveChangesAsync();
-                }
-            }
+                    var theTags = Tags.StringToList(tags, newHeader.Id, newHeader.NoteFileId, newHeader.ArchiveId);
 
-            // Check for linked notefile(s)
-
-            List<LinkedFile> links = await db.LinkedFile.Where(p => p.HomeFileId == newHeader.NoteFileId && p.SendTo).ToListAsync();
-
-            if (linked || links is null || links.Count < 1)
-            {
-            }
-            else
-            {
-                foreach (var link in links) // que up the linked notes
-                {
-                    if (link.SendTo)
+                    if (theTags.Count > 0)
                     {
-                        LinkQueue q = new()
-                        {
-                            Activity = newHeader.ResponseOrdinal == 0 ? LinkAction.CreateBase : LinkAction.CreateResponse,
-                            LinkGuid = newHeader.LinkGuid,
-                            LinkedFileId = newHeader.NoteFileId,
-                            BaseUri = link.RemoteBaseUri,
-                            Secret = link.Secret
-                        };
-
-                        db.LinkQueue.Add(q);
-                        await db.SaveChangesAsync();
+                        await db.Tags.AddRangeAsync(theTags);
                     }
                 }
-            }
 
-            return newHeader;
+                // Check for linked notefile(s)
+
+                List<LinkedFile> links = await db.LinkedFile.Where(p => p.HomeFileId == newHeader.NoteFileId && p.SendTo).ToListAsync();
+
+                if (!(linked || links is null || links.Count < 1))
+                {
+                    List<LinkQueue> queue = new();
+                    foreach (var link in links) // que up the linked notes
+                    {
+                        if (link.SendTo)
+                        {
+                            LinkQueue q = new()
+                            {
+                                Activity = newHeader.ResponseOrdinal == 0 ? LinkAction.CreateBase : LinkAction.CreateResponse,
+                                LinkGuid = newHeader.LinkGuid,
+                                LinkedFileId = newHeader.NoteFileId,
+                                BaseUri = link.RemoteBaseUri,
+                                Secret = link.Secret
+                            };
+                            queue.Add(q);
+                        }
+                    }
+                    if (queue.Count > 0)
+                    {
+                        await db.LinkQueue.AddRangeAsync(queue);
+                    }
+                }
+
+                // Persist all remaining changes in a single save
+                await db.SaveChangesAsync();
+
+                return newHeader;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to create note (correlationId={correlationId}).", ex);
+            }
         }
 
         /// <summary>

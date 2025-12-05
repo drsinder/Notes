@@ -48,51 +48,68 @@ namespace Notes.Services
         /// <returns>System.String.</returns>
         public static async Task<string> MakeNoteForEmail(ForwardViewModel fv, GNotefile NoteFile, NotesDbContext db, string email, string name)
         {
+            if (fv == null) throw new ArgumentNullException(nameof(fv));
+            if (NoteFile == null) throw new ArgumentNullException(nameof(NoteFile));
+            if (db == null) throw new ArgumentNullException(nameof(db));
+
             NoteHeader nc = await NoteDataManager.GetNoteByIdWithFile(db, fv.NoteID);
+
+            if (nc == null)
+            {
+                return "Forwarded by Notes 2026 - User: " + email + " / " + name
+                    + "<p>Note not found (Id: " + fv.NoteID + ")</p>";
+            }
 
             if (!fv.Hasstring || !fv.Wholestring)
             {
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
-                return "Forwarded by Notes 2026 - User: " + email + " / " + name
-                    + "<p>File: " + NoteFile.NoteFileName + " - File Title: " + NoteFile.NoteFileTitle + "</p><hr/>"
-                    + "<p>Author: " + nc.AuthorName + "  - Director Message: " + nc.DirectorMessage + "</p><p>"
-                    + "<p>Subject: " + nc.NoteSubject + "</p>"
-                    + nc.LastEdited.ToShortDateString() + " " + nc.LastEdited.ToShortTimeString() + " UTC" + "</p>"
-                    + nc.NoteContent.NoteBody;
+                var sbSingle = new StringBuilder(256);
+                sbSingle.Append("Forwarded by Notes 2026 - User: " + email + " / " + name);
+                sbSingle.Append("<p>File: " + (NoteFile.NoteFileName ?? string.Empty) + " - File Title: " + (NoteFile.NoteFileTitle ?? string.Empty) + "</p><hr/>");
+                sbSingle.Append("<p>Author: " + (nc.AuthorName ?? string.Empty) + "  - Director Message: " + (nc.DirectorMessage ?? string.Empty) + "</p><p>");
+                sbSingle.Append("<p>Subject: " + (nc.NoteSubject ?? string.Empty) + "</p>");
+                sbSingle.Append(nc.LastEdited.ToShortDateString() + " " + nc.LastEdited.ToShortTimeString() + " UTC" + "</p>");
+                sbSingle.Append(nc.NoteContent?.NoteBody ?? string.Empty);
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
                 //+ "<hr/>" + "<a href=\"" + Globals.ProductionUrl + "/notedisplay/" + fv.NoteID + "\" >Link to note</a>";   // TODO
+                return sbSingle.ToString();
             }
             else
             {
-                List<NoteHeader> bnhl = await db.NoteHeader
-                    .Where(p => p.NoteFileId == nc.NoteFileId && p.NoteOrdinal == nc.NoteOrdinal && p.ResponseOrdinal == 0)
-                    .ToListAsync();
-                NoteHeader bnh = bnhl[0];
-                fv.NoteSubject = bnh.NoteSubject;
-                List<NoteHeader> notes = await db.NoteHeader.Include("NoteContent")
+                List<NoteHeader> notes = await db.NoteHeader.Include(p => p.NoteContent)
                     .Where(p => p.NoteFileId == nc.NoteFileId && p.NoteOrdinal == nc.NoteOrdinal)
+                    .OrderBy(p => p.ResponseOrdinal)
                     .ToListAsync();
 
-                StringBuilder sb = new();
+                if (notes == null || notes.Count == 0)
+                {
+                    return "Forwarded by Notes 2026 - User: " + email + " / " + name
+                        + "<p>No notes found for File: " + (NoteFile.NoteFileName ?? string.Empty) + "</p>";
+                }
+
+                fv.NoteSubject = notes[0].NoteSubject ?? fv.NoteSubject;
+
+                StringBuilder sb = new(256 + notes.Count * 256);
                 sb.Append("Forwarded by Notes 2026 - User: " + email + " / " + name
-                    + "<p>\nFile: " + NoteFile.NoteFileName + " - File Title: " + NoteFile.NoteFileTitle + "</p>"
+                    + "<p>\nFile: " + (NoteFile.NoteFileName ?? string.Empty) + " - File Title: " + (NoteFile.NoteFileTitle ?? string.Empty) + "</p>"
                     + "<hr/>");
 
                 for (int i = 0; i < notes.Count; i++)
                 {
+                    var note = notes[i];
                     if (i == 0)
                     {
                         sb.Append("<p>Base Note - " + (notes.Count - 1) + " Response(s)</p>");
                     }
                     else
                     {
-                        sb.Append("<hr/><p>Response - " + notes[i].ResponseOrdinal + " of " + (notes.Count - 1) + "</p>");
+                        sb.Append("<hr/><p>Response - " + note.ResponseOrdinal + " of " + (notes.Count - 1) + "</p>");
                     }
-                    sb.Append("<p>Author: " + notes[i].AuthorName + "  - Director Message: " + notes[i].DirectorMessage + "</p>");
-                    sb.Append("<p>Subject: " + notes[i].NoteSubject + "</p>");
-                    sb.Append("<p>" + notes[i].LastEdited.ToShortDateString() + " " + notes[i].LastEdited.ToShortTimeString() + " UTC" + " </p>");
+                    sb.Append("<p>Author: " + (note.AuthorName ?? string.Empty) + "  - Director Message: " + (note.DirectorMessage ?? string.Empty) + "</p>");
+                    sb.Append("<p>Subject: " + (note.NoteSubject ?? string.Empty) + "</p>");
+                    sb.Append("<p>" + note.LastEdited.ToShortDateString() + " " + note.LastEdited.ToShortTimeString() + " UTC" + " </p>");
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
-                    sb.Append(notes[i].NoteContent.NoteBody);
+                    sb.Append(note.NoteContent?.NoteBody ?? string.Empty);
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
                     //sb.Append("<hr/>");
                     //sb.Append("<a href=\"");

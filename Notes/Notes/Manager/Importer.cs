@@ -484,9 +484,7 @@ namespace Notes.Manager
                             }
 
                             line = " " + line;
-                            line = line.Replace("     ", " ").Replace("    ", " ").Replace("   ", " ").Replace("  ", " ");
-                            line = line.Replace("     ", " ").Replace("    ", " ").Replace("   ", " ").Replace("  ", " ");
-
+                            line = Regex.Replace(line, @" {2,}", " ");
 
                             string[] splits = line.Split(' ', '/', '.', ':', ',', ';');
 
@@ -644,18 +642,27 @@ namespace Notes.Manager
         /// <param name="inline">input line</param>
         /// <param name="file">StreamReader for import file</param>
         /// <returns>System.String.</returns>
+        /// <remarks>Safely handles null or empty input and reads up to five lines following a form-feed character. Returns an empty string when the resulting line is null or empty.</remarks>
         public async Task<string> CheckFf(string inline, StreamReader file)
         {
+            if (string.IsNullOrEmpty(inline))
+                return string.Empty;
+
             if (inline.Length == 1)
             {
-                char[] mychars = inline.ToCharArray();
-                if (mychars[0] == Ff)
+                if (inline[0] == Ff)
                 {
-                    await file.ReadLineAsync();
-                    await file.ReadLineAsync();
-                    await file.ReadLineAsync();
-                    await file.ReadLineAsync();
-                    string it = await file.ReadLineAsync();
+                    string it = string.Empty;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        var read = await file.ReadLineAsync();
+                        if (read is null)
+                        {
+                            it = string.Empty;
+                            break;
+                        }
+                        it = read;
+                    }
                     return string.IsNullOrEmpty(it) ? string.Empty : it;
                 }
             }
