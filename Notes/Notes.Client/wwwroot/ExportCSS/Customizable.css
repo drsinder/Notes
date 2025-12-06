@@ -212,10 +212,10 @@ iframe.loginclock {
 }
 
 /*various main index boxes*/
-.roundedgray {
+.roundedgeneral {
     margin: 8px;
     padding: 8px;
-    background-color: #eee;
+    background-color: wheat;
     border-radius: 6px;
 }
 

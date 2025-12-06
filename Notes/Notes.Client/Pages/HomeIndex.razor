@@ -130,9 +130,8 @@
                     {
                         foreach (var localItem in impfileList.List)
                         {
-                             item = localItem;
                             <li> 
-                               <FileButton NoteFile="@item"></FileButton>
+                                <FileButton NoteFile="@localItem"></FileButton>
                             </li>
                         }
                     }
@@ -145,16 +144,14 @@
                     {
                         foreach (var localItem in histfileList.List)
                         {
-                             item = localItem;
                             <li>
-                               <FileButton NoteFile="@item"></FileButton>
+                                <FileButton NoteFile="@localItem"></FileButton>
                             </li>
                         }
                     }
                 </ul>
             </div>
         </div>
-
     } 
 </div>
 
