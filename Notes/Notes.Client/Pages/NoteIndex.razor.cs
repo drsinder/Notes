@@ -968,7 +968,7 @@ namespace Notes.Client.Pages
                 if (sfTextBox is not null)
                 {
                     int psize = sfGrid1?.PageSettings.PageSize ?? 1;
-                    if (psize > 1 && ++renderCount < 2) // goto last page only on first render
+                    if (!Model.UserData.Pref2 && psize > 1 && ++renderCount < 2) // goto last page only on first render
                     {
                         int last = (sfGrid1.DataSource.Count() / psize) + 1;
                         CurPage = last;
