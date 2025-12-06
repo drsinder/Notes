@@ -86,6 +86,614 @@
         <namespaces />
         <topics />
       </topic>
+      <topic>
+        <type>normal</type>
+        <is-default>no</is-default>
+        <name>GRPC Proto file</name>
+        <id>grpc</id>
+        <comment><![CDATA[<summary>
+<para>syntax = "proto3";</para>
+<para>option csharp_namespace = "Notes.Protos";</para>
+<para>package notesserver;</para>
+<para>import "google/protobuf/timestamp.proto";</para>
+<para>// service defintion<br/>
+service NotesServer {<br/>
+// Account Services</para>
+<para> //rpc Register(RegisterRequest) returns
+(AuthReply);&#160;&#160;&#160;&#160;&#160;// register a user - create login<br/>
+ //rpc Login(LoginRequest) returns
+(LoginReply);&#160;&#160;&#160;&#160;&#160;&#160;&#160;// log a user in<br/>
+ //rpc Logout(NoRequest) returns
+(AuthReply);&#160;&#160;&#160;&#160;&#160;&#160;&#160;// log current user
+out<br/>
+ //rpc ConfirmEmail(ConfirmEmailRequest) returns
+(AuthReply);&#160;&#160;&#160;// user confirms email - login enabled now</para>
+<para>// Notes Services proper</para>
+<para>// These are basic and often deal with a simple datasebase type or list /
+repeated field</para>
+<para> rpc GetUserData(NoRequest) returns
+(GAppUser);&#160;&#160;&#160;&#160;&#160;&#160;// gets data for the current
+user<br/>
+ rpc GetUserList(NoRequest) returns
+(GAppUserList);&#160;&#160;&#160;&#160;&#160;// get list of alll app
+users/logins<br/>
+ rpc GetUserRoles(AppUserRequest) returns (EditUserViewModel);&#160;&#160;//
+used for editing roles users are in<br/>
+ rpc GetHeaderForNoteId(NoteId) returns (GNoteHeader);&#160;&#160;&#160;&#160;//
+gets a note header given its id<br/>
+ rpc GetNoteContent(DisplayModelRequest) returns (DisplayModel);&#160;&#160;//
+gets the content of a note<br/>
+ rpc GetAccessAndUserList(AccessAndUserListRequest) returns
+(AccessAndUserList);&#160;// gets access data and user list<br/>
+ rpc GetAccessList(AccessAndUserListRequest) returns
+(GNoteAccessList);&#160;&#160;&#160;// gets the access list for a file<br/>
+ rpc GetAccess(NoteFileRequest) returns (GNoteAccess);&#160;&#160;&#160;&#160;//
+gets the access for user<br/>
+ rpc UpdateUserRoles(EditUserViewModel) returns (RequestStatus);&#160;&#160;//
+updates roles for a user<br/>
+ rpc CreateNoteFile(GNotefile) returns
+(GNotefile);&#160;&#160;&#160;&#160;&#160;// create a note file<br/>
+ rpc UpdateNoteFile(GNotefile) returns
+(GNotefile);&#160;&#160;&#160;&#160;&#160;// updates note file data<br/>
+ rpc DeleteNoteFile(GNotefile) returns
+(RequestStatus);&#160;&#160;&#160;&#160;// deletes a note file<br/>
+//&#160;rpc Import(ImportRequest) returns
+(NoRequest);&#160;&#160;&#160;&#160;&#160;&#160;// runs an import given server
+side file name<br/>
+ rpc Import(ImportRequest) returns
+(RequestStatus);&#160;&#160;&#160;&#160;&#160;// runs an import given client
+side file contents as btye[]<br/>
+ rpc UpdateAccessItem(GNoteAccess) returns (GNoteAccess);&#160;&#160;&#160;//
+get a single access item<br/>
+ rpc DeleteAccessItem(GNoteAccess) returns (RequestStatus);&#160;&#160;&#160;//
+deletes an access item<br/>
+ rpc AddAccessItem(GNoteAccess) returns (GNoteAccess);&#160;&#160;&#160;&#160;//
+adds an access item<br/>
+ rpc UpdateUserData(GAppUser) returns
+(GAppUser);&#160;&#160;&#160;&#160;&#160;// updates user data<br/>
+ rpc GetVersions(GetVersionsRequest) returns (GNoteHeaderList);&#160;&#160;//
+gets the non-zero version headers<br/>
+ rpc GetSequencer(NoRequest) returns (GSequencerList);&#160;&#160;&#160;&#160;//
+gets the sequencer list for a user<br/>
+ rpc CreateSequencer(SCheckModel) returns (RequestStatus);&#160;&#160;&#160;//
+creates a sequencer item<br/>
+ rpc DeleteSequencer(SCheckModel) returns (RequestStatus);&#160;&#160;&#160;//
+deletes a sequencer item<br/>
+ rpc UpdateSequencer(GSequencer) returns (RequestStatus);&#160;&#160;&#160;//
+updates a sequencer item - while sequencing<br/>
+ rpc UpdateSequencerOrdinal(GSequencer) returns (RequestStatus);&#160;&#160;//
+updates a sequencer item ordinal<br/>
+ rpc GetNoteFile(NoteFileRequest) returns (GNotefile);&#160;&#160;&#160;&#160;//
+get the notefile for the note index<br/>
+ rpc CreateNewNote(TextViewModel) returns
+(GNoteHeader);&#160;&#160;&#160;&#160;// get a note header<br/>
+ rpc UpdateNote(TextViewModel) returns (GNoteHeader);&#160;&#160;&#160;&#160;//
+updates a note header<br/>
+ rpc SendEmailAuth(GEmail) returns
+(RequestStatus);&#160;&#160;&#160;&#160;&#160;// authenticated<br/>
+ rpc GetExport2(NoteId) returns
+(GNoteContent);&#160;&#160;&#160;&#160;&#160;&#160;// gets note content during
+an export<br/>
+ rpc DoForward(ForwardViewModel) returns (RequestStatus);&#160;&#160;&#160;//
+forwards note(s) via email<br/>
+ rpc GetNoteFilesOrderedByName(NoRequest) returns (GNotefileList);&#160;// get
+list of the note files ordered by name<br/>
+ rpc CopyNote(CopyModel) returns
+(RequestStatus);&#160;&#160;&#160;&#160;&#160;// copies note(s) to another
+file<br/>
+ rpc DeleteNote(NoteId) returns
+(RequestStatus);&#160;&#160;&#160;&#160;&#160;&#160;// deletes a note<br/>
+ rpc GetExportJson(ExportRequest) returns
+(JsonExport);&#160;&#160;&#160;&#160;// returns data for a json export see
+GetNoteHeaders for a more flexible way to get filtered data<br/>
+ rpc GetNoteHeaders(NoteHeadersRequest) returns (GNoteHeaderList);&#160;//
+request all or some slice of a note file - headers w or wo content and tags<br/>
+ rpc GetHomePageMessage(NoRequest) returns (AString);&#160;&#160;&#160;&#160;//
+Gets the current homepage message if any<br/>
+ rpc GetNoteCount(NoteFileRequest) returns
+(NoteCount);&#160;&#160;&#160;&#160;// Gets the number of base notes.</para>
+<para>// These are crafted for the specific user interface I've provided and may
+return more or less than you want.<br/>
+// The basics above will permit more targeted access to data but may require
+more round trips.</para>
+<para> rpc GetHomePageModel(NoRequest) returns
+(HomePageModel);&#160;&#160;&#160;// get data needed for home page<br/>
+ rpc GetAdminPageModel(NoRequest) returns (HomePageModel);&#160;&#160;&#160;// a
+bit more data than home page<br/>
+ rpc GetNoteFileIndexData(NoteFileRequest) returns
+(NoteDisplayIndexModel);&#160;&#160;// get data for the index of a notefile<br/>
+ rpc GetAbout(NoRequest) returns
+(AboutModel);&#160;&#160;&#160;&#160;&#160;&#160;// gets data for the about
+page<br/>
+//&#160;rpc SendEmail(GEmail) returns
+(NoRequest);&#160;&#160;&#160;&#160;&#160;&#160;&#160;// unauthenticated -
+slower - use it too much and it really hurts you!<br/>
+//&#160;rpc GetExport(ExportRequest) returns
+(GNoteHeaderList);&#160;&#160;&#160;&#160;// gets a note header list during an
+Export<br/>
+ rpc GetTextFile(AString) returns (AString);&#160;// files: about.html |
+help.html | helpdialog.html | helpdialog2.html | license.html<br/>
+ rpc NoOp(NoRequest) returns (RequestStatus);</para>
+<para> rpc GetServerTime(NoRequest) returns
+(ServerTime);&#160;&#160;&#160;&#160;// gets server time</para>
+<para> rpc ContentSearch(ContentSearchRequest) returns (SearchResult);&#160;//
+search for text in note contents<br/>
+}</para>
+<para>// used generically -&#160; used when no data needed for request or
+response<br/>
+message NoRequest {<br/>
+}</para>
+<para>message RequestStatus<br/>
+{<br/>
+ bool success = 1;<br/>
+ int32 status = 2;<br/>
+ string message = 3;<br/>
+}</para>
+<para>message ServerTime {<br/>
+ google.protobuf.Timestamp utcTime = 1;<br/>
+ int32 offsetHours = 2;<br/>
+ int32 offsetMinutes = 3;<br/>
+ RequestStatus status = 4;<br/>
+}</para>
+<para>///////////////////////////////////////////////<br/>
+//<br/>
+// Login, Logout, and Register stuff<br/>
+//<br/>
+// register a user<br/>
+message RegisterRequest {<br/>
+ string username = 1;<br/>
+ string email = 2;<br/>
+ string password = 3;<br/>
+}</para>
+<para>// holds login information<br/>
+message LoginRequest {<br/>
+ string email = 1;&#160;&#160;// email or name supported<br/>
+ string password = 2;<br/>
+ int32 hours = 3;&#160;&#160;// number of hours to keep user logged in via
+cookies<br/>
+}</para>
+<para>// vital info about user<br/>
+message UserInfo {<br/>
+ string subject = 1;&#160;&#160;// userId<br/>
+ string email = 2;<br/>
+ string displayname = 3;<br/>
+ //repeated string roles = 4;&#160; // obsolete/not working with cookies<br/>
+ bool isAdmin = 5;<br/>
+ bool isUser = 6;<br/>
+}</para>
+<para>// used to return status during accout operations<br/>
+message AuthReply {<br/>
+ int32 status = 1;<br/>
+ string message = 2;<br/>
+}</para>
+<para>// reply for a login attempt<br/>
+message LoginReply {<br/>
+ int32 status = 1;&#160;&#160;// 200 if Ok<br/>
+ string message = 2;&#160;&#160;// text message<br/>
+ UserInfo info = 3;&#160;&#160;// vital info about user<br/>
+ string jwt = 4;&#160;&#160;&#160;// JWT for cookie and credentials for
+authenticated gRPC calls<br/>
+ int32 hours = 5;&#160;&#160;// hours for keep user logged in<br/>
+}</para>
+<para>/////////////////////////////////////////////////<br/>
+//<br/>
+// For Role editing - represents a user role item<br/>
+message UserRole {<br/>
+ string roleName = 1;<br/>
+ string roleId = 2; <br/>
+}</para>
+<para>// a user role and membership flag<br/>
+message CheckedUser {<br/>
+ UserRole theRole = 1;<br/>
+ bool isMember = 2;<br/>
+}</para>
+<para>// list of role/mambership items<br/>
+message CheckedUserList {<br/>
+ repeated CheckedUser List = 1;<br/>
+}</para>
+<para>// used while editing role memberships<br/>
+message EditUserViewModel {<br/>
+ GAppUser userData = 1;&#160;&#160;&#160;&#160;// a representation of the
+user<br/>
+ CheckedUserList rolesList = 2;&#160;&#160;// their role/memberships<br/>
+ RequestStatus status = 3;&#160;&#160;&#160;// status of the request<br/>
+}</para>
+<para><br/>
+///////////////////////////////////////////////<br/>
+//<br/>
+// Database entity related stuff<br/>
+//<br/>
+// gRPC representation of database tables/rows prefixed with "G"<br/>
+//</para>
+<para>// used to request user data<br/>
+message AppUserRequest {<br/>
+ string subject = 1;&#160;&#160;// user Id - subject in JWT terms<br/>
+}</para>
+<para>// Includes user defined elements and Id<br/>
+message GAppUser {<br/>
+ string id = 1;&#160;&#160;&#160;// = Subject in Jwt<br/>
+ string displayName = 2;&#160;// users name for display<br/>
+ int32 timeZoneID = 3;&#160;// obsolete<br/>
+ int32 ipref0 = 4;<br/>
+ int32 ipref1 = 5;<br/>
+ int32 ipref2 = 6;&#160;&#160;// page size for note file index<br/>
+ int32 ipref3 = 7;<br/>
+ int32 ipref4 = 8;<br/>
+ int32 ipref5 = 9;<br/>
+ int32 ipref6 = 10;<br/>
+ int32 ipref7 = 11;<br/>
+ int32 ipref8 = 12;<br/>
+ int32 ipref9 = 13;<br/>
+ bool pref0 = 14;<br/>
+ bool pref1 = 15;<br/>
+ bool pref2 = 16;<br/>
+ bool pref3 = 17;&#160;&#160;// Show Responses by default<br/>
+ bool pref4 = 18;&#160;&#160;// Flip Response order by default<br/>
+ bool pref5 = 19;&#160;&#160;// Show Response Content on index by default when
+expanded<br/>
+ bool pref6 = 20;<br/>
+ bool pref7 = 21;&#160;&#160;// Show Content on index by default when
+expanded<br/>
+ bool pref8 = 22;<br/>
+ bool pref9 = 23;<br/>
+}</para>
+<para>// list of app users<br/>
+message GAppUserList {<br/>
+ repeated GAppUser list = 1;<br/>
+}</para>
+<para>// data for a note file<br/>
+message GNotefile {<br/>
+ int32 id = 1;&#160;&#160;&#160;&#160;// file Id<br/>
+ int32 numberArchives = 2;&#160;// number of archives it has<br/>
+ string ownerId = 3;&#160;&#160;&#160;// owner id/subject<br/>
+ string noteFileName = 4;&#160;// name of the file<br/>
+ string noteFileTitle = 5;&#160;// title of the file<br/>
+ google.protobuf.Timestamp lastEdited = 6;&#160;// when was the file last
+edited<br/>
+ bool inhibitVersions = 7;&#160;&#160;// are versions inhibited for notes in
+this file<br/>
+}</para>
+<para>// list of note files<br/>
+message GNotefileList {<br/>
+ repeated GNotefile list = 1;<br/>
+}</para>
+<para>// header for a note<br/>
+message GNoteHeader {<br/>
+ int64 id = 1;&#160;&#160;&#160;&#160;&#160;// note Id<br/>
+ int32 noteFileId = 2;&#160;&#160;&#160;// Id of file to which it belongs<br/>
+ int32 archiveId = 3;&#160;&#160;&#160;// archive number<br/>
+ int64 baseNoteId = 4;&#160;&#160;&#160;// Id of this notes base note<br/>
+ int32 noteOrdinal = 5;&#160;&#160;&#160;// display order of the note - Note
+number<br/>
+ int32 responseOrdinal = 6;&#160;&#160;// response number - 0 for a base
+note<br/>
+ string noteSubject = 7;&#160;&#160;&#160;// subject of the note<br/>
+ google.protobuf.Timestamp lastEdited = 8;&#160;&#160;// when was it last
+edited<br/>
+ google.protobuf.Timestamp threadLastEdited = 9;&#160;// when was any not in the
+thread last edited<br/>
+ google.protobuf.Timestamp createDate = 10;&#160;&#160;// when wsa it
+create<br/>
+ int32 responseCount = 11;&#160;&#160;&#160;&#160;&#160;&#160;// for a base
+note, the number of responses in the thread<br/>
+ string authorID = 12;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Id / subject
+of the author<br/>
+ string authorName = 13;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// display
+name of the author<br/>
+ string linkGuid = 14;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// used to keep
+track of linked Notes<br/>
+ int64 refId = 15;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Id of note
+being responded to<br/>
+ bool isDeleted = 16;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// has this note
+been deleted - invisible <br/>
+ int32 version = 17;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// version
+of the note - used when reediting a note<br/>
+ string directorMessage = 18;&#160;&#160;&#160;&#160;&#160;// director
+message<br/>
+ GNoteContent content = 19;&#160;&#160;&#160;&#160;&#160;&#160;// for
+GetNoteHeaders and JsonExport only<br/>
+ GTagsList tags = 20;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// for
+GetNoteHeaders and JsonExport only<br/>
+ GNoteHeaderList Responses = 21;&#160;&#160;&#160;&#160;&#160;// for
+GetNoteHeaders and JsonExport only<br/>
+}</para>
+<para>// list of note headers<br/>
+message GNoteHeaderList {<br/>
+ repeated GNoteHeader list = 1;<br/>
+}</para>
+<para>// note content<br/>
+message GNoteContent {<br/>
+ int64 noteHeaderId = 1;<br/>
+ string noteBody = 2;<br/>
+}</para>
+<para>// list of note content<br/>
+message GNoteContentList {<br/>
+ repeated GNoteContent list = 1;<br/>
+}</para>
+<para>// access item/token for a user<br/>
+message GNoteAccess {<br/>
+ string userID = 1;&#160;&#160;&#160;// Id / subject<br/>
+ int32 noteFileId = 2;&#160;&#160;// file Id<br/>
+ int32 archiveId = 3;&#160;&#160;// archive id/number<br/>
+ bool readAccess = 4;&#160;&#160;// is permitted to read the file<br/>
+ bool respond = 5;&#160;&#160;&#160;// is permitted to responsd to a note<br/>
+ bool write = 6;&#160;&#160;&#160;&#160;// is permitted to write notes - base
+notes or respond<br/>
+ bool setTag = 7;&#160;&#160;&#160;// is permitted to set tags and director
+message<br/>
+ bool deleteEdit = 8;&#160;&#160;// is permitted to delete and edit notes<br/>
+ bool viewAccess = 9;&#160;&#160;// is permitted to view the access controls for
+a file<br/>
+ bool editAccess = 10;&#160;&#160;// is permitted to view and edit access
+controls for a file<br/>
+}</para>
+<para>// list of access tokens<br/>
+message GNoteAccessList {<br/>
+ repeated GNoteAccess list = 1;<br/>
+}</para>
+<para>// tag for a note<br/>
+message GTags {<br/>
+ int32 noteFileId = 1;&#160;&#160;// file Id<br/>
+ int32 archiveId = 2;&#160;&#160;// archive Id<br/>
+ int64 noteHeaderId = 3;&#160;&#160;// header Id - what note is this for<br/>
+ string Tag = 4;&#160;&#160;&#160;&#160;// text of tag<br/>
+}</para>
+<para>// list of tags<br/>
+message GTagsList {<br/>
+ repeated GTags list = 1;<br/>
+}</para>
+<para>// sequencer item<br/>
+message GSequencer {<br/>
+ string userId = 1;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// user Id /
+subject<br/>
+ int32 noteFileId = 2;&#160;&#160;&#160;&#160;&#160;&#160;// note file Id<br/>
+ int32 ordinal = 3;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// order in which
+to use<br/>
+ google.protobuf.Timestamp lastTime = 4;&#160;&#160;// when did this file last
+get sequenced<br/>
+ google.protobuf.Timestamp startTime = 5;&#160;// when did this file get started
+sequencing on this run<br/>
+ bool active = 6;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// is it currently
+the active sequencer item for user<br/>
+}</para>
+<para>// list of sequencer items<br/>
+message GSequencerList {<br/>
+ repeated GSequencer list = 1;<br/>
+}</para>
+<para><br/>
+message GLinkedFile {<br/>
+ int32 id = 1;<br/>
+ int32 homeFileId = 2;<br/>
+ string homeFileName = 3;<br/>
+ string remoteFileName = 4;<br/>
+ string remoteBaseUri = 5;<br/>
+ bool acceptFrom = 6;<br/>
+ bool sendTo = 7;<br/>
+ string secret = 8;<br/>
+}</para>
+<para>message GLinkedFileList {<br/>
+ repeated GLinkedFile list = 1;<br/>
+}</para>
+<para>message GLinkLog {<br/>
+ int64 id = 1;<br/>
+ string eventType = 2;<br/>
+ google.protobuf.Timestamp eventTime = 3;<br/>
+ string event = 4;<br/>
+}</para>
+<para>message GLinkLogList {<br/>
+ repeated GLinkLog list = 1;<br/>
+}</para>
+<para>message GLinkQueue {<br/>
+ int64 id = 1;<br/>
+ int32 linkedFileId = 2;<br/>
+ string linkGuid = 3;<br/>
+ int32 activity = 4;<br/>
+ string baseUri = 5;<br/>
+ bool enqueued = 6;<br/>
+ string secret = 7;<br/>
+}</para>
+<para>message GLinkQueueList {<br/>
+ repeated GLinkQueue list = 1;<br/>
+}</para>
+<para>///////////////////////////////////////////////<br/>
+//<br/>
+// Not Entites directly - Models for transfer of info to pages<br/>
+//</para>
+<para>// data needed for home page<br/>
+message HomePageModel {<br/>
+ GNotefileList noteFiles = 1;&#160;&#160;// list of files available to user<br/>
+ GNoteAccessList noteAccesses = 2;&#160;// access items for the files<br/>
+ string message = 3;&#160;&#160;&#160;&#160;&#160;// banner message text to
+display<br/>
+ GAppUser userData = 4;&#160;&#160;&#160;&#160;// user data<br/>
+ GAppUserList userDataList = 5;&#160;&#160;// list of all users<br/>
+ RequestStatus status = 6;&#160;&#160;&#160;// status of the request<br/>
+}</para>
+<para>// request to import a file<br/>
+//message ImportRequest {<br/>
+//&#160;string noteFile = 1;&#160;&#160;// file name to import to<br/>
+//&#160;string uploadFile = 2;&#160;&#160;// name of source file to import or
+its contents<br/>
+//}</para>
+<para>message ImportRequest {<br/>
+ string noteFile = 1;&#160;&#160;// file name to import to<br/>
+ bytes payload = 2;&#160;&#160;&#160;// import contents<br/>
+}</para>
+<para>// used to display the note file index<br/>
+message NoteDisplayIndexModel<br/>
+{<br/>
+ GNotefile noteFile = 1;&#160;&#160;&#160;// the note file to display<br/>
+ int32 arcId = 2;&#160;&#160;&#160;&#160;// which archive - usually 0<br/>
+ GNoteAccess myAccess = 3;&#160;&#160;// users access item/token<br/>
+ bool isMarked = 4;&#160;&#160;&#160;&#160;// are there marked notes<br/>
+ string rPath = 5;<br/>
+ string scroller = 6;<br/>
+ int32 expandOrdinal = 7;<br/>
+ GNoteHeaderList notes = 8;&#160;&#160;// list of base notes<br/>
+ GNoteHeaderList allNotes = 9;&#160;// list of all notes<br/>
+ string linkedText = 10;&#160;&#160;&#160;// extra text to be displayed for a
+linked file<br/>
+ string message = 11;&#160;&#160;&#160;<br/>
+ GAppUser userData = 12;&#160;&#160;&#160;// user data<br/>
+ GTagsList tags = 13;&#160;&#160;&#160;// all tags for file<br/>
+ RequestStatus status = 14;&#160;&#160;// status of the request<br/>
+}</para>
+<para>// used to requst a NoteDisplayIndexModel or other items related to a
+specific file/archive<br/>
+message NoteFileRequest {<br/>
+ int32 noteFileId = 1;<br/>
+ int32 arcId = 2;<br/>
+}</para>
+<para>// used to display a note<br/>
+message DisplayModel {<br/>
+ GNotefile noteFile = 1;&#160;&#160;&#160;// the note file<br/>
+ GNoteHeader header = 2;&#160;&#160;&#160;// the note header<br/>
+ GNoteContent content = 3;&#160;&#160;// note body<br/>
+ GTagsList tags = 4;&#160;&#160;&#160;&#160;// tags for this note<br/>
+ GNoteAccess access = 5;&#160;&#160;&#160;// access item/token for
+file/user<br/>
+ bool canEdit = 6;&#160;&#160;&#160;&#160;// can user edit the note<br/>
+ bool isAdmin = 7;&#160;&#160;&#160;&#160;// is user an admin<br/>
+ RequestStatus status = 8;&#160;&#160;// status of the request<br/>
+}</para>
+<para>// request a DisplayModel<br/>
+message DisplayModelRequest {<br/>
+ int32 vers = 1;<br/>
+ int64 noteId = 2;<br/>
+}</para>
+<para>// request use list and access list<br/>
+message AccessAndUserListRequest {<br/>
+ int32 fileId = 1;<br/>
+ int32 arcId = 2;<br/>
+ string userId = 3;<br/>
+}</para>
+<para>// user list, access list, and users access token/item<br/>
+message AccessAndUserList<br/>
+{<br/>
+ GNoteAccessList accessList = 1;<br/>
+ GAppUserList appUsers = 2;<br/>
+ GNoteAccess userAccess = 3;<br/>
+}</para>
+<para>// get versions for a note <br/>
+message GetVersionsRequest {<br/>
+ int32 fileId = 1;&#160;&#160;&#160;// file id<br/>
+ int32 noteOrdinal = 2;&#160;&#160;// note ordinal<br/>
+ int32 responseOrdinal = 3;&#160;// response ordinal<br/>
+ int32 arcId = 4;&#160;&#160;&#160;// archive id<br/>
+}</para>
+<para>message SCheckModel {<br/>
+ bool isChecked = 1;<br/>
+ int32 fileId = 2;<br/>
+}</para>
+<para>// used for creating and editing notes<br/>
+message TextViewModel {<br/>
+ string myNote = 1;&#160;&#160;&#160;&#160;// note body<br/>
+ string mySubject = 2;&#160;&#160;&#160;// note subject<br/>
+ int32 noteFileID = 3;&#160;&#160;&#160;// file Id<br/>
+ int64 baseNoteHeaderID = 4;&#160;&#160;// 0 for a base note - Id of the base
+note header for a response<br/>
+ int64 noteID = 5;&#160;&#160;&#160;&#160;// note Id<br/>
+ string tagLine = 6;&#160;&#160;&#160;&#160;// string of tags&#160; to parse to
+a list of tag objects<br/>
+ string directorMessage = 7;&#160;&#160;// director message<br/>
+ int64 refId = 8;&#160;&#160;&#160;&#160;// Id of note header we are responding
+to<br/>
+}</para>
+<para>// encapsulates a note id<br/>
+message NoteId {<br/>
+ int64 id = 1;<br/>
+}</para>
+<para>// configurable data for about page<br/>
+message AboutModel {<br/>
+ string PrimeAdminName = 1;<br/>
+ string PrimeAdminEmail = 2;<br/>
+}</para>
+<para>// container for an email<br/>
+message GEmail {<br/>
+ string address = 1;&#160;&#160;// send to<br/>
+ string subject = 2;<br/>
+ string body = 3;<br/>
+}</para>
+<para>// used when user confirms email<br/>
+message ConfirmEmailRequest {<br/>
+ string userId = 1;<br/>
+ string code = 2;<br/>
+}</para>
+<para>// Request export data<br/>
+message ExportRequest {<br/>
+ int32 fileId = 1;&#160;&#160;&#160;// file id<br/>
+ int32 arcId = 2;&#160;&#160;&#160;// archive id<br/>
+ int32 noteOrdinal = 3;&#160;&#160;// note ordinal<br/>
+ int32 responseOrdinal = 4;&#160;// response ordinal<br/>
+ bool nestResponses = 5;<br/>
+}</para>
+<para>// used to forward note(s) to an email address<br/>
+message ForwardViewModel {<br/>
+&#160;&#160;&#160; GNotefile NoteFile = 1;&#160;&#160;// Note file<br/>
+&#160;&#160;&#160; int64 NoteID = 2;&#160;&#160;&#160;// note Id<br/>
+ int32 FileID = 3;&#160;&#160;&#160;// file Id<br/>
+&#160;&#160;&#160; int32 ArcID = 4;&#160;&#160;&#160;// archive id<br/>
+&#160;&#160;&#160; int32 NoteOrdinal = 5;&#160;&#160;// note ordinal<br/>
+&#160;&#160;&#160; string NoteSubject = 6;&#160;&#160;// note subject<br/>
+&#160;&#160;&#160; bool wholestring = 7;&#160;&#160;// include note an
+responses<br/>
+&#160;&#160;&#160; bool hasstring = 8;&#160;&#160;&#160;// is part of a string
+of notes<br/>
+&#160;&#160;&#160; bool IsAdmin = 9;&#160;&#160;&#160;// is user an admin<br/>
+&#160;&#160;&#160; bool toAllUsers = 10;&#160;&#160;// send to all users<br/>
+&#160;&#160;&#160; string ToEmail = 11;&#160;&#160;// email addess to send
+to<br/>
+}</para>
+<para>// used to copy note(s) to another file<br/>
+message CopyModel {<br/>
+ GNoteHeader Note = 1;&#160;&#160;// note header to copy<br/>
+ int32 FileId = 2;&#160;&#160;&#160;// file id to copy to<br/>
+ bool WholeString = 3;&#160;&#160;// base note an responses<br/>
+}</para>
+<para>// Used to get a representation of the whole file - to be serialized as
+json<br/>
+message JsonExport {<br/>
+ GNotefile NoteFile = 1;&#160;&#160;&#160;&#160;// notefile to export<br/>
+ GNoteAccess NoteAccess = 2;&#160;&#160;&#160;// access token for requesting
+user<br/>
+ GNoteHeaderList NoteHeaders = 3;&#160;// list of headers - includes Content and
+Tags!<br/>
+}</para>
+<para>message AString {<br/>
+ string val = 1;<br/>
+}</para>
+<para>message NoteHeadersRequest {<br/>
+ int32 noteFileId = 1;<br/>
+ int32 noteOrdinal = 2;&#160;&#160;// 0 for all base notes, -1 basenotes and
+resposnses, else specifc noteordinal<br/>
+ int32 responseOrdinal = 3;&#160;// -1 for all responses, 0 for base only, else
+specific response<br/>
+ bool contentAndTags = 4;&#160;// include content and tags?<br/>
+ int32 arcId = 5;&#160;&#160;&#160;// archive id<br/>
+ int32 minNote = 6;&#160;&#160;&#160;// min base ordinal to include<br/>
+ int32 maxNote = 7;&#160;&#160;&#160;// max base ordinal to include<br/>
+ string fileName = 8;&#160;&#160;// used only for export of a note string<br/>
+ bool nestResponses = 9;&#160;&#160;// extra processing to nest responses inside
+base notes<br/>
+}</para>
+<para>message NoteCount {<br/>
+ int32 Count = 1;<br/>
+}</para>
+<para>message ContentSearchRequest {<br/>
+ string searchText = 1;<br/>
+ int32 noteFileId = 2;<br/>
+ int32 arcId = 3;<br/>
+ bool wholeWords = 4;<br/>
+ bool caseSensitive = 5;<br/>
+}</para>
+<para>message SearchResult {<br/>
+ repeated GNoteHeader list = 1;<br/>
+}<br/>
+</para>
+</summary>vsdocman_escaped_]_]_></comment>
+        <namespaces />
+        <topics />
+      </topic>
     </topics>
   </topic>
 </topics>]]></add>
