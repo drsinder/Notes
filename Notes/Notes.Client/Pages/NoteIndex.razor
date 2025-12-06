@@ -62,20 +62,20 @@ else                    @*    Index mode        *@
     else
     {
         <PageTitle>Notes - @Model.NoteFile.NoteFileName</PageTitle>
-    
         <h3 class="center">@Model.NoteFile.NoteFileTitle - (@Model.NoteFile.NoteFileName)  @Model.Message</h3>
-
-        <div>
-            <ListMenu Model=@Model Caller="@this" @ref="@MyMenu"></ListMenu>
-        </div>
         @if (@Model.MyAccess.ReadAccess && Model.Notes.List.Count > 0)
         {
-            <div class="col-lg-12 control-section dialoglist">
+            <div class="col-lg-12 control-section">
                 <div class="content-wrapper">
-                    <div class="row my-main-box-background">
-                        Show Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContent"></SfSwitch>&nbsp;
+                    <div class="row my-main-box-background index-border">
+                        <ListMenu Model=@Model Caller="@this" @ref="@MyMenu"></ListMenu>
+                        <div>
+                            &nbsp;Show Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContent"></SfSwitch>&nbsp;
                         Show Response Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContentR"></SfSwitch>&nbsp;
-                        <SfGrid @ref="@sfGrid1" DataSource="@Model.Notes.List" AllowPaging="true" AllowSelection="true" EnableHover="true" AllowSorting="true" AllowFiltering="true" AllowExcelExport="true" AllowPdfExport="true">
+                        </div>
+                        <SfGrid @ref="@sfGrid1" DataSource="@Model.Notes.List" AllowPaging="true" 
+                            AllowSelection="true" EnableHover="true" AllowSorting="true" AllowFiltering="true"
+                            AllowExcelExport="true" AllowPdfExport="true">
 
                             <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu" >
                                 <GridFilterColumns>
@@ -194,6 +194,9 @@ else                    @*    Index mode        *@
 
     .e-grid .e-altrow .e-rowcell {
         background-color: #E8EEFA;
+    }
+    .index-border {
+        border: 3px solid black;
     }
 </style>
 

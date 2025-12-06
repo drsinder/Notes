@@ -28,8 +28,8 @@
 @inject NotesServer.NotesServerClient Client
 @inject CookieStateAgent myState
 
-<div class="top-row navbar-full-dark" >
-    <SfMenu Items="@menuItems" @ref="@topMenu" HamburgerMode="@HamburgerMode" CssClass="e-std-menu" >
+<div class="top-row navbar-full-dark">
+    <SfMenu Items="@menuItems" @ref="@topMenu" HamburgerMode="@HamburgerMode" CssClass="e-std-menu">
         <MenuEvents TValue="MenuItem" ItemSelected="@OnSelect" >
         </MenuEvents>
     </SfMenu>
