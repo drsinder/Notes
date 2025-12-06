@@ -126,7 +126,7 @@ namespace Notes.Client.Pages
         /// initial render; otherwise, <see langword="false"/>.</param>
         protected override void OnAfterRender(bool firstRender)
         {
-            initDone = true;
+            initDone = true;    // we can now show the full UI
         }
 
         /// <summary>
@@ -141,7 +141,6 @@ namespace Notes.Client.Pages
         /// <returns>A task that represents the asynchronous operation.</returns>
         protected override async Task OnParametersSetAsync()
         {
-
             fileList = new List<GNotefile>();
             nameList = new GNotefileList();
             histfileList = new GNotefileList();
@@ -175,10 +174,9 @@ namespace Notes.Client.Pages
                 GNotefileList fileList1 = hpModel.NoteFiles;
                 nameList = fileList1;
 
-                fileList = fileList1.List
+                fileList = [.. fileList1.List
                     .Select(f => new GNotefile { Id = f.Id, NoteFileName = f.NoteFileName, NoteFileTitle = f.NoteFileTitle })
-                    .OrderBy(p => p.NoteFileName, System.StringComparer.Ordinal)
-                    .ToList();
+                    .OrderBy(p => p.NoteFileName, System.StringComparer.Ordinal)];
 
                 impfileList.List.Clear();
                 histfileList.List.Clear();

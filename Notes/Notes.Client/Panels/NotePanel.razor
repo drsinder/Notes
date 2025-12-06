@@ -31,7 +31,7 @@
 
 @implements IAsyncDisposable
 
-<div>
+<div class="note-border">
     @if (model is null)
     {
         <p class="center"><em>Loading...</em></p>
@@ -179,6 +179,9 @@
 </div>
 
 <style>
+    .note-border {
+        border: 4px solid black;
+    }
     .donebutton {
         color: white;
         background-color: darkcyan;

@@ -212,12 +212,14 @@ namespace Notes.Client.Pages
                 // If note ordinal passed in, get corresponding note id
                 if (NoteOrdinal > 0)
                 {
-                    GNoteHeader? val = Model.AllNotes.List.Where(
-                        e => e.NoteOrdinal == NoteOrdinal && e.ResponseOrdinal == 0 && e.Version == 0)
-                        .FirstOrDefault();
+                    GNoteHeader? target = Model.AllNotes.List
+                        .FirstOrDefault(e => e.NoteOrdinal == NoteOrdinal 
+                            && e.ResponseOrdinal == 0 
+                            && e.Version == 0 && !e.IsDeleted);
+            
                     NoteOrdinal = 0;
-                    if (val is not null)
-                        CurrentNoteId = val.Id; // set to view this note
+                    if (target is not null)
+                        CurrentNoteId = target.Id; // set to view this note
                 }
             }
             catch (Exception ex)
@@ -271,7 +273,6 @@ namespace Notes.Client.Pages
         public long GetNextBaseNote(GNoteHeader oh)
         {
             long newId = 0;
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             GNoteHeader nh = Model.Notes.List
                 .SingleOrDefault(p => p.NoteOrdinal == oh.NoteOrdinal + 1 && p.ResponseOrdinal == 0 && p.Version == 0);
             if (nh is not null)
@@ -505,9 +506,7 @@ namespace Notes.Client.Pages
             //message = "Searching... Please Wait...";
             //StateHasChanged();
 
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
       //      target.Text = target.Text.ToLower();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             switch (target.Option)
             {
@@ -588,7 +587,7 @@ namespace Notes.Client.Pages
         /// <param name="target">The target.</param>
         protected async Task SearchHeader(Search target)
         {
-            results = new List<GNoteHeader>();
+            results = [];
             List<GNoteHeader> lookin = [.. Model.AllNotes.List];
 
             target.Text = target.Text.ToLower();
@@ -598,14 +597,14 @@ namespace Notes.Client.Pages
                 switch (target.Option)
                 {
                     case SearchOption.Author:
-                        isMatch = nh.AuthorName.ToLower().Contains(target.Text);
+                        isMatch = nh.AuthorName.Contains(target.Text, StringComparison.CurrentCultureIgnoreCase);
                         break;
                     case SearchOption.Title:
-                        isMatch = nh.NoteSubject.ToLower().Contains(target.Text);
+                        isMatch = nh.NoteSubject.Contains(target.Text, StringComparison.CurrentCultureIgnoreCase);
                         break;
                     case SearchOption.DirMess:
                         if (!string.IsNullOrEmpty(nh.DirectorMessage))
-                            isMatch = nh.DirectorMessage.ToLower().Contains(target.Text);
+                            isMatch = nh.DirectorMessage.Contains(target.Text, StringComparison.CurrentCultureIgnoreCase);
                         break;
                     case SearchOption.TimeIsAfter:
                         isMatch = DateTime.Compare(nh.LastEdited.ToDateTime(), target.Time) > 0;
@@ -643,13 +642,15 @@ namespace Notes.Client.Pages
         /// <param name="target">The target.</param>
         protected async Task SearchContents(Search target)
         {
-            var parameters = new ModalParameters();
-            parameters.Add("MessageInput", "Searching.  Please wait...");
+            var parameters = new ModalParameters
+            {
+                { "MessageInput", "Searching.  Please wait..." }
+            };
             var modal = Modal.Show<MessageBox>("", parameters);
 
-            results = new List<GNoteHeader>();
+            results = [];
 
-            ContentSearchRequest csr = new ContentSearchRequest()
+            ContentSearchRequest csr = new ()
             {
                 NoteFileId = NotesfileId,
                 SearchText = target.Text,
@@ -696,7 +697,9 @@ namespace Notes.Client.Pages
             if (seq is null)
                 return;
 
-            List<GNoteHeader> noteHeaders1 = Model.AllNotes.List.ToList().FindAll(p => p.IsDeleted == false && p.Version == 0);
+            List<GNoteHeader> noteHeaders1 = Model.AllNotes.List
+                .ToList()
+                .FindAll(p => p.IsDeleted == false && p.Version == 0);
 
             List<GNoteHeader> noteHeaders2 = [];
             foreach (GNoteHeader noteHeader in noteHeaders1)
