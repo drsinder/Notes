@@ -69,7 +69,7 @@ namespace Notes.Client.Pages
         {
             UserData = await Client.GetUserDataAsync(new NoRequest(), myState.AuthHeader);
             pageSize = UserData.Ipref2.ToString();
-            MySizes = new List<LocalModel2> { new("0", "All"), new("5"), new("10"), new("12"), new("20") };
+            MySizes = new List<LocalModel2> { new("0", "All"), new("5"), new("10"), new("12"), new("15"), new("18"), new("20") };
             currentText = " ";
         }
 
