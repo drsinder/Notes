@@ -949,6 +949,8 @@ namespace Notes.Client.Pages
             Modal.Show<MessageBox>("", parameters);
         }
 
+        int renderCount = 0;
+
         /// <summary>
         /// On after render as an asynchronous operation.
         /// </summary>
@@ -965,6 +967,14 @@ namespace Notes.Client.Pages
 
                 if (sfTextBox is not null)
                 {
+                    int psize = sfGrid1?.PageSettings.PageSize ?? 1;
+                    if (psize > 1 && ++renderCount < 2) // goto last page only on first render
+                    {
+                        int last = (sfGrid1.DataSource.Count() / psize) + 1;
+                        CurPage = last;
+                        await sfGrid1.GoToPageAsync(last);
+                    }
+
                     await Task.Delay(300);
                     await sfTextBox.FocusAsync();
                 }
