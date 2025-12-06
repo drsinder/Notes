@@ -84,7 +84,10 @@ else                    @*    Index mode        *@
                                 </GridFilterColumns>
                             </GridFilterSettings>
 
-                            <GridEvents RowSelected="DisplayIt" OnActionComplete="ActionCompleteHandler" TValue="GNoteHeader"></GridEvents>
+                            <GridEvents RowSelected="DisplayIt" 
+                                OnActionComplete="ActionCompleteHandler" 
+                                PageChanged="PageChanged" 
+                                TValue="GNoteHeader"></GridEvents>
                             <GridPageSettings @ref="@PageSettings" 
                                 PageSizes="@(new string[] { "5", "10", "12", "15", "18", "20", "All" })" 
                                 PageSize="@PageSize" CurrentPage="@CurPage"></GridPageSettings>

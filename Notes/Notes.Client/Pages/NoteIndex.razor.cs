@@ -246,6 +246,11 @@ namespace Notes.Client.Pages
             StateHasChanged();
         }
 
+        public async Task PageChanged (GridPageChangedEventArgs args)
+        {
+            PageSize = args.CurrentPageSize;
+        }
+
         /// <summary>
         /// Goto a specific note
         /// </summary>
