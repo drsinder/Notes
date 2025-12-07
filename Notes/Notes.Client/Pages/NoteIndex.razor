@@ -63,7 +63,7 @@ else                    @*    Index mode        *@
     {
         <PageTitle>Notes - @Model.NoteFile.NoteFileName</PageTitle>
         <h3 class="center">@Model.NoteFile.NoteFileTitle - (@Model.NoteFile.NoteFileName)  @Model.Message</h3>
-        @if (@Model.MyAccess.ReadAccess && Model.Notes.List.Count > 0)
+        @if (@Model.MyAccess.ReadAccess )
         {
             <div class="col-lg-12 control-section">
                 <div class="content-wrapper">

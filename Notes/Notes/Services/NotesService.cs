@@ -385,7 +385,7 @@ namespace Notes.Services
             if (hpmf is not null)
             {
                 NoteHeader? hpmh = _db.NoteHeader.Where(p => p.NoteFileId == hpmf.Id && !p.IsDeleted).OrderByDescending(p => p.CreateDate).FirstOrDefault();
-                if (hpmh is not null)
+                if (hpmh is not null && !hpmh.IsDeleted)
                 {
                     homepageModel.Message = _db.NoteContent.Where(p => p.NoteHeaderId == hpmh.Id).FirstOrDefault().NoteBody;
                 }
