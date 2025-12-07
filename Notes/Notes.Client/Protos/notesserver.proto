@@ -395,6 +395,7 @@ message NoteDisplayIndexModel
 	GAppUser userData = 12;			// user data
 	GTagsList tags = 13;			// all tags for file
 	RequestStatus status = 14;		// status of the request
+	GNoteHeader policy = 15;		// policy note header if any
 }
 
 // used to requst a NoteDisplayIndexModel or other items related to a specific file/archive
