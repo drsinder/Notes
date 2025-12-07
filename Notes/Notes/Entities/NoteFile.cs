@@ -97,6 +97,10 @@ namespace Notes.Entities
         [DataMember(Order = 7)]
         public bool InhibitVersions { get; set; }
 
+        [Required]
+        [Display(Name = "Policy ID")]
+        [DataMember(Order = 8)]
+        public long PolicyId { get; set; }
 
         //
         // Conversions between Db Entity space and gRPC space.
@@ -117,6 +121,7 @@ namespace Notes.Entities
             noteFile.NoteFileTitle = other.NoteFileTitle;
             noteFile.LastEdited = other.LastEdited.ToDateTime();
             noteFile.InhibitVersions = other.InhibitVersions;
+            noteFile.PolicyId = other.PolicyId;
             return noteFile;
         }
 
@@ -135,6 +140,7 @@ namespace Notes.Entities
             notefile.NoteFileTitle = NoteFileTitle;
             notefile.LastEdited = Timestamp.FromDateTime(Globals.UTimeBlazor(LastEdited).ToUniversalTime());
             notefile.InhibitVersions = InhibitVersions;
+            notefile.PolicyId = PolicyId;
             return notefile;
         }
 

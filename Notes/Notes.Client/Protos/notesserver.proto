@@ -214,7 +214,8 @@ message GNotefile {
 	string noteFileName = 4;	// name of the file
 	string noteFileTitle = 5;	// title of the file
 	google.protobuf.Timestamp lastEdited = 6;	// when was the file last edited
-	bool inhibitVersions = 7;		// are versions inhibited for notes in this file
+	bool inhibitVersions = 7;	// are versions inhibited for notes in this file
+	int64 policyId = 8;			// Id of the policy for this file
 }
 
 // list of note files
