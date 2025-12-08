@@ -1,1 +1,1 @@
-search_result['1557']=["topic_00000000000002BA_props--.html","Tags Properties",""];
+search_result['1557']=["topic_00000000000003FD_overloads--.html","NotesService.GetServerTime Method","Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset."];

@@ -1,1 +1,1 @@
-search_result['1268']=["topic_000000000000021A_props--.html","HomePageMessage Properties",""];
+search_result['1268']=["topic_0000000000000335.html","LinkLog.EventTime Property","Gets or sets the event time."];

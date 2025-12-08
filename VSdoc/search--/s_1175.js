@@ -1,1 +1,1 @@
-search_result['1175']=["topic_00000000000001E4.html","NotesDbContext Class",""];
+search_result['1175']=["topic_00000000000002F1.html","NotesDbContext.Audit Property","Gets or sets the audit."];

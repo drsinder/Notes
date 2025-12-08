@@ -1,1 +1,1 @@
-search_result['983']=["topic_0000000000000194.html","Versions Constructor","Initializes a new instance of the Versions class."];
+search_result['983']=["topic_0000000000000290.html","Globals Class","Provides global constants, configuration values, and utility methods used throughout the application."];

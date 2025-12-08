@@ -1,1 +1,1 @@
-search_result['413']=["topic_000000000000009D.html","HelpDialog2 Class","Class HelpDialog2.\r\nImplements the ComponentBase"];
+search_result['413']=["topic_00000000000000FA_methods--.html","MessageBox Methods",""];

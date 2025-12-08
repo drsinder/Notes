@@ -1,1 +1,1 @@
-search_result['502']=["topic_00000000000000B6_attached_props--.html","YesNo Attached Properties",""];
+search_result['502']=["topic_000000000000012F.html","YesNo.Ok Method","Oks this instance."];

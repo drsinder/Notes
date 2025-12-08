@@ -1,1 +1,1 @@
-search_result['1337']=["topic_0000000000000240_vars--.html","Mark Fields",""];
+search_result['1337']=["topic_000000000000036A.html","NoteContent.GetNoteContents Method","Gets the note contents.\r\nConversions between Db Entity space and gRPC space."];

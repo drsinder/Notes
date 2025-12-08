@@ -1,1 +1,1 @@
-search_result['1397']=["topic_0000000000000260_methods--.html","NoteFile Methods",""];
+search_result['1397']=["topic_000000000000039E.html","Search.UserId Property","Gets or sets the user identifier."];

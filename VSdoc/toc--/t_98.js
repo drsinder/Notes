@@ -1,1 +1,1 @@
-c['98']=[['99',"AccessDeleteButton Constructor","topic_0000000000000027.html",0],['100',"Properties","topic_0000000000000024_props--.html",1],['103',"Methods","topic_0000000000000024_methods--.html",1]];
+c['98']=[['99',"Navigation Property","topic_0000000000000025.html",0],['100',"NoteFile Property","topic_0000000000000022.html",0],['101',"Ordinal Property","topic_0000000000000024.html",0],['102',"Triggered Property","topic_0000000000000023.html",0]];

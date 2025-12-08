@@ -1,1 +1,1 @@
-search_result['460']=["topic_00000000000000A8_props--.html","SearchDlg Properties",""];
+search_result['460']=["topic_0000000000000117.html","SearchDlg.wholeword Property",""];

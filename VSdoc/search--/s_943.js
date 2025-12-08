@@ -1,1 +1,1 @@
-search_result['943']=["topic_0000000000000183.html","NotePanel.NextSearch Method","GET next matching item from search"];
+search_result['943']=["topic_0000000000000274.html","NotePanel.ClearNav Method","Clear the NavString"];

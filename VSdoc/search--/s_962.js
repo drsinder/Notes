@@ -1,1 +1,1 @@
-search_result['962']=["topic_000000000000018B.html","Responses Constructor","Initializes a new instance of the Responses class."];
+search_result['962']=["topic_0000000000000281.html","Responses.sfGrid2 Property","Gets or sets the sf grid2."];

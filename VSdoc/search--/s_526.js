@@ -1,1 +1,1 @@
-search_result['526']=["topic_00000000000000BD_events--.html","ListMenu Events",""];
+search_result['526']=["topic_000000000000013D.html","ListMenu.myGauge Property","Gets or sets my gauge."];

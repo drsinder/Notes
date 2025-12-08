@@ -1,1 +1,1 @@
-search_result['72']=["topic_000000000000001D_attached_props--.html","AccessCheckBox Attached Properties",""];
+search_result['72']=["topic_000000000000002C.html","SCheckBox.isChecked Property","Gets or sets a value indicating whether this instance is checked."];

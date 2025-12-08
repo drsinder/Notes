@@ -1,1 +1,1 @@
-search_result['929']=["topic_000000000000017B_overloads--.html","NotePanel.OnParametersSetAsync Method","Get our data and set IsSeq flag from state"];
+search_result['929']=["topic_0000000000000267.html","NotePanel.Navigation Property","Gets or sets the navigation."];

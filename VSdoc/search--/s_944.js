@@ -1,1 +1,1 @@
-search_result['944']=["topic_0000000000000184.html","NotePanel.SeqNext Method","Find next recent note"];
+search_result['944']=["topic_0000000000000275.html","NotePanel.KeyUpHandler Method","Protential to do something when a key up event happens\r\nHandle single key press commands right away.  Otherwise\r\nlet input accumulate."];

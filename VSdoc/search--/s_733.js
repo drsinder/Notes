@@ -1,1 +1,1 @@
-search_result['733']=["topic_000000000000010E_props--.html","NoteIndex Properties",""];
+search_result['733']=["topic_00000000000001D3.html","NewNote.OnParametersSet Method","Just fill in a few fields and we are ready..."];

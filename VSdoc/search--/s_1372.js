@@ -1,1 +1,1 @@
-search_result['1372']=["topic_0000000000000254.html","NoteAccess.Write Property","Gets or sets a value indicating whether this NoteAccess is write."];
+search_result['1372']=["topic_0000000000000383.html","NoteHeader.CreateDate Property","Gets or sets the create date."];

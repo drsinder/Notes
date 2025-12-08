@@ -1,1 +1,1 @@
-search_result['1487']=["topic_000000000000029C.html","Search.ResponseOrdinal Property","Gets or sets the response ordinal."];
+search_result['1487']=["topic_00000000000003D7.html","AccessManager.GetAccessListForFile Method","Gets the access list for file."];

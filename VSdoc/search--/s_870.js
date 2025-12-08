@@ -1,1 +1,1 @@
-search_result['870']=["topic_0000000000000158.html","Tracker Class","Represents a component that manages and organizes collections of note files and sequencers, providing\r\nfunctionality to retrieve, order, and shuffle these items asynchronously."];
+search_result['870']=["topic_0000000000000237.html","Tracker.Shuffle Method","Shuffles this instance."];

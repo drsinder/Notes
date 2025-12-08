@@ -1,1 +1,1 @@
-search_result['699']=["topic_0000000000000103.html","HomeIndex Class","Represents the main component for the home page, providing data models, file lists, and navigation logic for\r\ninteracting with note files and server information."];
+search_result['699']=["topic_00000000000001B8.html","HomeIndex.NotesClient Property","Gets or sets the gRPC client used to communicate with the Notes server."];

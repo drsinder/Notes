@@ -1,1 +1,0 @@
-search_result['1663']=["topic_00000000000002E7_overloads--.html","NotesService.GetServerTime Method","Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset."];

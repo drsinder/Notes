@@ -1,1 +1,1 @@
-search_result['1486']=["topic_000000000000029B.html","Search.BaseOrdinal Property","Gets or sets the base ordinal."];
+search_result['1486']=["topic_00000000000003D6.html","AccessManager.GetOneAccess Method","Get Users Specific Access Entry"];

@@ -1,1 +1,1 @@
-search_result['1423']=["topic_000000000000026E.html","NoteFile.GetNoteFiles Method","Gets the note files.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1423']=["topic_00000000000003B3.html","SQLFile Class","This class defines a table in the database.\r\nNot currently in use."];

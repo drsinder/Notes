@@ -1,1 +1,0 @@
-search_result['1760']=["topic_0000000000000312.html","NotesService.GetExportJson Method","Gets the export json.  Well it\u0027s called json here because it was intended to be used to export a\r\nfile as json.  But the fact is this is a good way to grab every thing the file contains\r\nrelevant to t..."];

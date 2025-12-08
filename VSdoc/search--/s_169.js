@@ -1,1 +1,1 @@
-search_result['169']=["topic_0000000000000047.html","AddAccessDlg.Done Method","Dones the specified source."];
+search_result['169']=["topic_000000000000006E.html","AddAccessDlg.delay Property","Gets or sets the delay."];

@@ -1,1 +1,1 @@
-search_result['845']=["topic_000000000000014E_vars--.html","LocalModel2 Fields",""];
+search_result['845']=["topic_000000000000022A.html","LocalModel2.Name Property","Gets or sets the name."];

@@ -1,1 +1,1 @@
-search_result['1179']=["topic_00000000000001E4_props--.html","NotesDbContext Properties",""];
+search_result['1179']=["topic_00000000000002F5.html","NotesDbContext.Sequencer Property","Gets or sets the sequencer."];

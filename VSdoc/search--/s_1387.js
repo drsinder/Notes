@@ -1,1 +1,1 @@
-search_result['1387']=["topic_000000000000025D_attached_props--.html","NoteContent Attached Properties",""];
+search_result['1387']=["topic_0000000000000392.html","NoteHeader.GetGNoteHeader Method","Gets the g note header."];

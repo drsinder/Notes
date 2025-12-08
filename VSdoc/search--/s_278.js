@@ -1,1 +1,1 @@
-search_result['278']=["topic_000000000000006E_overloads--.html","EditNoteFile.OnInitialized Method","Method invoked when the component is ready to start, having received its\r\ninitial parameters from its parent in the render tree."];
+search_result['278']=["topic_00000000000000AF.html","EditNoteFile.Cancel Method","Cancels this instance."];

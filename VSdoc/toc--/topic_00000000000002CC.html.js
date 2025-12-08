@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['856',"Notes.Manager Namespace","topic_00000000000002C8.html"],['857',"AccessManager Class","topic_00000000000002C9.html"],['858',"Methods","topic_00000000000002C9_methods--.html"],['862',"GetOneAccess Method","topic_00000000000002CC.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['866',"Notes.Components Namespace","topic_00000000000002CB.html"],['867',"App Class","topic_00000000000002CC.html"]];

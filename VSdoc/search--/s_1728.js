@@ -1,1 +1,0 @@
-search_result['1728']=["topic_0000000000000302.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];

@@ -1,1 +1,1 @@
-c['4']=[['5',"Extensions Class","topic_0000000000000001.html",1]];
+c['4']=[['5',"IdentityComponentsEndpointRouteBuilderExtensions Class","topic_00000000000002B3.html",1]];

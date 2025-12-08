@@ -1,1 +1,1 @@
-search_result['772']=["topic_000000000000012C.html","NoteIndex.GetModel Method","Get the Index model - used by the NotePanel"];
+search_result['772']=["topic_00000000000001F3.html","NoteIndex.GetResponseHeaders Method","Get just the response headers for the given noteid"];

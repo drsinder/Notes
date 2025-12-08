@@ -1,1 +1,1 @@
-search_result['173']=["topic_0000000000000048_methods--.html","CodeFormat Methods",""];
+search_result['173']=["topic_0000000000000072.html","AddAccessDlg Constructor","Initializes a new instance of the AddAccessDlg class."];

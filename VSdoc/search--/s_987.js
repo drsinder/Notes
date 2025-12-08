@@ -1,1 +1,1 @@
-search_result['987']=["topic_0000000000000197.html","CookieStateAgent Class","Provides state management and authentication logic for user login using cookies in a Blazor component. Enables\r\nreading, writing, and tracking login information, authentication status, and user roles."];
+search_result['987']=["topic_0000000000000290_props--.html","Globals Properties",""];

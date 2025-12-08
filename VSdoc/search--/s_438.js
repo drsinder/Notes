@@ -1,1 +1,1 @@
-search_result['438']=["topic_00000000000000A1_vars--.html","NoteFileDetails Fields",""];
+search_result['438']=["topic_0000000000000107.html","PrintDlg.ModalInstance Property","Gets or sets the modal instance."];

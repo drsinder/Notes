@@ -1,1 +1,1 @@
-search_result['1301']=["topic_000000000000022B_vars--.html","LinkLog Fields",""];
+search_result['1301']=["topic_0000000000000350.html","Mark.MarkOrdinal Property","Gets or sets the mark ordinal."];

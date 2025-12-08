@@ -1,1 +1,1 @@
-search_result['1273']=["topic_000000000000021E.html","LinkedFile Class","This class defines a table in the database.\r\nIt is used to link a file to a file on a remote system\r\nsuch that notes written on one system will be transmitted\r\nto the other."];
+search_result['1273']=["topic_000000000000033A.html","LinkLog.GetGSequencerList Method","Gets the g sequencer list."];

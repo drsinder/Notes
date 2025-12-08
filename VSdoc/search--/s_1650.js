@@ -1,1 +1,1 @@
-search_result['1650']=["topic_00000000000002E4_props--.html","LocalService Properties",""];
+search_result['1650']=["topic_000000000000042E.html","NotesService.ContentSearch Method","Searches note content for matches to the specified search criteria and returns the results."];

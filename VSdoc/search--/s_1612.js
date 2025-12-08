@@ -1,1 +1,1 @@
-search_result['1612']=["topic_00000000000002D4_methods--.html","NoteDataManager Methods",""];
+search_result['1612']=["topic_000000000000041A_overloads--.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];

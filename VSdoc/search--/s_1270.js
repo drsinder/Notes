@@ -1,1 +1,1 @@
-search_result['1270']=["topic_000000000000021B.html","HomePageMessage.Id Property","Gets or sets the identifier."];
+search_result['1270']=["topic_0000000000000337.html","LinkLog.GetLinkLog Method","Gets the link log."];

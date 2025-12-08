@@ -1,1 +1,1 @@
-search_result['206']=["topic_0000000000000054_events--.html","Copy Events",""];
+search_result['206']=["topic_0000000000000087.html","Copy Class","Represents a Blazor component that provides functionality for copying note data to a selected file within a\r\nmodal dialog."];

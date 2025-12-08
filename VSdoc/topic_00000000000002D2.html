@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Importer.GetBaseNoteHeader Method</title>
+	<title>CreateIdentitySchema.Down Method</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Importer.GetBaseNoteHeader Method</h1>
+		<h1 class="title">CreateIdentitySchema.Down Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002C8.html">Notes.Manager</a>
+<a href="topic_00000000000002CF.html">Notes.Migrations</a>
 
 
 
@@ -90,7 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Get the BaseNoteHeader for a NoteContent</summary-info>
+        <summary-info>Builds the operations that will migrate the database 'down'.</summary-info>
 
 
 
@@ -140,7 +147,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Function GetBaseNoteHeader( _&nbsp;<br />   ByVal <i>_db</i> As <a target="_top" href="topic_00000000000001E4.html" onclick="this.target='';return true;">NotesDbContext</a>, _&nbsp;<br />   ByVal <i>nc</i> As <a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Protected Overrides Sub Down( _&nbsp;<br />   ByVal <i>migrationBuilder</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a> _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +186,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a>&gt; GetBaseNoteHeader(&nbsp;<br />   <a target="_top" href="topic_00000000000001E4.html" onclick="this.target='';return true;">NotesDbContext</a> <i>_db</i>,&nbsp;<br />   <a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a> <i>nc</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">protected override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> Down(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a> <i>migrationBuilder</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +226,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a>^&gt;^ GetBaseNoteHeader(&nbsp;<br />   <a target="_top" href="topic_00000000000001E4.html" onclick="this.target='';return true;">NotesDbContext</a>^ <i>_db</i>,&nbsp;<br />   <a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a>^ <i>nc</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> Down(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a>^ <i>migrationBuilder</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +265,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">protected function Down(&nbsp;<br />    <i>migrationBuilder</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a>&nbsp;<br />);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,42 +277,22 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="_db" class="parameterList">
+	Parameters</h4><dl paramName="migrationBuilder" class="parameterList">
 	<dt>
 		<span class="parameter">
-			_db
+			migrationBuilder
 		</span>
 	</dt>
 	<dd>
-		<a target="_top" href="topic_00000000000001E4.html" onclick="this.target='';return true;">NotesDbContext</a> 
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a> 
 	</dd>
 </dl>
 <p>
-	The database. 
-</p>
-<dl paramName="nc" class="parameterList">
-	<dt>
-		<span class="parameter">
-			nc
-		</span>
-	</dt>
-	<dd>
-		<a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a> 
-	</dd>
-</dl>
-<p>
-	NoteContent 
+	The <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder">MigrationBuilder</a> that will build the operations. 
 </p>
 
 <p />
 
-	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a target="_top" href="topic_0000000000000270.html" onclick="this.target='';return true;">NoteHeader</a>&gt; 
-		<p>
-		NoteHeader. 
-	</p>
-	
 
 
 
@@ -326,6 +313,28 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			<p>
+                    That is, builds the operations that will take the database from the state left in by
+                    this migration so that it returns to the state that it was in before this migration was applied.
+                </p>
+                <p>
+                    This method must be overridden in each class that inherits from <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.migrations.migration">Migration</a> if
+                    both 'up' and 'down' migrations are to be supported. If it is not overridden, then calling it
+                    will throw and it will not be possible to migrate in the 'down' direction.
+                </p>
+                <p>
+                    See <a target="_top" href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+                </p>
+	</div>					
+</div>
 
 
 
@@ -355,7 +364,6 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 
 
-
 	
 	
 	
@@ -369,8 +377,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -393,11 +401,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002CF.html">Importer Class</a><br />
+			<a href="topic_00000000000002D0.html">CreateIdentitySchema Class</a><br />
 
 
 
-<a href="topic_00000000000002C8.html">Notes.Manager Namespace</a><br />
+<a href="topic_00000000000002CF.html">Notes.Migrations Namespace</a><br />
 
 
 			

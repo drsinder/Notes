@@ -1,1 +1,1 @@
-search_result['153']=["topic_000000000000003E_vars--.html","AddAccessDlg Fields",""];
+search_result['153']=["topic_0000000000000064.html","AccessList Constructor","Initializes a new instance of the AccessList class."];

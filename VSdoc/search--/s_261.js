@@ -1,1 +1,1 @@
-search_result['261']=["topic_0000000000000066_methods--.html","EditNoteFile Methods",""];
+search_result['261']=["topic_00000000000000A4.html","EditNoteFile Class","Represents a Blazor component for editing the details of a note file, including its name, title, owner, and\r\narchive information."];

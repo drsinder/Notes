@@ -1,1 +1,1 @@
-search_result['726']=["topic_000000000000010C.html","NewNote.NotesfileId Property","Gets or sets the notesfile identifier."];
+search_result['726']=["topic_00000000000001CC_vars--.html","NewNote Fields",""];

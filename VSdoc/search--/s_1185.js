@@ -1,1 +1,1 @@
-search_result['1185']=["topic_00000000000001E9.html","NotesDbContext.Tags Property","Gets or sets the tags."];
+search_result['1185']=["topic_00000000000002FB.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];

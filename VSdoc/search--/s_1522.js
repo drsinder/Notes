@@ -1,1 +1,1 @@
-search_result['1522']=["topic_00000000000002AC_props--.html","SQLFileContent Properties",""];
+search_result['1522']=["topic_00000000000003F1.html","NoteDataManager.GetBaseNoteHeaderById Method","Gets a base note header given its headerid"];

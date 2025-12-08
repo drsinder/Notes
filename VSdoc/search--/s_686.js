@@ -1,1 +1,1 @@
-search_result['686']=["topic_00000000000000FD.html","EditNote.NoteId Property","Gets or sets the note identifier."];
+search_result['686']=["topic_00000000000001B1.html","EditNote.Model Property","our data for the note in edit model"];

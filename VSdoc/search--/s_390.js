@@ -1,1 +1,1 @@
-search_result['390']=["topic_0000000000000097_props--.html","Forward Properties",""];
+search_result['390']=["topic_00000000000000F1.html","Forward.Cancel Method","Cancels this instance."];

@@ -1,1 +1,1 @@
-search_result['922']=["topic_0000000000000175.html","NotePanel.ResetShown Property","Gets or sets a value indicating whether [reset shown]."];
+search_result['922']=["topic_0000000000000260.html","NotePanel.model Property","Gets or sets the display model associated with the current instance."];

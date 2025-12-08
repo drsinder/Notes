@@ -1,1 +1,1 @@
-search_result['1542']=["topic_00000000000002B5.html","Subscription Class","This class defines a table in the database.\r\nUsed to associate a user and a file for the purpose of\r\nforwarding an email when new notes are written."];
+search_result['1542']=["topic_00000000000003F9.html","AuthMessageSenderOptions.SendGridKey Property","Gets or sets the send grid key."];

@@ -1,1 +1,1 @@
-search_result['921']=["topic_0000000000000174.html","NotePanel.ShowResp Property","Public value of RespShown"];
+search_result['921']=["topic_000000000000025F.html","NotePanel.IsSeq Property","Are we sequencing?"];

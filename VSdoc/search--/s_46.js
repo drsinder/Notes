@@ -1,1 +1,1 @@
-search_result['46']=["topic_0000000000000012_props--.html","SCheckBox Properties",""];
+search_result['46']=["topic_000000000000001D.html","CookieStateAgent.IsAdmin Property","Is user in Admin role"];

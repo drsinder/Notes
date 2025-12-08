@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['577',"Notes.Client.Shared Namespace","topic_0000000000000196.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['723',"Notes.Client.Pages.Admin Namespace","topic_0000000000000185.html"],['724',"NotesFilesAdmin Class","topic_0000000000000186.html"],['735',"Methods","topic_0000000000000186_methods--.html"],['737',"CreateHomePageMessages Method","topic_0000000000000196.html"]];

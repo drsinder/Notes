@@ -1,1 +1,1 @@
-search_result['45']=["topic_0000000000000012_methods--.html","SCheckBox Methods",""];
+search_result['45']=["topic_000000000000001C.html","CookieStateAgent.IsAuthenticated Property","Check if user is authenticated - Login reply is not null and status == 200"];

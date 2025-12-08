@@ -1,1 +1,1 @@
-search_result['715']=["topic_0000000000000108.html","HomeIndex.OnAfterRender Method","Invoked after the component has rendered. Allows performing post-render logic, such as initialization, based\r\non whether this is the first render."];
+search_result['715']=["topic_00000000000001C8.html","HomeIndex.OnAfterRenderAsync Method","Invoked after the component has rendered. Allows performing post-render logic, such as initialization, based\r\non whether this is the first render."];

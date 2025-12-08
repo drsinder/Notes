@@ -1,1 +1,1 @@
-search_result['855']=["topic_0000000000000153_events--.html","ShowNote Events",""];
+search_result['855']=["topic_000000000000022F.html","ShowNote.Client Property","Gets or sets the client."];

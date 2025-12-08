@@ -1,1 +1,1 @@
-search_result['215']=["topic_0000000000000055_vars--.html","CreateNoteFile Fields",""];
+search_result['215']=["topic_000000000000008B.html","Copy.WholeString Property","Gets or sets a value indicating whether [whole string]."];

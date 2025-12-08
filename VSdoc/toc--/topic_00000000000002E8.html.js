@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['918',"Notes.Services Namespace","topic_00000000000002E1.html"],['919',"AuthMessageSenderOptions Class","topic_00000000000002E7.html"],['920',"Properties","topic_00000000000002E7_props--.html"],['921',"SendGridKey Property","topic_00000000000002E8.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['1185',"Notes.Migrations Namespace","topic_00000000000002CF.html"],['1186',"ApplicationDbContextModelSnapshot Class","topic_00000000000002E8.html"]];

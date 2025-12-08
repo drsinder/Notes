@@ -1,1 +1,1 @@
-search_result['188']=["topic_000000000000004F_attached_props--.html","CFormat Attached Properties",""];
+search_result['188']=["topic_000000000000007B.html","CodeFormat.TextObj Property","Gets or sets the text object."];

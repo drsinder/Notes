@@ -1,1 +1,1 @@
-search_result['277']=["topic_000000000000006E.html","EditNoteFile.OnInitialized Method","Method invoked when the component is ready to start, having received its\r\ninitial parameters from its parent in the render tree."];
+search_result['277']=["topic_00000000000000AE.html","EditNoteFile.HandleValidSubmit Method","Handles the valid submit."];

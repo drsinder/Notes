@@ -1,1 +1,1 @@
-search_result['213']=["topic_0000000000000055_methods--.html","CreateNoteFile Methods",""];
+search_result['213']=["topic_0000000000000089.html","Copy.Note Property","Gets or sets the note."];

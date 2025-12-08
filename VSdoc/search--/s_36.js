@@ -1,1 +1,1 @@
-search_result['36']=["topic_000000000000000F_methods--.html","SCheckBox Methods",""];
+search_result['36']=["topic_0000000000000014.html","CookieStateAgent.IAsyncDisposable.DisposeAsync Method","Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources asynchronously."];

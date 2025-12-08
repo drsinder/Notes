@@ -1,1 +1,1 @@
-search_result['594']=["topic_00000000000000DB_attached_props--.html","NoteMenu Attached Properties",""];
+search_result['594']=["topic_0000000000000172.html","NoteMenu Class","Represents the menu component for note-related actions, providing user interface options for navigating,\r\nediting, exporting, and managing notes within the application."];

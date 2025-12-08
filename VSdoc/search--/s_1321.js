@@ -1,1 +1,1 @@
-search_result['1321']=["topic_0000000000000239_attached_props--.html","LinkQueue Attached Properties",""];
+search_result['1321']=["topic_000000000000035F.html","NoteAccess.EditAccess Property","Gets or sets a value indicating whether [edit access]."];

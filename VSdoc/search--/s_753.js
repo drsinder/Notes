@@ -1,1 +1,1 @@
-search_result['753']=["topic_000000000000011B.html","NoteIndex.sfGrid1 Property","Our index grid"];
+search_result['753']=["topic_00000000000001E1.html","NoteIndex.ShowContent Property","Should note body be shown?"];

@@ -1,1 +1,0 @@
-search_result['1723']=["topic_00000000000002FF_overloads--.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];

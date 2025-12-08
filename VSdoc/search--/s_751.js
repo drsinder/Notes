@@ -1,1 +1,1 @@
-search_result['751']=["topic_0000000000000119.html","NoteIndex.NavString Property","Accumulator for the navigation string"];
+search_result['751']=["topic_00000000000001DF.html","NoteIndex.PageSize Property","Grid page size"];

@@ -1,1 +1,1 @@
-search_result['171']=["topic_0000000000000048_attached_props--.html","CodeFormat Attached Properties",""];
+search_result['171']=["topic_0000000000000070.html","AddAccessDlg.Client Property","Gets or sets the client."];

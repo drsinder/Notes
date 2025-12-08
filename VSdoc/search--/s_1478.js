@@ -1,1 +1,1 @@
-search_result['1478']=["topic_0000000000000298.html","Search.Time Property","Gets or sets the time."];
+search_result['1478']=["topic_00000000000003D2_attached_props--.html","AccessManager Attached Properties",""];

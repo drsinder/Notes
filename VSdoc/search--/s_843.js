@@ -1,1 +1,1 @@
-search_result['843']=["topic_000000000000014E_methods--.html","LocalModel2 Methods",""];
+search_result['843']=["topic_0000000000000228_overloads--.html","LocalModel2 Constructor","Initializes a new instance of the LocalModel2 class."];

@@ -1,1 +1,1 @@
-search_result['1609']=["topic_00000000000002D4.html","NoteDataManager Class","Class NoteDataManager."];
+search_result['1609']=["topic_0000000000000419.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];

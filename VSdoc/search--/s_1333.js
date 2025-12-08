@@ -1,1 +1,1 @@
-search_result['1333']=["topic_0000000000000240_attached_props--.html","Mark Attached Properties",""];
+search_result['1333']=["topic_0000000000000366.html","NoteContent.NoteBody Property","Gets or sets the note body.\r\nThe Body or content of the note"];

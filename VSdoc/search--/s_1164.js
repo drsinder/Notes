@@ -1,1 +1,1 @@
-search_result['1164']=["topic_00000000000001DF_events--.html","BodySearch Events",""];
+search_result['1164']=["topic_00000000000002EB.html","NotesDbContext Class","Represents the Entity Framework Core database context for the notes application, providing access to note-related\r\nentities and ASP.NET Core Identity features."];

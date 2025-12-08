@@ -1,1 +1,1 @@
-search_result['1444']=["topic_000000000000027E.html","NoteHeader.LinkGuid Property","Gets or sets the link unique identifier."];
+search_result['1444']=["topic_00000000000003BE.html","Subscription Class","This class defines a table in the database.\r\nUsed to associate a user and a file for the purpose of\r\nforwarding an email when new notes are written."];

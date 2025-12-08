@@ -1,1 +1,1 @@
-search_result['64']=["topic_0000000000000019_methods--.html","TrackerMover Methods",""];
+search_result['64']=["topic_0000000000000029.html","SCheckBox Class","Represents a checkbox component that tracks its checked state and file association, and interacts with a tracker\r\nand model for sequencer operations."];

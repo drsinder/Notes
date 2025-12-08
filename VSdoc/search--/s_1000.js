@@ -1,1 +1,1 @@
-search_result['1000']=["topic_000000000000019E.html","CookieStateAgent.IsAuthenticated Property","Check if user is authenticated - Login reply is not null and status == 200"];
+search_result['1000']=["topic_000000000000029C.html","Globals.PrimeAdminName Property",""];

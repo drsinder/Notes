@@ -1,1 +1,1 @@
-search_result['975']=["topic_0000000000000192.html","Versions.ArcId Property","Gets or sets the arc identifier."];
+search_result['975']=["topic_0000000000000289.html","Versions.ResponseOrdinal Property","Gets or sets the response ordinal."];

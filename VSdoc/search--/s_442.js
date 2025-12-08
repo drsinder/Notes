@@ -1,1 +1,1 @@
-search_result['442']=["topic_00000000000000A4_attached_props--.html","PrintDlg Attached Properties",""];
+search_result['442']=["topic_000000000000010B.html","PrintDlg.timer2 Property","Gets or sets the timer2."];

@@ -1,1 +1,1 @@
-search_result['1413']=["topic_0000000000000269.html","NoteFile.NoteFileName Property","Gets or sets the name of the note file."];
+search_result['1413']=["topic_00000000000003A9.html","Sequencer.UserId Property","Gets or sets the user identifier.\r\nID of the user who owns the item"];

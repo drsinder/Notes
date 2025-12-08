@@ -1,1 +1,1 @@
-search_result['405']=["topic_000000000000009B.html","Forward.ForwardView Property","Gets or sets the forward view."];
+search_result['405']=["topic_00000000000000F6.html","HelpDialog2.ModalInstance Property","Gets or sets the modal instance."];

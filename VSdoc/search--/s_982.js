@@ -1,1 +1,1 @@
-search_result['982']=["topic_0000000000000193_overloads--.html","CookieStateAgent.OnAfterRenderAsync Method","On parameters set as an asynchronous operation."];
+search_result['982']=["topic_000000000000028F.html","Notes.Client Namespace","The Notes.Client namespace contains classes and components for the client-side application of the Notes system,"];

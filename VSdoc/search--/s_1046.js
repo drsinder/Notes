@@ -1,1 +1,1 @@
-search_result['1046']=["topic_00000000000001B8.html","Globals.LocalTimeBlazor Method","GMT to Local."];
+search_result['1046']=["topic_00000000000002BA.html","IdentityEmailSender.SendPasswordResetCodeAsync Method","This API supports the ASP.NET Core Identity infrastructure and is not intended to be used as a general purpose\r\n            email abstraction. It should be implemented by the application so the Identi..."];

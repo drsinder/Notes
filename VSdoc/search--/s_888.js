@@ -1,1 +1,1 @@
-search_result['888']=["topic_000000000000015E.html","NoteEditor.Model Property","The data model used"];
+search_result['888']=["topic_0000000000000244.html","NoteEditor.Navigation Property","Gets or sets the navigation."];

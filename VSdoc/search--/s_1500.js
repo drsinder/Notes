@@ -1,1 +1,1 @@
-search_result['1500']=["topic_00000000000002A4.html","Sequencer.StartTime Property","Gets or sets the start time.\r\nTime a run in this file started - will get copied to LastTime when complete"];
+search_result['1500']=["topic_00000000000003E2.html","Importer.GetBaseNoteHeader Method","Get the BaseNoteHeader for a NoteContent"];

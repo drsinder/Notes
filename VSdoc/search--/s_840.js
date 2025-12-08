@@ -1,1 +1,1 @@
-search_result['840']=["topic_000000000000014E.html","LocalModel2 Class","Class LocalModel2."];
+search_result['840']=["topic_0000000000000227.html","LocalModel2(String) Constructor","Initializes a new instance of the LocalModel2 class."];

@@ -1,1 +1,1 @@
-search_result['1602']=["topic_00000000000002CF_methods--.html","Importer Methods",""];
+search_result['1602']=["topic_0000000000000415_overloads--.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];

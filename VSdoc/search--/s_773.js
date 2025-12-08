@@ -1,1 +1,1 @@
-search_result['773']=["topic_000000000000012D.html","NoteIndex.GetNoteHeaderId Method","Get note header Id given note ordinal and response ordinal"];
+search_result['773']=["topic_00000000000001F4.html","NoteIndex.GetModel Method","Get the Index model - used by the NotePanel"];

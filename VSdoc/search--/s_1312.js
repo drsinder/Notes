@@ -1,1 +1,1 @@
-search_result['1312']=["topic_0000000000000234_events--.html","LinkQueue Events",""];
+search_result['1312']=["topic_0000000000000356.html","NoteAccess.UserID Property","Gets or sets the user identifier."];

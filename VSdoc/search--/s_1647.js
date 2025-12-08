@@ -1,1 +1,1 @@
-search_result['1647']=["topic_00000000000002E4_events--.html","LocalService Events",""];
+search_result['1647']=["topic_000000000000042C_overloads--.html","NotesService.GetNoteHeaders Method","Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in\r\nthe request."];

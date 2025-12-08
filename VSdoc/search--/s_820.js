@@ -1,1 +1,1 @@
-search_result['820']=["topic_0000000000000148.html","NoteIndex.OnAfterRenderAsync Method","On after render as an asynchronous operation."];
+search_result['820']=["topic_000000000000021E.html","Preferences Class","Represents a container for managing user preferences and related data within the application."];

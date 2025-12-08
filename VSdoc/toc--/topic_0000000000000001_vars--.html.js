@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['8',"Microsoft.Extensions.Hosting Namespace","topic_0000000000000000.html"],['9',"Extensions Class","topic_0000000000000001.html"],['16',"Fields","topic_0000000000000001_vars--.html"]];

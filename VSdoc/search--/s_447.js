@@ -1,1 +1,1 @@
-search_result['447']=["topic_00000000000000A5.html","NoteFileDetails.NumberArchives Property","Gets or sets the number archives."];
+search_result['447']=["topic_000000000000010F.html","PrintDlg.ClosePrint Method","Closes the print."];

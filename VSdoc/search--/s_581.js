@@ -1,1 +1,1 @@
-search_result['581']=["topic_00000000000000D3_props--.html","MainMenu Properties",""];
+search_result['581']=["topic_0000000000000167.html","MainMenu Constructor","Initializes a new instance of the NavMenu class."];

@@ -1,1 +1,1 @@
-search_result['554']=["topic_00000000000000CB_props--.html","LoginDisplay Properties",""];
+search_result['554']=["topic_0000000000000153.html","LoginDisplay.GotoRegister Method","Gotoes the register."];

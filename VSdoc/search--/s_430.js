@@ -1,1 +1,1 @@
-search_result['430']=["topic_000000000000009F_props--.html","MessageBox Properties",""];
+search_result['430']=["topic_0000000000000104.html","NoteFileDetails.Owner Property","Gets or sets the owner."];

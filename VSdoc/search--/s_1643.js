@@ -1,1 +1,1 @@
-search_result['1643']=["topic_00000000000002E3.html","EmailSender(IOptions\u0026lt;AuthMessageSenderOptions\u0026gt;) Constructor","Initializes a new instance of the EmailSender class."];
+search_result['1643']=["topic_000000000000042A_overloads--.html","NotesService.GetTextFile Method","Gets text from server for display in client.\r\nfiles: about.html | help.html | helpdialog.html | helpdialog2.html | license.html"];

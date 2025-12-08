@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotePanel.HeaderStyle Property</title>
+	<title>MainMenu.ShowMessage Method</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotePanel.HeaderStyle Property</h1>
+		<h1 class="title">MainMenu.ShowMessage Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_000000000000015B.html">Notes.Client.Panels</a>
+<a href="topic_0000000000000136.html">Notes.Client.Menus</a>
 
 
 
@@ -90,7 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Header style string</summary-info>
+        <summary-info>Show error message</summary-info>
 
 
 
@@ -140,7 +147,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Property HeaderStyle() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Private Sub ShowMessage( _&nbsp;<br />   ByVal <i>message</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a> _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +186,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> HeaderStyle {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">private <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> ShowMessage(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> <i>message</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +226,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ HeaderStyle {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">private: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.void">void</a> ShowMessage(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>^ <i>message</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +265,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">protected function get HeaderStyle() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>;&nbsp;<br />protected function set HeaderStyle(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">private function ShowMessage(&nbsp;<br />    <i>message</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">String</a>&nbsp;<br />);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -269,14 +276,23 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="message" class="parameterList">
+	<dt>
+		<span class="parameter">
+			message
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
+	</dd>
+</dl>
+<p>
+	The message. 
+</p>
 
-	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.string">string</a> 
-		<p>
-		The header style. 
-	</p>
-	
+<p />
+
 
 
 
@@ -321,6 +337,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   
 
+  
 
 
 
@@ -342,6 +359,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	<div id="frameworksSection" class="section">	
   <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -364,11 +382,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000166.html">NotePanel Class</a><br />
+			<a href="topic_000000000000015A.html">MainMenu Class</a><br />
 
 
 
-<a href="topic_000000000000015B.html">Notes.Client.Panels Namespace</a><br />
+<a href="topic_0000000000000136.html">Notes.Client.Menus Namespace</a><br />
 
 
 			

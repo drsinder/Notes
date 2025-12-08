@@ -1,1 +1,1 @@
-search_result['1003']=["topic_000000000000019E_methods--.html","UserRoles Methods",""];
+search_result['1003']=["topic_000000000000029F.html","Globals.Base64Decode Method","Base64s the decode."];

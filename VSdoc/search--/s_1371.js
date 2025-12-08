@@ -1,1 +1,1 @@
-search_result['1371']=["topic_0000000000000253.html","NoteAccess.Respond Property","Gets or sets a value indicating whether this NoteAccess is respond."];
+search_result['1371']=["topic_0000000000000382.html","NoteHeader.ThreadLastEdited Property","Gets or sets the thread last edited.\r\nWhen the thread was last edited"];

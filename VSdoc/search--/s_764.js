@@ -1,1 +1,1 @@
-search_result['764']=["topic_0000000000000124.html","NoteIndex.DisplayIt Method","Note selected for display"];
+search_result['764']=["topic_00000000000001EB.html","NoteIndex.RemovePolicy Method",""];

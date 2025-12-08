@@ -1,1 +1,1 @@
-search_result['1347']=["topic_0000000000000245_vars--.html","Mark Fields",""];
+search_result['1347']=["topic_000000000000036F.html","NoteFile.OwnerId Property","Gets or sets the owner identifier."];

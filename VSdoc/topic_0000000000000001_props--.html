@@ -7,10 +7,10 @@
 	<link rel="icon" href="favicon.ico">
 	<title>Extensions Properties</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -66,6 +72,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 		<div id="mainSection"> 
 
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>

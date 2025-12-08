@@ -1,1 +1,1 @@
-search_result['1035']=["topic_00000000000001AD.html","Globals.SendGridEmail Property","Gets or sets the send grid email."];
+search_result['1035']=["topic_00000000000002B4.html","IdentityComponentsEndpointRouteBuilderExtensions.MapAdditionalIdentityEndpoints Method",""];

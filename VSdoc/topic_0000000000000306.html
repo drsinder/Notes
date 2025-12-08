@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.UpdateSequencer Method</title>
+	<title>ApplicationUser.Ipref6 Property</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.UpdateSequencer Method</h1>
+		<h1 class="title">ApplicationUser.Ipref6 Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002E1.html">Notes.Services</a>
+<a href="topic_00000000000002FD.html">Notes.Entities</a>
 
 
 
@@ -90,8 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Updates the sequencer state for the specified user and note file, setting its active status and relevant
-timestamps.</summary-info>
+        <summary-info>Gets or sets the ipref6.</summary-info>
 
 
 
@@ -141,7 +147,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function UpdateSequencer( _&nbsp;<br />   ByVal <i>request</i> As <strong>GSequencer</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoRequest</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;PersonalData()&gt; _&nbsp;<br />Public Property Ipref6() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +186,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; UpdateSequencer(&nbsp;<br />   <strong>GSequencer</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[PersonalData()]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> Ipref6 {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +226,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>^&gt;^ UpdateSequencer(&nbsp;<br />   <strong>GSequencer</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[PersonalData()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> Ipref6 {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +265,7 @@ timestamps.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   PersonalData()&nbsp;<br />function get Ipref6() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   PersonalData()&nbsp;<br />function set Ipref6(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,42 +276,12 @@ timestamps.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
-	<dt>
-		<span class="parameter">
-			request
-		</span>
-	</dt>
-	<dd>
-		<strong>GSequencer</strong> 
-	</dd>
-</dl>
-<p>
-	The sequencer update request containing the user ID, note file ID, and the desired active status. 
-</p>
-<dl paramName="context" class="parameterList">
-	<dt>
-		<span class="parameter">
-			context
-		</span>
-	</dt>
-	<dd>
-		<strong>ServerCallContext</strong> 
-	</dd>
-</dl>
-<p>
-	The server call context for the current gRPC request. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoRequest</strong>&gt; 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
 		<p>
-		A NoRequest instance indicating that the operation completed successfully and no additional data is
-returned. 
+		The ipref6. 
 	</p>
 	
 
@@ -329,18 +305,7 @@ returned.
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
 
-	<div id="remarksSection" class="section">	
-			If the sequencer is activated, its start time is set to the current UTC time. If
-deactivated, the last time is updated to match the previous start time. This method requires authorization
-and persists changes to the database.
-	</div>					
-</div>
 
 
 
@@ -369,7 +334,6 @@ and persists changes to the database.
 
 
 
-
 	
 	
 	
@@ -383,8 +347,8 @@ and persists changes to the database.
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -407,11 +371,11 @@ and persists changes to the database.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
+			<a href="topic_00000000000002FE.html">ApplicationUser Class</a><br />
 
 
 
-<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002FD.html">Notes.Entities Namespace</a><br />
 
 
 			

@@ -1,1 +1,1 @@
-search_result['578']=["topic_00000000000000D3_attached_props--.html","MainMenu Attached Properties",""];
+search_result['578']=["topic_0000000000000164.html","MainMenu.Navigation Property","Gets or sets the navigation."];

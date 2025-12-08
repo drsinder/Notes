@@ -1,1 +1,1 @@
-search_result['1594']=["topic_00000000000002CA_vars--.html","Importer Fields",""];
+search_result['1594']=["topic_0000000000000411_overloads--.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];

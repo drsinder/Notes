@@ -1,1 +1,1 @@
-search_result['1475']=["topic_0000000000000295.html","Search.UserId Property","Gets or sets the user identifier."];
+search_result['1475']=["topic_00000000000003D0.html","Tags.GetGTagsList Method","Gets the g tags list."];

@@ -1,1 +1,1 @@
-search_result['1201']=["topic_00000000000001F4.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];
+search_result['1201']=["topic_0000000000000306.html","ApplicationUser.Ipref6 Property","Gets or sets the ipref6."];

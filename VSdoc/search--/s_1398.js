@@ -1,1 +1,1 @@
-search_result['1398']=["topic_0000000000000260_props--.html","NoteFile Properties",""];
+search_result['1398']=["topic_000000000000039F.html","Search.Option Property","Gets or sets the option."];

@@ -1,1 +1,1 @@
-search_result['1288']=["topic_0000000000000226_events--.html","LinkLog Events",""];
+search_result['1288']=["topic_0000000000000348.html","LinkQueue.GetLinkQueue Method","Gets the link queue."];

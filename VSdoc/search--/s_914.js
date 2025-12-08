@@ -1,1 +1,1 @@
-search_result['914']=["topic_000000000000016D.html","NotePanel.IsMini Property","Should certain functions be suppressed at head and tail of panel"];
+search_result['914']=["topic_0000000000000258.html","NotePanel.BodyStyle Property","Body style string"];

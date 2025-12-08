@@ -1,1 +1,1 @@
-search_result['1217']=["topic_00000000000001FF.html","ApplicationUser.Ipref6 Property","Gets or sets the ipref6."];
+search_result['1217']=["topic_0000000000000316.html","ApplicationUser.MergeApplicationUser Method","Merges the application user."];

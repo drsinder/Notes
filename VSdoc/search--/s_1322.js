@@ -1,1 +1,1 @@
-search_result['1322']=["topic_0000000000000239_events--.html","LinkQueue Events",""];
+search_result['1322']=["topic_0000000000000360.html","NoteAccess.GetNoteAccess Method","Gets the note access.\r\nConversions between Db Entity space and gRPC space."];

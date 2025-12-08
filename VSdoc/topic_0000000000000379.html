@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
+	<link rel="icon" href="favicon.ico">
+	<title>NoteHeader Class</title>
+
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="SyntaxHighlighter/styles/shThemeMsdnLW.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+ <link rel="stylesheet" type="text/css" href="vsdocman_overrides.css"> 
+</head>
+
+<body style="direction: ltr;">
+	<div id="topic">
+<!--HEADER START-->
+  <div id="header">
+  	<div id="header-top-container">	
+	<div id="header-top-parent-container1">
+	  <div id="header-top-container1">
+	    <div id="runningHeaderText1"><a id="headerLogo" href="#" onclick="window.location.href = getCssCustomProperty('--headerLogoLink'); return false;">logo</a></div>
+	    <div id="runningHeaderText1b"><script>
+document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
+</script></div>
+	  </div>
+	</div>
+  	<div id="header-top-container2">
+    <div id="runningHeaderText">SOLUTION-WIDE PROPERTIES Reference</div>
+   
+    <div id="search-bar-container">
+     <form id="search-bar" action="search--.html">
+      <input id="HeaderSearchInput" type="search" name="search" placeholder="Search" >
+      <button id="btn-search" class="c-glyph" title="Search">
+      <span>Search</span>
+     </button>
+     </form>
+     <button id="cancel-search" class="cancel-search" title="Cancel">
+     <span>Cancel</span>
+    </button>
+    </div>
+   </div>
+   </div>
+
+  	
+  	<hr />
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+	<div id="headerLinks">
+	</div>
+		<hr />
+	</div>
+<!--HEADER END-->
+		<div id="mainSection">
+		
+		<div id="toc-area-overlay"></div>
+  <div id="toc-area">
+   <div id="toc-container" class="stickthis full-height">
+    <div id="-1"></div>
+    <div id="c-1">
+  <div id="ci-1" class="inner-for-height"></div>
+</div>
+   </div>
+  </div>
+
+<div id="mainBody">
+		<h1 class="title">NoteHeader Class</h1>
+        
+		<div class="metadata">
+        Namespace:
+<a href="topic_00000000000002FD.html">Notes.Entities</a>
+
+
+
+
+        <br />Assembly: Notes (in Notes.dll)
+
+		</div>
+
+       
+       
+        <summary-info>This class defines a table in the database.
+NoteHeader objects are the high level descriptors for a note.
+They contain all the information about a note EXCEPT the
+body, which is contained in related class NoteContent.
+The client index gets the complete set for a given notfile.
+This enables quick display, manipulation, and searching of
+the index.  Each object is related to one file object.
+Fields:
+Id          - The 64 bit unique Identifier for the note.
+NoteFileId  - The file which the note is a part of.
+ArchiveId   - 0 for the main file. Positive for archived notes.
+An Archive is a kind of subfile.
+BaseNoteId  - 0 for base notes. For responses the Id of its parent.
+NoteOrdinal - The number that appears in the index to Id a Base note.
+ResponseOrdinal - The number of a response. 0 for a base note.
+NoteSubject - You guessed it!
+LastEdited  - When the note was last edited
+ThreadLastEdited - When any note in a string was edited
+CreateDate  - DateTime when note was created
+ResponseCount - Only non-zero for a base note
+AuthorID    - UserId of the author
+AuthorName  - friendly name of author
+LinkGuid    - used to tie link notes together
+RefId       - Id of Note user was viewing when they responded
+IsDeleted   - true if the note has been marked as deleted
+Version     - Version Id for edited notes. Current is 0. Older are +
+DirectorMessage - Text message that may head a note.
+A single NoteContent is associated with each NoteHeader.</summary-info>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div id="syntaxSection" class="section">	
+	
+	
+	<div id="syntaxCodeBlocks">
+		<div class="codeSnippetContainer">		
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCornerActive">
+				</div>
+				<div class="codeSnippetTab csFirstTab csActiveTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeVB">
+					<pre xml:space="preserve" class="brush: vb">&lt;DataContract()&gt; _&nbsp;<br />Public Class NoteHeader</pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeCsharp">
+					<pre xml:space="preserve" class="brush: csharp">[DataContract()]&nbsp;<br />public class NoteHeader</pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+
+
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeCpp">
+					<pre xml:space="preserve" class="brush: cpp">[DataContract()]&nbsp;<br />public ref class NoteHeader </pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab csLastTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCornerActive">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeJScript">
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   DataContract()&nbsp;<br />class NoteHeader</pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037C.html">ArchiveId</a>
+
+	</td>
+	<td>
+
+Gets or sets the archive identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000385.html">AuthorID</a>
+
+	</td>
+	<td>
+
+Gets or sets the author identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000386.html">AuthorName</a>
+
+	</td>
+	<td>
+
+Gets or sets the name of the author.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037D.html">BaseNoteId</a>
+
+	</td>
+	<td>
+
+Gets or sets the base note identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000383.html">CreateDate</a>
+
+	</td>
+	<td>
+
+Gets or sets the create date.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038B.html">DirectorMessage</a>
+
+	</td>
+	<td>
+
+Gets or sets the director message.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037A.html">Id</a>
+
+	</td>
+	<td>
+
+Gets or sets the identifier.
+Uniquely identifies the note
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000389.html">IsDeleted</a>
+
+	</td>
+	<td>
+
+Gets or sets a value indicating whether this instance is deleted.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000381.html">LastEdited</a>
+
+	</td>
+	<td>
+
+Gets or sets the last edited.
+When the note was created or last edited
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000387.html">LinkGuid</a>
+
+	</td>
+	<td>
+
+Gets or sets the link unique identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038C.html">NoteContent</a>
+
+	</td>
+	<td>
+
+Gets or sets the content of the note.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037B.html">NoteFileId</a>
+
+	</td>
+	<td>
+
+Gets or sets the note file identifier.
+The fileid the note belongs to
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037E.html">NoteOrdinal</a>
+
+	</td>
+	<td>
+
+Gets or sets the note ordinal.
+the ordinal on a Base note and all its responses
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000380.html">NoteSubject</a>
+
+	</td>
+	<td>
+
+Gets or sets the note subject.
+Subject/Title of a note
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000388.html">RefId</a>
+
+	</td>
+	<td>
+
+Gets or sets the reference identifier.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000384.html">ResponseCount</a>
+
+	</td>
+	<td>
+
+Gets or sets the response count.
+Meaningful only if ResponseOrdinal = 0
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000037F.html">ResponseOrdinal</a>
+
+	</td>
+	<td>
+
+Gets or sets the response ordinal.
+The ordinal of the response where 0 is a Base Note
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038D.html">Tags</a>
+
+	</td>
+	<td>
+
+Gets or sets the tags.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000382.html">ThreadLastEdited</a>
+
+	</td>
+	<td>
+
+Gets or sets the thread last edited.
+When the thread was last edited
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="html2025/pubproperty.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038A.html">Version</a>
+
+	</td>
+	<td>
+
+Gets or sets the version.
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038E.html">Clone()</a>
+
+	</td>
+	<td>
+
+Clones this instance.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_000000000000038F.html">CloneForLink()</a>
+
+	</td>
+	<td>
+
+Clones for link.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000390.html">CloneForLinkR()</a>
+
+	</td>
+	<td>
+
+Clones for link r.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="html2025/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object instances are considered equal.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+			<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.equals">Equals(object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified object is equal to the current object.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+	
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="html2025/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.finalize">~Object()</a>
+
+	</td>
+	<td>
+
+Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000392.html">GetGNoteHeader()</a>
+
+	</td>
+	<td>
+
+Gets the g note header.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="html2025/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000394.html">GetGNoteHeaderList(List&lt;NoteHeader&gt;)</a>
+
+	</td>
+	<td>
+
+Gets the g note header list.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gethashcode">GetHashCode()</a>
+
+	</td>
+	<td>
+
+Serves as the default hash function.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="html2025/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000391.html">GetNoteHeader(GNoteHeader)</a>
+
+	</td>
+	<td>
+
+Gets the note header.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="html2025/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000393.html">GetNoteHeaders(GNoteHeaderList)</a>
+
+	</td>
+	<td>
+
+Gets the note headers.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.gettype">GetType()</a>
+
+	</td>
+	<td>
+
+Gets the <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.type">Type</a> of the current instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+   <img alt="Protected method" title="Protected method" src="html2025/protmethod.png"></img>
+
+    
+	  
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.memberwiseclone">MemberwiseClone()</a>
+
+	</td>
+	<td>
+
+Creates a shallow copy of the current <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+	<img alt="Static" title="Static" src="html2025/static.png"></img>
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.referenceequals">ReferenceEquals(object?, object?)</a>
+
+	</td>
+	<td>
+
+Determines whether the specified <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a> instances are the same instance.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="html2025/pubmethod.png"></img>
+
+
+    
+	</td>
+	<td>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object.tostring">ToString()</a>
+
+	</td>
+	<td>
+
+Returns a string that represents the current object.
+(inherited from <a target="_top" href=".html" onclick="this.target='';return true;">object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.object">object</a>
+</div>
+
+
+
+<div style="padding-left:1em;">Notes.Entities.NoteHeader</div>
+
+				
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Applies to</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="frameworksSection" class="section">	
+
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
+
+
+
+
+
+
+
+
+
+	
+	
+	</div>					
+</div>
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="seeAlsoSection" class="section">	
+		<div>
+	<a href="topic_00000000000002FD.html">Notes.Entities Namespace</a><br />
+
+
+	
+
+		</div>
+	</div>					
+</div>
+			</div>
+
+			<div id="internal-toc-area">
+				<div id="internal-toc-container" class="stickthis">
+					<h3 id="internal-toc-heading">In this article</h3>
+					<span id="internal-toc-definition-localized-text">Definition</span>
+				</div>
+			</div>
+
+			</div>
+      <div id="footer">
+	   <div id="footer-container">
+      	<p>Generated with <a target="_top" href="https://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+

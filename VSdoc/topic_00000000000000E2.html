@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NoteMenu.topMenu Property</title>
+	<title>ExportViewModel.Marks Property</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NoteMenu.topMenu Property</h1>
+		<h1 class="title">ExportViewModel.Marks Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000000BF.html">Notes.Client.Menus</a>
+<a href="topic_000000000000003F.html">Notes.Client.Dialogs</a>
 
 
 
@@ -90,7 +97,8 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Top level menu instance</summary-info>
+        <summary-info>&quot;Marks&quot; to limit scope of notes exportes the a specific set
+selected by user &quot;Marked&quot;</summary-info>
 
 
 
@@ -140,7 +148,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Protected Property topMenu() As <strong>SfMenu</strong>(Of <strong>MenuItem</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Property Marks() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>(Of <a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +187,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">protected <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>&gt; topMenu {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>&gt; Marks {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +227,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">protected: &nbsp;<br />property <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ topMenu {&nbsp;<br /> <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <strong>SfMenu</strong>&lt;<strong>MenuItem</strong>^&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>&gt;^ Marks {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +280,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<strong>SfMenu</strong>&lt;<strong>MenuItem</strong>&gt; 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a target="_top" href="topic_00000000000000E5.html" onclick="this.target='';return true;">Mark</a>&gt; 
 		<p>
-		The top menu. 
+		The marks. 
 	</p>
 	
 
@@ -321,6 +329,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   
 
+  
 
 
 
@@ -342,6 +351,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	<div id="frameworksSection" class="section">	
   <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -364,11 +374,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000DE.html">NoteMenu Class</a><br />
+			<a href="topic_00000000000000DB.html">ExportViewModel Class</a><br />
 
 
 
-<a href="topic_00000000000000BF.html">Notes.Client.Menus Namespace</a><br />
+<a href="topic_000000000000003F.html">Notes.Client.Dialogs Namespace</a><br />
 
 
 			

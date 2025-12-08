@@ -1,1 +1,1 @@
-search_result['104']=["topic_0000000000000029.html","AccessX Enumeration","Enum AccessX"];
+search_result['104']=["topic_0000000000000040.html","AccessCheckBox Class","Represents a UI component that displays and manages access permissions using a checkbox interface."];

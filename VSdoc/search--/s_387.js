@@ -1,1 +1,1 @@
-search_result['387']=["topic_0000000000000097_attached_props--.html","Forward Attached Properties",""];
+search_result['387']=["topic_00000000000000EE.html","Forward.ModalInstance Property","Gets or sets the modal instance."];

@@ -1,1 +1,1 @@
-search_result['1530']=["topic_00000000000002B0_methods--.html","Subscription Methods",""];
+search_result['1530']=["topic_00000000000003F4.html","EmailSender(IOptions\u0026lt;AuthMessageSenderOptions\u0026gt;) Constructor","Initializes a new instance of the EmailSender class."];

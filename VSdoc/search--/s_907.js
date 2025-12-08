@@ -1,1 +1,1 @@
-search_result['907']=["topic_0000000000000166_vars--.html","NotePanel Fields",""];
+search_result['907']=["topic_0000000000000251.html","NotePanel.ShowButtons Property","Should optional buttons be shown"];

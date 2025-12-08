@@ -1,1 +1,1 @@
-search_result['994']=["topic_0000000000000198_overloads--.html","CookieStateAgent.OnAfterRenderAsync Method","On parameters set as an asynchronous operation."];
+search_result['994']=["topic_0000000000000296.html","Globals.SendGridEmail Property","Gets or sets the send grid email."];

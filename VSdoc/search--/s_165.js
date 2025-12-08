@@ -1,1 +1,1 @@
-search_result['165']=["topic_0000000000000045_props--.html","CodeFormat Properties",""];
+search_result['165']=["topic_000000000000006A.html","AddAccessDlg.ModalInstance Property","Gets or sets the modal instance."];

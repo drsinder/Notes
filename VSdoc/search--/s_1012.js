@@ -1,1 +1,1 @@
-search_result['1012']=["topic_00000000000001A2_methods--.html","Globals Methods",""];
+search_result['1012']=["topic_00000000000002A8.html","Globals.ValidIssuerURL Property",""];

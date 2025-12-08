@@ -1,1 +1,1 @@
-search_result['1375']=["topic_0000000000000257.html","NoteAccess.ViewAccess Property","Gets or sets a value indicating whether [view access]."];
+search_result['1375']=["topic_0000000000000386.html","NoteHeader.AuthorName Property","Gets or sets the name of the author."];

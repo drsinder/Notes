@@ -1,1 +1,1 @@
-search_result['889']=["topic_000000000000015F.html","NoteEditor.PreparedCode Property","Holding place to prepared code to be inserted"];
+search_result['889']=["topic_0000000000000245.html","NoteEditor Constructor","Initializes a new instance of the NoteEditor class."];

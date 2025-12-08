@@ -1,1 +1,1 @@
-search_result['368']=["topic_000000000000008F.html","ExportViewModel.Marks Property","\"Marks\" to limit scope of notes exportes the a specific set\r\nselected by user \"Marked\""];
+search_result['368']=["topic_00000000000000E5.html","Mark Class","Represents a marker or reference to a specific note, response, or header within an archive or note file for a\r\nuser."];

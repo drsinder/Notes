@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetNoteFileIndexData Method</title>
+	<title>NotesDbContext.SQLFileContent Property</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetNoteFileIndexData Method</h1>
+		<h1 class="title">NotesDbContext.SQLFileContent Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002E1.html">Notes.Services</a>
+<a href="topic_00000000000002EA.html">Notes.Data</a>
 
 
 
@@ -90,8 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves index data for a note file, including access information, note headers, linked files, tags, and
-user details, based on the specified request and the current user's permissions.</summary-info>
+        <summary-info>Gets or sets the content of the SQL file.</summary-info>
 
 
 
@@ -141,7 +147,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteFileIndexData( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteFileRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoteDisplayIndexModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Property SQLFileContent() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>(Of <a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +186,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>&gt; GetNoteFileIndexData(&nbsp;<br />   <strong>NoteFileRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>&gt; SQLFileContent {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +226,7 @@ user details, based on the specified request and the current user's permissions.
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>^&gt;^ GetNoteFileIndexData(&nbsp;<br />   <strong>NoteFileRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>&gt;^ SQLFileContent {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,43 +276,12 @@ user details, based on the specified request and the current user's permissions.
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
-	<dt>
-		<span class="parameter">
-			request
-		</span>
-	</dt>
-	<dd>
-		<strong>NoteFileRequest</strong> 
-	</dd>
-</dl>
-<p>
-	The request containing the note file identifier and archive ID for which to retrieve index data. 
-</p>
-<dl paramName="context" class="parameterList">
-	<dt>
-		<span class="parameter">
-			context
-		</span>
-	</dt>
-	<dd>
-		<strong>ServerCallContext</strong> 
-	</dd>
-</dl>
-<p>
-	The server call context that provides user authentication and request metadata. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteDisplayIndexModel</strong>&gt; 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_00000000000003BA.html" onclick="this.target='';return true;">SQLFileContent</a>&gt; 
 		<p>
-		A NoteDisplayIndexModel containing the note file's index data, user access details, notes, tags, and any
-relevant messages. If the user does not have access or the file does not exist, the model will include an
-appropriate message. 
+		The content of the SQL file. 
 	</p>
 	
 
@@ -330,18 +305,7 @@ appropriate message.
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
 
-	<div id="remarksSection" class="section">	
-			Only users with the appropriate access rights can retrieve note file index data.
-Administrators have additional viewing privileges. If the user lacks access or the file is missing, the
-returned model will indicate the reason in the message property.
-	</div>					
-</div>
 
 
 
@@ -370,7 +334,6 @@ returned model will indicate the reason in the message property.
 
 
 
-
 	
 	
 	
@@ -384,8 +347,8 @@ returned model will indicate the reason in the message property.
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -408,11 +371,11 @@ returned model will indicate the reason in the message property.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesDbContext Class</a><br />
 
 
 
-<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002EA.html">Notes.Data Namespace</a><br />
 
 
 			

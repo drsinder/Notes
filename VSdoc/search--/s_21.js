@@ -1,1 +1,1 @@
-search_result['21']=["topic_0000000000000009.html","Clock.OnAfterRender Method","Handles post-render logic for the component, initializing resources when rendering for the first time."];
+search_result['21']=["topic_000000000000000B.html","Clock.Interval Property","Gets or sets the interval, in milliseconds, between consecutive operations."];

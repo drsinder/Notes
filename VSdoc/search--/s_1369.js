@@ -1,1 +1,1 @@
-search_result['1369']=["topic_0000000000000251.html","NoteAccess.ArchiveId Property","Gets or sets the archive identifier."];
+search_result['1369']=["topic_0000000000000380.html","NoteHeader.NoteSubject Property","Gets or sets the note subject.\r\nSubject/Title of a note"];

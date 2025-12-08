@@ -1,1 +1,1 @@
-search_result['1610']=["topic_00000000000002D4_attached_props--.html","NoteDataManager Attached Properties",""];
+search_result['1610']=["topic_0000000000000419_overloads--.html","NotesService.CreateSequencer Method","Creates a new sequencer entry for the authenticated user using the specified check model."];

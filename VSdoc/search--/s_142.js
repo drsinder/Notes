@@ -1,1 +1,1 @@
-search_result['142']=["topic_000000000000003B_methods--.html","AddAccessDlg Methods",""];
+search_result['142']=["topic_0000000000000059.html","AccessList.Modal Property","Gets or sets the modal."];

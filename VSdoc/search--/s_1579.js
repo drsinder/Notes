@@ -1,1 +1,1 @@
-search_result['1579']=["topic_00000000000002C5.html","Tags.GetGTags Method","Gets the g tags."];
+search_result['1579']=["topic_000000000000040A.html","NotesService.ClearNoteFilePolicy Method",""];

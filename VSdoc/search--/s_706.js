@@ -1,1 +1,1 @@
-search_result['706']=["topic_0000000000000105.html","HomeIndex.Ordinal Property","Gets or sets the ordinal position used to determine note file entry behavior."];
+search_result['706']=["topic_00000000000001BF.html","dummyFile Field","Represents a placeholder instance of a GNotefile used for default or dummy operations within\r\nthe containing class."];

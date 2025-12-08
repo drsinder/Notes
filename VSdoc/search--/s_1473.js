@@ -1,1 +1,1 @@
-search_result['1473']=["topic_0000000000000294_props--.html","Search Properties",""];
+search_result['1473']=["topic_00000000000003CE.html","Tags.GetGTags Method","Gets the g tags."];

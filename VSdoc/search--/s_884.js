@@ -1,1 +1,1 @@
-search_result['884']=["topic_000000000000015C_overloads--.html","NoteEditor.OnParametersSetAsync Method","Get a NoteFile Object for the file we are using"];
+search_result['884']=["topic_0000000000000240.html","NoteEditor.ToolBarObj Property","Reference to the Editor Tool bar"];

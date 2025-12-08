@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetNoteCount Method</title>
+	<title>ApplicationUser.MergeApplicationUser Method</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetNoteCount Method</h1>
+		<h1 class="title">ApplicationUser.MergeApplicationUser Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002E1.html">Notes.Services</a>
+<a href="topic_00000000000002FD.html">Notes.Entities</a>
 
 
 
@@ -90,8 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the number of notes in the specified note file and archive that are not deleted and are not
-responses.</summary-info>
+        <summary-info>Merges the application user.</summary-info>
 
 
 
@@ -141,7 +147,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteCount( _&nbsp;<br />   ByVal <i>request</i> As <strong>NoteFileRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>NoteCount</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Shared Function MergeApplicationUser( _&nbsp;<br />   ByVal <i>other</i> As <strong>GAppUser</strong>, _&nbsp;<br />   ByVal <i>u</i> As <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a> _&nbsp;<br />) As <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +186,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>&gt; GetNoteCount(&nbsp;<br />   <strong>NoteFileRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a> MergeApplicationUser(&nbsp;<br />   <strong>GAppUser</strong> <i>other</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a> <i>u</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +226,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>^&gt;^ GetNoteCount(&nbsp;<br />   <strong>NoteFileRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a>^ MergeApplicationUser(&nbsp;<br />   <strong>GAppUser</strong>^ <i>other</i>,&nbsp;<br />   <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a>^ <i>u</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +265,7 @@ responses.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">public static function MergeApplicationUser(&nbsp;<br />    <i>other</i> : <strong>GAppUser</strong>,&nbsp;<br />    <i>u</i> : <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a>&nbsp;<br />) : <a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -271,41 +277,40 @@ responses.</summary-info>
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
+	Parameters</h4><dl paramName="other" class="parameterList">
 	<dt>
 		<span class="parameter">
-			request
+			other
 		</span>
 	</dt>
 	<dd>
-		<strong>NoteFileRequest</strong> 
+		<strong>GAppUser</strong> 
 	</dd>
 </dl>
 <p>
-	The request containing the identifiers of the note file and archive for which to count notes. 
+	The other. 
 </p>
-<dl paramName="context" class="parameterList">
+<dl paramName="u" class="parameterList">
 	<dt>
 		<span class="parameter">
-			context
+			u
 		</span>
 	</dt>
 	<dd>
-		<strong>ServerCallContext</strong> 
+		<a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a> 
 	</dd>
 </dl>
 <p>
-	The context for the server call, which provides user and request information. 
+	The u. 
 </p>
 
 <p />
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>NoteCount</strong>&gt; 
+	<a target="_top" href="topic_00000000000002FE.html" onclick="this.target='';return true;">ApplicationUser</a> 
 		<p>
-		A <a target="_top" href=".html" onclick="this.target='';return true;">NoteCount</a> object containing the count of notes matching the specified criteria. If the user
-does not have read access, the count will be zero. 
+		ApplicationUser. 
 	</p>
 	
 
@@ -329,18 +334,7 @@ does not have read access, the count will be zero.
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
 
-	<div id="remarksSection" class="section">	
-			Only notes that are not deleted, are not responses, and are in the initial version
-are included in the count. The caller must have read access to the specified note file and archive;
-otherwise, the result will indicate a count of zero.
-	</div>					
-</div>
 
 
 
@@ -369,7 +363,6 @@ otherwise, the result will indicate a count of zero.
 
 
 
-
 	
 	
 	
@@ -383,8 +376,8 @@ otherwise, the result will indicate a count of zero.
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -407,11 +400,11 @@ otherwise, the result will indicate a count of zero.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
+			<a href="topic_00000000000002FE.html">ApplicationUser Class</a><br />
 
 
 
-<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002FD.html">Notes.Entities Namespace</a><br />
 
 
 			

@@ -1,1 +1,1 @@
-search_result['912']=["topic_000000000000016B.html","NotePanel.ShowButtons Property","Should optional buttons be shown"];
+search_result['912']=["topic_0000000000000256.html","NotePanel.respHeaders Property","List of responses"];

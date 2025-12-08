@@ -1,1 +1,1 @@
-search_result['996']=["topic_000000000000019A.html","CookieStateAgent.ReadCookie Method","Read a cookie"];
+search_result['996']=["topic_0000000000000298.html","Globals.SendGridApiKey Property","Gets or sets the send grid API key."];

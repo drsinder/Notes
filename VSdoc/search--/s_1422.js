@@ -1,1 +1,1 @@
-search_result['1422']=["topic_000000000000026D.html","NoteFile.GetGNotefile Method","Gets the g notefile.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1422']=["topic_00000000000003B2.html","Sequencer.GetGSequencerList Method","Gets the g sequencer list.\r\nConversions between Db Entity space and gRPC space."];

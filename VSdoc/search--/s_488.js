@@ -1,1 +1,1 @@
-search_result['488']=["topic_00000000000000B0_vars--.html","UserEdit Fields",""];
+search_result['488']=["topic_0000000000000127.html","UserEdit Constructor","Initializes a new instance of the UserEdit class."];

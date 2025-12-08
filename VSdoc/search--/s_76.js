@@ -1,1 +1,1 @@
-search_result['76']=["topic_000000000000001D_vars--.html","AccessCheckBox Fields",""];
+search_result['76']=["topic_000000000000002F.html","SCheckBox.OnClick Method","Toggles the checked state and asynchronously creates or deletes the sequencer item based on the new state."];

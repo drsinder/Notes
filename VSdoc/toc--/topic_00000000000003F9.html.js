@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['1238',"Notes.Services Namespace","topic_00000000000003F2.html"],['1239',"AuthMessageSenderOptions Class","topic_00000000000003F8.html"],['1240',"Properties","topic_00000000000003F8_props--.html"],['1241',"SendGridKey Property","topic_00000000000003F9.html"]];

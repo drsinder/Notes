@@ -1,1 +1,1 @@
-search_result['112']=["topic_0000000000000030.html","AccessItem.which Property","Indicates which segment we are dealing with"];
+search_result['112']=["topic_0000000000000043.html","AccessCheckBox Constructor","Initializes a new instance of the AccessCheckBox class."];

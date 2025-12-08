@@ -1,1 +1,1 @@
-search_result['1638']=["topic_00000000000002E2_attached_props--.html","EmailSender Attached Properties",""];
+search_result['1638']=["topic_0000000000000428.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];

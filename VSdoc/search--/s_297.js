@@ -1,1 +1,1 @@
-search_result['297']=["topic_0000000000000075_events--.html","ExportJson Events",""];
+search_result['297']=["topic_00000000000000B8.html","ExportJson Class","Represents a Blazor component that exports note data as a JSON file and provides functionality to save the\r\nexported file using JavaScript interop."];

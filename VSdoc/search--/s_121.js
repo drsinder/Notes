@@ -1,1 +1,1 @@
-search_result['121']=["topic_0000000000000033_attached_props--.html","AccessList Attached Properties",""];
+search_result['121']=["topic_0000000000000047.html","AccessDeleteButton.OnClick Property","Gets or sets the on click."];

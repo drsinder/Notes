@@ -1,1 +1,1 @@
-search_result['204']=["topic_0000000000000054.html","Copy Class","Represents a Blazor component that provides functionality for copying note data to a selected file within a\r\nmodal dialog."];
+search_result['204']=["topic_0000000000000085.html","CodeFormat.MakeCode Method","Makes the code."];

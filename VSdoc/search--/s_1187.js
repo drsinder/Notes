@@ -1,1 +1,1 @@
-search_result['1187']=["topic_00000000000001EB.html","NotesDbContext.HomePageMessage Property","Gets or sets the home page message."];
+search_result['1187']=["topic_00000000000002FD.html","Notes.Entities Namespace","The Notes.Entities namespace contains the Entity Framework Core Table\r\ndefinitions for the Notes application.  These classes define the schema."];

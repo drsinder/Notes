@@ -1,1 +1,1 @@
-search_result['654']=["topic_00000000000000F4_vars--.html","UserList Fields",""];
+search_result['654']=["topic_00000000000001A2.html","UserList Class","Class UserList.\r\nImplements the ComponentBase"];

@@ -1,1 +1,1 @@
-search_result['1027']=["topic_00000000000001A7_methods--.html","Globals Methods",""];
+search_result['1027']=["topic_00000000000002B1_overloads--.html","SubdirectoryHandler.SendAsync Method","Sends an HTTP request to the inner handler to send to the server as an asynchronous operation."];

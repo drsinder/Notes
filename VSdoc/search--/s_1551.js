@@ -1,1 +1,1 @@
-search_result['1551']=["topic_00000000000002B9.html","Subscription.NoteFile Property","Gets or sets the note file."];
+search_result['1551']=["topic_00000000000003FC_attached_props--.html","NotesService Attached Properties",""];

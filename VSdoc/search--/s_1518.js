@@ -1,1 +1,1 @@
-search_result['1518']=["topic_00000000000002AC.html","SQLFile.FileName Property","Gets or sets the name of the file."];
+search_result['1518']=["topic_00000000000003EF.html","NoteDataManager.GetBaseNoteHeader (NotesDbContext, Int64) Method","Get a NoteHeader given its Id"];

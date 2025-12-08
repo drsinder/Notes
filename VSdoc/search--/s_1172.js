@@ -1,1 +1,1 @@
-search_result['1172']=["topic_00000000000001E2.html","BodySearch.BuildTargetModel Method","Implemented to build the TargetModel."];
+search_result['1172']=["topic_00000000000002EE.html","NotesDbContext.NoteHeader Property","Gets or sets the note header."];

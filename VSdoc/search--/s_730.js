@@ -1,1 +1,1 @@
-search_result['730']=["topic_000000000000010E_attached_props--.html","NoteIndex Attached Properties",""];
+search_result['730']=["topic_00000000000001D0.html","NewNote.Model Property","Gets or sets the model."];

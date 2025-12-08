@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['577',"Notes.Client.Shared Namespace","topic_0000000000000196.html"],['594',"UserRoles Class","topic_00000000000001A3.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['723',"Notes.Client.Pages.Admin Namespace","topic_0000000000000185.html"],['756',"UserList Class","topic_00000000000001A2.html"],['758',"Properties","topic_00000000000001A2_props--.html"],['760',"Modal Property","topic_00000000000001A3.html"]];

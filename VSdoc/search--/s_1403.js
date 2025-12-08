@@ -1,1 +1,1 @@
-search_result['1403']=["topic_0000000000000264.html","NoteContent.GetGNoteContentList Method","Gets the g note content list.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1403']=["topic_00000000000003A4.html","Search.BaseOrdinal Property","Gets or sets the base ordinal."];

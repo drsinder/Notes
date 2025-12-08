@@ -1,1 +1,1 @@
-search_result['1377']=["topic_0000000000000258_attached_props--.html","NoteContent Attached Properties",""];
+search_result['1377']=["topic_0000000000000388.html","NoteHeader.RefId Property","Gets or sets the reference identifier."];

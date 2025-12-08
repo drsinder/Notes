@@ -1,1 +1,1 @@
-search_result['721']=["topic_000000000000010B_attached_props--.html","NewNote Attached Properties",""];
+search_result['721']=["topic_00000000000001CC.html","NewNote Class","FOr creating a new note"];

@@ -1,1 +1,1 @@
-search_result['879']=["topic_000000000000015B.html","Notes.Client.Panels Namespace",""];
+search_result['879']=["topic_000000000000023B.html","NoteEditor.Modal Property","For dialogs"];

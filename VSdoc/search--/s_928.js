@@ -1,1 +1,1 @@
-search_result['928']=["topic_000000000000017B.html","NotePanel.MyMenu Property","Reference to our menu so we can talk to it"];
+search_result['928']=["topic_0000000000000266.html","NotePanel.Client Property","Gets or sets the client."];

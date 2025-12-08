@@ -1,1 +1,1 @@
-search_result['883']=["topic_000000000000015C_methods--.html","NoteEditor Methods",""];
+search_result['883']=["topic_000000000000023F.html","NoteEditor.EditObj Property","Reference to the Body Editor"];

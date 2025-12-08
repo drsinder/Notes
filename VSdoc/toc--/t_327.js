@@ -1,1 +1,1 @@
-c['327']=[['328',"OnAfterRender Method","topic_00000000000000D0_overloads--.html",1],['330',"OnInitialized Method","topic_00000000000000CF_overloads--.html",1],['332',"Reload Method","topic_00000000000000D2.html",0],['333',"TimerTick2 Method","topic_00000000000000D1.html",0]];
+c['327']=[['328',"OnInitializedAsync() Method","topic_00000000000000D6.html",0]];

@@ -1,1 +1,1 @@
-search_result['1325']=["topic_0000000000000239_vars--.html","LinkQueue Fields",""];
+search_result['1325']=["topic_0000000000000363.html","NoteAccess.GetGNoteAccessList Method","Gets the g note access list.\r\nConversions between Db Entity space and gRPC space."];

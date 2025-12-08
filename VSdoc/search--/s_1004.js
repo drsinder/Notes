@@ -1,1 +1,1 @@
-search_result['1004']=["topic_000000000000019E_props--.html","UserRoles Properties",""];
+search_result['1004']=["topic_00000000000002A0.html","Globals.UTimeBlazor Method","us the time blazor."];

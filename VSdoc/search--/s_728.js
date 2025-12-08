@@ -1,1 +1,1 @@
-search_result['728']=["topic_000000000000010D_overloads--.html","NewNote.OnParametersSet Method","Just fill in a few fields and we are ready..."];
+search_result['728']=["topic_00000000000001CE.html","NewNote.BaseNoteHeaderId Property","Gets or sets the base note header identifier."];

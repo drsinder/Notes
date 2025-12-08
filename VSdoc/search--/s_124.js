@@ -1,1 +1,1 @@
-search_result['124']=["topic_0000000000000033_props--.html","AccessList Properties",""];
+search_result['124']=["topic_000000000000004A.html","AccessDeleteButton.Delete Method","Deletes this instance."];

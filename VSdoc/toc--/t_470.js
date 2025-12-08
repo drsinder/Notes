@@ -1,1 +1,0 @@
-c['470']=[['471',"ShowNote Constructor","topic_0000000000000156.html",0],['472',"Properties","topic_0000000000000153_props--.html",1],['475',"Methods","topic_0000000000000153_methods--.html",1]];

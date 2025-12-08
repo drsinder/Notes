@@ -1,1 +1,1 @@
-search_result['1378']=["topic_0000000000000258_events--.html","NoteContent Events",""];
+search_result['1378']=["topic_0000000000000389.html","NoteHeader.IsDeleted Property","Gets or sets a value indicating whether this instance is deleted."];

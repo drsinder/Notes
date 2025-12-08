@@ -1,1 +1,1 @@
-search_result['176']=["topic_0000000000000049.html","CodeFormat.stuff Property","Gets or sets the stuff."];
+search_result['176']=["topic_0000000000000074.html","AddAccessDlg.Cancel Method","Cancels this instance."];

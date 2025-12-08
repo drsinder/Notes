@@ -1,1 +1,1 @@
-search_result['1283']=["topic_0000000000000223.html","LinkedFile.RemoteBaseUri Property","Gets or sets the remote base URI."];
+search_result['1283']=["topic_0000000000000343.html","LinkQueue.LinkGuid Property","Gets or sets the link unique identifier."];

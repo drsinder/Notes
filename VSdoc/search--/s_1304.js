@@ -1,1 +1,1 @@
-search_result['1304']=["topic_000000000000022E.html","LinkLog.EventTime Property","Gets or sets the event time."];
+search_result['1304']=["topic_0000000000000353.html","Mark.ResponseOrdinal Property","Gets or sets the response ordinal."];

@@ -1,1 +1,1 @@
-search_result['605']=["topic_00000000000000DE_methods--.html","NoteMenu Methods",""];
+search_result['605']=["topic_0000000000000178.html","NoteMenu.HamburgerMode Property","Gets or sets a value indicating whether [hamburger mode]."];

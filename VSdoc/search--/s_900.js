@@ -1,1 +1,1 @@
-search_result['900']=["topic_0000000000000164.html","NoteEditor.InsertCode2 Method","Insert the previously prepared code."];
+search_result['900']=["topic_000000000000024C_methods--.html","NotePanel Methods",""];

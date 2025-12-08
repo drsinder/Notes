@@ -1,1 +1,1 @@
-search_result['448']=["topic_00000000000000A6.html","NoteFileDetails.Owner Property","Gets or sets the owner."];
+search_result['448']=["topic_0000000000000110.html","SearchDlg Class","Represents a modal dialog component used for configuring and initiating a search operation within the\r\napplication."];

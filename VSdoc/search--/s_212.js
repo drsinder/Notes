@@ -1,1 +1,1 @@
-search_result['212']=["topic_0000000000000055_events--.html","CreateNoteFile Events",""];
+search_result['212']=["topic_0000000000000088.html","Copy.ModalInstance Property","Gets or sets the modal instance."];

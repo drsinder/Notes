@@ -1,1 +1,1 @@
-search_result['563']=["topic_00000000000000CE_methods--.html","LoginDisplay Methods",""];
+search_result['563']=["topic_000000000000015A.html","MainMenu Class","Represents the main navigation menu component for the application, providing menu structure, navigation, and\r\nuser-specific menu item visibility."];

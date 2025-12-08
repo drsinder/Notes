@@ -1,1 +1,1 @@
-search_result['1026']=["topic_00000000000001A7_events--.html","Globals Events",""];
+search_result['1026']=["topic_00000000000002B1.html","SubdirectoryHandler.SendAsync Method","Sends an HTTP request to the inner handler to send to the server as an asynchronous operation."];

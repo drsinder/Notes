@@ -1,1 +1,1 @@
-search_result['530']=["topic_00000000000000BE.html","MainLayout.TimerTick2 Method",""];
+search_result['530']=["topic_0000000000000141.html","ListMenu.currNote Property","Ordinal of the current note"];

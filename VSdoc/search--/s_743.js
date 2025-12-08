@@ -1,1 +1,1 @@
-search_result['743']=["topic_0000000000000112_props--.html","NoteIndex Properties",""];
+search_result['743']=["topic_00000000000001D7.html","NoteIndex.NoteOrdinal Property","Gets or sets the ordinal position of the note within its collection.\r\nUsed for navigation purposes. - Direct entry of note ordinal"];

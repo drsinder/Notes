@@ -1,1 +1,1 @@
-search_result['398']=["topic_0000000000000099_vars--.html","HelpDialog Fields",""];
+search_result['398']=["topic_00000000000000F4.html","HelpDialog.Cancel Method","Cancels this instance."];

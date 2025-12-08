@@ -1,1 +1,1 @@
-search_result['356']=["topic_0000000000000088.html","ExportViewModel Class","Represents the configuration and options for exporting notes from a note file, including format, scope,\r\ndestination, and related metadata."];
+search_result['356']=["topic_00000000000000DB_methods--.html","ExportViewModel Methods",""];

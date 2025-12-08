@@ -1,1 +1,1 @@
-search_result['1308']=["topic_0000000000000232.html","LinkLog.GetLinkLogList Method","Gets the link log list."];
+search_result['1308']=["topic_0000000000000355_events--.html","NoteAccess Events",""];

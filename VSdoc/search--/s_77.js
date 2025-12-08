@@ -1,1 +1,1 @@
-search_result['77']=["topic_000000000000001E.html","TrackerMover.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];
+search_result['77']=["topic_0000000000000030.html","TrackerMover Class","Represents a component that manages the movement and ordering of tracker items within a collection."];

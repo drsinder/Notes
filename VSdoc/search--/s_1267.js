@@ -1,1 +1,1 @@
-search_result['1267']=["topic_000000000000021A_methods--.html","HomePageMessage Methods",""];
+search_result['1267']=["topic_0000000000000334.html","LinkLog.EventType Property","Gets or sets the type of the event."];

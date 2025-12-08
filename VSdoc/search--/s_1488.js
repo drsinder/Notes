@@ -1,1 +1,1 @@
-search_result['1488']=["topic_000000000000029D.html","Search.NoteID Property","Gets or sets the note identifier."];
+search_result['1488']=["topic_00000000000003D8.html","AccessManager.TestLinkAccess Method","Tests the link access."];

@@ -1,1 +1,1 @@
-search_result['854']=["topic_0000000000000153_attached_props--.html","ShowNote Attached Properties",""];
+search_result['854']=["topic_000000000000022E.html","ShowNote.Navigation Property","Gets or sets the navigation."];

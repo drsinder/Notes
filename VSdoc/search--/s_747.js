@@ -1,1 +1,1 @@
-search_result['747']=["topic_0000000000000115.html","NoteIndex.NoteOrdinal Property","Gets or sets the ordinal position of the note within its collection.\r\nUsed for navigation purposes. - Direct entry of note ordinal"];
+search_result['747']=["topic_00000000000001DB.html","NoteIndex.NavString Property","Accumulator for the navigation string"];

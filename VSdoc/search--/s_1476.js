@@ -1,1 +1,1 @@
-search_result['1476']=["topic_0000000000000296.html","Search.Option Property","Gets or sets the option."];
+search_result['1476']=["topic_00000000000003D1.html","Notes.Manager Namespace","The Notes.Manager namespace contains classes for managing note-related data operations,\r\naccess control, and business logic within the notes application."];

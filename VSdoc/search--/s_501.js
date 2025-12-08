@@ -1,1 +1,1 @@
-search_result['501']=["topic_00000000000000B6.html","UserEdit.Model Property","Gets or sets the model."];
+search_result['501']=["topic_000000000000012E.html","YesNo.Cancel Method","Cancels this instance."];

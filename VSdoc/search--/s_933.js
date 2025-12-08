@@ -1,1 +1,1 @@
-search_result['933']=["topic_000000000000017F.html","NotePanel Constructor","Initialize defaults for a \"root\" note - not showing children"];
+search_result['933']=["topic_000000000000026B.html","NotePanel.OnParametersSetAsync Method","Get our data and set IsSeq flag from state"];

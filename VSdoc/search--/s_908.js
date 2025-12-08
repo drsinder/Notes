@@ -1,1 +1,1 @@
-search_result['908']=["topic_0000000000000167.html","NotePanel.Modal Property","For Dialogs"];
+search_result['908']=["topic_0000000000000252.html","NotePanel.AltStyle Property","Is this panel to be shown in the alternate style?"];

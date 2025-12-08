@@ -1,1 +1,1 @@
-search_result['531']=["topic_00000000000000BF.html","Notes.Client.Menus Namespace",""];
+search_result['531']=["topic_0000000000000142.html","ListMenu.Navigation Property","Gets or sets the navigation."];

@@ -1,1 +1,1 @@
-search_result['135']=["topic_0000000000000038.html","AccessList.ModalInstance Property","Gets or sets the modal instance."];
+search_result['135']=["topic_0000000000000057.html","AccessItem.canEdit Property","Can current user change it?"];

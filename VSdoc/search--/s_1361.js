@@ -1,1 +1,1 @@
-search_result['1361']=["topic_000000000000024E.html","NoteAccess Class","This class defines a table in the database.\r\nObjects of this class are Access Tokens for a file.\r\nThere are a minimum of two for each file:\r\n1 for the file Owner.\r\n1 for the unknown \"Other\" user - if ..."];
+search_result['1361']=["topic_0000000000000379_props--.html","NoteHeader Properties",""];

@@ -1,1 +1,1 @@
-search_result['24']=["topic_000000000000000B.html","FileButton Class","Represents a button component that navigates to a note index page based on the specified note file and ordinal\r\nvalue."];
+search_result['24']=["topic_000000000000000E.html","Clock.OnAfterRender Method","Handles post-render logic for the component, initializing resources when rendering for the first time."];

@@ -1,1 +1,1 @@
-search_result['749']=["topic_0000000000000117.html","NoteIndex.MyMenu Property","Reference to the menu so we can talk to it."];
+search_result['749']=["topic_00000000000001DD.html","NoteIndex.sfGrid1 Property","Our index grid"];

@@ -1,1 +1,1 @@
-search_result['503']=["topic_00000000000000B6_events--.html","YesNo Events",""];
+search_result['503']=["topic_0000000000000130.html","Notes.Client.Layout Namespace","The Notes.Client.Layout namespace contains layout components for the Notes client application."];

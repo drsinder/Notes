@@ -1,1 +1,1 @@
-search_result['419']=["topic_000000000000009E.html","HelpDialog2.OnInitializedAsync Method","Get some simple stuff from server"];
+search_result['419']=["topic_00000000000000FE.html","NoteFileDetails Class","Represents the details of a note file, including its identifier, name, title, owner, and related metadata for\r\nuse within a Blazor modal component."];

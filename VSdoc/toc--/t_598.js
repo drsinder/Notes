@@ -1,1 +1,1 @@
-c['598']=[['599',"App Class","topic_00000000000001D1.html",0]];
+c['598']=[['599',"NewNote Constructor","topic_00000000000001D2.html",0],['600',"Properties","topic_00000000000001CC_props--.html",1],['606',"Methods","topic_00000000000001CC_methods--.html",1]];

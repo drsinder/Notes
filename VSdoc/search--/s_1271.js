@@ -1,1 +1,1 @@
-search_result['1271']=["topic_000000000000021C.html","HomePageMessage.Message Property","Gets or sets the message."];
+search_result['1271']=["topic_0000000000000338.html","LinkLog.GetGLinkLog Method","Gets the g link log."];

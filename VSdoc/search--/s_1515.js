@@ -1,1 +1,1 @@
-search_result['1515']=["topic_00000000000002AA_props--.html","SQLFile Properties",""];
+search_result['1515']=["topic_00000000000003EC.html","NoteDataManager.GetBaseNoteHeaderByIdRev Method","Get BaseNoteHeaders in reverse order - we only plan to look at the\r\nfirst one/one with highest NoteOrdinal"];

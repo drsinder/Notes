@@ -1,1 +1,1 @@
-search_result['514']=["topic_00000000000000B9_props--.html","YesNo Properties",""];
+search_result['514']=["topic_0000000000000136.html","Notes.Client.Menus Namespace","The Notes.Client.Menus namespace contains menu components for the Notes client application."];

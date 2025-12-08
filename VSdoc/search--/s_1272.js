@@ -1,1 +1,1 @@
-search_result['1272']=["topic_000000000000021D.html","HomePageMessage.Posted Property","Gets or sets the posted."];
+search_result['1272']=["topic_0000000000000339.html","LinkLog.GetLinkLogList Method","Gets the link log list."];

@@ -1,1 +1,1 @@
-search_result['1291']=["topic_0000000000000226_vars--.html","LinkLog Fields",""];
+search_result['1291']=["topic_000000000000034B.html","LinkQueue.GetGSequencerList Method","Gets the g sequencer list."];

@@ -1,1 +1,1 @@
-c['137']=[['138',"Code Property","topic_0000000000000051.html",0],['139',"Name Property","topic_0000000000000050.html",0]];
+c['137']=[['138',"AccessCheckBox Constructor","topic_0000000000000043.html",0],['139',"Properties","topic_0000000000000040_props--.html",1],['142',"Methods","topic_0000000000000040_methods--.html",1]];

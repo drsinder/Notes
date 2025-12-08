@@ -1,1 +1,1 @@
-search_result['73']=["topic_000000000000001D_events--.html","AccessCheckBox Events",""];
+search_result['73']=["topic_000000000000002D.html","SCheckBox.Model Property","Gets or sets the model."];

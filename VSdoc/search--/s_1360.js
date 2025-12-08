@@ -1,1 +1,1 @@
-search_result['1360']=["topic_000000000000024D.html","Mark.NoteFile Property","Gets or sets the note file."];
+search_result['1360']=["topic_0000000000000379_methods--.html","NoteHeader Methods",""];

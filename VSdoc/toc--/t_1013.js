@@ -1,1 +1,1 @@
-c['1013']=[['1014',"UpdateNoteFile(GNotefile, ServerCallContext) Method","topic_00000000000002F5.html",0]];
+c['1013']=[['1014',"Properties","topic_0000000000000355_props--.html",1],['1025',"Methods","topic_0000000000000355_methods--.html",1]];

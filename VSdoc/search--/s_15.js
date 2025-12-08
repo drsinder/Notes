@@ -1,1 +1,1 @@
-search_result['15']=["topic_0000000000000007_attached_props--.html","Clock Attached Properties",""];
+search_result['15']=["topic_000000000000000A.html","Clock Class","Represents a component that displays and updates the current time at a specified interval."];

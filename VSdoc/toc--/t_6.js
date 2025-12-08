@@ -1,1 +1,1 @@
-c['6']=[['7',"AddDefaultHealthChecks\u003cTBuilder\u003e Method","topic_0000000000000004.html",0],['8',"AddServiceDefaults\u003cTBuilder\u003e Method","topic_0000000000000002.html",0],['9',"ConfigureOpenTelemetry\u003cTBuilder\u003e Method","topic_0000000000000003.html",0],['10',"MapDefaultEndpoints Method","topic_0000000000000005.html",0]];
+c['6']=[['7',"MapAdditionalIdentityEndpoints Method","topic_00000000000002B4.html",0]];

@@ -1,1 +1,1 @@
-search_result['1637']=["topic_00000000000002E2.html","EmailSender Class","Class EmailSender.\r\nImplements the IEmailSender"];
+search_result['1637']=["topic_0000000000000427.html","NotesService.MakeHeader Method","Generates an HTML header string for a copied note, including the note file name, subject, author, and\r\ncreation date."];

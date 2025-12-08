@@ -1,1 +1,1 @@
-search_result['1385']=["topic_000000000000025C.html","NoteAccess.GetGNoteAccessList Method","Gets the g note access list.\r\nConversions between Db Entity space and gRPC space."];
+search_result['1385']=["topic_0000000000000390.html","NoteHeader.CloneForLinkR Method","Clones for link r."];

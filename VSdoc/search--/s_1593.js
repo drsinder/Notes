@@ -1,1 +1,1 @@
-search_result['1593']=["topic_00000000000002CA_props--.html","Importer Properties",""];
+search_result['1593']=["topic_0000000000000411.html","NotesService.GetAccessAndUserList Method","Retrieves the access permissions and user list associated with the specified note file and archive for a\r\ngiven user."];

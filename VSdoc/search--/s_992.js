@@ -1,1 +1,1 @@
-search_result['992']=["topic_0000000000000197_vars--.html","CookieStateAgent Fields",""];
+search_result['992']=["topic_0000000000000294.html","Globals.TimeZoneDefaultID Property","Gets or sets the time zone default identifier."];

@@ -1,1 +1,1 @@
-search_result['1302']=["topic_000000000000022C.html","LinkLog.Id Property","Gets or sets the identifier."];
+search_result['1302']=["topic_0000000000000351.html","Mark.NoteOrdinal Property","Gets or sets the note ordinal."];

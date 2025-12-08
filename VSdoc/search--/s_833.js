@@ -1,1 +1,1 @@
-search_result['833']=["topic_000000000000014C_attached_props--.html","Preferences Attached Properties",""];
+search_result['833']=["topic_0000000000000225.html","Preferences.Cancel Method","Cancels this instance."];

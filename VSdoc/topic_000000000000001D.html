@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>TrackerMover.Tracker Property</title>
+	<title>CookieStateAgent.IsAdmin Property</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">TrackerMover.Tracker Property</h1>
+		<h1 class="title">CookieStateAgent.IsAdmin Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_0000000000000006.html">Notes.Client.Comp</a>
+<a href="topic_0000000000000009.html">Notes.Client.Comp</a>
 
 
 
@@ -90,7 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Our container/caller</summary-info>
+        <summary-info>Is user in Admin role</summary-info>
 
 
 
@@ -140,7 +147,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Parameter()&gt; _&nbsp;<br />Public Property Tracker() As <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public ReadOnly Property IsAdmin() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">Boolean</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -179,7 +186,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Parameter()]&nbsp;<br />public <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a> Tracker {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> IsAdmin {get;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -219,7 +226,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Parameter()]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a>^ Tracker {&nbsp;<br /> <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a>^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a>^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> IsAdmin {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> get( );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -258,7 +265,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Parameter()&nbsp;<br />function get Tracker() : <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a>;&nbsp;<br />public &nbsp;<br />   Parameter()&nbsp;<br />function set Tracker(value : <a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public function get IsAdmin() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">boolean</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -272,9 +279,9 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	<a target="_top" href="topic_0000000000000158.html" onclick="this.target='';return true;">Tracker</a> 
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean">bool</a> 
 		<p>
-		The tracker. 
+		<code>true</code> if this instance is admin; otherwise, <code>false</code>. 
 	</p>
 	
 
@@ -321,6 +328,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   
 
+  
 
 
 
@@ -342,6 +350,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 	<div id="frameworksSection" class="section">	
   <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -364,11 +373,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000019.html">TrackerMover Class</a><br />
+			<a href="topic_0000000000000010.html">CookieStateAgent Class</a><br />
 
 
 
-<a href="topic_0000000000000006.html">Notes.Client.Comp Namespace</a><br />
+<a href="topic_0000000000000009.html">Notes.Client.Comp Namespace</a><br />
 
 
 			

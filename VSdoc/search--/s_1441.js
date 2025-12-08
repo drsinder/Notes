@@ -1,1 +1,1 @@
-search_result['1441']=["topic_000000000000027B.html","NoteHeader.ResponseCount Property","Gets or sets the response count.\r\nMeaningful only if ResponseOrdinal = 0"];
+search_result['1441']=["topic_00000000000003BB.html","SQLFileContent.SQLFileId Property","Gets or sets the SQL file identifier."];

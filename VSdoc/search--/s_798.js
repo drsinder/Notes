@@ -1,1 +1,1 @@
-search_result['798']=["topic_000000000000013E.html","Search.ResponseOrdinal Property","Gets or sets the response ordinal."];
+search_result['798']=["topic_000000000000020F.html","NoteIndex.SearchHeader Method","Searches the header."];

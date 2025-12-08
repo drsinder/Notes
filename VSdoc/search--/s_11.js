@@ -1,1 +1,1 @@
-search_result['11']=["topic_0000000000000004.html","Extensions.AddDefaultHealthChecks\u0026lt;TBuilder\u0026gt; Method",""];
+search_result['11']=["topic_0000000000000006.html","Extensions.AddOpenTelemetryExporters\u0026lt;TBuilder\u0026gt; Method",""];

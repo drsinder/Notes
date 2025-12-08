@@ -1,1 +1,1 @@
-search_result['1319']=["topic_0000000000000238.html","LinkQueue.Activity Property","Gets or sets the activity."];
+search_result['1319']=["topic_000000000000035D.html","NoteAccess.DeleteEdit Property","Gets or sets a value indicating whether [delete edit]."];

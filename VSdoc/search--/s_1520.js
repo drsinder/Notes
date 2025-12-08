@@ -1,1 +1,1 @@
-search_result['1520']=["topic_00000000000002AC_events--.html","SQLFileContent Events",""];
+search_result['1520']=["topic_00000000000003F0.html","NoteDataManager.GetBaseNoteHeader (NotesDbContext, Int32, Int32, Int32) Method","Get the BaseNoteHeader for a Note"];

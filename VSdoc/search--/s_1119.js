@@ -1,1 +1,1 @@
-search_result['1119']=["topic_00000000000001D3_vars--.html","CreateIdentitySchema Fields",""];
+search_result['1119']=["topic_00000000000002DC.html","BodySearch Class","A base class inherited by each EF Core migration."];

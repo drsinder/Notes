@@ -1,1 +1,1 @@
-search_result['1380']=["topic_0000000000000258_props--.html","NoteContent Properties",""];
+search_result['1380']=["topic_000000000000038B.html","NoteHeader.DirectorMessage Property","Gets or sets the director message."];

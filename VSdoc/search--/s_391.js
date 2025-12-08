@@ -1,1 +1,1 @@
-search_result['391']=["topic_0000000000000097_vars--.html","Forward Fields",""];
+search_result['391']=["topic_00000000000000F2.html","HelpDialog Class","Class HelpDialog.\r\nImplements the ComponentBase"];

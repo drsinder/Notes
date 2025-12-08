@@ -1,1 +1,1 @@
-c['398']=[['399',"OnParametersSet Method","topic_0000000000000111_overloads--.html",1]];
+c['398']=[['399',"ClosePrint Method","topic_000000000000010F.html",0],['400',"OnAfterRender Method","topic_000000000000010D_overloads--.html",1],['402',"TimerTick2 Method","topic_000000000000010E.html",0],['403',"onPrint Method","topic_000000000000010C.html",0]];

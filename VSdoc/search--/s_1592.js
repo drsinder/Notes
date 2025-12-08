@@ -1,1 +1,1 @@
-search_result['1592']=["topic_00000000000002CA_methods--.html","Importer Methods",""];
+search_result['1592']=["topic_0000000000000410_overloads--.html","NotesService.GetAccessList Method","Retrieves the access list for a specified note file and archive for the requesting user."];

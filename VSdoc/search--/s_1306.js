@@ -1,1 +1,1 @@
-search_result['1306']=["topic_0000000000000230.html","LinkLog.GetLinkLog Method","Gets the link log."];
+search_result['1306']=["topic_0000000000000355.html","NoteAccess Class","This class defines a table in the database.\r\nObjects of this class are Access Tokens for a file.\r\nThere are a minimum of two for each file:\r\n1 for the file Owner.\r\n1 for the unknown \"Other\" user - if ..."];

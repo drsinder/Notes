@@ -1,1 +1,1 @@
-search_result['1644']=["topic_00000000000002E3_overloads--.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];
+search_result['1644']=["topic_000000000000042B.html","NotesService.GetHomePageMessage Method","Retrieves the current home page message to be displayed to users."];

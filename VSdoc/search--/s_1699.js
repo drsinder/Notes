@@ -1,1 +1,0 @@
-search_result['1699']=["topic_00000000000002F3_overloads--.html","NotesService.GetHomePageModel Method","Retrieves the data model for the home page in response to a client request."];

@@ -1,1 +1,1 @@
-search_result['1007']=["topic_00000000000001A0.html","CookieStateAgent.IsUser Property","Is user in User role"];
+search_result['1007']=["topic_00000000000002A3.html","Globals.LoginDisplay Property",""];

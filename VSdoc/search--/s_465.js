@@ -1,1 +1,1 @@
-search_result['465']=["topic_00000000000000AA_overloads--.html","SearchDlg.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];
+search_result['465']=["topic_000000000000011B.html","Upload4 Class","Represents a component that handles uploading a note file and its associated data within a modal dialog."];

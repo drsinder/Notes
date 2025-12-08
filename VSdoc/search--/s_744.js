@@ -1,1 +1,1 @@
-search_result['744']=["topic_0000000000000112_vars--.html","NoteIndex Fields",""];
+search_result['744']=["topic_00000000000001D8.html","NoteIndex.CurrentNoteId Property","Non zero when viewing a note"];

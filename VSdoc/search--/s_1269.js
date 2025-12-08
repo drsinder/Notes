@@ -1,1 +1,1 @@
-search_result['1269']=["topic_000000000000021A_vars--.html","HomePageMessage Fields",""];
+search_result['1269']=["topic_0000000000000336.html","LinkLog.Event Property","Gets or sets the event."];

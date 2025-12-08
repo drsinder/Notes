@@ -1,1 +1,1 @@
-search_result['296']=["topic_0000000000000075_attached_props--.html","ExportJson Attached Properties",""];
+search_result['296']=["topic_00000000000000B7.html","Email.Cancel Method","Cancels this instance."];

@@ -1,1 +1,1 @@
-search_result['316']=["topic_000000000000007B_attached_props--.html","ExportJsonString Attached Properties",""];
+search_result['316']=["topic_00000000000000C4.html","ExportJsonString Class","Provides functionality to export note header data as a JSON file within a Blazor modal dialog component."];

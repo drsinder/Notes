@@ -1,1 +1,1 @@
-search_result['1583']=["topic_00000000000002C9.html","AccessManager Class","Class AccessManager."];
+search_result['1583']=["topic_000000000000040C.html","NotesService.DeleteNoteFile Method","Deletes the specified note file and all associated data from the database."];

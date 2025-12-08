@@ -1,1 +1,1 @@
-search_result['177']=["topic_000000000000004A.html","CodeFormat.EditObj Property","Gets or sets the edit object."];
+search_result['177']=["topic_0000000000000075.html","AddAccessDlg.Create Method","Creates this instance."];

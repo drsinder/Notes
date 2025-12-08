@@ -1,1 +1,1 @@
-search_result['235']=["topic_000000000000005E.html","DeleteNoteFile Class","Represents a Blazor component for deleting a note file, providing functionality to confirm or cancel the\r\ndeletion within a modal dialog."];
+search_result['235']=["topic_0000000000000096_methods--.html","CreateFileModel Methods",""];

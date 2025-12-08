@@ -1,1 +1,1 @@
-search_result['796']=["topic_000000000000013C.html","Search.ArchiveId Property","Gets or sets the archive identifier."];
+search_result['796']=["topic_000000000000020D.html","NoteIndex.StartSearch Method","Starts the search."];

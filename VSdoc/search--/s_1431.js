@@ -1,1 +1,1 @@
-search_result['1431']=["topic_0000000000000271.html","NoteHeader.Id Property","Gets or sets the identifier.\r\nUniquely identifies the note"];
+search_result['1431']=["topic_00000000000003B6.html","SQLFile.ContentType Property","Gets or sets the type of the content."];

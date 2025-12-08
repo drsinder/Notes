@@ -1,1 +1,1 @@
-search_result['859']=["topic_0000000000000154.html","ShowNote.NoteId Property","Gets or sets the note identifier."];
+search_result['859']=["topic_0000000000000232.html","Tracker Class","Represents a component that manages and organizes collections of note files and sequencers, providing\r\nfunctionality to retrieve, order, and shuffle these items asynchronously."];

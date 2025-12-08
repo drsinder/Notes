@@ -1,1 +1,1 @@
-search_result['841']=["topic_000000000000014E_attached_props--.html","LocalModel2 Attached Properties",""];
+search_result['841']=["topic_0000000000000227_overloads--.html","LocalModel2 Constructor","Initializes a new instance of the LocalModel2 class."];

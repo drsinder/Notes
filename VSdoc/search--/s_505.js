@@ -1,1 +1,1 @@
-search_result['505']=["topic_00000000000000B6_props--.html","YesNo Properties",""];
+search_result['505']=["topic_0000000000000131_attached_props--.html","MainLayout Attached Properties",""];

@@ -1,1 +1,0 @@
-search_result['1736']=["topic_0000000000000306.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];

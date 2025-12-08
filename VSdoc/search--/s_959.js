@@ -1,1 +1,1 @@
-search_result['959']=["topic_0000000000000189_props--.html","Versions Properties",""];
+search_result['959']=["topic_000000000000027E.html","Responses.Headers Property","List of response headers"];

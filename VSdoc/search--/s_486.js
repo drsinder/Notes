@@ -1,1 +1,1 @@
-search_result['486']=["topic_00000000000000B0_methods--.html","UserEdit Methods",""];
+search_result['486']=["topic_0000000000000125.html","UserEdit.Model Property","Gets or sets the model."];

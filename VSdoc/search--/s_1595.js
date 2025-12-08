@@ -1,1 +1,1 @@
-search_result['1595']=["topic_00000000000002CB.html","AccessManager.GetAccess Method","All access checks call this."];
+search_result['1595']=["topic_0000000000000412.html","NotesService.UpdateAccessItem Method","Updates the access permissions for a note file if the current user has edit access."];

@@ -1,1 +1,1 @@
-search_result['905']=["topic_0000000000000166_methods--.html","NotePanel Methods",""];
+search_result['905']=["topic_000000000000024F.html","NotePanel.ShowChild Property","Whether or not child windows should be shown.  These might include\r\nResponses, versions, references."];

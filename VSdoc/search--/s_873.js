@@ -1,1 +1,1 @@
-search_result['873']=["topic_0000000000000158_methods--.html","Tracker Methods",""];
+search_result['873']=["topic_000000000000023A.html","NoteEditor Class","Editor for notes\r\nHas a fields for:\r\nSubject, Tags, Director Message, and the Note Body"];

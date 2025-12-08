@@ -1,1 +1,1 @@
-search_result['963']=["topic_000000000000018C.html","Responses.DataBoundHandler Method","Copy parameter to local copy"];
+search_result['963']=["topic_0000000000000282.html","Responses.Navigation Property","Gets or sets the navigation."];

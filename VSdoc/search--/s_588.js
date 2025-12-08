@@ -1,1 +1,1 @@
-search_result['588']=["topic_00000000000000D8.html","MainMenu.OnAfterRender Method","Update the clock once per second"];
+search_result['588']=["topic_000000000000016D.html","MainMenu.Reload Method","Reloads this instance."];

@@ -1,1 +1,1 @@
-search_result['1036']=["topic_00000000000001AE.html","Globals.SendGridName Property","Gets or sets the name of the send grid."];
+search_result['1036']=["topic_00000000000002B5.html","Notes.Components.Account Namespace",""];

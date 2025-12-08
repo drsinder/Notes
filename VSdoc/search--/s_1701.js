@@ -1,1 +1,0 @@
-search_result['1701']=["topic_00000000000002F4_overloads--.html","NotesService.GetAdminPageModel Method","Retrieves the administrative home page model, including user and note access data, for authorized admin\r\nusers."];

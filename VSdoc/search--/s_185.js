@@ -1,1 +1,1 @@
-search_result['185']=["topic_000000000000004D.html","CodeFormat.IsEditing Property","Gets or sets a value indicating whether this instance is editing."];
+search_result['185']=["topic_0000000000000078.html","CodeFormat.ModalInstance Property","Gets or sets the modal instance."];

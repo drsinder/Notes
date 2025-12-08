@@ -1,1 +1,0 @@
-c['971']=[['972',"GetHeaderForNoteId(NoteId, ServerCallContext) Method","topic_000000000000030A.html",0]];

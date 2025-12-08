@@ -1,1 +1,1 @@
-search_result['552']=["topic_00000000000000CB_events--.html","LoginDisplay Events",""];
+search_result['552']=["topic_0000000000000151.html","LoginDisplay.BeginSignOut Method","Begins the sign out."];

@@ -1,1 +1,1 @@
-search_result['174']=["topic_0000000000000048_props--.html","CodeFormat Properties",""];
+search_result['174']=["topic_0000000000000073.html","AddAccessDlg.OnParametersSet Method","Method invoked when the component has received parameters from its parent in\r\nthe render tree, and the incoming values have been assigned to properties."];

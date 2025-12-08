@@ -1,1 +1,1 @@
-search_result['924']=["topic_0000000000000177.html","NotePanel.EatEnter Property","Should the typing box \"eat\" the next enter key?"];
+search_result['924']=["topic_0000000000000262.html","NotePanel.sfTextBox Property","Reference to our fancy html editor"];

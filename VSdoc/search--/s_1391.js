@@ -1,1 +1,1 @@
-search_result['1391']=["topic_000000000000025D_vars--.html","NoteContent Fields",""];
+search_result['1391']=["topic_000000000000039D.html","Search Class","Model for searching a notefile"];

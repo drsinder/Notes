@@ -1,1 +1,1 @@
-search_result['1216']=["topic_00000000000001FE.html","ApplicationUser.Ipref5 Property","Gets or sets the ipref5."];
+search_result['1216']=["topic_0000000000000315.html","ApplicationUser.GetApplicationUser Method","Gets the application user.\r\nConversions between Db Entity space and gRPC space."];

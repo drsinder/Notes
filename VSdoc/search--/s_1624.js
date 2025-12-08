@@ -1,1 +1,1 @@
-search_result['1624']=["topic_00000000000002DC.html","NoteDataManager.GetFileById Method","Get notefile entity from its Id"];
+search_result['1624']=["topic_0000000000000420_overloads--.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];

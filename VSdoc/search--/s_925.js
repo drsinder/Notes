@@ -1,1 +1,1 @@
-search_result['925']=["topic_0000000000000178.html","NotePanel.ShowVers Property","Are we showing version history?"];
+search_result['925']=["topic_0000000000000263.html","NotePanel.NavString Property","Accumulator for the typin nav box"];

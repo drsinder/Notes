@@ -1,1 +1,1 @@
-search_result['1044']=["topic_00000000000001B6.html","Globals.Base64Decode Method","Base64s the decode."];
+search_result['1044']=["topic_00000000000002B8.html","IdentityEmailSender.SendConfirmationLinkAsync Method","This API supports the ASP.NET Core Identity infrastructure and is not intended to be used as a general purpose\r\n            email abstraction. It should be implemented by the application so the Identi..."];

@@ -1,1 +1,1 @@
-search_result['602']=["topic_00000000000000DE.html","NoteMenu Class","Represents the menu component for note-related actions, providing user interface options for navigating,\r\nediting, exporting, and managing notes within the application."];
+search_result['602']=["topic_0000000000000175.html","NoteMenu.MyNoteIndex Property","Reference to our caller/container so we can call back into it."];

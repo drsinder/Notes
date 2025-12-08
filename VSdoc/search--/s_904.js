@@ -1,1 +1,1 @@
-search_result['904']=["topic_0000000000000166_events--.html","NotePanel Events",""];
+search_result['904']=["topic_000000000000024E.html","NotePanel.NoteId Property","Gets or sets the unique identifier for the note we are displaying."];

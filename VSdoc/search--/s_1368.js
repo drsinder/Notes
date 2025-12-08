@@ -1,1 +1,1 @@
-search_result['1368']=["topic_0000000000000250.html","NoteAccess.NoteFileId Property","Gets or sets the note file identifier."];
+search_result['1368']=["topic_000000000000037F.html","NoteHeader.ResponseOrdinal Property","Gets or sets the response ordinal.\r\nThe ordinal of the response where 0 is a Base Note"];

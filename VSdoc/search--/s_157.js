@@ -1,1 +1,1 @@
-search_result['157']=["topic_0000000000000042.html","AddAccessDlg.selectedUserId Property","Gets or sets the selected user identifier."];
+search_result['157']=["topic_0000000000000067.html","AccessList.CreateNew Method","Add a new token for another user"];

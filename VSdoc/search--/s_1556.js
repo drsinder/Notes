@@ -1,1 +1,1 @@
-search_result['1556']=["topic_00000000000002BA_overloads--.html","Tags.ToString Method","Returns a string that represents this instance."];
+search_result['1556']=["topic_00000000000003FD.html","NotesService.GetServerTime Method","Retrieves the current server time in Coordinated Universal Time (UTC) along with the local time zone offset."];

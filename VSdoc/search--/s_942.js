@@ -1,1 +1,1 @@
-search_result['942']=["topic_0000000000000182.html","NotePanel.PrintString Method","Print a whole string if wholeString is true"];
+search_result['942']=["topic_0000000000000273.html","NotePanel.NavInputHandler Method","collect input and clear EatEnter"];

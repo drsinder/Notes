@@ -1,1 +1,1 @@
-search_result['42']=["topic_0000000000000012.html","SCheckBox Class","Represents a checkbox component that tracks its checked state and file association, and interacts with a tracker\r\nand model for sequencer operations."];
+search_result['42']=["topic_0000000000000019.html","CookieStateAgent.LoginReply Property","Gets or sets the login reply.  Setting also notifies subsrcibers"];

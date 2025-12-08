@@ -1,1 +1,1 @@
-search_result['834']=["topic_000000000000014C_events--.html","Preferences Events",""];
+search_result['834']=["topic_0000000000000226.html","LocalModel2 Class","Class LocalModel2."];

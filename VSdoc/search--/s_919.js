@@ -1,1 +1,1 @@
-search_result['919']=["topic_0000000000000172.html","NotePanel.BodyStyle Property","Body style string"];
+search_result['919']=["topic_000000000000025D.html","NotePanel.EatEnter Property","Should the typing box \"eat\" the next enter key?"];

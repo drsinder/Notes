@@ -1,1 +1,1 @@
-search_result['952']=["topic_0000000000000186_vars--.html","Responses Fields",""];
+search_result['952']=["topic_000000000000027C.html","NotePanel.IAsyncDisposable.DisposeAsync Method","Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources asynchronously."];

@@ -1,1 +1,1 @@
-search_result['732']=["topic_000000000000010E_methods--.html","NoteIndex Methods",""];
+search_result['732']=["topic_00000000000001D2.html","NewNote Constructor","Initializes a new instance of the NewNote class."];

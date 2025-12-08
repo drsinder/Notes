@@ -1,1 +1,1 @@
-search_result['887']=["topic_000000000000015D.html","NoteEditor.Modal Property","For dialogs"];
+search_result['887']=["topic_0000000000000243.html","NoteEditor.Client Property","Gets or sets the client."];

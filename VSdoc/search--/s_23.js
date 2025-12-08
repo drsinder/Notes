@@ -1,1 +1,1 @@
-search_result['23']=["topic_000000000000000A.html","Clock.TimerTick2 Method","Handles the timer\u0027s elapsed event by updating the current time and triggering a UI refresh."];
+search_result['23']=["topic_000000000000000D.html","Clock.mytime Property","Gets or sets the date and time value associated with this instance."];

@@ -1,1 +1,1 @@
-c['756']=[['757',"GetGNotefile Method","topic_000000000000026D.html",0],['758',"GetGNotefileList Method","topic_000000000000026F.html",0],['759',"GetNoteFile Method","topic_000000000000026C.html",0],['760',"GetNoteFiles Method","topic_000000000000026E.html",0]];
+c['756']=[['757',"UserList Constructor","topic_00000000000001A6.html",0],['758',"Properties","topic_00000000000001A2_props--.html",1],['762',"Methods","topic_00000000000001A2_methods--.html",1]];

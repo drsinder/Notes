@@ -1,1 +1,1 @@
-search_result['1005']=["topic_000000000000019E_vars--.html","UserRoles Fields",""];
+search_result['1005']=["topic_00000000000002A1.html","Globals.LocalTimeBlazor Method","GMT to Local."];

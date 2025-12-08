@@ -1,1 +1,1 @@
-search_result['493']=["topic_00000000000000B3_attached_props--.html","UserEdit Attached Properties",""];
+search_result['493']=["topic_000000000000012B.html","YesNo Class","Represents a modal dialog component that displays a yes/no confirmation message."];

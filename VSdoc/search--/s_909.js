@@ -1,1 +1,1 @@
-search_result['909']=["topic_0000000000000168.html","NotePanel.NoteId Property","Gets or sets the unique identifier for the note we are displaying."];
+search_result['909']=["topic_0000000000000253.html","NotePanel.IsMini Property","Should certain functions be suppressed at head and tail of panel"];

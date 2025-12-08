@@ -1,1 +1,1 @@
-search_result['1607']=["topic_00000000000002D2.html","Importer.GetBaseNoteHeader Method","Get the BaseNoteHeader for a NoteContent"];
+search_result['1607']=["topic_0000000000000418.html","NotesService.GetSequencer Method","Retrieves a list of sequencers owned by the current user for which read access is granted."];

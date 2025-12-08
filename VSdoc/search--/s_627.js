@@ -1,1 +1,1 @@
-search_result['627']=["topic_00000000000000EA_attached_props--.html","NotesFilesAdmin Attached Properties",""];
+search_result['627']=["topic_0000000000000188.html","NotesFilesAdmin.files Property","Gets or sets the files."];

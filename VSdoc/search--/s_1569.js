@@ -1,1 +1,1 @@
-search_result['1569']=["topic_00000000000002C1_overloads--.html","Tags.StringToList Method","Strings to list."];
+search_result['1569']=["topic_0000000000000404.html","NotesService.GetAppUser Method","Retrieves the current authenticated application user associated with the specified gRPC call context."];

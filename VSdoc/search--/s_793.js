@@ -1,1 +1,1 @@
-search_result['793']=["topic_0000000000000139.html","Search.Text Property","Gets or sets the text."];
+search_result['793']=["topic_000000000000020A.html","Search.NoteID Property","Gets or sets the note identifier."];

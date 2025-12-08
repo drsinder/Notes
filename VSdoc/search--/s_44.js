@@ -1,1 +1,1 @@
-search_result['44']=["topic_0000000000000012_events--.html","SCheckBox Events",""];
+search_result['44']=["topic_000000000000001B.html","CookieStateAgent.NotifyStateChanged Method","Notifies subscribers of login state change."];

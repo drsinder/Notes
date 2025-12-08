@@ -1,1 +1,1 @@
-search_result['1599']=["topic_00000000000002CF.html","Importer Class","Does the import of a text file from an old plato/novanet system notefile\r\nThere be messy stuff in here!!!"];
+search_result['1599']=["topic_0000000000000414.html","NotesService.AddAccessItem Method","Adds a new access item for a note if the current user has edit permissions."];

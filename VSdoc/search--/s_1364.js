@@ -1,1 +1,1 @@
-search_result['1364']=["topic_000000000000024E_methods--.html","NoteAccess Methods",""];
+search_result['1364']=["topic_000000000000037B.html","NoteHeader.NoteFileId Property","Gets or sets the note file identifier.\r\nThe fileid the note belongs to"];

@@ -1,1 +1,1 @@
-search_result['1601']=["topic_00000000000002CF_events--.html","Importer Events",""];
+search_result['1601']=["topic_0000000000000415.html","NotesService.GetUserData Method","Retrieves user data for the authenticated user associated with the current server call context."];

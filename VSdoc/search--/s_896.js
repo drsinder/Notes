@@ -1,1 +1,1 @@
-search_result['896']=["topic_0000000000000161_props--.html","NotePanel Properties",""];
+search_result['896']=["topic_000000000000024B.html","NoteEditor.CancelEdit Method","Cancel out of editing"];

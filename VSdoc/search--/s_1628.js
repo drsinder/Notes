@@ -1,1 +1,1 @@
-search_result['1628']=["topic_00000000000002DD_methods--.html","EmailSender Methods",""];
+search_result['1628']=["topic_0000000000000422_overloads--.html","NotesService.SendEmailAuth Method","Send email authenticated."];

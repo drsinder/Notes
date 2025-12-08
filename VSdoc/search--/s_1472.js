@@ -1,1 +1,1 @@
-search_result['1472']=["topic_0000000000000294_methods--.html","Search Methods",""];
+search_result['1472']=["topic_00000000000003CD.html","Tags.GetTags Method","Gets the tags."];

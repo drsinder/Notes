@@ -1,1 +1,1 @@
-search_result['80']=["topic_0000000000000020.html","AccessCheckBox Class","Represents a UI component that displays and manages access permissions using a checkbox interface."];
+search_result['80']=["topic_0000000000000030_methods--.html","TrackerMover Methods",""];

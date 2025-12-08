@@ -1,1 +1,1 @@
-search_result['454']=["topic_00000000000000A7_props--.html","PrintDlg Properties",""];
+search_result['454']=["topic_0000000000000111.html","SearchDlg.ModalInstance Property","Gets or sets the modal instance."];

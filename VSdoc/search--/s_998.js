@@ -1,1 +1,1 @@
-search_result['998']=["topic_000000000000019C.html","CookieStateAgent.LoginReply Property","Gets or sets the login reply.  Setting also notifies subsrcibers"];
+search_result['998']=["topic_000000000000029A.html","Globals.AppVirtDir Property",""];

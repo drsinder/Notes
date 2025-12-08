@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>NotesService.GetNoteContent Method</title>
+	<title>NotesDbContext.LinkedFile Property</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,11 +82,11 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">NotesService.GetNoteContent Method</h1>
+		<h1 class="title">NotesDbContext.LinkedFile Property</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000002E1.html">Notes.Services</a>
+<a href="topic_00000000000002EA.html">Notes.Data</a>
 
 
 
@@ -90,8 +97,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
        
        
-        <summary-info>Retrieves the content and metadata of a note specified by the request, including header, body, tags, file
-information, and access permissions.</summary-info>
+        <summary-info>Gets or sets the linked file.</summary-info>
 
 
 
@@ -141,7 +147,7 @@ information, and access permissions.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Authorize()&gt; _&nbsp;<br />Public Overrides Function GetNoteContent( _&nbsp;<br />   ByVal <i>request</i> As <strong>DisplayModelRequest</strong>, _&nbsp;<br />   ByVal <i>context</i> As <strong>ServerCallContext</strong> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>(Of <strong>DisplayModel</strong>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Property LinkedFile() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>(Of <a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +186,7 @@ information, and access permissions.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Authorize()]&nbsp;<br />public override <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>&gt; GetNoteContent(&nbsp;<br />   <strong>DisplayModelRequest</strong> <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong> <i>context</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>&gt; LinkedFile {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +226,7 @@ information, and access permissions.</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Authorize()]&nbsp;<br />public: &nbsp;<br /><a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>^&gt;^ GetNoteContent(&nbsp;<br />   <strong>DisplayModelRequest</strong>^ <i>request</i>,&nbsp;<br />   <strong>ServerCallContext</strong>^ <i>context</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>&gt;^ LinkedFile {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>&gt;^ get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>&gt;^ value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,42 +276,12 @@ information, and access permissions.</summary-info>
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="request" class="parameterList">
-	<dt>
-		<span class="parameter">
-			request
-		</span>
-	</dt>
-	<dd>
-		<strong>DisplayModelRequest</strong> 
-	</dd>
-</dl>
-<p>
-	An object containing the note identifier and version to specify which note content to retrieve. 
-</p>
-<dl paramName="context" class="parameterList">
-	<dt>
-		<span class="parameter">
-			context
-		</span>
-	</dt>
-	<dd>
-		<strong>ServerCallContext</strong> 
-	</dd>
-</dl>
-<p>
-	The server call context for the current gRPC request, used to identify and authorize the user. 
-</p>
-
-<p />
 
 	<h4 class="subHeading">
-		Return Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<strong>DisplayModel</strong>&gt; 
+		Property Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a target="_top" href="topic_0000000000000325.html" onclick="this.target='';return true;">LinkedFile</a>&gt; 
 		<p>
-		A DisplayModel containing the note's header, content, tags, file information, access details, and edit
-permissions. Returns an empty DisplayModel if the user does not have read access to the note. 
+		The linked file. 
 	</p>
 	
 
@@ -329,18 +305,7 @@ permissions. Returns an empty DisplayModel if the user does not have read access
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div>&nbsp;</div>
-	</div>
 
-	<div id="remarksSection" class="section">	
-			Only users with appropriate read access can retrieve note content. Edit permissions
-are granted to administrators and the note's author. The returned model includes information about whether
-the user can edit the note and whether they have administrative privileges.
-	</div>					
-</div>
 
 
 
@@ -369,7 +334,6 @@ the user can edit the note and whether they have administrative privileges.
 
 
 
-
 	
 	
 	
@@ -383,8 +347,8 @@ the user can edit the note and whether they have administrative privileges.
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -407,11 +371,11 @@ the user can edit the note and whether they have administrative privileges.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000002EB.html">NotesService Class</a><br />
+			<a href="topic_00000000000002EB.html">NotesDbContext Class</a><br />
 
 
 
-<a href="topic_00000000000002E1.html">Notes.Services Namespace</a><br />
+<a href="topic_00000000000002EA.html">Notes.Data Namespace</a><br />
 
 
 			

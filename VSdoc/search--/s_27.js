@@ -1,1 +1,1 @@
-search_result['27']=["topic_000000000000000B_methods--.html","FileButton Methods",""];
+search_result['27']=["topic_0000000000000010.html","CookieStateAgent Class","Provides state management and authentication logic for user login using cookies in a Blazor component. Enables\r\nreading, writing, and tracking login information, authentication status, and user roles."];

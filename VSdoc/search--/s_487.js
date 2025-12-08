@@ -1,1 +1,1 @@
-search_result['487']=["topic_00000000000000B0_props--.html","UserEdit Properties",""];
+search_result['487']=["topic_0000000000000126.html","UserEdit.Client Property","Gets or sets the client."];

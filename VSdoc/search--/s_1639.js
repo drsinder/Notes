@@ -1,1 +1,1 @@
-search_result['1639']=["topic_00000000000002E2_events--.html","EmailSender Events",""];
+search_result['1639']=["topic_0000000000000428_overloads--.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];

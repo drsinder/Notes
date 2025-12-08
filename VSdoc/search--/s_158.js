@@ -1,1 +1,1 @@
-search_result['158']=["topic_0000000000000043.html","AddAccessDlg.delay Property","Gets or sets the delay."];
+search_result['158']=["topic_0000000000000068.html","AccessList.ClickHandler Method","Item deleted - refresh list"];

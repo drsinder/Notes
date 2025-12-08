@@ -1,1 +1,1 @@
-search_result['803']=["topic_0000000000000143.html","NoteIndex.SearchTags Method","Searches the tags."];
+search_result['803']=["topic_0000000000000214.html","NoteIndex.NavInputHandler Method","Accumulate input"];

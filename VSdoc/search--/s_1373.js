@@ -1,1 +1,1 @@
-search_result['1373']=["topic_0000000000000255.html","NoteAccess.SetTag Property","Gets or sets a value indicating whether [set tag]."];
+search_result['1373']=["topic_0000000000000384.html","NoteHeader.ResponseCount Property","Gets or sets the response count.\r\nMeaningful only if ResponseOrdinal = 0"];

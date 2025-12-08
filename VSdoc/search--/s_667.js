@@ -1,1 +1,1 @@
-search_result['667']=["topic_00000000000000F9_attached_props--.html","EditNote Attached Properties",""];
+search_result['667']=["topic_00000000000001A9.html","Notes.Client.Pages Namespace","The Notes.Client.Pages namespace contains page components for the Notes client application."];

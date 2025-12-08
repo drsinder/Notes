@@ -1,1 +1,1 @@
-search_result['1641']=["topic_00000000000002E2_props--.html","EmailSender Properties",""];
+search_result['1641']=["topic_0000000000000429_overloads--.html","NotesService.GetExportJson Method","Gets the export json.  Well it\u0027s called json here because it was intended to be used to export a\r\nfile as json.  But the fact is this is a good way to grab every thing the file contains\r\nrelevant to t..."];

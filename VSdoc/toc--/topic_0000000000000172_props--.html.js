@@ -1,0 +1,1 @@
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['456',"Notes.Client.Menus Namespace","topic_0000000000000136.html"],['528',"NoteMenu Class","topic_0000000000000172.html"],['530',"Properties","topic_0000000000000172_props--.html"]];

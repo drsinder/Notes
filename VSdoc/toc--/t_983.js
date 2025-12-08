@@ -1,1 +1,1 @@
-c['983']=[['984',"GetNoteFileIndexData(NoteFileRequest, ServerCallContext) Method","topic_00000000000002F8.html",0]];
+c['983']=[['984',"GetGLinkQueue Method","topic_0000000000000349.html",0],['985',"GetGSequencerList Method","topic_000000000000034B.html",0],['986',"GetLinkQueue Method","topic_0000000000000348.html",0],['987',"GetSequencerList Method","topic_000000000000034A.html",0]];

@@ -1,0 +1,1 @@
+c['687']=[['688',"LocalModel2(string) Constructor","topic_0000000000000227.html",0],['689',"LocalModel2(string, string) Constructor","topic_0000000000000228.html",0]];

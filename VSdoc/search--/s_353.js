@@ -1,1 +1,1 @@
-search_result['353']=["topic_0000000000000086.html","ExportUtil1.OnInitializedAsync Method","On initialized as an asynchronous operation."];
+search_result['353']=["topic_00000000000000DB.html","ExportViewModel Class","Represents the configuration and options for exporting notes from a note file, including format, scope,\r\ndestination, and related metadata."];

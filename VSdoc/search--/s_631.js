@@ -1,1 +1,1 @@
-search_result['631']=["topic_00000000000000EA_vars--.html","NotesFilesAdmin Fields",""];
+search_result['631']=["topic_000000000000018C.html","NotesFilesAdmin.Navigation Property","Gets or sets the navigation."];

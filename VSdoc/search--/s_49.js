@@ -1,1 +1,1 @@
-search_result['49']=["topic_0000000000000014.html","SCheckBox.fileId Property","Gets or sets the file identifier."];
+search_result['49']=["topic_0000000000000020.html","CookieStateAgent.UserInfo Property","Get the decoded user info"];

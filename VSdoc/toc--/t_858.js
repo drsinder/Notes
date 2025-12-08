@@ -1,1 +1,0 @@
-c['858']=[['859',"CreateBaseEntries Method","topic_00000000000002CA.html",0],['860',"GetAccess Method","topic_00000000000002CB.html",0],['861',"GetAccessListForFile Method","topic_00000000000002CD.html",0],['862',"GetOneAccess Method","topic_00000000000002CC.html",0],['863',"TestLinkAccess Method","topic_00000000000002CE.html",0]];

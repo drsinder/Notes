@@ -1,1 +1,1 @@
-search_result['844']=["topic_000000000000014E_props--.html","LocalModel2 Properties",""];
+search_result['844']=["topic_0000000000000229.html","LocalModel2.Psize Property","Gets or sets the psize."];

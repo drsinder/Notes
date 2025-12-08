@@ -1,1 +1,1 @@
-search_result['1307']=["topic_0000000000000231.html","LinkLog.GetGLinkLog Method","Gets the g link log."];
+search_result['1307']=["topic_0000000000000355_attached_props--.html","NoteAccess Attached Properties",""];

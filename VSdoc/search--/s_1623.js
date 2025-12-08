@@ -1,1 +1,1 @@
-search_result['1623']=["topic_00000000000002DB.html","NoteDataManager.NextBaseNoteOrdinal Method","Get next available BaseNoteOrdinal"];
+search_result['1623']=["topic_0000000000000420.html","NotesService.GetHeaderForNoteId Method","Retrieves the header information for the specified note identifier, subject to access permissions."];

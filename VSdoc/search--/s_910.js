@@ -1,1 +1,1 @@
-search_result['910']=["topic_0000000000000169.html","NotePanel.ShowChild Property","Whether or not child windows should be shown.  These might include\r\nResponses, versions, references."];
+search_result['910']=["topic_0000000000000254.html","NotePanel.Vers Property","Are we showing history versions"];

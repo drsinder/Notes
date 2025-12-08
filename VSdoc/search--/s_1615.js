@@ -1,1 +1,1 @@
-search_result['1615']=["topic_00000000000002D5.html","NoteDataManager.CreateNoteFile Method","Create a NoteFile"];
+search_result['1615']=["topic_000000000000041C.html","NotesService.UpdateSequencer Method","Updates the sequencer state for the specified user and note file, setting its active status and relevant\r\ntimestamps."];

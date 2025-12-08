@@ -1,1 +1,1 @@
-search_result['179']=["topic_000000000000004C.html","CodeFormat.message Property","Gets or sets the message."];
+search_result['179']=["topic_0000000000000077.html","CodeFormat Class","Provides functionality for formatting code snippets and managing code format options within a modal dialog\r\ncomponent."];

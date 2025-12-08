@@ -1,1 +1,1 @@
-search_result['619']=["topic_00000000000000E7_attached_props--.html","NotesFilesAdmin Attached Properties",""];
+search_result['619']=["topic_0000000000000185.html","Notes.Client.Pages.Admin Namespace","The notes client.Pages.Admin namespace Contains admin page components for the Notes application."];

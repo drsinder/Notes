@@ -1,1 +1,1 @@
-search_result['880']=["topic_000000000000015C.html","NoteEditor Class","Editor for notes\r\nHas a fields for:\r\nSubject, Tags, Director Message, and the Note Body"];
+search_result['880']=["topic_000000000000023C.html","NoteEditor.Model Property","The data model used"];

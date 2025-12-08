@@ -1,1 +1,1 @@
-search_result['1143']=["topic_00000000000001DA_attached_props--.html","BodySearch Attached Properties",""];
+search_result['1143']=["topic_00000000000002E4.html","PolicyNotes Class","A base class inherited by each EF Core migration."];

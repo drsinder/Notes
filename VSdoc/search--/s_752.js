@@ -1,1 +1,1 @@
-search_result['752']=["topic_000000000000011A.html","NoteIndex.sfTextBox Property","Our direct navigation typin box"];
+search_result['752']=["topic_00000000000001E0.html","NoteIndex.CurPage Property","Current page of grid"];

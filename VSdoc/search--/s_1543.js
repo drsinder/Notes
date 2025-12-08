@@ -1,1 +1,1 @@
-search_result['1543']=["topic_00000000000002B5_attached_props--.html","Subscription Attached Properties",""];
+search_result['1543']=["topic_00000000000003FA.html","LocalService Class","Provides functionality to generate formatted note content for email forwarding within the Notes 2026 system."];

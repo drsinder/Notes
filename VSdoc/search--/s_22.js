@@ -1,1 +1,1 @@
-search_result['22']=["topic_0000000000000009_overloads--.html","Clock.OnAfterRender Method","Handles post-render logic for the component, initializing resources when rendering for the first time."];
+search_result['22']=["topic_000000000000000C.html","Clock.timer2 Property","Gets or sets the timer used for scheduled operations."];

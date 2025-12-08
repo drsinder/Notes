@@ -1,1 +1,1 @@
-search_result['1649']=["topic_00000000000002E4_overloads--.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];
+search_result['1649']=["topic_000000000000042D_overloads--.html","NotesService.GetNoteCount Method","Retrieves the number of notes in the specified note file and archive that are not deleted and are not\r\nresponses."];

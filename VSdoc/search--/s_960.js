@@ -1,1 +1,1 @@
-search_result['960']=["topic_0000000000000189_vars--.html","Versions Fields",""];
+search_result['960']=["topic_000000000000027F.html","Responses.ShowContentR Property","Show content for responses"];

@@ -1,1 +1,1 @@
-search_result['1484']=["topic_000000000000029A_props--.html","Sequencer Properties",""];
+search_result['1484']=["topic_00000000000003D4.html","AccessManager.CreateBaseEntries Method","Create standard starting entires for a access controls for a new file.\r\n\"Other\" -- no access\r\ncreating user (Admin) -- Full Access"];

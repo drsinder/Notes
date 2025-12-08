@@ -1,1 +1,1 @@
-search_result['1502']=["topic_00000000000002A5_attached_props--.html","SQLFile Attached Properties",""];
+search_result['1502']=["topic_00000000000003E4.html","NoteDataManager Class","Provides static methods for creating, retrieving, editing, and deleting note files and notes within the\r\napplication database."];

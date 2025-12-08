@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="GENERATOR" content="VSdocman - documentation generator; https://www.helixoft.com" />
 	<link rel="icon" href="favicon.ico">
-	<title>Sequencer.NoteFileId Property</title>
+	<title>Globals.LocalTimeBlazor Method</title>
 
-	<link rel="stylesheet" type="text/css" href="msdn2019/toc.css" />
-	<script src="msdn2019/toc.js"></script>
-	<link rel="stylesheet" type="text/css" href="msdn2019/msdn2019.css">
-	<script src="msdn2019/msdn2019.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/toc.css" />
+	<script src="html2025/toc.js"></script>
+	<link rel="stylesheet" type="text/css" href="html2025/html_2025.css">
+	<script src="html2025/html_2025.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
@@ -57,7 +57,13 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 
   	
   	<hr />
-	<div id="header-breadcrumbs"></div>
+	<div id="header-breadcrumbs">
+		<button id="toc-hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
 	<div id="headerLinks">
 	</div>
 		<hr />
@@ -65,6 +71,7 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
 <!--HEADER END-->
 		<div id="mainSection">
 		
+		<div id="toc-area-overlay"></div>
   <div id="toc-area">
    <div id="toc-container" class="stickthis full-height">
     <div id="-1"></div>
@@ -75,23 +82,22 @@ document.write(getCssCustomProperty('--headerTopCustomLineHtml'));
   </div>
 
 <div id="mainBody">
-		<h1 class="title">Sequencer.NoteFileId Property</h1>
+		<h1 class="title">Globals.LocalTimeBlazor Method</h1>
         
 		<div class="metadata">
         Namespace:
-<a href="topic_00000000000001F6.html">Notes.Entities</a>
+<a href="topic_000000000000028F.html">Notes.Client</a>
 
 
 
 
-        <br />Assembly: Notes (in Notes.dll)
+        <br />Assembly: Notes.Client (in Notes.Client.dll)
 
 		</div>
 
        
        
-        <summary-info>Gets or sets the note file identifier.
-ID of target notfile</summary-info>
+        <summary-info>GMT to Local.</summary-info>
 
 
 
@@ -141,7 +147,7 @@ ID of target notfile</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">&lt;Required()&gt; _&nbsp;<br />&lt;Column(Order = 1)&gt; _&nbsp;<br />&lt;DataMember(Order = 2)&gt; _&nbsp;<br />Public Property NoteFileId() As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">Integer</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Shared Function LocalTimeBlazor( _&nbsp;<br />   ByVal <i>dt</i> As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">Date</a> _&nbsp;<br />) As <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">Date</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -180,7 +186,7 @@ ID of target notfile</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">[Required()]&nbsp;<br />[Column(Order = 1)]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {get; set;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp">public static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> LocalTimeBlazor(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> <i>dt</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -220,7 +226,7 @@ ID of target notfile</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">[Required()]&nbsp;<br />[Column(Order = 1)]&nbsp;<br />[DataMember(Order = 2)]&nbsp;<br />public: &nbsp;<br />property <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> NoteFileId {&nbsp;<br /> <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> value&nbsp;<br /> );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />static <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> LocalTimeBlazor(&nbsp;<br />   <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> <i>dt</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -259,7 +265,7 @@ ID of target notfile</summary-info>
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   Required()&nbsp;<br />   Column(Order = 1)&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function get NoteFileId() : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>;&nbsp;<br />public &nbsp;<br />   Required()&nbsp;<br />   Column(Order = 1)&nbsp;<br />   DataMember(Order = 2)&nbsp;<br />function set NoteFileId(value : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a>);</pre>			
+					<pre xml:space="preserve" class="brush: js">public static function LocalTimeBlazor(&nbsp;<br />    <i>dt</i> : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>&nbsp;<br />) : <a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -270,12 +276,28 @@ ID of target notfile</summary-info>
 	</div>
 
 
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="dt" class="parameterList">
+	<dt>
+		<span class="parameter">
+			dt
+		</span>
+	</dt>
+	<dd>
+		<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> 
+	</dd>
+</dl>
+<p>
+	The dt. 
+</p>
+
+<p />
 
 	<h4 class="subHeading">
-		Property Value</h4>
-	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32">int</a> 
+		Return Value</h4>
+	<a target="_top" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> 
 		<p>
-		The note file identifier. 
+		DateTime. 
 	</p>
 	
 
@@ -322,6 +344,7 @@ ID of target notfile</summary-info>
 
   
 
+  
 
 
 
@@ -343,6 +366,7 @@ ID of target notfile</summary-info>
 	<div id="frameworksSection" class="section">	
   <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8<br />
 
+  <h4 class="subHeading">.NET Core</h4>Supported in: 10.0<br />
 
 
 
@@ -365,11 +389,11 @@ ID of target notfile</summary-info>
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_000000000000029F.html">Sequencer Class</a><br />
+			<a href="topic_0000000000000290.html">Globals Class</a><br />
 
 
 
-<a href="topic_00000000000001F6.html">Notes.Entities Namespace</a><br />
+<a href="topic_000000000000028F.html">Notes.Client Namespace</a><br />
 
 
 			

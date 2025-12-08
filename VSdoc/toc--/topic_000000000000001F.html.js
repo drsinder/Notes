@@ -1,1 +1,1 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_000000000000031B.html"],['91',"Notes.Client.Dialogs Namespace","topic_000000000000001F.html"]];
+var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['64',"Notes.Client.Comp Namespace","topic_0000000000000009.html"],['74',"CookieStateAgent Class","topic_0000000000000010.html"],['75',"Properties","topic_0000000000000010_props--.html"],['76',"AuthHeader Property","topic_000000000000001F.html"]];

@@ -1,1 +1,1 @@
-search_result['416']=["topic_000000000000009D_methods--.html","HelpDialog2 Methods",""];
+search_result['416']=["topic_00000000000000FB.html","MessageBox.ModalInstance Property","Gets or sets the modal instance."];

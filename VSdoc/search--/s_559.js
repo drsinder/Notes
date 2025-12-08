@@ -1,1 +1,1 @@
-search_result['559']=["topic_00000000000000CD_overloads--.html","LoginDisplay.OnAfterRender Method","Method invoked after each time the component has rendered interactively and the UI has finished\r\n             updating (for example, after elements have been added to the browser DOM). Any ElementRefe..."];
+search_result['559']=["topic_0000000000000157.html","LoginDisplay.OnAfterRender Method","Delays the rendering of the component to allow other components to load first."];

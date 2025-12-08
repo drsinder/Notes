@@ -1,1 +1,1 @@
-search_result['1532']=["topic_00000000000002B0_vars--.html","Subscription Fields",""];
+search_result['1532']=["topic_00000000000003F5.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];

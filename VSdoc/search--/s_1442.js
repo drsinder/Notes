@@ -1,1 +1,1 @@
-search_result['1442']=["topic_000000000000027C.html","NoteHeader.AuthorID Property","Gets or sets the author identifier."];
+search_result['1442']=["topic_00000000000003BC.html","SQLFileContent.SQLFile Property","Gets or sets the SQL file."];

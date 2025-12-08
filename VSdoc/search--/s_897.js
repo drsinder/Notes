@@ -1,1 +1,1 @@
-search_result['897']=["topic_0000000000000161_vars--.html","NotePanel Fields",""];
+search_result['897']=["topic_000000000000024C.html","NotePanel Class","Represents a panel for displaying and interacting with notes, including support for responses, navigation, and\r\nvarious display modes within a note management application."];
