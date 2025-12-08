@@ -22,6 +22,7 @@
     **--------------------------------------------------------------------------*/
 
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using Notes.Protos;
 using Syncfusion.Blazor.DropDowns;
 
@@ -47,6 +48,8 @@ namespace Notes.Client.Pages
         [Inject] 
         NotesServer.NotesServerClient NotesClient { get; set; } = null!;
 
+        [Inject] IJSRuntime JS { get; set; }    // enables calling javascript
+
         /// <summary>
         /// Gets or sets the file name to be used when directly entering file.
         /// </summary>
@@ -56,6 +59,8 @@ namespace Notes.Client.Pages
         /// Gets or sets the ordinal position used to determine note file entry behavior.
         /// </summary>
         [Parameter] public long Ordinal { get; set; } = 0;
+
+        private IJSObjectReference? module;
 
         /// <summary>
         /// Gets or sets the data model for the home page.
@@ -124,9 +129,23 @@ namespace Notes.Client.Pages
         /// </summary>
         /// <param name="firstRender">Indicates whether this is the first time the component has rendered. <see langword="true"/> if this is the
         /// initial render; otherwise, <see langword="false"/>.</param>
-        protected override void OnAfterRender(bool firstRender)
+        protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             initDone = true;    // we can now show the full UI
+
+            if (firstRender)    // load the prism script
+            {
+                module = await JS.InvokeAsync<IJSObjectReference>("import",
+                    "./prism.min.js");
+            }
+            else
+            {
+                if (module != null)
+                {
+                    await module.InvokeVoidAsync("doPrism", "x");
+                }
+            }
+
         }
 
         /// <summary>

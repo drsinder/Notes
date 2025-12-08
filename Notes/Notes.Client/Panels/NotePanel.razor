@@ -117,10 +117,10 @@
                         @if (model is not null && model.Header.ResponseOrdinal == 0)
                         {
                             <SfButton @onclick="OnPrintString" class="printbutton">Print String</SfButton>
-                        }
-                        if (model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
-                        {
-                            <SfButton @onclick="OnSetPolicy" class="donebutton">Set Policy</SfButton>
+                            if (model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
+                            {
+                                <SfButton @onclick="OnSetPolicy" class="donebutton">Set Policy</SfButton>
+                            }
                         }
                     }
                 }
