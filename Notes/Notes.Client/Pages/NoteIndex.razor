@@ -74,10 +74,11 @@ else                    @*    Index mode        *@
                             Show Response Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContentR"></SfSwitch>&nbsp;
                             @if (Model.NoteFile.PolicyId > 0)
                             {
-                                <SfButton @onclick="SeePolicy" CssClass="e-primary">See Policy Note</SfButton>
-                                if (Model.NoteFile.OwnerId == Model.UserData.Id)
+                                <span class="policy-button"><SfButton @onclick="SeePolicy" CssClass="e-primary">See Policy Note</SfButton></span>
+                                if (Model.MyAccess.EditAccess ||  Model.NoteFile.OwnerId == Model.UserData.Id)
                                 {
-                                    <SfButton @onclick="RemovePolicy" CssClass="e-primary">&nbsp;Remove Policy</SfButton>
+                                    <span class="policy-button">
+                                        <SfButton @onclick="RemovePolicy" CssClass="e-primary">&nbsp;Remove Policy</SfButton></span>
                                 }
                             }
                         </div>
@@ -220,6 +221,12 @@ else                    @*    Index mode        *@
         font-weight: bold;
         background-color: black !important;
         color: white !important;
+    }
+
+    .policy-button
+    {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 </style>
 
