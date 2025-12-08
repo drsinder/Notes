@@ -458,6 +458,26 @@ namespace Notes.Services
             return noteFile;
         }
 
+        [Authorize]
+        public override async Task<GNotefile> ClearNoteFilePolicy(GNotefile noteFile, ServerCallContext context)
+        {
+            NoteFile nf = await NoteDataManager.GetFileById(_db, noteFile.Id);
+            nf.PolicyId = 0;
+            _db.NoteFile.Update(nf);
+            await _db.SaveChangesAsync();
+            return noteFile;
+        }
+
+        [Authorize]
+        public override async Task<GNotefile> SetNoteFilePolicy(GNotefile noteFile, ServerCallContext context)
+        {
+            NoteFile nf = await NoteDataManager.GetFileById(_db, noteFile.Id);
+            nf.PolicyId = noteFile.PolicyId;
+            _db.NoteFile.Update(nf);
+            await _db.SaveChangesAsync();
+            return noteFile;
+        }
+
         /// <summary>
         /// Deletes the specified note file and all associated data from the database.
         /// </summary>
@@ -597,7 +617,9 @@ namespace Notes.Services
 
                         List<NoteHeader> allhead = await _db.NoteHeader
                             .Where(p => p.NoteFileId == request.NoteFileId 
-                                && p.ArchiveId == arcId).ToListAsync(); // await NoteDataManager.GetAllHeaders(_db, request.NoteFileId, arcId);
+                                && p.ArchiveId == arcId
+                                && p.Id != idxModel.NoteFile.PolicyId
+                                ).ToListAsync(); // await NoteDataManager.GetAllHeaders(_db, request.NoteFileId, arcId);
                         idxModel.AllNotes = NoteHeader.GetGNoteHeaderList(allhead);
 
                         List<NoteHeader> notes = [.. allhead.FindAll(p => p.ResponseOrdinal == 0).OrderBy(p => p.NoteOrdinal)];
@@ -611,6 +633,11 @@ namespace Notes.Services
                         idxModel.Tags = Tags.GetGTagsList(tags);
 
                         idxModel.ArcId = arcId;
+
+                        if (idxModel.NoteFile.PolicyId > 0)
+                        {
+                            idxModel.Policy = notes.FirstOrDefault(p => p.Id == idxModel.NoteFile.PolicyId)?.GetGNoteHeader();
+                        }
                     }
                     catch (Exception ex1)
                     {

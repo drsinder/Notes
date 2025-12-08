@@ -804,6 +804,25 @@ namespace Notes.Client.Panels
             }
         }
 
+        private async Task OnSetPolicy(MouseEventArgs args)
+        {
+            try
+            {
+                _ = await Client.ClearNoteFilePolicyAsync(model.NoteFile, myState.AuthHeader);
+            }
+            finally
+            {
+                try { 
+                    model.NoteFile.PolicyId = model.Header.Id;
+                    _ = await Client.SetNoteFilePolicyAsync(model.NoteFile, myState.AuthHeader);
+                }
+                catch (Exception ex)
+                {
+                    ShowMessage("Error setting policy: " + ex.Message);
+                }
+            }
+        }
+
         /// <summary>
         /// Shows the message.
         /// </summary>

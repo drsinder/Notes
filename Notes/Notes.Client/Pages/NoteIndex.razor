@@ -71,7 +71,15 @@ else                    @*    Index mode        *@
                         <ListMenu Model=@Model Caller="@this" @ref="@MyMenu"></ListMenu>
                         <div>
                             &nbsp;Show Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContent"></SfSwitch>&nbsp;
-                        Show Response Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContentR"></SfSwitch>&nbsp;
+                            Show Response Content on Expand&nbsp; <SfSwitch @bind-Checked="@ShowContentR"></SfSwitch>&nbsp;
+                            @if (Model.NoteFile.PolicyId > 0)
+                            {
+                                <SfButton @onclick="SeePolicy" CssClass="e-primary">See Policy Note</SfButton>
+                                if (Model.NoteFile.OwnerId == Model.UserData.Id)
+                                {
+                                    <SfButton @onclick="RemovePolicy" CssClass="e-primary">&nbsp;Remove Policy</SfButton>
+                                }
+                            }
                         </div>
                         <SfGrid @ref="@sfGrid1" DataSource="@Model.Notes.List" AllowPaging="true" 
                             AllowSelection="true" EnableHover="true" AllowSorting="true" AllowFiltering="true"

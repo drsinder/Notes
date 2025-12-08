@@ -30,6 +30,8 @@ service NotesServer {
 	rpc UpdateUserRoles(EditUserViewModel) returns (RequestStatus);		// updates roles for a user
 	rpc CreateNoteFile(GNotefile) returns (GNotefile);					// create a note file
 	rpc UpdateNoteFile(GNotefile) returns (GNotefile);					// updates note file data
+	rpc ClearNoteFilePolicy(GNotefile) returns (GNotefile);				// updates note file data
+	rpc SetNoteFilePolicy(GNotefile) returns (GNotefile);				// updates note file data
 	rpc DeleteNoteFile(GNotefile) returns (RequestStatus);				// deletes a note file
 //	rpc Import(ImportRequest) returns (NoRequest);						// runs an import given server side file name
 	rpc Import(ImportRequest) returns (RequestStatus);					// runs an import given client side file contents as btye[]

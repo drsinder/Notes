@@ -84,7 +84,9 @@ namespace Notes.Client.Dialogs
         /// </summary>
         private async Task HandleValidSubmit()
         {
-            GNotefile nf = new() { Id = FileId, NumberArchives = NumberArchives, OwnerId = Owner, NoteFileName = dummyFile.NoteFileName, NoteFileTitle = dummyFile.NoteFileTitle, LastEdited = LastEdited };
+            GNotefile nf = new() { Id = FileId, NumberArchives = NumberArchives, 
+                OwnerId = Owner, NoteFileName = dummyFile.NoteFileName,
+                NoteFileTitle = dummyFile.NoteFileTitle, LastEdited = LastEdited };
             await Client.UpdateNoteFileAsync(nf, myState.AuthHeader);
             await ModalInstance.CloseAsync();
         }

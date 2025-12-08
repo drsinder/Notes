@@ -246,6 +246,25 @@ namespace Notes.Client.Pages
             StateHasChanged();
         }
 
+        protected void SeePolicy(MouseEventArgs args)
+        {
+            CurrentNoteId = Model.NoteFile.PolicyId;
+            StateHasChanged();
+        }
+
+        protected async Task RemovePolicy(MouseEventArgs args)
+        {
+            try
+            {
+                _ = await Client.ClearNoteFilePolicyAsync(Model.NoteFile, myState.AuthHeader);
+            }
+            finally
+            {
+            
+            }
+        }
+
+
         public async Task PageChanged (GridPageChangedEventArgs args)
         {
             PageSize = args.CurrentPageSize;

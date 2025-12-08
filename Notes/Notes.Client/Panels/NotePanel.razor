@@ -118,7 +118,10 @@
                         {
                             <SfButton @onclick="OnPrintString" class="printbutton">Print String</SfButton>
                         }
-
+                        if (model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
+                        {
+                            <SfButton @onclick="OnSetPolicy" class="donebutton">Set Policy</SfButton>
+                        }
                     }
                 }
             </div>
