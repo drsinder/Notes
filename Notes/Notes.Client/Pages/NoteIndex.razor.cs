@@ -69,7 +69,7 @@ namespace Notes.Client.Pages
         /// Reference to the menu so we can talk to it.
         /// </summary>
         /// <value>My menu.</value>
-        protected ListMenu? MyMenu { get; set; }
+        public ListMenu? MyMenu { get; set; }
 
         public NotePanel? MyNotePanel { get; set; }
 
@@ -260,7 +260,7 @@ namespace Notes.Client.Pages
             }
             finally
             {
-            
+                await MyMenu.ExecMenu("ReloadIndex");
             }
         }
 

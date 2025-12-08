@@ -820,6 +820,8 @@ namespace Notes.Client.Panels
                 {
                     ShowMessage("Error setting policy: " + ex.Message);
                 }
+                await MyNoteIndex.MyMenu.ExecMenu("ReloadIndex");
+
             }
         }
 
