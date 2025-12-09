@@ -168,13 +168,13 @@ namespace Notes.Client.Dialogs
         //                sb.AppendLine("<title>" + nf.NoteFileTitle + "</title>");
 
         //                sb.AppendLine("<link rel = \"stylesheet\" href = \"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">");
-        //                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2022/NotesExport.css\" rel=\"stylesheet\" />");
-        //                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2022/prism.css\" rel=\"stylesheet\" />");
+        //                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2026/NotesExport.css\" rel=\"stylesheet\" />");
+        //                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2026/prism.css\" rel=\"stylesheet\" />");
 
 
         //                sb.AppendLine("<script src = \"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\" ></script >");
         //                sb.AppendLine("<script src = \"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" ></script >");
-        //                sb.AppendLine("<script src = \"https://www.drsinder.com/NotesStuff/Notes2022/prism.min.js\" ></script >");
+        //                sb.AppendLine("<script src = \"https://www.drsinder.com/NotesStuff/Notes2026/prism.min.js\" ></script >");
 
         //                sb.AppendLine("</head>");
         //                sb.AppendLine("<body><div>");
@@ -335,13 +335,13 @@ namespace Notes.Client.Dialogs
                 sb.AppendLine("<title>" + nf.NoteFileTitle + "</title>");
 
                 sb.AppendLine("<link rel = \"stylesheet\" href = \"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">");
-                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2022/NotesExport.css\" rel=\"stylesheet\" />");
-                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2022/prism.css\" rel=\"stylesheet\" />");
+                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2026/NotesExport.css\" rel=\"stylesheet\" />");
+                sb.AppendLine("<link href=\"https://www.drsinder.com/NotesStuff/Notes2026/prism.css\" rel=\"stylesheet\" />");
 
 
                 sb.AppendLine("<script src = \"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\" ></script >");
                 sb.AppendLine("<script src = \"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" ></script >");
-                sb.AppendLine("<script src = \"https://www.drsinder.com/NotesStuff/Notes2022/prism.min.js\" ></script >");
+                sb.AppendLine("<script src = \"https://www.drsinder.com/NotesStuff/Notes2026/prism.min.js\" ></script >");
 
                 sb.AppendLine("</head>");
                 sb.AppendLine("<body><div>");
