@@ -458,6 +458,14 @@ namespace Notes.Services
             return noteFile;
         }
 
+        /// <summary>
+        /// Removes the policy association from the specified note file.
+        /// </summary>
+        /// <remarks>After calling this method, the note file will no longer be associated with any
+        /// policy. This operation requires authorization.</remarks>
+        /// <param name="noteFile">The note file for which the policy association will be cleared. Must contain a valid identifier.</param>
+        /// <param name="context">The server call context for the current request.</param>
+        /// <returns>A <see cref="GNotefile"/> representing the note file after its policy association has been removed.</returns>
         [Authorize]
         public override async Task<GNotefile> ClearNoteFilePolicy(GNotefile noteFile, ServerCallContext context)
         {
@@ -468,6 +476,17 @@ namespace Notes.Services
             return noteFile;
         }
 
+        /// <summary>
+        /// Updates the policy associated with the specified note file and persists the change to the database.
+        /// </summary>
+        /// <remarks>Requires authorization. The note file must exist in the database; otherwise, an error
+        /// may occur.</remarks>
+        /// <param name="noteFile">The note file containing the updated policy information. The <see cref="GNotefile.Id"/> property identifies
+        /// the note file to update, and the <see cref="GNotefile.PolicyId"/> property specifies the new policy to
+        /// assign.</param>
+        /// <param name="context">The server call context for the current gRPC request. Provides information about the call, such as user
+        /// identity and cancellation tokens.</param>
+        /// <returns>A <see cref="GNotefile"/> representing the note file with the updated policy information.</returns>
         [Authorize]
         public override async Task<GNotefile> SetNoteFilePolicy(GNotefile noteFile, ServerCallContext context)
         {
