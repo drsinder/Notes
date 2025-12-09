@@ -132,6 +132,7 @@ button {
 
 .index-background-class {
     background-image: url("https://www.drsinder.com/NotesStuff/Notes2026/Images/index-bgnd.jpg");
+    background-size: 100% 100%;
     min-height: 100%;
 }
 
