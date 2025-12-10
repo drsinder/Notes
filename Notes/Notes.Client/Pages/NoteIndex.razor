@@ -75,11 +75,12 @@ else                    @*    Index mode        *@
                             @if (Model.NoteFile.PolicyId > 0)
                             {
                                 <span class="policy-button"><SfButton @onclick="SeePolicy" CssClass="e-primary">See Policy Note</SfButton></span>
-                                if (Model.MyAccess.EditAccess ||  Model.NoteFile.OwnerId == Model.UserData.Id)
+                           @*     if (Model.MyAccess.EditAccess ||  Model.NoteFile.OwnerId == Model.UserData.Id)
                                 {
                                     <span class="policy-button">
                                         <SfButton @onclick="RemovePolicy" CssClass="e-primary">&nbsp;Remove Policy</SfButton></span>
                                 }
+                            *@
                             }
                         </div>
                         <SfGrid @ref="@sfGrid1" DataSource="@Model.Notes.List" AllowPaging="true" 

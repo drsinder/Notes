@@ -117,9 +117,20 @@
                         @if (model is not null && model.Header.ResponseOrdinal == 0)
                         {
                             <SfButton @onclick="OnPrintString" class="printbutton">Print String</SfButton>
-                            if (model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
+                            if ((model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id) 
+                                && model.NoteFile.PolicyId == 0)
                             {
                                 <SfButton @onclick="OnSetPolicy" class="donebutton">Set Policy</SfButton>
+                            }
+                            if (model.NoteFile.PolicyId != 0) 
+                            {
+                                if (model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
+                                {
+                                    <span class="policy-button">
+                                        <SfButton @onclick="RemovePolicy" CssClass="e-primary">&nbsp;Remove Policy</SfButton>
+                                    </span>
+                                }
+
                             }
                         }
                     }

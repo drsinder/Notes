@@ -251,7 +251,7 @@ namespace Notes.Client.Pages
             CurrentNoteId = Model.NoteFile.PolicyId;
             StateHasChanged();
         }
-
+        /*
         protected async Task RemovePolicy(MouseEventArgs args)
         {
             try
@@ -263,7 +263,7 @@ namespace Notes.Client.Pages
                 await MyMenu.ExecMenu("ReloadIndex");
             }
         }
-
+        */
 
         public async Task PageChanged (GridPageChangedEventArgs args)
         {

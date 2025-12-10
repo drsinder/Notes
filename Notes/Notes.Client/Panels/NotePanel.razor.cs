@@ -825,6 +825,19 @@ namespace Notes.Client.Panels
             }
         }
 
+        protected async Task RemovePolicy(MouseEventArgs args)
+        {
+            try
+            {
+                _ = await Client.ClearNoteFilePolicyAsync(model.NoteFile, myState.AuthHeader);
+            }
+            finally
+            {
+                await MyNoteIndex.MyMenu.ExecMenu("ReloadIndex");
+            }
+        }
+
+
         /// <summary>
         /// Shows the message.
         /// </summary>
