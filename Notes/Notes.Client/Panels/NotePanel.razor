@@ -122,7 +122,7 @@
                             {
                                 <SfButton @onclick="OnSetPolicy" class="donebutton">Set Policy</SfButton>
                             }
-                            if (model.NoteFile.PolicyId != 0) 
+                            if (model.NoteFile.PolicyId == NoteId) 
                             {
                                 if (model.Access.EditAccess || model.NoteFile.OwnerId == MyNoteIndex.Model.UserData.Id)
                                 {
