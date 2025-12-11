@@ -161,6 +161,23 @@ namespace Notes.Client.Pages
         /// <returns>A Task representing the asynchronous operation.</returns>
         protected override async Task OnParametersSetAsync()
         {
+            await base.OnParametersSetAsync();
+
+            await GetData();
+        }
+
+        /// <summary>
+        /// Initializes or restores the state of the notefile index page, including authentication, user preferences,
+        /// and navigation context.
+        /// </summary>
+        /// <remarks>This method ensures the user is authenticated before loading notefile data and user
+        /// preferences. It resets relevant session storage items and restores the current page and note selection based
+        /// on session and global state. If authentication is required, the user is redirected to the login page. Any
+        /// exceptions encountered during execution are captured and reflected in the model's message
+        /// property.</remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
+        private async Task GetData()
+        {
             try
             {
                 if (!myState.IsAuthenticated)
@@ -213,10 +230,10 @@ namespace Notes.Client.Pages
                 if (NoteOrdinal > 0)
                 {
                     GNoteHeader? target = Model.AllNotes.List
-                        .FirstOrDefault(e => e.NoteOrdinal == NoteOrdinal 
-                            && e.ResponseOrdinal == 0 
+                        .FirstOrDefault(e => e.NoteOrdinal == NoteOrdinal
+                            && e.ResponseOrdinal == 0
                             && e.Version == 0 && !e.IsDeleted);
-            
+
                     NoteOrdinal = 0;
                     if (target is not null)
                         CurrentNoteId = target.Id; // set to view this note
@@ -232,6 +249,8 @@ namespace Notes.Client.Pages
                 if (ex.InnerException != null)
                     Model.Message += ":  " + ex.InnerException.Message;
             }
+
+
         }
 
         /// <summary>
