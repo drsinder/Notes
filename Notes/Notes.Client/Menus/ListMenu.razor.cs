@@ -166,7 +166,10 @@ namespace Notes.Client.Menus
                     break;
 
                 case "ReloadIndex": // only a direct type in
-                    Navigation.NavigateTo("enter/" + Model.NoteFile.NoteFileName, true);
+                    //Navigation.NavigateTo("enter/" + Model.NoteFile.NoteFileName, true);
+
+                    await Caller.GetData();
+                    await Caller.ChangeState();
                     break;
 
                 case "NewBaseNote":

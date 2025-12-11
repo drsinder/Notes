@@ -176,7 +176,7 @@ namespace Notes.Client.Pages
         /// exceptions encountered during execution are captured and reflected in the model's message
         /// property.</remarks>
         /// <returns>A task that represents the asynchronous operation.</returns>
-        private async Task GetData()
+        public async Task GetData()
         {
             try
             {
@@ -268,6 +268,11 @@ namespace Notes.Client.Pages
         protected void SeePolicy(MouseEventArgs args)
         {
             CurrentNoteId = Model.NoteFile.PolicyId;
+            StateHasChanged();
+        }
+
+        public async Task ChangeState()
+        {
             StateHasChanged();
         }
         /*
