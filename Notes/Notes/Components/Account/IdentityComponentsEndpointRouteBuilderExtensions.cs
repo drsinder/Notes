@@ -50,8 +50,8 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
         {
             await signInManager.SignOutAsync();
             //            context.Response.Cookies.Delete(Globals.CookieName);
-            //            return TypedResults.LocalRedirect($"~/{returnUrl}");
-            return TypedResults.LocalRedirect($"~/delete-cookie");
+            return TypedResults.LocalRedirect($"~/{returnUrl}");
+            //return TypedResults.LocalRedirect($"~/delete-cookie");
         });
 
         accountGroup.MapPost("/PasskeyCreationOptions", async (
