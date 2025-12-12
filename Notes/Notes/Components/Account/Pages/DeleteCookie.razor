@@ -11,7 +11,7 @@
 
     protected override void OnParametersSet()   
     { 
-        HttpContext.Response.Cookies.Delete(Globals.CookieName);
+        HttpContext.Response.Cookies.Delete(Globals.CookieName + Navigation.BaseUri.Replace(":", "").Replace("/", ""));
         Navigation.NavigateTo("");
     }
 }

@@ -209,21 +209,11 @@
         };
 
         LoginReply ret = new() { Status = StatusCodes.Status200OK, Message = "Login successful.", Info = userInfo, Jwt = stoken, Hours = ExpHours };
-        string? enc = Globals.CookieName + "=" + Globals.Base64Encode(JsonSerializer.Serialize(ret));
+        string? enc = Globals.CookieName + NavigationManager.BaseUri.Replace(":", "").Replace("/", "")
+            + "=" + Globals.Base64Encode(JsonSerializer.Serialize(ret));
 
-        /*
-        HttpContext.Response.Headers.Remove("Set-Cookie");
-
-        DateTime dt = DateTime.UtcNow.AddHours(ExpHours);
-        string exp = dt.ToString("r");
-        string suffix = $"; expires={exp}; path=/; secure; samesite=lax";
-        Metadata md = new()
-                {
-                    { "Set-Cookie", enc + suffix }
-                };
-        await context.WriteResponseHeadersAsync(md);
-        */
-        HttpContext.Response.Cookies.Append(Globals.CookieName, Globals.Base64Encode(JsonSerializer.Serialize(ret)), new CookieOptions
+        HttpContext.Response.Cookies.Append(Globals.CookieName + NavigationManager.BaseUri.Replace(":", "").Replace("/", "")
+            , Globals.Base64Encode(JsonSerializer.Serialize(ret)), new CookieOptions
         {
             Expires = DateTimeOffset.UtcNow.AddHours(ExpHours),
             Path = "/",

@@ -152,7 +152,7 @@ Globals.SendGridApiKey = builder.Configuration["SendGridApiKey"];
 Globals.SendGridEmail = builder.Configuration["SendGridEmail"];
 Globals.SendGridName = builder.Configuration["SendGridName"];
 Globals.ImportRoot = builder.Configuration["ImportRoot"];
-Globals.CookieName = builder.Configuration["CookieName"];
+//Globals.CookieName = builder.Configuration["CookieName"];
 Globals.ImportMailInterval = int.Parse(builder.Configuration["ImportMailInterval"]);
 Globals.AppUrl = (builder.Configuration["AppUrl"]);
 

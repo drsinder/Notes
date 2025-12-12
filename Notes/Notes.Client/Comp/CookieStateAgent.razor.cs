@@ -89,7 +89,7 @@ namespace Notes.Client.Comp
                     if (module is null)
                         module = await JS.InvokeAsync<IJSObjectReference>("import", "./cookies.js");
 
-                    cookie = await ReadCookie(Globals.CookieName);
+                    cookie = await ReadCookie(Globals.CookieName + NavigationManager.BaseUri.Replace(":", "").Replace("/", ""));
                 }
 
                 if (!string.IsNullOrEmpty(cookie))
