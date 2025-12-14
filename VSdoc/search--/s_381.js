@@ -1,1 +1,0 @@
-search_result['381']=["topic_00000000000000ED.html","Forward Class","Represents a component that manages forwarding operations, including displaying the forward view and handling\r\nuser actions to forward content."];

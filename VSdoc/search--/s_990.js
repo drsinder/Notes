@@ -1,1 +1,0 @@
-search_result['990']=["topic_0000000000000292.html","Globals.ImportedAuthorId Property","Gets the imported author identifier."];

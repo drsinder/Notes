@@ -1,1 +1,0 @@
-search_result['1260']=["topic_0000000000000332.html","LinkLog Class","This class defines a table in the database.\r\nLog of link activity."];

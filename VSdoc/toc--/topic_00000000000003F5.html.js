@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['1238',"Notes.Services Namespace","topic_00000000000003F2.html"],['1242',"EmailSender Class","topic_00000000000003F3.html"],['1243',"EmailSender Constructor","topic_00000000000003F4_overloads--.html"],['1244',"EmailSender() Constructor","topic_00000000000003F5.html"]];

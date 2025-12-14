@@ -1,1 +1,0 @@
-search_result['1257']=["topic_000000000000032F.html","LinkedFile.GetGLinkedFile Method","Gets the g linked file."];

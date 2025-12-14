@@ -1,1 +1,0 @@
-search_result['1384']=["topic_000000000000038F.html","NoteHeader.CloneForLink Method","Clones for link."];

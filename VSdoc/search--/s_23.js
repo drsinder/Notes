@@ -1,1 +1,0 @@
-search_result['23']=["topic_000000000000000D.html","Clock.mytime Property","Gets or sets the date and time value associated with this instance."];

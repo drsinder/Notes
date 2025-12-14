@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['871',"Notes.Components.Account Namespace","topic_00000000000002B5.html"],['879',"IdentityRedirectManager Class","topic_00000000000002BB.html"],['890',"Fields","topic_00000000000002BB_vars--.html"],['892',"StatusCookieName Field","topic_00000000000002BC.html"]];

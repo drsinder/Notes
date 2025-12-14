@@ -1,1 +1,0 @@
-search_result['994']=["topic_0000000000000296.html","Globals.SendGridEmail Property","Gets or sets the send grid email."];

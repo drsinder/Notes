@@ -1,1 +1,0 @@
-search_result['399']=["topic_00000000000000F5.html","HelpDialog2 Class","Class HelpDialog2.\r\nImplements the ComponentBase"];

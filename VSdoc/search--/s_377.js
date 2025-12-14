@@ -1,1 +1,0 @@
-search_result['377']=["topic_00000000000000E9.html","Mark.MarkOrdinal Property","Gets or sets the mark ordinal."];

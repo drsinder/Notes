@@ -1,1 +1,0 @@
-search_result['198']=["topic_0000000000000080.html","CFormat.Name Property","Gets or sets the name."];

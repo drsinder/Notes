@@ -1,1 +1,0 @@
-search_result['1473']=["topic_00000000000003CE.html","Tags.GetGTags Method","Gets the g tags."];

@@ -1,1 +1,0 @@
-search_result['1275']=["topic_0000000000000340.html","LinkQueue Class","This class defines a table in the database.\r\nUsed to que up items to be linked to remote system."];

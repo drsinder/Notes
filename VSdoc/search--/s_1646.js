@@ -1,1 +1,0 @@
-search_result['1646']=["topic_000000000000042C.html","NotesService.GetNoteHeaders Method","Retrieves a list of note headers for the specified note file and archive, based on the criteria provided in\r\nthe request."];

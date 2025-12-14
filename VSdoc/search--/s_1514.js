@@ -1,1 +1,0 @@
-search_result['1514']=["topic_00000000000003EB.html","NoteDataManager.NextBaseNoteOrdinal Method","Get next available BaseNoteOrdinal"];

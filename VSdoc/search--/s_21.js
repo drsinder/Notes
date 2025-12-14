@@ -1,1 +1,0 @@
-search_result['21']=["topic_000000000000000B.html","Clock.Interval Property","Gets or sets the interval, in milliseconds, between consecutive operations."];

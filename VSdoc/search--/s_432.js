@@ -1,1 +1,0 @@
-search_result['432']=["topic_0000000000000106.html","PrintDlg Class","This takes the provided PrintStuff string and puts it in a\r\nSyncfusion editor component for the user to see.  It then allows\r\nthe user to press a button to print.  TO do the printing\r\nthe built in pri..."];

@@ -1,1 +1,0 @@
-search_result['1338']=["topic_000000000000036B.html","NoteContent.GetGNoteContentList Method","Gets the g note content list.\r\nConversions between Db Entity space and gRPC space."];

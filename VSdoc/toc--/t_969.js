@@ -1,1 +1,0 @@
-c['969']=[['970',"GetGLinkLog Method","topic_0000000000000338.html",0],['971',"GetGSequencerList Method","topic_000000000000033A.html",0],['972',"GetLinkLog Method","topic_0000000000000337.html",0],['973',"GetLinkLogList Method","topic_0000000000000339.html",0]];

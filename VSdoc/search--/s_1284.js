@@ -1,1 +1,0 @@
-search_result['1284']=["topic_0000000000000344.html","LinkQueue.Activity Property","Gets or sets the activity."];

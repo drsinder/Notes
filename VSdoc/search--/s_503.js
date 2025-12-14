@@ -1,1 +1,0 @@
-search_result['503']=["topic_0000000000000130.html","Notes.Client.Layout Namespace","The Notes.Client.Layout namespace contains layout components for the Notes client application."];

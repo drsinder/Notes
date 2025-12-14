@@ -1,1 +1,0 @@
-search_result['179']=["topic_0000000000000077.html","CodeFormat Class","Provides functionality for formatting code snippets and managing code format options within a modal dialog\r\ncomponent."];

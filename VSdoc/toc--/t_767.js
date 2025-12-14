@@ -1,1 +1,0 @@
-c['767']=[['768',"NoteEditor Constructor","topic_0000000000000245.html",0],['769',"Properties","topic_000000000000023A_props--.html",1],['778',"Methods","topic_000000000000023A_methods--.html",1],['786',"Fields","topic_000000000000023A_vars--.html",1]];

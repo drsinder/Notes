@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['4',"Microsoft.AspNetCore.Routing Namespace","topic_00000000000002B2.html"],['5',"IdentityComponentsEndpointRouteBuilderExtensions Class","topic_00000000000002B3.html"],['6',"Methods","topic_00000000000002B3_methods--.html"]];

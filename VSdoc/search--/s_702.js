@@ -1,1 +1,0 @@
-search_result['702']=["topic_00000000000001BB.html","HomeIndex.Ordinal Property","Gets or sets the ordinal position used to determine note file entry behavior."];

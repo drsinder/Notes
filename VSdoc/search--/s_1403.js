@@ -1,1 +1,0 @@
-search_result['1403']=["topic_00000000000003A4.html","Search.BaseOrdinal Property","Gets or sets the base ordinal."];

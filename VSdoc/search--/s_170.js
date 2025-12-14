@@ -1,1 +1,0 @@
-search_result['170']=["topic_000000000000006F.html","AddAccessDlg.ArcString Property","Gets or sets the arc string."];

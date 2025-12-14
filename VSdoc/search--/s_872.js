@@ -1,1 +1,0 @@
-search_result['872']=["topic_0000000000000239.html","Notes.Client.Panels Namespace","The Notes.Client.Panels namespace contains components for displaying and managing notes within the client application."];

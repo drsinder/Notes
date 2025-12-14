@@ -1,1 +1,0 @@
-search_result['1266']=["topic_0000000000000333.html","LinkLog.Id Property","Gets or sets the identifier."];

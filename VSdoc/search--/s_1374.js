@@ -1,1 +1,0 @@
-search_result['1374']=["topic_0000000000000385.html","NoteHeader.AuthorID Property","Gets or sets the author identifier."];

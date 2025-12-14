@@ -1,1 +1,0 @@
-search_result['1326']=["topic_0000000000000364.html","NoteContent Class","This class defines a table in the database.\r\nEach NoteContent object is associated with one NoteHeader\r\nIt contains the \"Body\" text of the note."];

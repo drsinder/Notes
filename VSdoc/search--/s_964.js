@@ -1,1 +1,0 @@
-search_result['964']=["topic_0000000000000283.html","Responses Constructor","Initializes a new instance of the Responses class."];

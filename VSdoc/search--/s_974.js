@@ -1,1 +1,0 @@
-search_result['974']=["topic_0000000000000288.html","Versions.NoteOrdinal Property","Gets or sets the note ordinal."];

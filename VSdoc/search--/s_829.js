@@ -1,1 +1,0 @@
-search_result['829']=["topic_0000000000000222.html","Preferences.pageSize Property","Gets or sets the size of the page."];

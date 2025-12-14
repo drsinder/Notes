@@ -1,1 +1,0 @@
-search_result['975']=["topic_0000000000000289.html","Versions.ResponseOrdinal Property","Gets or sets the response ordinal."];

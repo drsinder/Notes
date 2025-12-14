@@ -1,1 +1,0 @@
-search_result['556']=["topic_0000000000000155.html","LoginDisplay.GotoHome Method","Gotoes the home."];

@@ -1,1 +1,0 @@
-search_result['1319']=["topic_000000000000035D.html","NoteAccess.DeleteEdit Property","Gets or sets a value indicating whether [delete edit]."];

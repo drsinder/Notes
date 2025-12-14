@@ -1,1 +1,0 @@
-search_result['553']=["topic_0000000000000152.html","LoginDisplay.GotoProfile Method","Gotoes the profile."];

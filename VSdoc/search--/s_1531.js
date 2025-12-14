@@ -1,1 +1,0 @@
-search_result['1531']=["topic_00000000000003F4_overloads--.html","EmailSender Constructor","Initializes a new instance of the EmailSender class."];

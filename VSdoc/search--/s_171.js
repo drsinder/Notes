@@ -1,1 +1,0 @@
-search_result['171']=["topic_0000000000000070.html","AddAccessDlg.Client Property","Gets or sets the client."];

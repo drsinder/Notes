@@ -1,1 +1,0 @@
-search_result['1273']=["topic_000000000000033A.html","LinkLog.GetGSequencerList Method","Gets the g sequencer list."];

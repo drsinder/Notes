@@ -1,1 +1,0 @@
-search_result['630']=["topic_000000000000018B.html","NotesFilesAdmin.Client Property","Gets or sets the client."];

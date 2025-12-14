@@ -1,1 +1,0 @@
-search_result['747']=["topic_00000000000001DB.html","NoteIndex.NavString Property","Accumulator for the navigation string"];

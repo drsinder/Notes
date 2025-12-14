@@ -1,1 +1,0 @@
-search_result['991']=["topic_0000000000000293.html","Globals.GuestId Property","Gets or sets the guest identifier."];

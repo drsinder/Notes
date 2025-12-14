@@ -1,1 +1,0 @@
-search_result['1550']=["topic_00000000000003FC.html","NotesService Class","Provides gRPC service methods for managing notes, note files, user access, and related operations in the\r\napplication. Supports authentication, authorization, and administrative features for note coll..."];

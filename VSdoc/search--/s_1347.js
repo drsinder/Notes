@@ -1,1 +1,0 @@
-search_result['1347']=["topic_000000000000036F.html","NoteFile.OwnerId Property","Gets or sets the owner identifier."];

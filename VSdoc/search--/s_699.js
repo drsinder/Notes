@@ -1,1 +1,0 @@
-search_result['699']=["topic_00000000000001B8.html","HomeIndex.NotesClient Property","Gets or sets the gRPC client used to communicate with the Notes server."];

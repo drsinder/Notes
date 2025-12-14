@@ -1,1 +1,0 @@
-search_result['1561']=["topic_00000000000003FF_overloads--.html","NotesService.GetAccess Method","Retrieves the access permissions for a specified note file based on the current user\u0027s context."];

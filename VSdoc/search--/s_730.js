@@ -1,1 +1,0 @@
-search_result['730']=["topic_00000000000001D0.html","NewNote.Model Property","Gets or sets the model."];

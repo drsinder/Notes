@@ -1,1 +1,0 @@
-search_result['1648']=["topic_000000000000042D.html","NotesService.GetNoteCount Method","Retrieves the number of notes in the specified note file and archive that are not deleted and are not\r\nresponses."];

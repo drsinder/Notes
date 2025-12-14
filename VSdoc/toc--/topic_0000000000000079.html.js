@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"Notes Reference","topic_0000000000000432.html"],['136',"Notes.Client.Dialogs Namespace","topic_000000000000003F.html"],['196',"CodeFormat Class","topic_0000000000000077.html"],['201',"Properties","topic_0000000000000077_props--.html"],['207',"stuff Property","topic_0000000000000079.html"]];

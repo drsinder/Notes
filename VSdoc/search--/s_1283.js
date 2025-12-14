@@ -1,1 +1,0 @@
-search_result['1283']=["topic_0000000000000343.html","LinkQueue.LinkGuid Property","Gets or sets the link unique identifier."];

@@ -1,1 +1,0 @@
-search_result['1415']=["topic_00000000000003AB.html","Sequencer.Ordinal Property","Gets or sets the ordinal."];

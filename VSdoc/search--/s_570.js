@@ -1,1 +1,0 @@
-search_result['570']=["topic_000000000000015C.html","MainMenu.menuItemsTop Property","The list of menu bar items (structure of the menu)"];

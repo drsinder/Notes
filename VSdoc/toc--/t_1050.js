@@ -1,1 +1,0 @@
-c['1050']=[['1051',"GetGNotefile Method","topic_0000000000000376.html",0],['1052',"GetGNotefileList Method","topic_0000000000000378.html",0],['1053',"GetNoteFile Method","topic_0000000000000375.html",0],['1054',"GetNoteFiles Method","topic_0000000000000377.html",0]];

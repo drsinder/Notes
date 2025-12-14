@@ -1,1 +1,0 @@
-search_result['675']=["topic_00000000000001AC.html","About.upTime Property","Gets or sets up time."];

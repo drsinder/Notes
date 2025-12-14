@@ -1,1 +1,0 @@
-search_result['1407']=["topic_00000000000003A8.html","Sequencer Class","This class defines a table in the database.\r\nObject of this class may be associated with a user\r\nand file to be used to find notes written since the\r\n\"Recent\" function was last invoked."];

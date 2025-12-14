@@ -1,1 +1,0 @@
-search_result['619']=["topic_0000000000000185.html","Notes.Client.Pages.Admin Namespace","The notes client.Pages.Admin namespace Contains admin page components for the Notes application."];

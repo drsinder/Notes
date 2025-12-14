@@ -1,1 +1,0 @@
-search_result['773']=["topic_00000000000001F4.html","NoteIndex.GetModel Method","Get the Index model - used by the NotePanel"];

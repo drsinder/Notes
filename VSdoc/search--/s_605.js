@@ -1,1 +1,0 @@
-search_result['605']=["topic_0000000000000178.html","NoteMenu.HamburgerMode Property","Gets or sets a value indicating whether [hamburger mode]."];

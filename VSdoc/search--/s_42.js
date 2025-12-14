@@ -1,1 +1,0 @@
-search_result['42']=["topic_0000000000000019.html","CookieStateAgent.LoginReply Property","Gets or sets the login reply.  Setting also notifies subsrcibers"];

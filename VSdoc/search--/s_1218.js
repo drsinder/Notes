@@ -1,1 +1,0 @@
-search_result['1218']=["topic_0000000000000317.html","ApplicationUser.GetGAppUser Method","Gets the g application user.\r\nConversions between Db Entity space and gRPC space."];

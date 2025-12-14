@@ -1,1 +1,0 @@
-c['686']=[['687',"LocalModel2 Constructor","topic_0000000000000227_overloads--.html",1],['690',"Properties","topic_0000000000000226_props--.html",1]];

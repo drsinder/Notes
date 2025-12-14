@@ -1,1 +1,0 @@
-search_result['1638']=["topic_0000000000000428.html","NotesService.DeleteNote Method","Deletes the specified note if the current user has delete permissions."];

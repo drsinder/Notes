@@ -1,1 +1,0 @@
-search_result['1637']=["topic_0000000000000427.html","NotesService.MakeHeader Method","Generates an HTML header string for a copied note, including the note file name, subject, author, and\r\ncreation date."];

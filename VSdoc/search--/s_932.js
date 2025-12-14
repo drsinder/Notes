@@ -1,1 +1,0 @@
-search_result['932']=["topic_000000000000026A.html","NotePanel Constructor","Initialize defaults for a \"root\" note - not showing children"];

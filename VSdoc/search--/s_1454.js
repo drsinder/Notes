@@ -1,1 +1,0 @@
-search_result['1454']=["topic_00000000000003C3.html","Tags Class","This class defines a table in the database.\r\nZero or more of these objects may be associated with each note.\r\nDefines a simple tag or set of tags for a note."];

@@ -1,1 +1,0 @@
-search_result['1185']=["topic_00000000000002FB.html","NotesDbContext.LinkLog Property","Gets or sets the link log."];

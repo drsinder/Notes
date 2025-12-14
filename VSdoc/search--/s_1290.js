@@ -1,1 +1,0 @@
-search_result['1290']=["topic_000000000000034A.html","LinkQueue.GetSequencerList Method","Gets the sequencer list."];

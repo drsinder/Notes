@@ -1,1 +1,0 @@
-search_result['1563']=["topic_0000000000000401.html","NotesService.GetUserList Method","Retrieves a list of all application users accessible to administrators."];

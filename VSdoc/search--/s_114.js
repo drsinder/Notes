@@ -1,1 +1,0 @@
-search_result['114']=["topic_0000000000000045.html","AccessDeleteButton Class","Represents a button component that allows deletion of note access within the application."];

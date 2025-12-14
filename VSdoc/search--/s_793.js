@@ -1,1 +1,0 @@
-search_result['793']=["topic_000000000000020A.html","Search.NoteID Property","Gets or sets the note identifier."];

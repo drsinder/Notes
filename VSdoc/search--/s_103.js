@@ -1,1 +1,0 @@
-search_result['103']=["topic_000000000000003F.html","Notes.Client.Dialogs Namespace","The Notes.Client.Dialogs namespace contains dialog components for the Notes client application."];

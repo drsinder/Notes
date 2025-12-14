@@ -1,1 +1,0 @@
-search_result['1521']=["topic_00000000000003F0_overloads--.html","NoteDataManager.GetBaseNoteHeader Method","Get the BaseNoteHeader for a Note"];

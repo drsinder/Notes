@@ -1,1 +1,0 @@
-search_result['1611']=["topic_000000000000041A.html","NotesService.DeleteSequencer Method","Deletes the sequencer associated with the specified note file for the current user."];

@@ -1,1 +1,0 @@
-search_result['845']=["topic_000000000000022A.html","LocalModel2.Name Property","Gets or sets the name."];

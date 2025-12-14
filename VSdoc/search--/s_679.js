@@ -1,1 +1,0 @@
-search_result['679']=["topic_00000000000001AF.html","EditNote Class","Setup for calling note editor panel to edit an existing note"];

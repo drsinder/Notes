@@ -1,1 +1,0 @@
-search_result['928']=["topic_0000000000000266.html","NotePanel.Client Property","Gets or sets the client."];

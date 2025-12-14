@@ -1,1 +1,0 @@
-search_result['457']=["topic_0000000000000114.html","SearchDlg.text Property","Gets or sets the text."];

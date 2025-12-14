@@ -1,1 +1,0 @@
-search_result['785']=["topic_0000000000000202.html","Search.UserId Property","Gets or sets the user identifier."];

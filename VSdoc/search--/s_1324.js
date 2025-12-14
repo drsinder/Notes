@@ -1,1 +1,0 @@
-search_result['1324']=["topic_0000000000000362.html","NoteAccess.GetNoteAccesses Method","Gets the note accesses.\r\nConversions between Db Entity space and gRPC space."];

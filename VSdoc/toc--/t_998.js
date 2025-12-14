@@ -1,1 +1,0 @@
-c['998']=[['999',"GetGLinkedFile Method","topic_000000000000032F.html",0],['1000',"GetGLinkedFileList Method","topic_0000000000000331.html",0],['1001',"GetLinkedFile Method","topic_000000000000032E.html",0],['1002',"GetSequencerList Method","topic_0000000000000330.html",0]];

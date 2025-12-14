@@ -1,1 +1,0 @@
-search_result['846']=["topic_000000000000022B.html","ShowNote Class","Class ShowNote.\r\nImplements the ComponentBase"];

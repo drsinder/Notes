@@ -1,1 +1,0 @@
-search_result['14']=["topic_0000000000000009.html","Notes.Client.Comp Namespace","The Notes.Client.Comp namespace contains Blazor components and related classes for the Notes client application."];

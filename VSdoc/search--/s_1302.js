@@ -1,1 +1,0 @@
-search_result['1302']=["topic_0000000000000351.html","Mark.NoteOrdinal Property","Gets or sets the note ordinal."];

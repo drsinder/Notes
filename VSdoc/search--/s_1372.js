@@ -1,1 +1,0 @@
-search_result['1372']=["topic_0000000000000383.html","NoteHeader.CreateDate Property","Gets or sets the create date."];

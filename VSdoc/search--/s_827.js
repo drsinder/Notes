@@ -1,1 +1,0 @@
-search_result['827']=["topic_0000000000000220.html","Preferences.currentText Property","Gets or sets the current text."];

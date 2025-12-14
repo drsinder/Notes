@@ -1,1 +1,0 @@
-search_result['1524']=["topic_00000000000003F3.html","EmailSender Class","Provides functionality to send email messages asynchronously using configured options."];

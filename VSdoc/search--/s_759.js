@@ -1,1 +1,0 @@
-search_result['759']=["topic_00000000000001E7.html","NoteIndex.sessionStorage Property","Gets or sets the session storage."];

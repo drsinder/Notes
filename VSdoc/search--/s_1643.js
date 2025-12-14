@@ -1,1 +1,0 @@
-search_result['1643']=["topic_000000000000042A_overloads--.html","NotesService.GetTextFile Method","Gets text from server for display in client.\r\nfiles: about.html | help.html | helpdialog.html | helpdialog2.html | license.html"];

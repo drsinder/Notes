@@ -1,1 +1,0 @@
-search_result['77']=["topic_0000000000000030.html","TrackerMover Class","Represents a component that manages the movement and ordering of tracker items within a collection."];

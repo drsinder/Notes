@@ -1,1 +1,0 @@
-search_result['1572']=["topic_0000000000000406.html","NotesService.GetHomePageModel Method","Retrieves the data model for the home page in response to a client request."];

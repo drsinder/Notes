@@ -1,1 +1,0 @@
-search_result['1471']=["topic_00000000000003CC.html","Tags.CloneForLink Method","Clones for link."];

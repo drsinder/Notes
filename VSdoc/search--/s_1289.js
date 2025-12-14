@@ -1,1 +1,0 @@
-search_result['1289']=["topic_0000000000000349.html","LinkQueue.GetGLinkQueue Method","Gets the g link queue."];

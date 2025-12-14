@@ -1,1 +1,0 @@
-search_result['1380']=["topic_000000000000038B.html","NoteHeader.DirectorMessage Property","Gets or sets the director message."];

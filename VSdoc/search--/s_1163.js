@@ -1,1 +1,0 @@
-search_result['1163']=["topic_00000000000002EA.html","Notes.Data Namespace","The Notes.Data namespace contains the Entity Framework Core database context for the notes application,\r\nproviding access to note-related entities and ASP.NET Core Identity features."];

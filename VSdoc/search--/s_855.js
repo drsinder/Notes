@@ -1,1 +1,0 @@
-search_result['855']=["topic_000000000000022F.html","ShowNote.Client Property","Gets or sets the client."];

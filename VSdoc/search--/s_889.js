@@ -1,1 +1,0 @@
-search_result['889']=["topic_0000000000000245.html","NoteEditor Constructor","Initializes a new instance of the NoteEditor class."];

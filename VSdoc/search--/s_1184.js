@@ -1,1 +1,0 @@
-search_result['1184']=["topic_00000000000002FA.html","NotesDbContext.LinkQueue Property","Gets or sets the link queue."];

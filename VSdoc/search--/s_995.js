@@ -1,1 +1,0 @@
-search_result['995']=["topic_0000000000000297.html","Globals.SendGridName Property","Gets or sets the name of the send grid."];

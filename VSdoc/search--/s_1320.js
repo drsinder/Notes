@@ -1,1 +1,0 @@
-search_result['1320']=["topic_000000000000035E.html","NoteAccess.ViewAccess Property","Gets or sets a value indicating whether [view access]."];

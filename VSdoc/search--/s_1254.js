@@ -1,1 +1,0 @@
-search_result['1254']=["topic_000000000000032C.html","LinkedFile.SendTo Property","Gets or sets a value indicating whether [send to]."];

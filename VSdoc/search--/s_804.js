@@ -1,1 +1,0 @@
-search_result['804']=["topic_0000000000000215.html","NoteIndex.ClearNav Method","Clear accumulated input"];

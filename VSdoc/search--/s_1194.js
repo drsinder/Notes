@@ -1,1 +1,0 @@
-search_result['1194']=["topic_00000000000002FF.html","ApplicationUser.DisplayName Property","Gets or sets the display name."];

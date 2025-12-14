@@ -1,1 +1,0 @@
-search_result['493']=["topic_000000000000012B.html","YesNo Class","Represents a modal dialog component that displays a yes/no confirmation message."];

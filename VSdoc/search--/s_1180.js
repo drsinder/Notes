@@ -1,1 +1,0 @@
-search_result['1180']=["topic_00000000000002F6.html","NotesDbContext.Subscription Property","Gets or sets the subscription."];

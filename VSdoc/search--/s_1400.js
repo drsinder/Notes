@@ -1,1 +1,0 @@
-search_result['1400']=["topic_00000000000003A1.html","Search.Time Property","Gets or sets the time."];

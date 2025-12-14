@@ -1,1 +1,0 @@
-search_result['963']=["topic_0000000000000282.html","Responses.Navigation Property","Gets or sets the navigation."];

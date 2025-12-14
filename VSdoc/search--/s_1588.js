@@ -1,1 +1,0 @@
-search_result['1588']=["topic_000000000000040E_overloads--.html","NotesService.GetNoteFileIndexData Method","Retrieves index data for a note file, including access information, note headers, linked files, tags, and\r\nuser details, based on the specified request and the current user\u0027s permissions."];

@@ -1,1 +1,0 @@
-search_result['398']=["topic_00000000000000F4.html","HelpDialog.Cancel Method","Cancels this instance."];

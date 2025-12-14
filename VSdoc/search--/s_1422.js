@@ -1,1 +1,0 @@
-search_result['1422']=["topic_00000000000003B2.html","Sequencer.GetGSequencerList Method","Gets the g sequencer list.\r\nConversions between Db Entity space and gRPC space."];

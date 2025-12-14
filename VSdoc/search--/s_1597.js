@@ -1,1 +1,0 @@
-search_result['1597']=["topic_0000000000000413.html","NotesService.DeleteAccessItem Method","Deletes the specified access item for a note if the current user has edit permissions."];

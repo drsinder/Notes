@@ -1,1 +1,0 @@
-search_result['1477']=["topic_00000000000003D2.html","AccessManager Class","Provides static methods for managing and querying access control entries for note files, including creation of\r\nbase access entries, retrieval of user-specific access, and validation of link-based acc..."];

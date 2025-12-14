@@ -1,1 +1,0 @@
-search_result['917']=["topic_000000000000025B.html","NotePanel.ResetShown Property","Gets or sets a value indicating whether [reset shown]."];

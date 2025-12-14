@@ -1,1 +1,0 @@
-search_result['1583']=["topic_000000000000040C.html","NotesService.DeleteNoteFile Method","Deletes the specified note file and all associated data from the database."];

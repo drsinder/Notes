@@ -1,1 +1,0 @@
-search_result['22']=["topic_000000000000000C.html","Clock.timer2 Property","Gets or sets the timer used for scheduled operations."];

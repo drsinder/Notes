@@ -1,1 +1,0 @@
-search_result['1502']=["topic_00000000000003E4.html","NoteDataManager Class","Provides static methods for creating, retrieving, editing, and deleting note files and notes within the\r\napplication database."];

@@ -1,1 +1,0 @@
-search_result['1188']=["topic_00000000000002FE.html","ApplicationUser Class","Extentions to the base IdentityUser\r\nContains fields mirrored locally in UserData\r\nThese fields are accessed and edited there and then written back\r\nenmass.  By contrast the predefined field not seen ..."];

@@ -1,1 +1,0 @@
-search_result['15']=["topic_000000000000000A.html","Clock Class","Represents a component that displays and updates the current time at a specified interval."];
