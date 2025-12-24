@@ -74,6 +74,9 @@ service NotesServer {
 	rpc GetServerTime(NoRequest) returns (ServerTime);				// gets server time
 
 	rpc ContentSearch(ContentSearchRequest) returns (SearchResult);	// search for text in note contents
+
+	rpc TestLinkConnection(LinkTestMessage) returns (RequestStatus);	// test link connection to another server
+	rpc SendLinkedNote(SendLinkedNoteRequest) returns (RequestStatus);	// send a linked note to another server
 }
 
 // used generically -  used when no data needed for request or response
@@ -354,6 +357,18 @@ message GLinkQueueList {
 	repeated GLinkQueue list = 1;
 }
 
+message LinkTestMessage {
+	string remoteFileName = 1;
+	string secret = 2;
+}
+
+message SendLinkedNoteRequest {
+	string remoteFileName = 1;
+	string secret = 2;
+	int32 requstAction = 3;
+	GNoteHeader noteHeader = 4;
+	GNoteContent noteContent = 5;
+}
 ///////////////////////////////////////////////
 //
 // Not Entites directly - Models for transfer of info to pages
