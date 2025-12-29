@@ -22,6 +22,7 @@ using Microsoft.EntityFrameworkCore;
 using Notes.Client;
 using Notes.Data;
 using Notes.Entities;
+using System.Reflection.PortableExecutable;
 
 /// <summary>
 /// The Notes.Manager namespace contains classes for managing note-related data operations,
@@ -232,7 +233,8 @@ namespace Notes.Manager
         /// <param name="linked">Are we processing linked file?</param>
         /// <param name="editing">Are we editing?</param>
         /// <returns>NoteHeader.</returns>
-        public static async Task<NoteHeader> CreateNote(NotesDbContext db, NoteHeader nh, string body, string tags, string dMessage, bool send, bool linked, bool editing = false)
+        public static async Task<NoteHeader> CreateNote(NotesDbContext db, NoteHeader nh, string body, string tags, string dMessage, bool send,
+            bool linked, bool editing = false)
         {
             long editingId = nh.Id;
 
@@ -356,10 +358,23 @@ namespace Notes.Manager
                             {
                                 Activity = newHeader.ResponseOrdinal == 0 ? LinkAction.CreateBase : LinkAction.CreateResponse,
                                 LinkGuid = newHeader.LinkGuid,
-                                LinkedFileId = newHeader.NoteFileId,
+                                LinkedFileId = link.Id,
                                 BaseUri = link.RemoteBaseUri,
                                 Secret = link.Secret
                             };
+                            if (q.Activity == LinkAction.CreateResponse)
+                            {
+                                // need to get the LinkGuid for the base note
+                                NoteHeader bnh = await db.NoteHeader
+                                    .SingleAsync(p => p.NoteFileId == newHeader.NoteFileId && p.ArchiveId == newHeader.ArchiveId
+                                        && p.NoteOrdinal == newHeader.NoteOrdinal && p.ResponseOrdinal == 0);
+                               
+                                if (bnh is not null)
+                                {
+                                    q.OldLinkGuid = bnh.LinkGuid;
+                                }
+                            }
+
                             queue.Add(q);
                         }
                     }
@@ -415,7 +430,7 @@ namespace Notes.Manager
         /// </summary>
         /// <param name="_db">The database.</param>
         /// <param name="nh">The nh.</param>
-        public static async Task DeleteNote(NotesDbContext _db, NoteHeader nh)
+        public static async Task DeleteNote(NotesDbContext _db, NoteHeader nh, bool linked = false)
         {
             nh.IsDeleted = true;
             _db.Entry(nh).State = EntityState.Modified;
@@ -426,11 +441,42 @@ namespace Notes.Manager
                 // delete all responses
                 for (int i = 1; i <= nh.ResponseCount; i++)
                 {
-                    NoteHeader rh = _db.NoteHeader.Single(p => p.ResponseOrdinal == i && p.Version == 0);
+                    NoteHeader rh = _db.NoteHeader.Single(p => p.BaseNoteId == nh.Id &&
+                    p.ResponseOrdinal == i && p.Version == 0);
                     rh.IsDeleted = true;
                     _db.Entry(rh).State = EntityState.Modified;
                 }
                 await _db.SaveChangesAsync();
+            }
+
+            // Check for linked notefile(s)
+
+            List<LinkedFile> links = await _db.LinkedFile.Where(p => p.HomeFileId == nh.NoteFileId && p.SendTo).ToListAsync();
+
+            if (!(linked || links is null || links.Count < 1))
+            {
+                List<LinkQueue> queue = new();
+                foreach (var link in links) // que up the linked notes
+                {
+                    if (link.SendTo)
+                    {
+                        LinkQueue q = new()
+                        {
+                            Activity = LinkAction.Delete,
+                            LinkGuid = nh.LinkGuid,
+                            LinkedFileId = link.Id,
+                            BaseUri = link.RemoteBaseUri,
+                            Secret = link.Secret
+                        };
+
+                        queue.Add(q);
+                    }
+                }
+                if (queue.Count > 0)
+                {
+                    await _db.LinkQueue.AddRangeAsync(queue);
+                    await _db.SaveChangesAsync();
+                }
             }
         }
 
@@ -443,7 +489,8 @@ namespace Notes.Manager
         /// <param name="nc">The nc.</param>
         /// <param name="tags">The tags.</param>
         /// <returns>NoteHeader.</returns>
-        public static async Task<NoteHeader> EditNote(NotesDbContext db, UserManager<ApplicationUser> userManager, NoteHeader nh, NoteContent nc, string tags)
+        public static async Task<NoteHeader> EditNote(NotesDbContext db, UserManager<ApplicationUser> userManager, NoteHeader nh, 
+            NoteContent nc, string tags, bool linked = false)
         {
             // this is for making the current version 0 a higher version and creating a new version 0
             // begin by getting the old header and setting version to 1 more than the highest existing version
@@ -464,7 +511,41 @@ namespace Notes.Manager
 
             // then create new note
 
-            return await CreateNote(db, dh, nc.NoteBody, tags, nh.DirectorMessage, true, false, true);
+            NoteHeader newh = await CreateNote(db, dh, nc.NoteBody, tags, nh.DirectorMessage, true, true, true);
+
+            // Check for linked notefile(s)
+            List<LinkedFile> links = await db.LinkedFile.Where(p => p.HomeFileId == nh.NoteFileId && p.SendTo).ToListAsync();
+
+            if (!(linked || links is null || links.Count < 1))
+            {
+                List<LinkQueue> queue = new();
+                foreach (var link in links) // que up the linked notes
+                {
+                    if (link.SendTo)
+                    {
+                        LinkQueue q = new()
+                        {
+                            Activity = LinkAction.Edit,
+                            OldLinkGuid = nh.LinkGuid,
+                            LinkGuid = newh.LinkGuid,
+                            LinkedFileId = link.Id,
+                            BaseUri = link.RemoteBaseUri,
+                            Secret = link.Secret
+                        };
+
+                        queue.Add(q);
+                    }
+                }
+                if (queue.Count > 0)
+                {
+                    await db.LinkQueue.AddRangeAsync(queue);
+                    await db.SaveChangesAsync();
+                }
+            }
+
+
+
+            return newh;
         }
 
         /// <summary>

@@ -76,6 +76,7 @@ service NotesServer {
 	rpc ContentSearch(ContentSearchRequest) returns (SearchResult);	// search for text in note contents
 
 	rpc TestLinkConnection(LinkTestMessage) returns (RequestStatus);	// test link connection to another server
+	rpc LocalTestLinkConnection(LinkTestMessage) returns (RequestStatus);	// test link connection to another server
 	rpc SendLinkedNote(SendLinkedNoteRequest) returns (RequestStatus);	// send a linked note to another server
 }
 
@@ -351,6 +352,7 @@ message GLinkQueue {
 	string baseUri = 5;
 	bool enqueued = 6;
 	string secret = 7;
+	string oldLinkGuid = 8;
 }
 
 message GLinkQueueList {
@@ -360,14 +362,16 @@ message GLinkQueueList {
 message LinkTestMessage {
 	string remoteFileName = 1;
 	string secret = 2;
+	string remoteBaseUri = 3;
 }
 
 message SendLinkedNoteRequest {
 	string remoteFileName = 1;
 	string secret = 2;
-	int32 requstAction = 3;
+	int32 requestAction = 3;
 	GNoteHeader noteHeader = 4;
 	GNoteContent noteContent = 5;
+	GNoteHeader oldNoteHeader = 6;
 }
 ///////////////////////////////////////////////
 //
@@ -382,6 +386,7 @@ message HomePageModel {
 	GAppUser userData = 4;				// user data
 	GAppUserList userDataList = 5;		// list of all users
 	RequestStatus status = 6;			// status of the request
+	repeated GLinkedFile linkedFiles = 7;	// linked files
 }
 
 // request to import a file

@@ -1,0 +1,41 @@
+﻿@using Notes.Client.Comp
+@using Notes.Protos
+@using Syncfusion.Blazor.Grids
+
+@inject CookieStateAgent myState
+
+<div class="dialogs modal-body">
+    <h3>Linked File Editor - File: @FileName</h3>
+    <div class="col-lg-12 control-section dialoglist">
+        <div class="content-wrapper">
+            <div class="row">
+                <SfGrid @ref="MyGrid" DataSource="@myLinks" AllowPaging="false">
+                        <GridPageSettings PageSizes="false"></GridPageSettings>
+                    <GridColumns>
+                        <GridColumn Field="Id" HeaderText="" Width="1" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="HomeFileId" HeaderText="" Width="1" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="RemoteFileName" HeaderText="Remote File" Width="150" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="RemoteBaseUri" HeaderText="System Uri" Width="250" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="Secret" HeaderText="Secret" Width="250" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="AcceptFrom" HeaderText="Accept" Width="80" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn Field="SendTo" HeaderText="Send" Width="80" TextAlign="TextAlign.Center"></GridColumn>
+                        <GridColumn HeaderText="Actions" Width="150" TextAlign="TextAlign.Center">
+                            <Template>
+                                @{
+                                    var current = (context as GLinkedFile);
+                                    if (current.SendTo)
+                                    {
+                                        <button type="button" class="btn btn-info btn-sm" @onclick="() => TestLink(current)">Test</button>
+                                    }
+                                }
+                            </Template>
+                        </GridColumn>
+                    </GridColumns>
+                </SfGrid>
+            </div>
+        </div>
+        <button type="button" @onclick="Cancel" class="btn btn-info btn-sm">Close</button>
+    </div>
+</div>
+
+

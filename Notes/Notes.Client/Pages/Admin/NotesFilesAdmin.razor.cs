@@ -86,6 +86,22 @@ namespace Notes.Client.Pages.Admin
         {
             model = await Client.GetAdminPageModelAsync(new NoRequest(), myState.AuthHeader);
 
+            // TEMP
+            /*
+            RequestStatus reply;
+            if (model.LinkedFiles.Count > 0)
+            {
+                GLinkedFile x = model.LinkedFiles[0];
+                LinkTestMessage m = new LinkTestMessage
+                {
+                    RemoteFileName = x.RemoteFileName,
+                    RemoteBaseUri = x.RemoteBaseUri,
+                    Secret = x.Secret
+                };
+
+                reply = await Client.LocalTestLinkConnectionAsync(m, myState.AuthHeader);
+            }
+            */
             uList = GetApplicationUsers(model.UserDataList);
             uList = uList is not null ? uList : new();
 
@@ -196,16 +212,12 @@ namespace Notes.Client.Pages.Admin
         /// <param name="Id">The identifier.</param>
         async void DeleteNoteFile(int Id)
         {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             GNotefile file = files.List.ToList().Find(x => x.Id == Id);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
             StateHasChanged();
             var parameters = new ModalParameters();
             parameters.Add("FileId", Id);
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             parameters.Add("FileName", file.NoteFileName);
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
             parameters.Add("FileTitle", file.NoteFileTitle);
             var xModal = Modal.Show<Dialogs.DeleteNoteFile>("Delete", parameters);
             var result = await xModal.Result;
@@ -214,7 +226,20 @@ namespace Notes.Client.Pages.Admin
                 await Reload();
                 Navigation.NavigateTo("admin/notefilelist");
             }
+        }
 
+        async void LinkNoteFile(int Id)
+        {
+            GNotefile file = files.List.ToList().Find(x => x.Id == Id);
+            var parameters = new ModalParameters();
+            parameters.Add("FileId", Id);
+            parameters.Add("FileName", file.NoteFileName);
+            parameters.Add("Model", model);
+
+            var xModal = Modal.Show<Dialogs.LinkNoteFile>("Notefile Links", parameters);
+            var result = await xModal.Result;
+            await Reload();
+            Navigation.NavigateTo("admin/notefilelist");
         }
 
         /// <summary>

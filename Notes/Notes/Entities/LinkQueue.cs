@@ -84,6 +84,13 @@ namespace Notes.Entities
         [StringLength(50)]
         public string? Secret { get; set; }
 
+        /// <summary>
+        /// Gets or sets the link unique identifier.
+        /// </summary>
+        /// <value>The link unique identifier.</value>
+        [StringLength(100)]
+        public string? OldLinkGuid { get; set; }
+
 
         //
         // Conversions between Db Entity space and gRPC space.
@@ -103,6 +110,7 @@ namespace Notes.Entities
             s.BaseUri = other.BaseUri;
             s.Enqueued = other.Enqueued;
             s.Secret = other.Secret;
+            s.OldLinkGuid = other.OldLinkGuid;
             return s;
         }
 
@@ -120,6 +128,7 @@ namespace Notes.Entities
             s.BaseUri = this.BaseUri;
             s.Enqueued = this.Enqueued;
             s.Secret = this.Secret;
+            s.OldLinkGuid = this.OldLinkGuid;
             return s;
         }
 

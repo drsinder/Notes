@@ -20,6 +20,8 @@
     **--------------------------------------------------------------------------*/
 
 using Grpc.Core;
+using Grpc.Net.Client;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -347,6 +349,12 @@ namespace Notes.Services
             {
                 NoteAccess na = await AccessManager.GetAccess(_db, user.Id, nf.Id, 0);
                 homepageModel.NoteAccesses.List.Add(na.GetGNoteAccess());
+            }
+
+            homepageModel.LinkedFiles.Clear();
+            foreach (var lf in _db.LinkedFile)
+            {
+                homepageModel.LinkedFiles.Add(lf.GetGLinkedFile());
             }
 
             homepageModel.Status = new()
@@ -1171,13 +1179,146 @@ namespace Notes.Services
                 created = await NoteDataManager.CreateResponse(_db, nheader, tvm.MyNote, tvm.TagLine, tvm.DirectorMessage, true, false);
             }
 
-            //// Process any linked note file
-            //await ProcessLinkedNotes();
+            // Process any linked note file
+            await ProcessLinkedNotes();
 
             //// Send copy to subscribers
             //await SendNewNoteToSubscribers(created);
 
             return created.GetGNoteHeader();
+        }
+
+        private async Task ProcessLinkedNotes()
+        {
+            List<LinkQueue> lql = await _db.LinkQueue
+                .Where(p => !p.Enqueued)
+                .ToListAsync();
+            foreach (LinkQueue lq in lql)
+            {
+                lq.Enqueued = true;
+                _db.Entry(lq).State = EntityState.Modified;
+                await _db.SaveChangesAsync();
+
+                LinkedFile lf = await _db.LinkedFile
+                    .SingleAsync(p => p.Id == lq.LinkedFileId);
+
+                // send to linked file
+
+                NoteHeader nh = await _db.NoteHeader
+                    .SingleAsync(p => p.LinkGuid == lq.LinkGuid && p.NoteFileId == lf.HomeFileId && p.Version == 0);
+
+                SendLinkedNoteRequest request = new()
+                {
+                    RemoteFileName = lf.RemoteFileName,
+                    Secret = lq.Secret,
+                    NoteHeader = nh.GetGNoteHeader(),
+                    NoteContent = (await _db.NoteContent.SingleAsync(p => p.NoteHeaderId == nh.Id)).GetGNoteContent(),
+                    RequestAction = (int)lq.Activity
+                };
+
+                if (request.RequestAction == (int)LinkAction.CreateResponse) 
+                {
+                    request.OldNoteHeader = await _db.NoteHeader
+                        .Where(p => p.LinkGuid == lq.OldLinkGuid
+                        && p.NoteFileId == request.NoteHeader.NoteFileId)
+                        .Select(p => p.GetGNoteHeader())
+                        .SingleAsync();
+                }
+                else if (request.RequestAction == (int)LinkAction.Edit)
+                {
+                /*    request.OldNoteHeader = await _db.NoteHeader
+                        .Where(p => p.LinkGuid == lq.OldLinkGuid
+                        && p.NoteFileId == request.NoteHeader.NoteFileId 
+                        && p.Version == 0)
+                        .Select(p => p.GetGNoteHeader())
+                        .SingleAsync();  */
+                }
+
+                // await GetClient(lq.BaseUri).SendLinkedNoteAsync(request);
+
+                BackgroundJob.Enqueue(() => GetClient(lq.BaseUri).SendLinkedNoteAsync(request)); //.GetAwaiter());
+
+                _db.LinkQueue.Remove(lq);
+                await _db.SaveChangesAsync();
+            }
+        }
+
+
+        public override async Task<RequestStatus> SendLinkedNote(SendLinkedNoteRequest request, ServerCallContext context)
+        {
+            LinkedFile thefile = await _db.LinkedFile
+                .SingleAsync(p => p.Secret == request.Secret 
+                && p.HomeFileName == request.RemoteFileName
+                && p.AcceptFrom);
+
+            DateTime n = DateTime.Now;
+            NoteHeader xnh = NoteHeader.GetNoteHeader(request.NoteHeader);
+            NoteHeader nheader = new()  // construct a new NoteHeader
+            {
+                LastEdited = n,
+                ThreadLastEdited = n,
+                CreateDate = n,
+                NoteFileId = thefile.HomeFileId,
+                AuthorName = xnh.AuthorName,
+                AuthorID = xnh.AuthorID,
+                NoteSubject = xnh.NoteSubject,
+                DirectorMessage = xnh.DirectorMessage,
+                LinkGuid = xnh.LinkGuid,
+                ResponseOrdinal = 0,
+                ResponseCount = 0
+            };
+
+            NoteHeader created;
+
+            if (request.RequestAction == (int)LinkAction.CreateBase)  // a base note
+            {
+                created = await NoteDataManager.CreateNote(_db, nheader, request.NoteContent.NoteBody, "", nheader.DirectorMessage, false, true);
+                return new RequestStatus()
+                { Message = "Remote base note created.", Status = 0, Success = true };
+            }
+            else if (request.RequestAction == (int)LinkAction.CreateResponse)       // a response
+            {
+                NoteHeader znh = await _db.NoteHeader
+                    .SingleAsync(p => p.LinkGuid == request.OldNoteHeader.LinkGuid
+                    && p.NoteFileId == thefile.HomeFileId);
+                nheader.BaseNoteId = znh.Id;
+                nheader.ResponseOrdinal = nheader.ResponseCount = znh.ResponseCount + 1;
+                // ////////               nheader.RefId = xnh.RefId;
+                created = await NoteDataManager.CreateResponse(_db, nheader, request.NoteContent.NoteBody, "", nheader.DirectorMessage, false, true);
+                return new RequestStatus()
+                { Message = "Remote response created.", Status = 0, Success = true };
+            }
+            else if (request.RequestAction == (int)LinkAction.Delete)       // a delete
+            {
+                NoteHeader znh = await _db.NoteHeader
+                    .SingleAsync(p => p.LinkGuid == request.NoteHeader.LinkGuid
+                    && p.NoteFileId == thefile.HomeFileId && !p.IsDeleted);
+                await NoteDataManager.DeleteNote(_db, znh, true);
+                return new RequestStatus()
+                { Message = "Remote note deleted.", Status = 0, Success = true };
+            }
+            else if (request.RequestAction == (int)LinkAction.Edit)       // an edit
+            {
+                NoteHeader znh = await _db.NoteHeader
+                    .SingleAsync(p => p.LinkGuid == request.NoteHeader.LinkGuid
+                    && p.NoteFileId == thefile.HomeFileId && p.Version == 0);
+                znh.NoteSubject = xnh.NoteSubject;
+                znh.DirectorMessage = xnh.DirectorMessage;
+                znh.LastEdited = xnh.LastEdited;
+                znh.ThreadLastEdited = xnh.ThreadLastEdited;
+                NoteContent nc = new()
+                {
+                    NoteHeaderId = znh.Id,
+                    NoteBody = request.NoteContent.NoteBody
+                };
+                NoteHeader newheader = await NoteDataManager.EditNote(_db, _userManager, znh, nc, "", true);
+                return new RequestStatus()
+                { Message = "Remote note edited.", Status = 0, Success = true };
+            }
+
+                return new RequestStatus()
+                { Message = "Unknown action.", Status = 0, Success = false };
+         
         }
 
         /// <summary>
@@ -1222,7 +1363,7 @@ namespace Notes.Services
 
             NoteHeader newheader = await NoteDataManager.EditNote(_db, _userManager, nheader, nc, tvm.TagLine);
 
-            //await ProcessLinkedNotes();
+            await ProcessLinkedNotes();
 
             return newheader.GetGNoteHeader();
         }
@@ -1629,6 +1770,8 @@ namespace Notes.Services
 
             await NoteDataManager.DeleteNote(_db, note);
 
+            await ProcessLinkedNotes();
+
             return new() { Success = true, Message = "Note deleted" };
         }
 
@@ -1907,6 +2050,59 @@ namespace Notes.Services
             };
 
             return returnval;
+        }
+
+        private NotesServer.NotesServerClient GetClient(string serverAddress)
+        {
+            GrpcChannel channel = GrpcChannel.ForAddress(serverAddress);
+            NotesServer.NotesServerClient client = new(channel);
+            return client;
+        }
+
+        public override async Task<RequestStatus> LocalTestLinkConnection(LinkTestMessage request, ServerCallContext context)
+        {
+            RequestStatus status = new() { Success = false, Message = "Not implemented" };
+            try
+            {
+                NotesServer.NotesServerClient client = GetClient(request.RemoteBaseUri);
+                status = client.TestLinkConnection(request);
+            }
+            catch (Exception ex)
+            {
+                status.Success = false;
+                status.Message = ex.Message;
+            }
+            return status;
+        }
+
+        public override async Task<RequestStatus> TestLinkConnection(LinkTestMessage request, ServerCallContext? context)
+        {
+            RequestStatus status = new() { Success = false, Message = "NoteFile does not exist!" };
+
+            // see if file exists
+            NoteFile myFile = _db.NoteFile.Where(p => p.NoteFileName == request.RemoteFileName).FirstOrDefault();
+            if (myFile is null)
+            {
+                return await Task.FromResult(status);
+            }
+            // is it linked?
+            LinkedFile mylink = _db.LinkedFile.Where(p => p.HomeFileName == request.RemoteFileName
+                        && p.AcceptFrom).FirstOrDefault();
+            if (mylink is null)
+            {     
+                status.Message = "File not linked!";
+                return await Task.FromResult(status);
+            }
+            mylink = _db.LinkedFile.Where(p => p.HomeFileName == request.RemoteFileName
+                        && p.Secret == request.Secret).FirstOrDefault();
+            // does the secret match?
+            if (mylink is null)
+            {
+                status.Message = "File link secret does not match!";
+                return await Task.FromResult(status);
+            }
+            status = new() { Success = true, Message = "NoteFile Connected!" };
+            return await Task.FromResult(status);
         }
 
         /// <summary>
